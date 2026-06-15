@@ -1,0 +1,29 @@
+2018-11-07 10:33:24,678 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-07 10:41:55,262 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-07 10:56:23,004 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-07 11:25:51,711 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-07 14:05:37,658 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-07 14:44:25,330 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-07 14:45:54,398 [1] ERROR KronosCameraTestApp.View.ListExposureData System.ArgumentException: Key not found: 'SubarrayID'
+Parameter name: key
+   at Infragistics.Shared.KeyedSubObjectsCollectionBase.GetItem(String key)
+   at Infragistics.Win.UltraWinGrid.ColumnsCollection.get_Item(String key)
+   at Infragistics.Win.UltraWinGrid.CellsCollection.GetItem(String key)
+   at Infragistics.Win.UltraWinGrid.CellsCollection.get_Item(String key)
+   at KronosCameraTestApp.View.ListExposureData.<>c__DisplayClass34_0.<ultraGridExposureData_AfterCellUpdate_1>b__1(SubarrayDataModel s) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\ListExposureData.cs:line 186
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at KronosCameraTestApp.View.ListExposureData.ultraGridExposureData_AfterCellUpdate_1(Object sender, CellEventArgs e) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\ListExposureData.cs:line 186
+ AMER\babagoud.gadiga - Exception inVoid ultraGridExposureData_AfterCellUpdate_1(System.Object, Infragistics.Win.UltraWinGrid.CellEventArgs)
+2018-11-07 14:57:13,174 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-07 15:05:46,765 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-07 15:08:51,415 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-07 15:14:20,318 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-07 15:20:02,467 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-07 15:25:33,977 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Collection was modified; enumeration operation may not execute.
+   at System.Collections.ArrayList.ArrayListEnumeratorSimple.MoveNext()
+   at System.Windows.Forms.Application.ExitInternal()
+   at System.Windows.Forms.Application.Exit(CancelEventArgs e)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.ExitApplication() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 4062
+ AMER\babagoud.gadiga - Exception inVoid ExitApplication()
+2018-11-07 15:37:43,349 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-07 15:45:32,456 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host

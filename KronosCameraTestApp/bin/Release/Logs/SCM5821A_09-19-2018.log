@@ -1,0 +1,43 @@
+2018-09-19 16:40:38,560 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-09-19 16:41:45,513 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-09-19 16:43:36,954 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-09-19 16:44:40,627 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-09-19 17:03:17,217 [11] ERROR KronosCameraTestApp.View.TCPSettingsForm System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.AbortMessages() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\Kronos.Instrument.Camera.Interface\SCM5821AX1.cs:line 365
+   at Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.Disconnect() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\Kronos.Instrument.Camera.Interface\SCM5821AX1.cs:line 838
+   at Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.Disconnect() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\Kronos.Instrument.Camera.Interface\CIDInterface.cs:line 225
+   at KronosCameraTestApp.View.TCPSettingsForm.<buttonConnect_Click>b__1() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\TCPSettingsForm.cs:line 99
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.View.TCPSettingsForm.<buttonConnect_Click>d__4.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\TCPSettingsForm.cs:line 102
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-09-19 17:03:26,143 [11] ERROR KronosCameraTestApp.View.TCPSettingsForm System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.AbortMessages() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\Kronos.Instrument.Camera.Interface\SCM5821AX1.cs:line 365
+   at Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.Disconnect() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\Kronos.Instrument.Camera.Interface\SCM5821AX1.cs:line 838
+   at Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.Disconnect() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\Kronos.Instrument.Camera.Interface\CIDInterface.cs:line 225
+   at KronosCameraTestApp.View.TCPSettingsForm.<buttonConnect_Click>b__1() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\TCPSettingsForm.cs:line 99
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.View.TCPSettingsForm.<buttonConnect_Click>d__4.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\TCPSettingsForm.cs:line 102
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-09-19 17:04:25,304 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.AbortMessages() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\Kronos.Instrument.Camera.Interface\SCM5821AX1.cs:line 365
+   at Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.Disconnect() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\Kronos.Instrument.Camera.Interface\SCM5821AX1.cs:line 838
+   at Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.Disconnect() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\Kronos.Instrument.Camera.Interface\CIDInterface.cs:line 225
+   at KronosCameraTestApp.View.KronosTestAppMainForm.KronosTestAppMainForm_FormClosed(Object sender, FormClosedEventArgs e) in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 3908
+ AMER\babagoud.gadiga - Exception inVoid KronosTestAppMainForm_FormClosed(System.Object, System.Windows.Forms.FormClosedEventArgs)

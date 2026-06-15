@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ChargeTransferLossesTestLimitsData>
+  <Limit>
+    <LimitsID_PK>1</LimitsID_PK>
+    <SILossesMax>-8000000</SILossesMax>
+    <SkimLossesMax>-13500000</SkimLossesMax>
+    <ReadLossesMax>-80000</ReadLossesMax>
+    <ROI_Xs>270</ROI_Xs>
+    <ROI_Ys>270</ROI_Ys>
+    <ROI_dXs>10</ROI_dXs>
+    <ROI_dYs>10</ROI_dYs>
+    <ROI_dXbs>1</ROI_dXbs>
+    <ROI_dYbs>1</ROI_dYbs>
+    <ROI_PixRate>0</ROI_PixRate>
+    <ROI_NDRO>5</ROI_NDRO>
+    <Points>10</Points>
+    <MaxAuto_Flash>2</MaxAuto_Flash>
+    <Transfers>3</Transfers>
+    <AutoFlash_LED>70</AutoFlash_LED>
+    <AutoFlash_Target>338000</AutoFlash_Target>
+    <DefinedDate>2018-01-26T16:16:58.310</DefinedDate>
+    <UserModified>Baba</UserModified>
+  </Limit>
+</ChargeTransferLossesTestLimitsData>

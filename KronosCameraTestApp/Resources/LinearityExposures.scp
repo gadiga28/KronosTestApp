@@ -1,0 +1,54 @@
+
+ASSIGN Exposure exp = (
+  .exposure_interval = 4, //ms
+  .exposure_ndros    = 1,
+  .exposure_region.xo   = 1000,
+  .exposure_region.yo   = 1000,
+  .exposure_region.dx   = 64,
+  .exposure_region.dy   = 64,
+  .exposure_fpn           = 0,
+  
+  .led_ontime    = 30000, //us 31456max
+  .led_offtime   = 1000,
+  .led_flashes   = 3,   // 1 LED flash per exposure
+
+  .led1_enabled    = TRUE,
+  .led2_enabled    = TRUE,
+  .led3_enabled    = TRUE,
+  .shutter_enabled = FALSE,
+
+  .dark_frame_enabled = FALSE,
+  .full_frame_enabled = FALSE, //clobbers exposure_region
+        
+  .num_subarrays  = 1,
+
+  .sa_list[0].name = One,                       
+  .sa_list[0].subarray_region.xo = 1000,
+  .sa_list[0].subarray_region.yo = 1000,
+  .sa_list[0].subarray_region.dx = 64,
+  .sa_list[0].subarray_region.dy = 64,						
+  .sa_list[0].read_enabled = FALSE,
+  .sa_list[0].read_interval = 0,
+  .sa_list[0].subinject_enabled = FALSE,
+  .sa_list[0].subinject_interval = 0,
+  .sa_list[0].postread_enabled  = TRUE,  // 1 non-destructive read per exposure
+  .sa_list[0].postread_ndros = 1,
+        
+  .sa_list[0].threshold_enabled = FALSE,
+  .sa_list[0].threshold_percent = 75,
+  .sa_list[0].threshold_region.xo = 0,
+  .sa_list[0].threshold_region.yo = 0,
+  .sa_list[0].threshold_region.dx = 0,
+  .sa_list[0].threshold_region.dy = 0
+)
+        
+
+GI( 10 )		// ms global inject
+DELAY( 1000 )	// camera delay 1 seconds
+
+LOOP index FOR 100  //
+   EXPOSE( exp )   // LED flash per exposure
+   DELAY( 1 )	   // ms
+NEXT index         // increment index, loop back to 'LOOP index'
+
+START                   // CAMERA start sequence

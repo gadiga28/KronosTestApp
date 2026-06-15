@@ -1,0 +1,6 @@
+C:\Users\babagoud.gadiga\_binaries\Kronos.Instrument.Camera.Contracts.XML
+C:\Users\babagoud.gadiga\_binaries\Kronos.Instrument.Camera.Contracts.dll
+C:\Users\babagoud.gadiga\_binaries\Kronos.Instrument.Camera.Contracts.pdb
+C:\Users\babagoud.gadiga\Source\Repos\CID821API_Latest_Aug302023\CID821API\Kronos.Instrument.Camera.Contracts\obj\Release\Kronos.Instrument.Camera.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\babagoud.gadiga\Source\Repos\CID821API_Latest_Aug302023\CID821API\Kronos.Instrument.Camera.Contracts\obj\Release\Kronos.Instrument.Camera.Contracts.dll
+C:\Users\babagoud.gadiga\Source\Repos\CID821API_Latest_Aug302023\CID821API\Kronos.Instrument.Camera.Contracts\obj\Release\Kronos.Instrument.Camera.Contracts.pdb

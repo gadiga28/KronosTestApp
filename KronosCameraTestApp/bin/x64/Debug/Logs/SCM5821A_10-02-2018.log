@@ -1,0 +1,129 @@
+2018-10-02 09:18:54,493 [10] ERROR KronosCameraTestApp.Helpers.ExcelUtilities System.Runtime.InteropServices.COMException (0x80010108): The object invoked has disconnected from its clients. (Exception from HRESULT: 0x80010108 (RPC_E_DISCONNECTED))
+   at Microsoft.Office.Interop.Excel._Workbook.get_Worksheets()
+   at KronosCameraTestApp.Helpers.ExcelUtilities.<>c__DisplayClass2.<WriteTestResultsToExcel>b__0() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Helpers\ExcelUtilities.cs:line 123
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Helpers.ExcelUtilities.<WriteTestResultsToExcel>d__4.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Helpers\ExcelUtilities.cs:line 115
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-10-02 09:35:36,574 [9] ERROR KronosCameraTestApp.View.TestResultsForm System.ArgumentException: Parameter is not valid.
+   at System.Drawing.Bitmap..ctor(String filename)
+   at KronosCameraTestApp.View.TestResultsForm.InitializeGridLayout() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 229
+ AMER\babagoud.gadiga - Exception inVoid InitializeGridLayout()
+2018-10-02 09:36:01,672 [9] ERROR KronosCameraTestApp.View.TestResultsForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.TestResultsForm.UpdateMeanVarianceResultsGrid() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 736
+ AMER\babagoud.gadiga - Exception inVoid UpdateMeanVarianceResultsGrid()
+2018-10-02 09:36:56,262 [9] ERROR KronosCameraTestApp.View.TestResultsForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.TestResultsForm.UpdateMeanVarianceResultsGrid() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 736
+ AMER\babagoud.gadiga - Exception inVoid UpdateMeanVarianceResultsGrid()
+2018-10-02 09:37:12,732 [9] ERROR KronosCameraTestApp.View.TestResultsForm System.ArgumentException: Parameter is not valid.
+   at System.Drawing.Bitmap..ctor(String filename)
+   at KronosCameraTestApp.View.TestResultsForm.InitializeGridLayout() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 229
+ AMER\babagoud.gadiga - Exception inVoid InitializeGridLayout()
+2018-10-02 10:43:44,480 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.ultraToolbarsManager1_ToolClick(Object sender, ToolClickEventArgs e) in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 2745
+ AMER\babagoud.gadiga - Exception inVoid ultraToolbarsManager1_ToolClick(System.Object, Infragistics.Win.UltraWinToolbars.ToolClickEventArgs)
+2018-10-02 13:02:37,138 [15] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: Value must be between the minimum and maximum.
+   at Infragistics.Win.UltraWinStatusBar.ProgressBarInfo.set_Value(Int32 value)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBarForPreTest() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 758
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBarForPreTest()
+2018-10-02 13:02:46,470 [15] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: Value must be between the minimum and maximum.
+   at Infragistics.Win.UltraWinStatusBar.ProgressBarInfo.set_Value(Int32 value)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBarForPreTest() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 758
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBarForPreTest()
+2018-10-02 13:02:48,996 [15] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: Value must be between the minimum and maximum.
+   at Infragistics.Win.UltraWinStatusBar.ProgressBarInfo.set_Value(Int32 value)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBarForPreTest() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 758
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBarForPreTest()
+2018-10-02 13:02:49,761 [15] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: Value must be between the minimum and maximum.
+   at Infragistics.Win.UltraWinStatusBar.ProgressBarInfo.set_Value(Int32 value)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBarForPreTest() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 758
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBarForPreTest()
+2018-10-02 13:02:50,420 [15] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: Value must be between the minimum and maximum.
+   at Infragistics.Win.UltraWinStatusBar.ProgressBarInfo.set_Value(Int32 value)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBarForPreTest() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 758
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBarForPreTest()
+2018-10-02 13:02:50,973 [15] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: Value must be between the minimum and maximum.
+   at Infragistics.Win.UltraWinStatusBar.ProgressBarInfo.set_Value(Int32 value)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBarForPreTest() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 758
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBarForPreTest()
+2018-10-02 13:02:51,516 [15] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: Value must be between the minimum and maximum.
+   at Infragistics.Win.UltraWinStatusBar.ProgressBarInfo.set_Value(Int32 value)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBarForPreTest() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 758
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBarForPreTest()
+2018-10-02 13:02:51,715 [15] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: Value must be between the minimum and maximum.
+   at Infragistics.Win.UltraWinStatusBar.ProgressBarInfo.set_Value(Int32 value)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBarForPreTest() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 758
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBarForPreTest()
+2018-10-02 13:02:51,928 [15] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: Value must be between the minimum and maximum.
+   at Infragistics.Win.UltraWinStatusBar.ProgressBarInfo.set_Value(Int32 value)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBarForPreTest() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 758
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBarForPreTest()
+2018-10-02 13:02:52,135 [15] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: Value must be between the minimum and maximum.
+   at Infragistics.Win.UltraWinStatusBar.ProgressBarInfo.set_Value(Int32 value)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBarForPreTest() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 758
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBarForPreTest()
+2018-10-02 13:02:52,347 [15] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: Value must be between the minimum and maximum.
+   at Infragistics.Win.UltraWinStatusBar.ProgressBarInfo.set_Value(Int32 value)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBarForPreTest() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 758
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBarForPreTest()
+2018-10-02 13:02:54,328 [15] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: Value must be between the minimum and maximum.
+   at Infragistics.Win.UltraWinStatusBar.ProgressBarInfo.set_Value(Int32 value)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBarForPreTest() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 758
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBarForPreTest()
+2018-10-02 15:53:22,338 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at Infragistics.Win.UltraWinToolbars.ToolsCollectionBase.get_Item(Int32 index)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.<AutoConnectCamera>d__20.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 973
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-10-02 15:55:47,471 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at Infragistics.Win.UltraWinToolbars.ToolsCollectionBase.get_Item(Int32 index)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.<AutoConnectCamera>d__20.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 973
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-10-02 15:56:32,206 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at Infragistics.Win.UltraWinToolbars.ToolsCollectionBase.get_Item(Int32 index)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.<AutoConnectCamera>d__20.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 973
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-10-02 15:57:38,323 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at Infragistics.Win.UltraWinToolbars.ToolsCollectionBase.get_Item(Int32 index)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.<AutoConnectCamera>d__20.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 973
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-10-02 16:24:36,753 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.Resources.MissingManifestResourceException: Could not find any resources appropriate for the specified culture or the neutral culture.  Make sure "SCM5821AX1.Properties.Resources.resources" was correctly embedded or linked into assembly "SCM5821AX1" at compile time, or that all the satellite assemblies required are loadable and fully signed.
+   at System.Resources.ManifestBasedResourceGroveler.HandleResourceStreamMissing(String fileName)
+   at System.Resources.ManifestBasedResourceGroveler.GrovelForResourceSet(CultureInfo culture, Dictionary`2 localResourceSets, Boolean tryParents, Boolean createIfNotExists, StackCrawlMark& stackMark)
+   at System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo requestedCulture, Boolean createIfNotExists, Boolean tryParents, StackCrawlMark& stackMark)
+   at System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo culture, Boolean createIfNotExists, Boolean tryParents)
+   at System.Resources.ResourceManager.GetObject(String name, CultureInfo culture, Boolean wrapUnmanagedMemStream)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.GetImageByName(String imageName) in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 1010
+   at KronosCameraTestApp.View.KronosTestAppMainForm.<AutoConnectCamera>d__20.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 951
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-10-02 16:26:21,577 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.Resources.MissingManifestResourceException: Could not find any resources appropriate for the specified culture or the neutral culture.  Make sure "SCM5821AX1.Properties.Resources.resources" was correctly embedded or linked into assembly "SCM5821AX1" at compile time, or that all the satellite assemblies required are loadable and fully signed.
+   at System.Resources.ManifestBasedResourceGroveler.HandleResourceStreamMissing(String fileName)
+   at System.Resources.ManifestBasedResourceGroveler.GrovelForResourceSet(CultureInfo culture, Dictionary`2 localResourceSets, Boolean tryParents, Boolean createIfNotExists, StackCrawlMark& stackMark)
+   at System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo requestedCulture, Boolean createIfNotExists, Boolean tryParents, StackCrawlMark& stackMark)
+   at System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo culture, Boolean createIfNotExists, Boolean tryParents)
+   at System.Resources.ResourceManager.GetObject(String name, CultureInfo culture, Boolean wrapUnmanagedMemStream)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.GetImageByName(String imageName) in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 1011
+   at KronosCameraTestApp.View.KronosTestAppMainForm.<AutoConnectCamera>d__20.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 952
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()

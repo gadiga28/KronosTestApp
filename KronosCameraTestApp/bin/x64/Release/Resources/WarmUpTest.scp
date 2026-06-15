@@ -1,0 +1,34 @@
+
+ASSIGN Exposure exp = (
+  .exposure_interval = 1000,
+  .exposure_ndros    = 1,
+  .exposure_region.xo   = 0,
+  .exposure_region.yo   = 0,
+  .exposure_region.dx   = 2048,
+  .exposure_region.dy   = 2048,
+  .exposure_fpn           = 0,
+  
+  .led_ontime    = 1000, // 0-1310 us
+  .led_offtime   = 1000, // 0-1310 us
+  .led_flashes   = 1,
+  
+  .led1_enabled    = TRUE,
+  .led2_enabled    = FALSE,
+  .led3_enabled    = TRUE,
+  .shutter_enabled = FALSE,
+  
+  .full_frame_enabled = TRUE, // true to send to host
+  .dark_frame_enabled = FALSE,
+        
+  .num_subarrays  = 0,
+)
+ 
+GI( 10 )		   // global inject for 10ms
+ 
+LOOP index FOR 2  //
+   GI( 10 )	   // global inject for 10ms
+   DELAY( 10 )   // camera delay 10ms
+   EXPOSE( exp )   // recieve video packet from camera 
+NEXT index         // increment index, loop back to 'LOOP index'
+
+START              // CAMERA start sequence

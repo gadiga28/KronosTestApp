@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DarkCurrentTestLimitsData>
+  <Limit>
+    <LimitsID>1</LimitsID>
+    <DarkCurrentRateMax>2.500000000000000e+002</DarkCurrentRateMax>
+    <DefinedDate>2018-01-26T16:18:55.953</DefinedDate>
+    <UserModified>Baba</UserModified>
+  </Limit>
+</DarkCurrentTestLimitsData>

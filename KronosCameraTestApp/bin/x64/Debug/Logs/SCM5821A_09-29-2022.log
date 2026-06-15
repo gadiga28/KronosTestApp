@@ -1,0 +1,55 @@
+2022-09-29 08:56:59,194 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Category does not exist.
+   at System.Diagnostics.PerformanceCounterLib.CounterExists(String machine, String category, String counter)
+   at System.Diagnostics.PerformanceCounter.InitializeImpl()
+   at System.Diagnostics.PerformanceCounter..ctor(String categoryName, String counterName, String instanceName, Boolean readOnly)
+   at System.Diagnostics.PerformanceCounter..ctor(String categoryName, String counterName)
+   at KronosCameraTestApp.View.KronosTestAppMainForm..ctor() in C:\Users\babagoud.gadiga\source\repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 238
+ AMER\babagoud.gadiga - Exception inVoid .ctor()
+2022-09-29 08:57:13,851 [1] ERROR KronosCameraTestApp.Helpers.TestAppHelper System.Data.SqlClient.SqlException (0x80131904): Cannot open database "KronosCamTestDB" requested by the login. The login failed.
+Login failed for user 'KronosTestUser'.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at KronosCameraTestApp.Helpers.TestAppHelper.CheckDBExists() in C:\Users\babagoud.gadiga\source\repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Helpers\TestAppHelper.cs:line 401
+ClientConnectionId:2ada9f8d-56ee-4a22-a764-d75a8c39009c
+Error Number:4060,State:1,Class:11
+ AMER\babagoud.gadiga - Exception inBoolean CheckDBExists()
+2022-09-29 08:57:17,964 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentException: The path is not of a legal form.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.<LoadInfraStyles>b__408_0() in C:\Users\babagoud.gadiga\source\repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 1336
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.View.KronosTestAppMainForm.<LoadInfraStyles>d__408.MoveNext() in C:\Users\babagoud.gadiga\source\repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 1334
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2022-09-29 08:57:20,143 [1] ERROR KronosCameraTestApp.Helpers.TestAppHelper System.Data.SqlClient.SqlException (0x80131904): Cannot open database "KronosCamTestDB" requested by the login. The login failed.
+Login failed for user 'KronosTestUser'.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at KronosCameraTestApp.Helpers.TestAppHelper.CheckDBExists() in C:\Users\babagoud.gadiga\source\repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Helpers\TestAppHelper.cs:line 401
+ClientConnectionId:2ada9f8d-56ee-4a22-a764-d75a8c39009c
+Error Number:4060,State:1,Class:11
+ AMER\babagoud.gadiga - Exception inBoolean CheckDBExists()
+2022-09-29 08:57:22,059 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.<runAutoLEDCalibrationTest>d__389.MoveNext() in C:\Users\babagoud.gadiga\source\repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 387
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2022-09-29 08:57:24,073 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Camera is disconnected because of no heart beat
+2022-09-29 08:57:33,599 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.ultraRadioButtonManufacutring_Click(Object sender, EventArgs e) in C:\Users\babagoud.gadiga\source\repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 3951
+ AMER\babagoud.gadiga - Exception inVoid ultraRadioButtonManufacutring_Click(System.Object, System.EventArgs)
+2022-09-29 08:57:39,018 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2022-09-29 08:59:14,321 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.ultraRadioButtonManufacutring_Click(Object sender, EventArgs e) in C:\Users\babagoud.gadiga\source\repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 3951
+ AMER\babagoud.gadiga - Exception inVoid ultraRadioButtonManufacutring_Click(System.Object, System.EventArgs)

@@ -1,0 +1,14 @@
+2018-10-30 15:51:01,490 [1] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 649
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<CalculateNoiseNDRO>d__142.MoveNext() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 546
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-10-30 15:51:01,712 [1] ERROR KronosCameraTestApp.View.NoiseVsNDROTestForm System.ArgumentNullException: Value cannot be null.
+Parameter name: yData
+   at NationalInstruments.UI.ScatterPlot.PlotXYAppend(Double[] xData, Double[] yData)
+   at KronosCameraTestApp.View.NoiseVsNDROTestForm.<PlotNoiseNDROData>d__33.MoveNext() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\NoiseVsNDROTestForm.cs:line 347
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()

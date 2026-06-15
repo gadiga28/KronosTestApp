@@ -1,0 +1,80 @@
+2018-11-06 10:24:17,062 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 10:25:19,730 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 10:25:24,870 [1] ERROR KronosCameraTestApp.View.TestResultsForm System.ArgumentException: Parameter is not valid.
+   at System.Drawing.Bitmap..ctor(String filename)
+   at KronosCameraTestApp.View.TestResultsForm.InitializeGridLayout() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 229
+ AMER\babagoud.gadiga - Exception inVoid InitializeGridLayout()
+2018-11-06 10:46:03,554 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 10:51:29,268 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 10:55:14,833 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 10:57:57,196 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 11:07:49,725 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 11:21:43,876 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 11:34:27,392 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 11:41:16,339 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 11:48:32,092 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 12:01:19,925 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 12:03:09,636 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 12:04:21,137 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 12:05:46,755 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 12:13:50,316 [1] ERROR KronosCameraTestApp.View.TestResultsForm System.ArgumentException: Parameter is not valid.
+   at System.Drawing.Bitmap..ctor(String filename)
+   at KronosCameraTestApp.View.TestResultsForm.InitializeGridLayout() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 229
+ AMER\babagoud.gadiga - Exception inVoid InitializeGridLayout()
+2018-11-06 12:16:32,607 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Collection was modified; enumeration operation may not execute.
+   at System.Collections.ArrayList.ArrayListEnumeratorSimple.MoveNext()
+   at System.Windows.Forms.Application.ExitInternal()
+   at System.Windows.Forms.Application.Exit(CancelEventArgs e)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.ExitApplication() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 4059
+ AMER\babagoud.gadiga - Exception inVoid ExitApplication()
+2018-11-06 12:20:10,083 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 12:36:33,018 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 12:37:35,780 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 12:45:31,568 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 12:46:28,869 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 13:03:27,236 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 13:21:18,944 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 13:24:07,501 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 13:27:43,093 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 13:28:47,982 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 13:33:39,048 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 13:45:31,203 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 14:16:19,714 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 14:24:46,617 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host.
+2018-11-06 14:25:08,944 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 14:26:13,648 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 15:02:57,927 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-06 15:07:58,630 [1] ERROR KronosCameraTestApp.Presenter.RedBluePresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.RedBluePresenter.<calculateRedBlueDiff>b__113_0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\RedBluePresenter.cs:line 552
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Presenter.RedBluePresenter.<calculateRedBlueDiff>d__113.MoveNext() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\RedBluePresenter.cs:line 542
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-11-06 15:07:58,900 [1] ERROR KronosCameraTestApp.View.RedBlueTestForm System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.View.RedBlueTestForm.setRedGraphContrast(Double[,] plotData) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\RedBlueTestForm.cs:line 378
+   at KronosCameraTestApp.View.RedBlueTestForm.PlotRedImageData() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\RedBlueTestForm.cs:line 313
+ AMER\babagoud.gadiga - Exception inVoid PlotRedImageData()
+2018-11-06 15:07:59,048 [1] ERROR KronosCameraTestApp.View.RedBlueTestForm System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.View.RedBlueTestForm.setBlueGraphContrast(Double[,] plotData) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\RedBlueTestForm.cs:line 411
+   at KronosCameraTestApp.View.RedBlueTestForm.PlotBlueImageData() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\RedBlueTestForm.cs:line 335
+ AMER\babagoud.gadiga - Exception inVoid PlotBlueImageData()
+2018-11-06 15:12:19,569 [1] ERROR KronosCameraTestApp.Presenter.RedBluePresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.RedBluePresenter.<calculateRedBlueDiff>b__113_0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\RedBluePresenter.cs:line 552
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Presenter.RedBluePresenter.<calculateRedBlueDiff>d__113.MoveNext() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\RedBluePresenter.cs:line 542
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-11-06 15:12:33,662 [1] ERROR KronosCameraTestApp.View.RedBlueTestForm System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.View.RedBlueTestForm.setRedGraphContrast(Double[,] plotData) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\RedBlueTestForm.cs:line 378
+   at KronosCameraTestApp.View.RedBlueTestForm.PlotRedImageData() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\RedBlueTestForm.cs:line 313
+ AMER\babagoud.gadiga - Exception inVoid PlotRedImageData()
+2018-11-06 15:13:04,135 [1] ERROR KronosCameraTestApp.View.RedBlueTestForm System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.View.RedBlueTestForm.setBlueGraphContrast(Double[,] plotData) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\RedBlueTestForm.cs:line 411
+   at KronosCameraTestApp.View.RedBlueTestForm.PlotBlueImageData() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\RedBlueTestForm.cs:line 335
+ AMER\babagoud.gadiga - Exception inVoid PlotBlueImageData()

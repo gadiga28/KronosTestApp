@@ -1,0 +1,107 @@
+﻿using Infragistics.Win.UltraWinListView;
+using KronosCameraTestApp.View.UserControls;
+using System;
+using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace KronosCameraTestApp.View
+{
+    public partial class TestGraphPreferences : Form
+    {
+        static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);       
+
+        int lineWidthOfSelectedGraph = 0;
+
+        public int LineWidthOfSelectedGraph
+        {
+            get
+            {
+                return lineWidthOfSelectedGraph;
+            }
+            set
+            {
+                lineWidthOfSelectedGraph = value;
+            }
+        }
+       
+        private bool plotBackColorWhite = false;
+        public bool PlotBackColorWhite
+        {
+            get
+            {
+                return plotBackColorWhite;
+            }
+            set
+            {
+                plotBackColorWhite = value;
+            }
+        }      
+       
+        public TestGraphPreferences()
+        {
+            InitializeComponent();
+        }     
+
+        private void TestGraphPreferences_Load(object sender, EventArgs e)
+        {
+            try
+            {
+               
+                numericEditPlotLineWidth.Value = Properties.Settings.Default.lineWidthOfPlot;
+                ultraCheckEditorMonochromeGraph.Checked= Properties.Settings.Default.plotBackgroundColor ? true: false;               
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+           
+        }
+
+        private void buttonSavePreferences_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               
+                lineWidthOfSelectedGraph = Convert.ToInt32(numericEditPlotLineWidth.Value);
+                Properties.Settings.Default.lineWidthOfPlot = lineWidthOfSelectedGraph;
+                Properties.Settings.Default.plotBackgroundColor = plotBackColorWhite = ultraCheckEditorMonochromeGraph.Checked ? true : false; 
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                plotBackColorWhite = false;
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }      
+        private void TestGraphPreferences_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                Properties.Settings.Default.lineWidthOfPlot = lineWidthOfSelectedGraph;
+                Properties.Settings.Default.plotBackgroundColor = ultraCheckEditorMonochromeGraph.Checked ? true : false;
+
+                //this.Hide();
+                //e.Cancel = true;
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+
+        private void buttonCancelPreferences_Click(object sender, EventArgs e)
+        {
+            //plotBackColorWhite = false;
+            this.Close();
+        }
+    }
+}

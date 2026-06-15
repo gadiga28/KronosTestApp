@@ -1,0 +1,27 @@
+2018-04-25 08:14:33,118 [10] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<>c__DisplayClass2d.<CalculateDarkCurrent>b__2b() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 581
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<CalculateDarkCurrent>d__2f.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 549
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-04-25 08:16:45,340 [9] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<>c__DisplayClass2d.<CalculateDarkCurrent>b__2b() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 581
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<CalculateDarkCurrent>d__2f.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 549
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-04-25 08:25:11,403 [8] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<>c__DisplayClass2d.<CalculateDarkCurrent>b__2b() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 581
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<CalculateDarkCurrent>d__2f.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 549
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()

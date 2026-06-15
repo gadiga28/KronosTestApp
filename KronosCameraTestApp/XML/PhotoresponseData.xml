@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PhotoresponseExposures>
+<Exposure>
+  <ExposureID>1</ExposureID>
+  <TestDataID>PRT</TestDataID>
+  <ExposureName>exp</ExposureName>
+  <DateDefined>2018-01-16T14:39:37.410</DateDefined>
+  <UserModified>Baba</UserModified>
+  <ExposureRegionXo>1000</ExposureRegionXo>
+  <ExposureRegionYo>1000</ExposureRegionYo>
+  <ExposureRegiondX>10</ExposureRegiondX>
+  <ExposureRegiondY>10</ExposureRegiondY>
+  <ExposureInterval>200</ExposureInterval>
+  <ExposureNDROS>1</ExposureNDROS>
+  <ExposureFPN>1</ExposureFPN>
+  <FullFrameEnabled>0</FullFrameEnabled>
+  <DarkFrameEnabled>0</DarkFrameEnabled>
+  <UserDefaultConfiguration>0</UserDefaultConfiguration>
+  <LED1Enabled>1</LED1Enabled>
+  <LED2Enabled>1</LED2Enabled>
+  <LED3Enabled>1</LED3Enabled>
+  <LEDOnTime>10000</LEDOnTime>
+  <LEDOffTime>100</LEDOffTime>
+  <LEDFlashes>2</LEDFlashes>
+  <ShutterEnabled>0</ShutterEnabled>
+  <AutoBiasFPNEnabled>0</AutoBiasFPNEnabled>
+  <NumberOfSubarrays>1</NumberOfSubarrays>
+  <GlobalInject>5</GlobalInject>
+  <GlobalInjectDelay>1</GlobalInjectDelay>
+  <SubarrayList ID="1">
+    <Subarray>
+      <SubarrayID>1</SubarrayID>
+      <ExposureID>1</ExposureID>
+      <SubarrayName>Subarray1</SubarrayName>
+      <DateDefined>2018-01-16T14:55:13.770</DateDefined>
+      <UserModified>Baba</UserModified>
+      <SubarrayRegionXo>1000</SubarrayRegionXo>
+      <SubarrayRegionYo>1000</SubarrayRegionYo>
+      <SubarrayRegiondX>10</SubarrayRegiondX>
+      <SubarrayRegiondY>10</SubarrayRegiondY>
+      <SubarrayReadEnabled>1</SubarrayReadEnabled>
+      <SubarrayReadInterval>100</SubarrayReadInterval>
+      <SubarraySubinjectEnabled>0</SubarraySubinjectEnabled>
+      <SubarraySubinjectInterval>0</SubarraySubinjectInterval>
+      <SubarrayPostReadEnabled>0</SubarrayPostReadEnabled>
+      <SubarrayPostReadNDROS>1</SubarrayPostReadNDROS>
+      <SubarrayFPN>1</SubarrayFPN>
+      <SubarrayThresholdEnabled>0</SubarrayThresholdEnabled>
+      <SubarrayThresholdPercent>75</SubarrayThresholdPercent>
+      <SubarrayThresholdRegionXo>0</SubarrayThresholdRegionXo>
+      <SubarrayThresholdRegionYo>0</SubarrayThresholdRegionYo>
+      <SubarrayThresholdRegiondX>0</SubarrayThresholdRegiondX>
+      <SubarrayThresholdRegiondY>0</SubarrayThresholdRegiondY>
+      <TimeResolvedEnabled>0</TimeResolvedEnabled>
+      <TimeResolvedInterval>0</TimeResolvedInterval>
+      <AdaptiveEnabled>0</AdaptiveEnabled>
+    </Subarray>
+  </SubarrayList>
+</Exposure>
+</PhotoresponseExposures>

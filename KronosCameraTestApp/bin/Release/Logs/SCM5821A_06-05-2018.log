@@ -1,0 +1,28 @@
+2018-06-05 10:24:05,770 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.<RunAutoTests>d__4c.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 2274
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.View.KronosTestAppMainForm.<buttonRunAuto_Click>d__54.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 3812
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-06-05 10:31:44,590 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.<RunAutoTests>d__4c.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 2274
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.View.KronosTestAppMainForm.<buttonRunAuto_Click>d__54.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 3812
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-06-05 11:05:10,824 [8] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<>c__DisplayClass2d.<CalculateDarkCurrent>b__2b() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 611
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<CalculateDarkCurrent>d__2f.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 581
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()

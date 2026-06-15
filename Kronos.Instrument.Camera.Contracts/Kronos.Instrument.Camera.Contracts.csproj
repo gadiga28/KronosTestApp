@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00B110DB-0535-4F8C-810A-A31DD8AC3756}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Thermo.Kronos.Instrument.Camera.Contracts</RootNamespace>
+    <AssemblyName>Kronos.Instrument.Camera.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\..\imhotep.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <OutputPath>..\..\..\..\..\_binaries</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <DocumentationFile>
+    </DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.3</LangVersion>
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>false</DebugSymbols>
+    <DocumentationFile>..\..\..\..\..\_binaries\Kronos.Instrument.Camera.Contracts.XML</DocumentationFile>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CameraException.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Data\CameraConfigData.cs" />
+    <Compile Include="Data\CameraExposureSettings.cs" />
+    <Compile Include="Data\CameraInformation.cs" />
+    <Compile Include="Data\CameraNotificationTypes.cs" />
+    <Compile Include="Data\CameraSerialNumbers.cs" />
+    <Compile Include="Data\CameraStatus.cs" />
+    <Compile Include="Data\CameraSubarraySettings.cs" />
+    <Compile Include="Data\Heartbeat.cs" />
+    <Compile Include="Data\LogEntry.cs" />
+    <Compile Include="Data\CameraRegion.cs" />
+    <Compile Include="Data\CameraExposureResult.cs" />
+    <Compile Include="Data\State.cs" />
+    <Compile Include="Data\Subarray.cs" />
+    <Compile Include="Data\Voltages.cs" />
+    <Compile Include="Enums\CameraConnectionStatus.cs" />
+    <Compile Include="Enums\ImageType.cs" />
+    <Compile Include="Enums\LogLevel.cs" />
+    <Compile Include="Enums\Saturation.cs" />
+    <Compile Include="Enums\StateLevel.cs" />
+    <Compile Include="ICIDInterface.cs" />
+    <Compile Include="ICommandProcessorParserService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

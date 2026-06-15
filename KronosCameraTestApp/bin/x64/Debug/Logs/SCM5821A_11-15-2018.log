@@ -1,0 +1,19 @@
+2018-11-15 09:55:32,572 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-15 10:14:48,815 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-15 13:46:38,218 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-15 13:51:44,305 [1] ERROR KronosCameraTestApp.View.PhotoresponseTestForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-15 13:51:44,748 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-15 13:53:37,156 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-15 14:01:26,337 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-15 14:09:11,106 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-15 14:15:43,370 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-15 14:24:26,194 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-15 14:26:14,296 [1] ERROR KronosCameraTestApp.View.PhotoresponseTestForm System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: value
+   at NationalInstruments.Restricted.NumericControl.b(Double A_0, Action A_1, Boolean A_2)
+   at NationalInstruments.UI.WindowsForms.NumericEdit.a(Double A_0, Action A_1)
+   at NationalInstruments.UI.WindowsForms.NumericEdit.a(String A_0, Boolean A_1, Action A_2)
+   at NationalInstruments.UI.WindowsForms.NumericEdit.get_Value()
+   at KronosCameraTestApp.View.PhotoresponseTestForm.UpdateExposureDataModelFromView() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\PhotoresponseTestForm.cs:line 425
+ AMER\babagoud.gadiga - Exception inVoid UpdateExposureDataModelFromView()
+2018-11-15 15:01:02,392 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host

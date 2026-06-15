@@ -1,0 +1,937 @@
+
+ASSIGN Exposure Exp1a = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      = 10,
+    .shutter_enabled     = False,
+    .autobias_fpn_enabled     = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray1,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+    
+ )
+ 
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp1a )
+
+
+ASSIGN Exposure Exp1b = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      = 10,
+    .shutter_enabled     = False,
+    .autobias_fpn_enabled     = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray2,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+    
+ )
+ 
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp1b )
+
+
+ASSIGN Exposure Exp2a = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      = 30,
+    .shutter_enabled     = False,
+    .autobias_fpn_enabled     = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray1,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+ )
+  
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp2a )
+
+ASSIGN Exposure Exp2b = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      = 30,
+    .shutter_enabled     = False,
+    .autobias_fpn_enabled     = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray2,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+ )
+  
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp2b )
+
+
+
+ASSIGN Exposure Exp3a = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      = 50,
+    .shutter_enabled     = False,
+    .autobias_fpn_enabled     = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray1,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+ )
+  
+
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp3a )
+
+ASSIGN Exposure Exp3b = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      = 50,
+    .shutter_enabled     = False,
+    .autobias_fpn_enabled     = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray2,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+ )
+  
+
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp3b )
+
+
+ASSIGN Exposure Exp4a = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      = 70,
+    .shutter_enabled     = False,
+    .autobias_fpn_enabled     = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray1,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+ )
+  
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp4a )
+
+ASSIGN Exposure Exp4b = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      = 70,
+    .shutter_enabled     = False,
+    .autobias_fpn_enabled     = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray2,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+ )
+  
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp4b )
+
+ASSIGN Exposure Exp5a = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      =  90,
+    .shutter_enabled       = False,
+    .autobias_fpn_enabled  = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray1,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+ )
+  
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp5a )
+
+ASSIGN Exposure Exp5b = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      =  90,
+    .shutter_enabled       = False,
+    .autobias_fpn_enabled  = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray2,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+ )
+  
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp5b )
+
+
+ASSIGN Exposure Exp6a = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      =  110,
+    .shutter_enabled         = False,
+    .autobias_fpn_enabled    = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray1,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+ )
+  
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp6a )
+
+ASSIGN Exposure Exp6b = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      =  110,
+    .shutter_enabled         = False,
+    .autobias_fpn_enabled    = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray2,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+ )
+  
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp6b )
+
+ASSIGN Exposure Exp7a = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      =  130,
+    .shutter_enabled  = False,
+    .autobias_fpn_enabled  = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray1,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+   
+ )
+  
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp7a )
+
+ASSIGN Exposure Exp7b = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      =  130,
+    .shutter_enabled  = False,
+    .autobias_fpn_enabled  = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray2,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+   
+ )
+  
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp7b )
+
+
+ASSIGN Exposure Exp8a = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      =  150,
+    .shutter_enabled     = False,
+    .autobias_fpn_enabled     = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray1,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+ )
+  
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp8a )
+
+ASSIGN Exposure Exp8b = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      =  150,
+    .shutter_enabled     = False,
+    .autobias_fpn_enabled     = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray2,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+ )
+  
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp8b )
+
+
+ASSIGN Exposure Exp9a = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 10000,
+    .led_flashes      =  170,
+    .shutter_enabled     = False,
+    .autobias_fpn_enabled     = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray1,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+ )
+  
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp9a )
+
+ASSIGN Exposure Exp9b = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 10000,
+    .led_flashes      =  170,
+    .shutter_enabled     = False,
+    .autobias_fpn_enabled     = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray2,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+ )
+  
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp9b )
+
+
+ASSIGN Exposure Exp10a = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      = 190,
+    .shutter_enabled     = False,
+    .autobias_fpn_enabled     = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray1,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+ )
+  
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp10a )
+
+ASSIGN Exposure Exp10b = ( 
+    .exposure_interval     = 100,
+    .exposure_ndros     = 1,
+    .exposure_region.xo     = 0,
+    .exposure_region.yo     = 0,
+    .exposure_region.dx     = 2048,
+    .exposure_region.dy     = 2048,
+    .exposure_fpn     = 0,
+    .full_frame_enabled     = False,
+    .dark_frame_enabled     = False,
+    .use_default_configuration     = False,
+    .led1_enabled     = TRUE,
+    .led2_enabled     = False,
+    .led3_enabled     = TRUE,
+    .led_ontime       = 30000, // 31000us max
+    .led_offtime      = 1000,
+    .led_flashes      = 190,
+    .shutter_enabled     = False,
+    .autobias_fpn_enabled     = False,
+    .num_subarrays  = 1,
+    .sa_list[0].name   = Subarray2,
+    .sa_list[0].subarray_region.xo   = 1000,
+    .sa_list[0].subarray_region.yo   = 1000,
+    .sa_list[0].subarray_region.dx   = 100,
+    .sa_list[0].subarray_region.dy   = 100,
+    .sa_list[0].subarray_fpn = 0,
+    .sa_list[0].read_enabled   = False,
+    .sa_list[0].read_interval   = 0,
+    .sa_list[0].subinject_enabled   = False,
+    .sa_list[0].subinject_interval   = 0,
+    .sa_list[0].postread_enabled   = True,
+    .sa_list[0].postread_ndros   = 16,
+    .sa_list[0].threshold_enabled   = False,
+    .sa_list[0].threshold_percent   = 75,
+    .sa_list[0].threshold_region.xo   = 0,
+    .sa_list[0].threshold_region.yo   = 0,
+    .sa_list[0].threshold_region.dx   = 0,
+    .sa_list[0].threshold_region.dy   = 0,
+    .sa_list[0].time_resolved_enabled   = False,
+    .sa_list[0].adaptive_enabled   = False
+ )
+  
+GI( 5 )
+DELAY( 1 )
+EXPOSE( Exp10b )
+
+START                   // CAMERA start sequence

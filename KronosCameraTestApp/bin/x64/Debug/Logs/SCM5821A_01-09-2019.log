@@ -1,0 +1,350 @@
+2019-01-09 10:17:20,456 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:22,261 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:24,992 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:25,053 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:25,112 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:25,182 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:25,246 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:25,310 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:25,367 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:25,427 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:25,485 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:25,546 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:25,675 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:25,736 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:25,792 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:25,852 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:25,928 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:25,988 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:26,052 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:26,110 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:26,168 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:26,238 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:26,295 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:26,358 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:26,415 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:26,474 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:26,532 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:26,591 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:26,653 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:26,711 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:26,857 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:26,925 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:26,986 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 861
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2019-01-09 10:17:33,262 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   at KronosCameraTestApp.Helpers.ExcelUtilities.<>c__DisplayClass60_0.<LogCameraTempHumidity>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Helpers\ExcelUtilities.cs:line 486
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Helpers.ExcelUtilities.<LogCameraTempHumidity>d__60.MoveNext() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Helpers\ExcelUtilities.cs:line 473
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2019-01-09 11:14:24,207 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 11:14:24,281 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 11:14:24,618 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 11:14:24,626 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 11:14:24,638 [7] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 11:14:24,663 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 11:14:24,694 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 11:14:24,828 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 11:14:24,838 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 11:14:24,838 [6] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 11:14:26,601 [7] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 11:14:26,740 [7] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 11:14:26,855 [7] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 7
+2019-01-09 11:14:26,873 [7] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 8
+2019-01-09 11:14:28,772 [6] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 11:14:28,873 [6] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 11:15:18,465 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 11:15:18,561 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 11:15:18,909 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 11:15:18,918 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 11:15:18,936 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 11:15:18,938 [6] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 11:15:18,968 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 11:15:19,218 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 11:15:19,226 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 11:15:19,227 [7] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 11:15:21,028 [6] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 11:15:21,168 [6] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 11:15:21,255 [6] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 7
+2019-01-09 11:15:21,334 [6] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 8
+2019-01-09 11:15:23,183 [7] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 11:15:23,279 [7] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 13:00:18,220 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:00:20,368 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 13:00:20,806 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 13:00:20,817 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:00:20,829 [7] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 13:00:20,831 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:00:22,074 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 13:00:22,445 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 13:00:22,452 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:00:22,452 [6] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 13:00:24,502 [7] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 13:00:24,827 [7] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 13:01:16,633 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:01:18,565 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 13:01:19,042 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 13:01:19,061 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:01:19,075 [6] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 13:01:19,076 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:01:20,220 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 13:01:20,493 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 13:01:20,499 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:01:20,499 [7] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 13:01:22,804 [6] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 13:01:23,086 [6] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 13:03:05,570 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:03:07,802 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 13:03:08,278 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 13:03:08,301 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 13:03:17,986 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 13:03:18,131 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 13:03:23,278 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 7
+2019-01-09 13:03:24,402 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 8
+2019-01-09 13:03:24,857 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 9
+2019-01-09 13:03:24,864 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:03:24,961 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:03:24,990 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 10
+2019-01-09 13:03:25,008 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:03:25,034 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:03:25,073 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:03:25,097 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:03:27,271 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 13:03:27,534 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 13:03:27,540 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 13:03:29,975 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 13:03:30,042 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 13:03:35,322 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 7
+2019-01-09 13:03:36,233 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 9
+2019-01-09 13:03:36,243 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:03:40,798 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:03:40,828 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 10
+2019-01-09 13:03:40,839 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:03:40,844 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:03:40,868 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:04:29,803 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:04:29,877 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 13:04:30,392 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 13:04:30,452 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 13:04:32,995 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 13:04:33,146 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 13:04:36,767 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 7
+2019-01-09 13:04:37,715 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 8
+2019-01-09 13:04:38,255 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 9
+2019-01-09 13:04:38,262 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:04:38,330 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:04:38,359 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 10
+2019-01-09 13:04:38,365 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:04:38,374 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:04:38,408 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:04:38,415 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:05:19,443 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:05:19,515 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 13:05:20,244 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 13:05:20,281 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 13:05:22,975 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 13:05:23,139 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 13:05:28,828 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 7
+2019-01-09 13:05:29,702 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 8
+2019-01-09 13:05:30,168 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 9
+2019-01-09 13:05:30,178 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:05:30,295 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:05:30,331 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 10
+2019-01-09 13:05:30,338 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:05:30,348 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:05:30,374 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:05:30,384 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:05:30,392 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 13:05:30,763 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 13:05:30,775 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 13:05:33,260 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 13:05:33,335 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 13:05:40,597 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 7
+2019-01-09 13:05:41,520 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 9
+2019-01-09 13:05:41,528 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:05:45,946 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:05:45,976 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 10
+2019-01-09 13:05:45,991 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:05:45,998 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:05:46,026 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:06:39,677 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:06:42,597 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 13:06:42,988 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 13:06:43,025 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 13:06:52,780 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 13:06:53,087 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 13:06:54,945 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 7
+2019-01-09 13:06:55,762 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 8
+2019-01-09 13:06:56,182 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 9
+2019-01-09 13:06:56,191 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:06:56,293 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:06:56,327 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 10
+2019-01-09 13:06:56,335 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:06:56,343 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:06:56,372 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:06:56,534 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:07:01,466 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 13:07:01,771 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 13:07:01,778 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 13:07:04,347 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 13:07:04,429 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 13:07:06,862 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 7
+2019-01-09 13:07:07,693 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 8
+2019-01-09 13:07:08,207 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 9
+2019-01-09 13:07:08,216 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:07:08,312 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:07:08,345 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 10
+2019-01-09 13:07:08,351 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:07:08,360 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:07:08,396 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:11:46,963 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:11:47,038 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 13:11:47,430 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 13:11:47,472 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 13:11:50,327 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 13:11:50,649 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 13:11:51,101 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 7
+2019-01-09 13:12:00,977 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 8
+2019-01-09 13:12:01,406 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 9
+2019-01-09 13:12:01,420 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:12:01,505 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:12:01,540 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 10
+2019-01-09 13:12:01,546 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:12:01,552 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:12:01,582 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:12:57,327 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:12:57,406 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 13:12:58,025 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 13:12:58,057 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 13:13:00,744 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 13:13:02,508 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 13:13:02,958 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 7
+2019-01-09 13:13:03,786 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 8
+2019-01-09 13:13:04,193 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 9
+2019-01-09 13:13:04,202 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:13:04,303 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:13:04,338 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 10
+2019-01-09 13:13:04,347 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:13:04,363 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:13:04,396 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:13:07,511 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:13:07,521 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 13:13:07,919 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 13:13:07,927 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 13:13:10,341 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 13:13:31,466 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 13:13:32,043 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 7
+2019-01-09 13:13:33,170 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 9
+2019-01-09 13:13:33,178 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:13:38,235 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:13:38,281 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 10
+2019-01-09 13:13:38,292 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:13:38,299 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:13:38,326 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:15:07,002 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:15:08,671 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 13:15:09,036 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 13:15:09,069 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 13:15:18,765 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 13:15:20,033 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 13:15:20,982 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 7
+2019-01-09 13:15:22,114 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 8
+2019-01-09 13:15:22,597 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 9
+2019-01-09 13:15:22,604 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:15:22,699 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:15:22,734 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 10
+2019-01-09 13:15:22,746 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:15:22,755 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:15:22,785 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:19:43,447 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:19:44,924 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 13:19:45,523 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 13:19:45,541 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:19:45,566 [7] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 13:21:02,626 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-09 13:21:03,527 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-09 13:21:03,939 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-09 13:21:03,960 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-09 13:21:13,600 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-09 13:21:13,787 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-09 13:21:14,410 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 7
+2019-01-09 13:21:14,420 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 8
+2019-01-09 13:21:14,857 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 9
+2019-01-09 13:21:14,880 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp copied
+2019-01-09 13:21:14,889 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:21:15,103 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:21:15,140 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 10
+2019-01-09 13:21:15,151 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-09 13:21:15,163 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 13
+2019-01-09 13:21:15,194 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1

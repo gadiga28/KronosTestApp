@@ -1,0 +1,980 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Kronos.Instrument.Camera.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.Constants">
+            <summary></summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Constants.SensorDimensions">
+            <summary>
+            The sensor dimensions in pixel.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Constants.ApiVersion">
+            <summary>
+            Gets the API version.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings">
+            <summary></summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.Subarrays">
+            <summary>
+            Gets or sets the subarrays.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.ExposureId">
+            <summary>
+            Gets or sets the exposure identifier, which is unique and can be used to identify the matching Image.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.ExposureInterval">
+            <summary>
+            Gets or sets the exposure interval.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.NumberOfNonDestructiveReadouts">
+            <summary>
+            Gets or sets the number of non destructive readouts.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.Region">
+            <summary>
+            Gets or sets the region.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.FixedPatternNoiseReduction">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.AutoBiasEnabled">
+            <summary>
+            Gets or sets the automatic bias enabled.
+            </summary>
+            <value>
+            The automatic bias enabled.
+            </value>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.FullframeEnabled">
+            <summary>
+            Gets or sets a value indicating whether [fullframe enabled].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.DarkframeEnabled">
+            <summary>
+            Gets or sets a value indicating whether [darkframe enabled].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.UseDefaultConfiguration">
+            <summary>
+            Gets or sets a value indicating whether [use default configuration].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.Led1Enabled">
+            <summary>
+            Gets or sets a value indicating whether [led1 enabled].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.Led2Enabled">
+            <summary>
+            Gets or sets a value indicating whether [led2 enabled].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.Led3Enabled">
+            <summary>
+            Gets or sets a value indicating whether [led3 enabled].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.LedOnTime">
+            <summary>
+            Gets or sets the led on time.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.LedOffTime">
+            <summary>
+            Gets or sets the led off time.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.LedFlashes">
+            <summary>
+            Gets or sets the led flashes.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.ShutterEnabled">
+            <summary>
+            Gets or sets a value indicating whether [shutter enabled].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.GlobalInjectTime">
+            <summary>
+            Gets or sets the global inject time.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings.DelayAfterGlobalInject">
+            <summary>
+            Gets or sets the delay after global inject.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation">
+            <summary>
+            CameraInformation
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation.CameraVersion">
+            <summary>
+            Gets or sets the camera revision.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation.CameraType">
+            <summary>
+            Gets or sets the type of the camera.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation.FirmwareRevision">
+            <summary>
+            Gets or sets the firmware version.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation.CameraApiVersion">
+            <summary>
+            Gets or sets the camera API version.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation.BoardVersion">
+            <summary>
+            Gets or sets the board version.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation.MAC_ADDRESS_LENGTH">
+            <summary>
+            Length of every serial number.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation.MACAddress">
+            <summary>
+            Gets or sets the cameras CPU iREX board serial number.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation.FPGAVersion">
+            <summary>
+            Gets or sets the camera FPGA version id.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation.BoardSupportPackageVersion">
+            <summary>
+            Gets or sets the camera Board Support Package (BSP) version id.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation.SerialNumbers">
+            <summary>
+            Gets or sets the all of the camera realted serial numbers.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSerialNumbers">
+            <summary>
+            Camera Serial Numbers
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSerialNumbers.SERIAL_NUMBER_LENGTH">
+            <summary>
+            Length of every serial number.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSerialNumbers.CPUSerialNumber">
+            <summary>
+            Gets or sets the cameras CPU iREX board serial number.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSerialNumbers.CSPSerialNumber">
+            <summary>
+            Gets or sets the camera CSP board serial number.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSerialNumbers.PWRBoardSerialNumber">
+            <summary>
+            Gets or sets the camera Power board serial number.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSerialNumbers.ImagerSerialNumber">
+            <summary>
+            Gets or sets the camera imager serial number.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSerialNumbers.CameraSerialNumber">
+            <summary>
+            Gets or sets the camera serial number.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSerialNumbers.ISISerialNumber">
+            <summary>
+            Gets or sets the camera ISI board serial number.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus">
+            <summary>
+            Status and ThermoElectricCooler states from the SCM5821AX1 camera.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus.SequenceNumber">
+            <summary>
+            Status packet sequence number since Connect
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus.ImageSensorTemperatureDiodeInC">
+            <summary>
+            The Image Sensor temperature in Celsius via on-chip diode, formerly known as DiodeTemp.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus.ImageSensorTemperatureThermistorInC">
+            <summary>
+            The Image Sensor temperature in Celsius via nearby thermistor, formerly known as TecTherm1v.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus.RelativeHumidityInProcent">
+            <summary>
+            Legacy thermistor for analog TEC control, will be used as Future Humidity Sensor. Formerly known as TecTherm2v.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus.ImageSensorBoardTemperatureInC">
+            <summary>
+            The Image Sensor Interface board temperature in Celsius, formerly known as IsiTemp.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus.CameraSignalProcessorBoardTemperatureInC">
+            <summary>
+            The Camera Signal Processor board temperature in Celsius, formerly known as CspTemp.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus.ThermoElectricControlCircuitTemperatureInC">
+            <summary>
+            The temperature in Celsius near Thermo Electric Control Circuit, formerly known as PwrLocalTemp0.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus.DigitalElectronicsRegulatorTemperatureInC">
+            <summary>
+            The temperature in Celsius near regulator for digital electronics, formerly known as PwrLocalTemp1.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus.ArmCpuTemperatureInC">
+            <summary>
+            The i.MX6 Rex ARM CPU temperature, formerly known as CpuTemp.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus.TecVdiv2">
+            <summary>
+            TODO[liverpool]
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus.ThermoElectricCoolerEnabled">
+            <summary>
+            A flag that enables and disables the ThermoElectricCooler, formerly known as TecEn.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus.ThermoElectricCoolerTemperatureInC">
+            <summary>
+            The target temperature of the ThermoElectricCooler, formerly known as TecTTemp.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings">
+            <summary></summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings.Id">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings.AnalyteId">
+            <summary>
+            Gets or sets the analyte id.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings.Region">
+            <summary>
+            Gets or sets the region.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings.ReadEnabled">
+            <summary>
+            Gets or sets a value indicating whether [read enabled].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings.ReadInterval">
+            <summary>
+            Gets or sets the read interval.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings.SubInjectEnabled">
+            <summary>
+            Gets or sets a value indicating whether [sub inject enabled].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings.SubInjectInterval">
+            <summary>
+            Gets or sets the sub inject interval.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings.PostReadEnabled">
+            <summary>
+            Gets or sets a value indicating whether [post read enabled].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings.PostReadNonDestructiveReadouts">
+            <summary>
+            Gets or sets the post read non destructive reads.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings.SubarrayFixedPatternNoiseReduction">
+            <summary>
+            Gets or sets the subarray FixedPatternNoiseReduction.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings.TresholdEnabled">
+            <summary>
+            Gets or sets a value indicating whether [treshold enabled].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings.TimeResolvedEnabled">
+            <summary>
+            Gets or sets a value indicating whether [time resolved enabled].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings.TimeResolvedInterval">
+            <summary>
+            Gets or sets the Time Resolved interval.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings.AdaptiveEnabled">
+            <summary>
+            Gets or sets a value indicating whether [adaptive enabled].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings.TresholdValuePercentage">
+            <summary>
+            Gets or sets the treshold value percentage.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSubarraySettings.TresholdRegion">
+            <summary>
+            Gets or sets the treshold region.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.Data.Heartbeat">
+            <summary/>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Heartbeat.Timestamp">
+            <summary/>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.Data.LogEntry">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Contracts.Data.LogEntry.#ctor(Thermo.Kronos.Instrument.Camera.Contracts.Enums.LogLevel,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Thermo.Kronos.Instrument.Camera.Contracts.Data.LogEntry" /> class.
+            </summary>
+            <param name="logLevel">The log level.</param>
+            <param name="text">The text.</param>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.LogEntry.Timestamp">
+            <summary>
+            Gets or sets the timestamp.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.LogEntry.LogLevel">
+            <summary>
+            Gets or sets the log level.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.LogEntry.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraRegion">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraRegion.PositionX">
+            <summary>
+            Gets or sets the start point x in pixel.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraRegion.PositionY">
+            <summary>
+            Gets or sets the start point y in pixel.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraRegion.Width">
+            <summary>
+            Gets or sets the width of the region in pixel.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraRegion.Height">
+            <summary>
+            Gets or sets the height of the region in pixel.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureResult">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureResult.InitialTimestamp">
+            <summary>
+            Gets or sets the initial time stamp.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureResult.ReadTimestamp">
+            <summary>
+            Gets or sets the read time stamp.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureResult.ExposureTag">
+            <summary>
+            Gets or sets the exposure tag.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureResult.ImageType">
+            <summary>
+            Gets or sets the type of the image.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureResult.Tag">
+            <summary>
+            Gets or sets the subarray tag.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureResult.StartColumn">
+            <summary>
+            Gets or sets the start column.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureResult.StartRow">
+            <summary>
+            Gets or sets the start row.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureResult.OffsetColumn">
+            <summary>
+            Gets or sets the offset column.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureResult.OffsetRow">
+            <summary>
+            Gets or sets the offset row.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureResult.NumberOfNonDestructiveReads">
+            <summary>
+            Gets or sets the number of non destructive reads.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureResult.RawData">
+            <summary>
+            Gets or sets the data.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureResult.CameraExposureSettings">
+            <summary>
+            Gets or sets the camera exposure settings.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.Data.State">
+            <summary/>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.State.StateLevel">
+            <summary>
+            Gets or sets the state level.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.State.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.Data.Subarray">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Subarray.InitialTimestamp">
+            <summary>
+            Gets or sets the initial time stamp.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Subarray.ReadTimestamp">
+            <summary>
+            Gets or sets the read time stamp.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Subarray.ExposureTag">
+            <summary>
+            Gets or sets the exposure tag.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Subarray.ImageType">
+            <summary>
+            Gets or sets the type of the image.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Subarray.Tag">
+            <summary>
+            Gets or sets the subarray tag.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Subarray.StartColumn">
+            <summary>
+            Gets or sets the start column.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Subarray.StartRow">
+            <summary>
+            Gets or sets the start row.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Subarray.OffsetColumn">
+            <summary>
+            Gets or sets the offset column.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Subarray.OffsetRow">
+            <summary>
+            Gets or sets the offset row.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Subarray.NumberOfNonDestructiveReads">
+            <summary>
+            Gets or sets the number of non destructive reads.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Subarray.PixelSaturated">
+            <summary>
+            Gets or sets the flag if one or more pixels are saturated in a subarray.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Subarray.NumberOfSubinjects">
+            <summary>
+            Gets or sets the number of Subinjects on a subarray.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Subarray.RawData">
+            <summary>
+            Gets or sets the data.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.Data.Voltages">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Voltages.SelstoreVb">
+            <summary>
+            The Select storage voltage B setting.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Voltages.SelstoreVc">
+            <summary>
+            The Select storage voltage C setting.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Voltages.SelstoreVa">
+            <summary>
+            The Select storage voltage A setting.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Voltages.SelsenseVb">
+            <summary>
+            The Select sense voltage B setting.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Voltages.SelsenseVc">
+            <summary>
+            The Select sense voltage C setting.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Voltages.SelsenseVa">
+            <summary>
+            The Select sense voltage A setting.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Voltages.SelinjectVb">
+            <summary>
+            The Select inject voltage B setting.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Voltages.SelinjectVc">
+            <summary>
+            The Select inject voltage C setting.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Voltages.SelinjectVd">
+            <summary>
+            The Select inject voltage D setting.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Voltages.Ad9826Offset">
+            <summary>
+            The Ad9826Offset setting.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Voltages.Ad9826Gain">
+            <summary>
+            The Select inject voltage C setting.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.Data.Voltages.ImrefcdsVa">
+            <summary>
+            The Imrefcds voltage A setting.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.Enums.CameraConnectionStatus">
+            <summary></summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.CameraConnectionStatus.Stopped">
+            <summary>
+            The stopped state. (Initial and default state)
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.CameraConnectionStatus.Initializing">
+            <summary>
+            The initializing state, indicating that the client was just started.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.CameraConnectionStatus.Disconnected">
+            <summary>
+            The disconnected state, which always occurs after the <code>Initializing</code> state.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.CameraConnectionStatus.Connected">
+            <summary>
+            The connected state, which indicates that the client is actively connected to a server.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.CameraConnectionStatus.Disconnecting">
+            <summary>
+            The connected state, which indicates that a client has either disconnected, or is being disconnected.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.Enums.ImageType">
+            <summary>
+            The image types from the camera.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.ImageType.None">
+            <summary>
+            Default to none
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.ImageType.WarmUp">
+            <summary>
+            warm up image - discard
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.ImageType.DarkFrame">
+            <summary>
+            store dark frame
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.ImageType.CalibrateAutoBias">
+            <summary>
+            calibrate AutoBias image
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.ImageType.SaveAutoBias">
+            <summary>
+            store AutoBias image
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.ImageType.FullFrame">
+            <summary>
+            store full frame [x] Exposed Frame
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.ImageType.FixedExposure">
+            <summary>
+            Single frame exposure
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.ImageType.Examine">
+            <summary>
+            Subarray Threshold region
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.ImageType.SAFPN">
+            <summary>
+            save Subarray FixedPatternNoiseReduction image after GI,AB or SI
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.ImageType.Subarray">
+            <summary>
+            Subarray sent to host PC. [x] Read 
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.ImageType.SubInject">
+            <summary>
+            clear region, save FixedPatternNoiseReduction image [x] SubInject
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.ImageType.PostRead">
+            <summary>
+            Last read after end of exposure. Integrate with SubInject images. [x] PostRead
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.ImageType.Integrated">
+            <summary>
+            Integrated subarray(s) at the end of exposure.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.Enums.LogLevel">
+            <summary>
+            These are the different log levels, the camera should use.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.LogLevel.Fatal">
+            <summary>
+            The fatal log flag.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.LogLevel.Error">
+            <summary>
+            The error log flag.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.LogLevel.Warning">
+            <summary>
+            The warning log flag.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.LogLevel.Info">
+            <summary>
+            The information log flag.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.LogLevel.Debug">
+            <summary>
+            The debug log flag.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.LogLevel.Camera">
+            <summary>
+            The camera log flag.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.Enums.StateLevel">
+            <summary/>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.StateLevel.Error">
+            <summary>
+            The error
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Contracts.Enums.StateLevel.Warning">
+            <summary>
+            The warning
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface">
+            <summary>
+            This is the application programming interface (API) of a Liverpool CID camera.
+            HINT: API version 9 (count up if breaking changes occur)
+            HINT: If this is working properly, consider the usage of asynchronous operators.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.ReceivedStatus">
+            <summary>
+            Occurs when camera status information was received.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.ReceivedLogData">
+            <summary>
+            Occurs when the camera or the underlying controller class issued a log entry.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.ReceivedSubarrays">
+            <summary>
+            Occurs when an image was received.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.ReceivedImage">
+            <summary>
+            Gets or sets the received exposure complete.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.ReceivedCameraConnectionStatus">
+            <summary>
+            Gets or sets the received camera connection status.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.ReceivedCameraInformation">
+            <summary>
+            Gets or sets the received camera information.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.ReceivedHeartbeat">
+            <summary>
+            Gets or sets the received heartbeat.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.ReceivedState">
+            <summary>
+            Gets or sets the state of the received.
+            </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.IsConnected">
+            <summary>
+            Gets a value indicating whether the camera is connected.
+            </summary>
+            <value>
+            <c>true</c> if the camera is connected; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.DevelopmentMode">
+            <summary>
+            Gets or sets a value indicating whether [development mode].
+            </summary>
+            <value>
+              <c>true</c> if [development mode]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.Connect(System.String,System.Int32)">
+            <summary>
+            This attempts to connects to the camera on the specified IP address.
+            HINT: Should only allow one connection.
+            HINT: Should not deadlock, but return a meaningful log entry.
+            HINT: Manage a safe and self maintained connection in the underlying controller class.
+            HINT: Do not throw an exception.
+            </summary>
+            <param name="ipAddress">The IP address.</param>
+            <param name="port">The port.</param>
+            <returns><c>true</c>, when the camera connected successfully; otherwise <c>false</c>.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.Disconnect">
+            <summary>
+            Disconnects from the camera if currently connected.
+            HINT: Calling <c>Disconnect</c> whilst already disconnected, should have no effect and should not cause an error, but should log an entry about this.
+            HINT: Should not deadlock, but return a meaningful log entry.
+            HINT: Do not throw an exception.
+            </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.GetCameraInformation">
+            <summary>
+            Gets information about the camera.
+            </summary>
+            HINT: Should not deadlock, but return a meaningful log entry.
+            HINT: Do not throw an exception.
+            <returns>Returns true for success of the message request sent.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.UpdateFirmware(System.String,System.String,System.String,System.String)">
+            <summary>
+            Update the current connected camera with a new version of firmware (*.exe file)
+            Secure FTP the file to the LINUX based camera
+            </summary>
+            <param name="file">The folder/filename.exe where the new firmware resides.</param>
+            <param name="username">The username to log into the camera.</param>
+            <param name="password">The user password to log into the camera.</param>
+            <param name="hostAddress">The TCP/IP Address to log into the camera.</param>
+            <returns>returns a bool indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.RebootFirmware">
+            <summary>
+            Reboots the Linux OS/CPU board where the Firmware resides. 
+            Used after a Firmware Update or Set IP Address command.
+            </summary>    
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.SendLogLevel(Thermo.Kronos.Instrument.Camera.Contracts.Enums.LogLevel)">
+            <summary>
+            Sends the log level to the camera.
+            </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.SetIpAddress(System.String)">
+            <summary>
+            Sets a new TCP/IP Address for the camera.
+            </summary>
+            <returns>returns a boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.SendVoltageRequest(System.String)">
+            <summary>
+            Sends the voltage request.
+            </summary>
+            <param name="request">The request.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.SendSerialNumbers(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSerialNumbers)">
+            <summary>
+            Sends the Set Serial Numbers message to the camera.
+            </summary>
+            <param name="serialNumbers">string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.PerformExposure(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings)">
+            <summary>
+            This requests the camera to perform an exposure.
+            </summary>
+            <param name="cameraExposureSetting">The camera exposure setting.</param>
+            <returns>
+              <c>true</c>, when the request to perform an exposure was successful; otherwise, <c>false</c>.
+            </returns>
+            HINT: Should not deadlock, but return a meaningful log entry.
+            HINT: Do not throw an exception.
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.AbortExposure">
+            <summary>
+            Aborts any currently active exposure.
+            A meaningful log message should be issued during this call, also when no exposure was currently active.
+            HINT: Should not deadlock, but return a meaningful log entry.
+            HINT: Do not throw an exception.
+            </summary>
+            <returns><c>true</c>, when an active exposure was aborted, or when there was no active exposure in process; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.EnableThermoElectricCooler">
+            <summary>
+            Enables the active control of the thermoelectric cooler.
+            </summary>
+            HINT: Should not deadlock, but return a meaningful log entry.
+            HINT: Do not throw an exception.
+            HINT: Issue a meaningful log message when an error occurred.
+            <returns><c>true</c>, when the control loop of the thermoelectric cooler was activated successfully; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.DisableThermoElectricCooler">
+            <summary>
+            Disables the active control of the thermoelectric cooler.
+            </summary>
+            HINT: Should not deadlock, but return a meaningful log entry.
+            HINT: Do not throw an exception.
+            HINT: Issue a meaningful log message when an error occurred.
+            <returns><c>true</c>, when the control loop of the thermoelectric cooler was deactivated successfully; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface.SetThermoElectricCoolerTemperature(System.Single)">
+            <summary>
+            Sets the control loop's temperature set point of the thermoelectric cooler.
+            The set point value should always be accepted, even when the thermoelectric cooler is disabled. When enabled thereafter, the last specified set point shall be used.
+            </summary>
+            HINT: Should not deadlock, but return a meaningful log entry.
+            HINT: Do not throw an exception.
+            <param name="temperatureCelsius">The set point temperature in degrees Celsius.</param>
+            <returns><c>true</c>, when set point temperature was successfully set; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Contracts.ICommandProcessorParserService">
+            <summary>
+            Parses the CidApp script files into our ExposureSettings structure
+            </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Contracts.ICommandProcessorParserService.Parse(System.String)">
+            <summary>
+            Parses the specified script file to a list of CameraExposureSettings.
+            </summary>
+            <param name="pathToScriptFile">The path to script file.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

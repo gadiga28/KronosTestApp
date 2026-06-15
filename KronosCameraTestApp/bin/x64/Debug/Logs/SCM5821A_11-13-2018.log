@@ -1,0 +1,9 @@
+2018-11-13 13:33:02,544 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.DivideByZeroException: Attempted to divide by zero.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBar() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 683
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBar()
+2018-11-13 13:39:33,923 [1] ERROR KronosCameraTestApp.View.TestResultsForm System.InvalidCastException: Unable to cast object of type 'System.DBNull' to type 'System.Drawing.Image'.
+   at KronosCameraTestApp.View.TestResultsForm.ultraGrid1_ClickCell(Object sender, ClickCellEventArgs e) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 261
+ AMER\babagoud.gadiga - Exception inVoid ultraGrid1_ClickCell(System.Object, Infragistics.Win.UltraWinGrid.ClickCellEventArgs)
+2018-11-13 14:09:49,024 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.DivideByZeroException: Attempted to divide by zero.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBar() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 683
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBar()

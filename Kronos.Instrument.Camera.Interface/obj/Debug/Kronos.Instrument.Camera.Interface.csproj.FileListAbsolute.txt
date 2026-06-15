@@ -1,0 +1,19 @@
+C:\Dev\CID821API\CID821API\Kronos.Instrument.Camera.Interface\obj\Debug\Kronos.Instrument.Camera.Interface.csproj.AssemblyReference.cache
+C:\Dev\CID821API\CID821API\Kronos.Instrument.Camera.Interface\obj\Debug\Kronos.Instrument.Camera.Interface.csproj.CoreCompileInputs.cache
+C:\_binaries\Kronos.Instrument.Camera.Interface.dll
+C:\_binaries\Kronos.Instrument.Camera.Interface.pdb
+C:\Dev\CID821API\CID821API\Kronos.Instrument.Camera.Interface\obj\Debug\Kronos.Instrument.Camera.Interface.csproj.CopyComplete
+C:\Dev\CID821API\CID821API\Kronos.Instrument.Camera.Interface\obj\Debug\Kronos.Instrument.Camera.Interface.dll
+C:\Dev\CID821API\CID821API\Kronos.Instrument.Camera.Interface\obj\Debug\Kronos.Instrument.Camera.Interface.pdb
+C:\Users\bill.donahue\source\_binaries\Kronos.Instrument.Camera.Interface.dll
+C:\Users\bill.donahue\source\_binaries\Kronos.Instrument.Camera.Interface.pdb
+C:\Users\bill.donahue\source\repos\New folder\CID821API\CID821API\Kronos.Instrument.Camera.Interface\obj\Debug\Kronos.Instrument.Camera.Interface.csproj.AssemblyReference.cache
+C:\Users\bill.donahue\source\repos\New folder\CID821API\CID821API\Kronos.Instrument.Camera.Interface\obj\Debug\Kronos.Instrument.Camera.Interface.csproj.CoreCompileInputs.cache
+C:\Users\bill.donahue\source\repos\New folder\CID821API\CID821API\Kronos.Instrument.Camera.Interface\obj\Debug\Kronos.Instrument.Camera.Interface.csproj.CopyComplete
+C:\Users\bill.donahue\source\repos\New folder\CID821API\CID821API\Kronos.Instrument.Camera.Interface\obj\Debug\Kronos.Instrument.Camera.Interface.dll
+C:\Users\bill.donahue\source\repos\New folder\CID821API\CID821API\Kronos.Instrument.Camera.Interface\obj\Debug\Kronos.Instrument.Camera.Interface.pdb
+C:\Users\bill.donahue\source\repos\CID821 API Interlock\CID821API\CID821API\Kronos.Instrument.Camera.Interface\obj\Debug\Kronos.Instrument.Camera.Interface.csproj.AssemblyReference.cache
+C:\Users\bill.donahue\source\repos\CID821 API Interlock\CID821API\CID821API\Kronos.Instrument.Camera.Interface\obj\Debug\Kronos.Instrument.Camera.Interface.csproj.CoreCompileInputs.cache
+C:\Users\bill.donahue\source\repos\CID821 API Interlock\CID821API\CID821API\Kronos.Instrument.Camera.Interface\obj\Debug\Kronos.Instrument.Camera.Interface.csproj.CopyComplete
+C:\Users\bill.donahue\source\repos\CID821 API Interlock\CID821API\CID821API\Kronos.Instrument.Camera.Interface\obj\Debug\Kronos.Instrument.Camera.Interface.dll
+C:\Users\bill.donahue\source\repos\CID821 API Interlock\CID821API\CID821API\Kronos.Instrument.Camera.Interface\obj\Debug\Kronos.Instrument.Camera.Interface.pdb

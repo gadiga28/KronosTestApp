@@ -1,0 +1,109 @@
+2018-05-18 12:24:08,921 [10] ERROR KronosCameraTestApp.Helpers.TestAppHelper  AMER\babagoud.gadiga - Database Not found or no Connection Exists
+2018-05-18 12:24:45,473 [10] ERROR KronosCameraTestApp.Helpers.TestAppHelper  AMER\babagoud.gadiga - Database Not found or no Connection Exists
+2018-05-18 12:25:03,299 [10] ERROR KronosCameraTestApp.Helpers.TestAppHelper  AMER\babagoud.gadiga - Database Not found or no Connection Exists
+2018-05-18 12:43:42,197 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 12:43:42,465 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 12:46:04,707 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 12:46:05,004 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 12:57:12,542 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 12:57:12,807 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 12:57:29,471 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 12:57:29,768 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 13:06:12,026 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 13:06:12,293 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 13:06:33,739 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 13:06:34,036 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 15:49:48,449 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 15:49:48,793 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 15:51:08,013 [10] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 15:51:08,336 [10] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 15:54:38,948 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 15:54:39,287 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 16:00:31,836 [9] ERROR KronosCameraTestApp.CommandProcessor System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at KronosCameraTestApp.CommandProcessor.<>c__DisplayClass2.<ProcessExposureData>b__0() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\CommandProcessor.cs:line 148
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.CommandProcessor.<ProcessExposureData>d__4.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\CommandProcessor.cs:line 99
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-05-18 16:01:02,284 [9] ERROR KronosCameraTestApp.CommandProcessor System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at KronosCameraTestApp.CommandProcessor.<>c__DisplayClass9.<SendExposure>b__7() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\CommandProcessor.cs:line 224
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.CommandProcessor.<SendExposure>d__b.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\CommandProcessor.cs:line 196
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-05-18 16:10:39,904 [8] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 16:10:40,235 [8] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 16:15:36,287 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 16:15:36,598 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 16:16:41,807 [9] ERROR KronosCameraTestApp.CommandProcessor System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   at KronosCameraTestApp.CommandProcessor.<>c__DisplayClass9.<SendExposure>b__7() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\CommandProcessor.cs:line 307
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.CommandProcessor.<SendExposure>d__b.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\CommandProcessor.cs:line 199
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-05-18 16:18:30,587 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-18 16:18:30,890 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)

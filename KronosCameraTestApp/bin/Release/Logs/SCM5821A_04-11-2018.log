@@ -1,0 +1,28 @@
+2018-04-11 09:38:39,449 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-04-11 09:55:03,032 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-04-11 10:42:42,763 [10] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at System.Collections.Generic.List`1.set_Capacity(Int32 value)
+   at System.Collections.Generic.List`1.EnsureCapacity(Int32 min)
+   at System.Collections.Generic.List`1.Add(T item)
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<>c__DisplayClass32.<CalculateDefects>b__2f() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 644
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<CalculateDefects>d__34.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 530
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-04-11 10:46:04,887 [10] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at System.Collections.Generic.List`1.set_Capacity(Int32 value)
+   at System.Collections.Generic.List`1.EnsureCapacity(Int32 min)
+   at System.Collections.Generic.List`1.Add(T item)
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<>c__DisplayClass32.<CalculateDefects>b__2f() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 587
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<CalculateDefects>d__34.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 530
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()

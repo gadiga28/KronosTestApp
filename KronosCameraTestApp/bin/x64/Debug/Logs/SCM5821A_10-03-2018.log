@@ -1,0 +1,92 @@
+2018-10-03 13:33:31,021 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 13:34:21,558 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 15:44:36,132 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 15:45:42,683 [11] ERROR KronosCameraTestApp.View.PhotoresponseTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.PhotoresponseTestForm.ResetProgressBar() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\PhotoresponseTestForm.cs:line 1581
+ AMER\babagoud.gadiga - Exception inVoid ResetProgressBar()
+2018-10-03 15:45:49,711 [11] ERROR KronosCameraTestApp.View.PhotoresponseTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.PhotoresponseTestForm.ResetProgressBar() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\PhotoresponseTestForm.cs:line 1581
+ AMER\babagoud.gadiga - Exception inVoid ResetProgressBar()
+2018-10-03 15:46:16,019 [11] ERROR KronosCameraTestApp.View.PhotoresponseTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.PhotoresponseTestForm.ResetProgressBar() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\PhotoresponseTestForm.cs:line 1581
+ AMER\babagoud.gadiga - Exception inVoid ResetProgressBar()
+2018-10-03 15:46:20,219 [11] ERROR KronosCameraTestApp.View.PhotoresponseTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.PhotoresponseTestForm.ResetProgressBar() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\PhotoresponseTestForm.cs:line 1581
+ AMER\babagoud.gadiga - Exception inVoid ResetProgressBar()
+2018-10-03 15:46:23,971 [11] ERROR KronosCameraTestApp.View.PhotoresponseTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.PhotoresponseTestForm.ResetProgressBar() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\PhotoresponseTestForm.cs:line 1581
+ AMER\babagoud.gadiga - Exception inVoid ResetProgressBar()
+2018-10-03 15:46:37,189 [11] ERROR KronosCameraTestApp.View.InjectionPerformanceTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.InjectionPerformanceTestForm.<buttonInjectionPerformanceRun_Click>d__e.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\InjectionPerformanceTestForm.cs:line 245
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-10-03 15:46:48,960 [11] ERROR KronosCameraTestApp.View.InjectionPerformanceTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.InjectionPerformanceTestForm.<buttonInjectionPerformanceRun_Click>d__e.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\InjectionPerformanceTestForm.cs:line 245
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-10-03 15:46:50,760 [11] ERROR KronosCameraTestApp.View.InjectionPerformanceTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.InjectionPerformanceTestForm.ResetProgressBar() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\InjectionPerformanceTestForm.cs:line 1509
+ AMER\babagoud.gadiga - Exception inVoid ResetProgressBar()
+2018-10-03 15:46:52,389 [11] ERROR KronosCameraTestApp.View.InjectionPerformanceTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.InjectionPerformanceTestForm.<buttonInjectionPerformanceRun_Click>d__e.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\InjectionPerformanceTestForm.cs:line 245
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-10-03 15:46:54,640 [11] ERROR KronosCameraTestApp.View.InjectionPerformanceTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.InjectionPerformanceTestForm.ResetProgressBar() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\InjectionPerformanceTestForm.cs:line 1509
+ AMER\babagoud.gadiga - Exception inVoid ResetProgressBar()
+2018-10-03 15:46:55,420 [11] ERROR KronosCameraTestApp.View.InjectionPerformanceTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.InjectionPerformanceTestForm.ResetProgressBar() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\InjectionPerformanceTestForm.cs:line 1509
+ AMER\babagoud.gadiga - Exception inVoid ResetProgressBar()
+2018-10-03 15:47:11,655 [11] ERROR KronosCameraTestApp.View.MeanVarianceTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.MeanVarianceTestForm.<buttonMVRun_Click>d__3.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 187
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-10-03 15:47:13,837 [11] ERROR KronosCameraTestApp.View.MeanVarianceTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.MeanVarianceTestForm.ResetProgressBar() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 1594
+ AMER\babagoud.gadiga - Exception inVoid ResetProgressBar()
+2018-10-03 15:48:05,402 [11] ERROR KronosCameraTestApp.View.MeanVarianceTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.MeanVarianceTestForm.<buttonMVRun_Click>d__3.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 187
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-10-03 15:48:22,820 [11] ERROR KronosCameraTestApp.View.MeanVarianceTestForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 15:55:50,453 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 15:56:08,837 [11] ERROR KronosCameraTestApp.View.DashBoard System.InvalidCastException: Unable to cast object of type 'System.Windows.Forms.MdiClient' to type 'System.Windows.Forms.Form'.
+   at KronosCameraTestApp.View.DashBoard.DashBoard_Load(Object sender, EventArgs e) in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\DashBoard.cs:line 105
+ AMER\babagoud.gadiga - Exception inVoid DashBoard_Load(System.Object, System.EventArgs)
+2018-10-03 15:57:55,824 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 15:59:43,429 [11] ERROR KronosCameraTestApp.View.MeanVarianceTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.MeanVarianceTestForm.<buttonMVRun_Click>d__3.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 187
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-10-03 16:01:25,989 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 16:05:49,128 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 16:11:15,567 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 16:12:39,176 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 16:14:15,497 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 16:19:11,706 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 16:21:31,426 [10] ERROR KronosCameraTestApp.View.MeanVarianceTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.MeanVarianceTestForm.<buttonMVRun_Click>d__3.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 191
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-10-03 16:23:12,013 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 16:27:21,440 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 16:29:54,909 [11] ERROR KronosCameraTestApp.View.MeanVarianceTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.MeanVarianceTestForm.<buttonMVRun_Click>d__3.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 192
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-10-03 16:39:07,944 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 16:45:42,363 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 16:46:52,474 [10] ERROR KronosCameraTestApp.View.MeanVarianceTestForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 16:50:16,303 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 16:50:45,711 [11] ERROR KronosCameraTestApp.View.MeanVarianceTestForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 16:50:54,620 [11] ERROR KronosCameraTestApp.View.MeanVarianceTestForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 16:52:49,174 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 17:18:11,773 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 17:21:28,646 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 17:26:18,126 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 17:35:37,432 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 17:35:41,827 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentException: Form cannot be both an MDI child and MDI parent.
+Parameter name: value
+   at System.Windows.Forms.Form.set_MdiParentInternal(Form value)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.ManualTestDashBoard() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 1310
+ AMER\babagoud.gadiga - Exception inVoid ManualTestDashBoard()
+2018-10-03 17:43:30,330 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 17:48:52,239 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 17:48:57,272 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.ManualTestDashBoard() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 1312
+ AMER\babagoud.gadiga - Exception inVoid ManualTestDashBoard()
+2018-10-03 17:50:42,215 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 17:52:21,631 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-10-03 17:57:27,202 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host

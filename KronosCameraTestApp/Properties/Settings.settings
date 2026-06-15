@@ -1,0 +1,189 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="KronosCameraTestApp.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FormWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1431</Value>
+    </Setting>
+    <Setting Name="FormHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">832</Value>
+    </Setting>
+    <Setting Name="selectInjectVb" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">2.8</Value>
+    </Setting>
+    <Setting Name="selectInjectVc" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="selectInjectVd" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">2.8</Value>
+    </Setting>
+    <Setting Name="selectSenseVa" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">1.75</Value>
+    </Setting>
+    <Setting Name="selectSenseVb" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">1.75</Value>
+    </Setting>
+    <Setting Name="selectSenseVc" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.65</Value>
+    </Setting>
+    <Setting Name="selectStoreVa" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="selectStoreVb" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="selectStoreVc" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="transferSel" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">3.05</Value>
+    </Setting>
+    <Setting Name="videoBias" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">2.9</Value>
+    </Setting>
+    <Setting Name="pixelVdd" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">2.2</Value>
+    </Setting>
+    <Setting Name="cdsRef" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="offset" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="gain" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="impxbiasVa" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="selResetVc" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="outBiasVd" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="InfraStyleName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"Default"</Value>
+    </Setting>
+    <Setting Name="DefaultFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"BABA"</Value>
+    </Setting>
+    <Setting Name="FormLocationX" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="FormLocationY" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="FilesLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\SCM5821AData\</Value>
+    </Setting>
+    <Setting Name="AutoTestOrder1" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SelectedPreTests" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="noneRadioButton" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="fileRadioButton" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="consoleRadioButton" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="debugRadioButton" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="infoRadioButton" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="warningRadioButton" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="errorRadioButton" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="fatalRadioButton" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="firmwareLoggingEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="selectedGraphPreferencesList" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="lineWidthOfPlot" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="colorOfPlotBackground" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="plotBackgroundColor" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="openShutterSpeed" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="closeShutterSpeed" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="enableOnConnect" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="TECEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AbortAutoTestCheckBox" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AutoTestResultsServerFilePathFromDB" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="OffseteADU" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">5.74</Value>
+    </Setting>
+    <Setting Name="UnSelsenseVc" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.65</Value>
+    </Setting>
+    <Setting Name="UnSelstoreVc" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="UnSelinjectVc" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">2.8</Value>
+    </Setting>
+    <Setting Name="UnSeltgVc" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">3.05</Value>
+    </Setting>
+    <Setting Name="UnSelresetVc" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="CameraIPAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"192.168.1.2"</Value>
+    </Setting>
+    <Setting Name="CameraPortNumber" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"47151"</Value>
+    </Setting>
+    <Setting Name="sendCameraHeartBeat" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="dryRunTest" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="saveTestResultsToNetworkDrive" Type="System.String" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="TCubePort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM1</Value>
+    </Setting>
+    <Setting Name="BKPowerPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM1</Value>
+    </Setting>
+    <Setting Name="FlowMeterPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM1</Value>
+    </Setting>
+    <Setting Name="AutoConnectEnvStatCOMPorts" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

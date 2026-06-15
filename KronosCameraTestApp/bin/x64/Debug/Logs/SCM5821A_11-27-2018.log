@@ -1,0 +1,11 @@
+2018-11-27 16:26:40,981 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-27 16:28:09,953 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-27 16:44:17,614 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-27 17:06:36,880 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-27 17:17:34,388 [1] ERROR KronosCameraTestApp.View.MeanVarianceTestForm System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'NationalInstruments.UI.WindowsForms.NumericEdit'.
+   at NationalInstruments.UI.WindowsForms.NumericEdit.ThrowExceptionIfDisposed()
+   at NationalInstruments.UI.WindowsForms.NumericEdit.set_Value(Double value)
+   at KronosCameraTestApp.View.MeanVarianceTestForm.UpdateExposureView(Int32 currentRecord) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 685
+ AMER\babagoud.gadiga - Exception inVoid UpdateExposureView(Int32)
+2018-11-27 17:35:39,094 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host

@@ -1,0 +1,26 @@
+2018-04-10 16:25:37,562 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-04-10 16:25:52,522 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.IO.IOException: Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.IO.BinaryWriter.Write(UInt32 value)
+   at Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.AbortMessages() in c:\Baba\New folder (5)\Kronos.Instrument.Camera.Interface\SCM5821AX1.cs:line 364
+   at Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.Disconnect() in c:\Baba\New folder (5)\Kronos.Instrument.Camera.Interface\SCM5821AX1.cs:line 833
+   at Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.Disconnect() in c:\Baba\New folder (5)\Kronos.Instrument.Camera.Interface\CIDInterface.cs:line 219
+   at KronosCameraTestApp.View.KronosTestAppMainForm.ExitApplication() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 3573
+ AMER\babagoud.gadiga - Exception inVoid ExitApplication()
+2018-04-10 16:31:52,118 [9] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<>c__DisplayClass2a.<CalculateDarkCurrent>b__28() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 503
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<CalculateDarkCurrent>d__2c.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 472
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-04-10 16:33:33,763 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host

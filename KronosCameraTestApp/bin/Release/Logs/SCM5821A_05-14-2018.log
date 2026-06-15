@@ -1,0 +1,55 @@
+2018-05-14 12:17:51,234 [9] ERROR KronosCameraTestApp.View.UserControls.DarkCurrentUserControl System.ArgumentNullException: Value cannot be null.
+Parameter name: yData
+   at NationalInstruments.UI.WaveformPlot.PlotY(Double[] yData)
+   at KronosCameraTestApp.View.UserControls.DarkCurrentUserControl.<PlotDarkCurrentData>d__6.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\DarkCurrentUserControl.cs:line 115
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-05-14 12:57:33,785 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-14 13:28:57,945 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-14 15:08:19,012 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-14 15:11:34,572 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-14 15:16:31,381 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-14 15:19:43,094 [9] ERROR KronosCameraTestApp.View.TestResultsForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.TestResultsForm.<InitializeGridLayout>b__6() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 165
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.View.TestResultsForm.<InitializeGridLayout>d__8.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 160
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-05-14 15:24:07,421 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-14 15:28:37,660 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-14 15:36:11,778 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-14 15:38:03,444 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-14 15:56:44,225 [9] ERROR KronosCameraTestApp.View.DashBoardAutoForm System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.View.DashBoardAutoForm.DashBoardAutoForm_Load(Object sender, EventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\DashBoardAutoForm.cs:line 105
+ AMER\babagoud.gadiga - Exception inVoid DashBoardAutoForm_Load(System.Object, System.EventArgs)
+2018-05-14 15:58:50,271 [9] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<>c__DisplayClass2d.<CalculateDarkCurrent>b__2b() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 608
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<CalculateDarkCurrent>d__2f.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 579
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-05-14 15:58:55,476 [9] ERROR KronosCameraTestApp.View.UserControls.DarkCurrentUserControl System.ArgumentNullException: Value cannot be null.
+Parameter name: yData
+   at NationalInstruments.UI.WaveformPlot.PlotY(Double[] yData)
+   at KronosCameraTestApp.View.UserControls.DarkCurrentUserControl.<PlotDarkCurrentData>d__6.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\DarkCurrentUserControl.cs:line 115
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-05-14 16:00:47,985 [9] ERROR KronosCameraTestApp.View.DashBoardAutoForm System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.View.DashBoardAutoForm.DashBoardAutoForm_Load(Object sender, EventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\DashBoardAutoForm.cs:line 105
+ AMER\babagoud.gadiga - Exception inVoid DashBoardAutoForm_Load(System.Object, System.EventArgs)
+2018-05-14 16:02:28,686 [9] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<>c__DisplayClass2d.<CalculateDarkCurrent>b__2b() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 619
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.<CalculateDarkCurrent>d__2f.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 579
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()

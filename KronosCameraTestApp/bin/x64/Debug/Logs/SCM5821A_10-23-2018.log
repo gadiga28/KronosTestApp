@@ -1,0 +1,12 @@
+2018-10-23 11:26:21,265 [1] INFO KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - End Test App
+2018-10-23 11:26:21,322 [1] INFO KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - Begin Close Excel
+2018-10-23 11:26:21,348 [1] INFO KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - End Close Excel
+2018-10-23 11:26:21,355 [1] INFO KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - End Test App
+2018-10-23 11:26:21,361 [1] INFO KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - Begin Close Excel
+2018-10-23 11:26:21,388 [1] INFO KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - End Close Excel
+2018-10-23 11:26:25,632 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'KronosTestAppMainForm'.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.ReceivedLogDataHandler(LogEntry logEntry) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 541
+ AMER\babagoud.gadiga - Exception inVoid ReceivedLogDataHandler(Thermo.Kronos.Instrument.Camera.Contracts.Data.LogEntry)

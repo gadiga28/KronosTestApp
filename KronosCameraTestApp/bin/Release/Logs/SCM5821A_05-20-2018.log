@@ -1,0 +1,32 @@
+2018-05-20 18:59:28,791 [8] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-20 18:59:29,341 [8] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-20 18:59:54,751 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-20 19:00:18,511 [8] ERROR KronosCameraTestApp.View.MeanVarianceTestForm System.ArgumentOutOfRangeException: Value of '21' is not valid for 'Value'. 'Value' should be between 'Minimum' and 'Maximum'.
+Parameter name: Value
+   at System.Windows.Forms.NumericUpDown.set_Value(Decimal value)
+   at KronosCameraTestApp.View.MeanVarianceTestForm.<ultraButtonAddExposure_Click_1>d__c.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 958
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-05-20 19:00:58,185 [8] ERROR KronosCameraTestApp.View.MeanVarianceTestForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-20 19:25:09,522 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-20 19:25:10,052 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-20 19:25:35,408 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-20 19:26:29,628 [9] ERROR KronosCameraTestApp.View.MeanVarianceTestForm System.ArgumentOutOfRangeException: Value of '21' is not valid for 'Value'. 'Value' should be between 'Minimum' and 'Maximum'.
+Parameter name: Value
+   at System.Windows.Forms.NumericUpDown.set_Value(Decimal value)
+   at KronosCameraTestApp.View.MeanVarianceTestForm.<ultraButtonAddExposure_Click_1>d__c.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 958
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-05-20 19:30:05,323 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-20 19:30:06,373 [9] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.ImageDisplayPanel.intensityGraph1_AfterMoveCursor(Object sender, AfterMoveIntensityCursorEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 153
+ AMER\babagoud.gadiga - Exception inVoid intensityGraph1_AfterMoveCursor(System.Object, NationalInstruments.UI.AfterMoveIntensityCursorEventArgs)
+2018-05-20 19:30:31,592 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host

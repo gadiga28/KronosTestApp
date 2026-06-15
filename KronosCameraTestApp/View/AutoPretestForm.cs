@@ -1,0 +1,119 @@
+﻿using Infragistics.Win.UltraWinListView;
+using KronosCameraTestApp.Helpers;
+using KronosCameraTestApp.Model;
+using KronosCameraTestApp.Properties;
+using System;
+using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+namespace KronosCameraTestApp.View
+{
+    public partial class AutoPretestForm : Form
+    {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(
+           System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        string testResultsPath = string.Empty;
+        private bool goAutoPretest = false;
+        string[] selectedPreTests = null;   
+
+        public bool GoAutoPretest
+        {
+            get
+            {
+                return goAutoPretest;
+            }
+            set
+            {
+                goAutoPretest = value;
+            }
+        }
+        public string[] SelectedPreTests
+        {
+            get
+            {
+                return selectedPreTests;
+            }
+            set
+            {
+                selectedPreTests = value;
+            }
+        }
+        public AutoPretestForm()
+        {
+            InitializeComponent();
+        }
+        private void buttonRunAutoPretest_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                goAutoPretest = true;
+                UltraListViewCheckedItemsCollection checkedItems = this.ultraListView1.CheckedItems;
+                selectedPreTests = new string[checkedItems.Count];
+                Properties.Settings.Default.SelectedPreTests = new StringCollection();
+                for (int i = 0; i < checkedItems.Count; i++)
+                {
+                    selectedPreTests[i] = checkedItems[i].Key.ToString();
+                    Properties.Settings.Default.SelectedPreTests.Add(selectedPreTests[i].ToString());
+                }
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void buttonCancelAutoPretest_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void AutoPretestForm_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Properties.Settings.Default.SelectedPreTests != null)
+                {
+                   ultraListView1.Items.SetCheckState(CheckState.Unchecked);                   
+                    foreach (string str in Properties.Settings.Default.SelectedPreTests)
+                    {
+                        for (int i = 0; i < ultraListView1.Items.Count; i++)
+                        {
+                            if (str.Equals(ultraListView1.Items[i].Key))
+                            {
+                                ultraListView1.Items[i].CheckState = CheckState.Checked;
+                                break;
+                            }
+                        }
+                    }
+                }
+               ParametersModel parametersModel = TestAppHelper.GetParametersModel();                
+               Settings.Default.AutoTestResultsServerFilePathFromDB = parametersModel.TestResultsServerPath.ToString();
+            }
+            catch(Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void AutoPretestForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                Properties.Settings.Default.SelectedPreTests = new StringCollection();
+                foreach(UltraListViewItem selectedItem in ultraListView1.CheckedItems)
+                {
+                    Properties.Settings.Default.SelectedPreTests.Add(selectedItem.Key);
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+    }
+}

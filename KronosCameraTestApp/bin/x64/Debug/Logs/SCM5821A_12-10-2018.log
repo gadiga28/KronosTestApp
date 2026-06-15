@@ -1,0 +1,44 @@
+2018-12-10 12:18:16,213 [1] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: value
+   at NationalInstruments.Restricted.NumericControl.b(Double A_0, Action A_1, Boolean A_2)
+   at NationalInstruments.UI.WindowsForms.NumericEdit.set_Value(Double value)
+   at KronosCameraTestApp.View.ImageDisplayPanel.ClearSubarrayData() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 1549
+ AMER\babagoud.gadiga - Exception inVoid ClearSubarrayData()
+2018-12-10 12:19:39,561 [1] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: value
+   at NationalInstruments.Restricted.NumericControl.b(Double A_0, Action A_1, Boolean A_2)
+   at NationalInstruments.UI.WindowsForms.NumericEdit.set_Value(Double value)
+   at KronosCameraTestApp.View.ImageDisplayPanel.ClearSubarrayData() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 1549
+ AMER\babagoud.gadiga - Exception inVoid ClearSubarrayData()
+2018-12-10 12:20:31,163 [1] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: value
+   at NationalInstruments.Restricted.NumericControl.b(Double A_0, Action A_1, Boolean A_2)
+   at NationalInstruments.UI.WindowsForms.NumericEdit.set_Value(Double value)
+   at KronosCameraTestApp.View.ImageDisplayPanel.ClearSubarrayData() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 1549
+ AMER\babagoud.gadiga - Exception inVoid ClearSubarrayData()
+2018-12-10 12:21:18,277 [1] ERROR KronosCameraTestApp.View.ImageDisplayPanel System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: value
+   at NationalInstruments.Restricted.NumericControl.b(Double A_0, Action A_1, Boolean A_2)
+   at NationalInstruments.UI.WindowsForms.NumericEdit.set_Value(Double value)
+   at KronosCameraTestApp.View.ImageDisplayPanel.ClearSubarrayData() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\ImageDisplayPanel.cs:line 1549
+ AMER\babagoud.gadiga - Exception inVoid ClearSubarrayData()
+2018-12-10 15:12:59,375 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.DivideByZeroException: Attempted to divide by zero.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBar1() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 706
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBar1()
+2018-12-10 15:24:48,875 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.DivideByZeroException: Attempted to divide by zero.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBar1() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 706
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBar1()
+2018-12-10 16:06:54,790 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.DivideByZeroException: Attempted to divide by zero.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBar1() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 706
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBar1()
+2018-12-10 16:08:10,251 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.DivideByZeroException: Attempted to divide by zero.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBar1() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 706
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBar1()
+2018-12-10 16:10:20,293 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.DivideByZeroException: Attempted to divide by zero.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBar1() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 706
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBar1()
+2018-12-10 16:15:31,886 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.DivideByZeroException: Attempted to divide by zero.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBar1() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 706
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBar1()
+2018-12-10 16:48:49,886 [1] ERROR KronosCameraTestApp.View.UserControls.FinalTestReportUserControl  AMER\babagoud.gadiga - Rp2correlation0.0544795418237837
+2018-12-10 16:48:49,955 [1] ERROR KronosCameraTestApp.View.UserControls.FinalTestReportUserControl  AMER\babagoud.gadiga - Rp2correlation Limit0.2
