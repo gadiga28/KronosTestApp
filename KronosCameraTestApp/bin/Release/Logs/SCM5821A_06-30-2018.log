@@ -1,0 +1,80 @@
+2018-06-30 16:46:45,580 [20] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.PRNUTest() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 736
+ AMER\babagoud.gadiga - Exception inVoid PRNUTest()
+2018-06-30 17:01:14,650 [14] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.PRNUTest() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 736
+ AMER\babagoud.gadiga - Exception inVoid PRNUTest()
+2018-06-30 17:05:15,925 [6] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.PRNUTest() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 736
+ AMER\babagoud.gadiga - Exception inVoid PRNUTest()
+2018-06-30 17:08:50,754 [19] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.PRNUTest() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 736
+ AMER\babagoud.gadiga - Exception inVoid PRNUTest()
+2018-06-30 17:16:28,685 [17] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.PRNUTest() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 736
+ AMER\babagoud.gadiga - Exception inVoid PRNUTest()
+2018-06-30 17:20:46,907 [16] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.PRNUTest() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 736
+ AMER\babagoud.gadiga - Exception inVoid PRNUTest()
+2018-06-30 17:20:52,148 [10] ERROR KronosCameraTestApp.View.UserControls.PhotoresponseUserControl System.ArgumentNullException: Value cannot be null.
+Parameter name: inputXData
+   at NationalInstruments.Analysis.Math.CurveFit.LinearFit(Double[] inputXData, Double[] inputYData, FitMethod fitMethod, Double[] weight, Double tolerance, Double& slope, Double& intercept, Double& residue)
+   at NationalInstruments.Analysis.Math.CurveFit.LinearFit(Double[] inputXData, Double[] inputYData)
+   at KronosCameraTestApp.View.UserControls.PhotoresponseUserControl.<PlotPhotoresponseData>d__6.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\PhotoresponseUserControl.cs:line 203
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-06-30 17:32:30,305 [15] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.PRNUTest() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 736
+ AMER\babagoud.gadiga - Exception inVoid PRNUTest()
+2018-06-30 17:32:33,694 [8] ERROR KronosCameraTestApp.View.UserControls.PhotoresponseUserControl System.ArgumentNullException: Value cannot be null.
+Parameter name: inputXData
+   at NationalInstruments.Analysis.Math.CurveFit.LinearFit(Double[] inputXData, Double[] inputYData, FitMethod fitMethod, Double[] weight, Double tolerance, Double& slope, Double& intercept, Double& residue)
+   at NationalInstruments.Analysis.Math.CurveFit.LinearFit(Double[] inputXData, Double[] inputYData)
+   at KronosCameraTestApp.View.UserControls.PhotoresponseUserControl.<PlotPhotoresponseData>d__6.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\PhotoresponseUserControl.cs:line 203
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-06-30 17:36:45,692 [13] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.PRNUTest() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 736
+ AMER\babagoud.gadiga - Exception inVoid PRNUTest()
+2018-06-30 17:36:49,249 [8] ERROR KronosCameraTestApp.View.UserControls.PhotoresponseUserControl System.ArgumentNullException: Value cannot be null.
+Parameter name: inputXData
+   at NationalInstruments.Analysis.Math.CurveFit.LinearFit(Double[] inputXData, Double[] inputYData, FitMethod fitMethod, Double[] weight, Double tolerance, Double& slope, Double& intercept, Double& residue)
+   at NationalInstruments.Analysis.Math.CurveFit.LinearFit(Double[] inputXData, Double[] inputYData)
+   at KronosCameraTestApp.View.UserControls.PhotoresponseUserControl.<PlotPhotoresponseData>d__6.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\PhotoresponseUserControl.cs:line 203
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-06-30 18:13:14,335 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-06-30 18:16:45,368 [14] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.PRNUTest() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 737
+ AMER\babagoud.gadiga - Exception inVoid PRNUTest()
+2018-06-30 18:17:10,662 [10] ERROR KronosCameraTestApp.View.UserControls.PhotoresponseUserControl System.ArgumentNullException: Value cannot be null.
+Parameter name: inputXData
+   at NationalInstruments.Analysis.Math.CurveFit.LinearFit(Double[] inputXData, Double[] inputYData, FitMethod fitMethod, Double[] weight, Double tolerance, Double& slope, Double& intercept, Double& residue)
+   at NationalInstruments.Analysis.Math.CurveFit.LinearFit(Double[] inputXData, Double[] inputYData)
+   at KronosCameraTestApp.View.UserControls.PhotoresponseUserControl.<PlotPhotoresponseData>d__6.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\PhotoresponseUserControl.cs:line 203
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-06-30 18:22:56,131 [16] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.PRNUTest() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 737
+ AMER\babagoud.gadiga - Exception inVoid PRNUTest()
+2018-06-30 18:23:02,114 [9] ERROR KronosCameraTestApp.View.UserControls.PhotoresponseUserControl System.ArgumentNullException: Value cannot be null.
+Parameter name: inputXData
+   at NationalInstruments.Analysis.Math.CurveFit.LinearFit(Double[] inputXData, Double[] inputYData, FitMethod fitMethod, Double[] weight, Double tolerance, Double& slope, Double& intercept, Double& residue)
+   at NationalInstruments.Analysis.Math.CurveFit.LinearFit(Double[] inputXData, Double[] inputYData)
+   at KronosCameraTestApp.View.UserControls.PhotoresponseUserControl.<PlotPhotoresponseData>d__6.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\PhotoresponseUserControl.cs:line 203
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-06-30 18:31:41,676 [3] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.PRNUTest() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 737
+ AMER\babagoud.gadiga - Exception inVoid PRNUTest()
+2018-06-30 18:31:47,848 [9] ERROR KronosCameraTestApp.View.UserControls.PhotoresponseUserControl System.ArgumentNullException: Value cannot be null.
+Parameter name: inputXData
+   at NationalInstruments.Analysis.Math.CurveFit.LinearFit(Double[] inputXData, Double[] inputYData, FitMethod fitMethod, Double[] weight, Double tolerance, Double& slope, Double& intercept, Double& residue)
+   at NationalInstruments.Analysis.Math.CurveFit.LinearFit(Double[] inputXData, Double[] inputYData)
+   at KronosCameraTestApp.View.UserControls.PhotoresponseUserControl.<PlotPhotoresponseData>d__6.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\PhotoresponseUserControl.cs:line 203
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-06-30 18:41:00,663 [9] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass2e.<CalculateNoiseNDRO>b__2c() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 597
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<CalculateNoiseNDRO>d__30.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 524
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-06-30 19:09:03,146 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host

@@ -1,0 +1,16 @@
+2018-11-28 14:05:19,878 [1] ERROR KronosCameraTestApp.View.TestResultsForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.TestResultsForm.PopulateTestResults(Int32 numRecords) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 646
+ AMER\babagoud.gadiga - Exception inVoid PopulateTestResults(Int32)
+2018-11-28 14:05:22,526 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-28 14:08:10,445 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-28 14:08:35,899 [1] ERROR KronosCameraTestApp.View.TestResultsForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.TestResultsForm.PopulateTestResults(Int32 numRecords) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 646
+ AMER\babagoud.gadiga - Exception inVoid PopulateTestResults(Int32)
+2018-11-28 14:24:47,978 [1] ERROR KronosCameraTestApp.View.TestResultsForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.TestResultsForm.PopulateTestResults(Int32 numRecords) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 646
+ AMER\babagoud.gadiga - Exception inVoid PopulateTestResults(Int32)
+2018-11-28 14:24:48,408 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-28 14:28:56,679 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-28 15:13:03,755 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-28 15:21:49,968 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-28 19:00:25,408 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host

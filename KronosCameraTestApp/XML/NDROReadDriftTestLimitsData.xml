@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NdroReadDriftTestLimitsData>
+  <Limit>
+    <LimitsID>1</LimitsID>
+    <NdroReadDriftMaxSlope>2.000000000000000e+001</NdroReadDriftMaxSlope>
+    <DefinedDate>2018-01-26T16:23:38.853</DefinedDate>
+    <UserModified>Baba</UserModified>
+  </Limit>
+</NdroReadDriftTestLimitsData>

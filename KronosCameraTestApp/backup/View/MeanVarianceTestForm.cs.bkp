@@ -1,0 +1,1692 @@
+﻿using Infragistics.Win.UltraWinToolTip;
+using KronosCameraTestApp.Helpers;
+using KronosCameraTestApp.Model;
+using KronosCameraTestApp.Presenter;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Configuration;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml;
+using Thermo.Kronos.Instrument.Camera.Interface;
+
+namespace KronosCameraTestApp.View
+{
+    public partial class MeanVarianceTestForm : Form
+    {
+        public MeanVariancePresenter meanVariancePresenter { get; set; }
+       
+        // The once-per-class call to initialize the log object
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(
+           System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+             
+        private CIDInterface cidInterface = null;       
+        public int currentRecord = 0;
+        public int currentSubarrayRecord = 0;
+        private string userMode = string.Empty;
+        bool engineeringLoginStatus = false;
+        string enggUserName = string.Empty;
+        //Infragistics.Win.UltraWinStatusBar.UltraStatusBar statusBar = null;
+        CancellationTokenSource cts { get; set; }
+        public CIDInterface CidInterface
+        {
+            get { return cidInterface; }
+            set { cidInterface = value; }
+        }      
+        bool meanVarianceTestStatus = false;
+        public bool MeanVarianceTestStatus
+        {
+            get { return meanVarianceTestStatus; }
+            set { meanVarianceTestStatus = value; }
+        }      
+        public MeanVarianceTestForm()
+        {
+            InitializeComponent();
+        }
+        Form mdiParent = null;
+        public MeanVarianceTestForm(MeanVariancePresenter meanVariancePresenter, string UserMode, bool enggLoginStatus, 
+            CIDInterface cidInterface, Form MDIParent)
+        {
+            try
+            {
+                InitializeComponent();
+                currentSubarrayRecord = 0;
+                currentRecord = 0;
+                this.meanVariancePresenter = meanVariancePresenter;
+                this.userMode = UserMode;
+                this.engineeringLoginStatus = enggLoginStatus;
+                //this.enggUserName = enggUserName;
+                this.cidInterface = cidInterface;
+                //this.statusBar = statusBar;
+                mdiParent = MDIParent;
+                //this.MdiParent = (KronosTestAppMainForm)MDIParent;
+            }          
+            catch(Exception ex)
+            {
+                log.Error("Exception in"+ MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private async void MeanVarianceTestForm_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                numericEditExposureInterval.BeforeChangeValue += CheckRanges;
+                numericEditLEDOn.BeforeChangeValue += CheckRanges;
+                numericEditLEDOff.BeforeChangeValue += CheckRanges;
+                numericEditFlash.BeforeChangeValue += CheckRanges;
+                numericEditExposureStartX.BeforeChangeValue += CheckRanges;
+                numericEditExposureStartY.BeforeChangeValue += CheckRanges;
+                numericEditExposureWidth.BeforeChangeValue += CheckRanges;
+                numericEditExposureHeight.BeforeChangeValue += CheckRanges;
+                numericEditThresholdPercent.BeforeChangeValue += CheckRanges;
+                numericEditSubarrayStartX.BeforeChangeValue += CheckRanges;
+                numericEditSubarrayStartY.BeforeChangeValue += CheckRanges;
+                numericEditSubarrayWidth.BeforeChangeValue += CheckRanges;
+                numericEditSubarrayHeight.BeforeChangeValue += CheckRanges;
+                //numericEditSubarrayThresholdStartX.BeforeChangeValue += CheckRanges;
+                //numericEditSubarrayThresholdStartY.BeforeChangeValue += CheckRanges;
+                //numericEditSubarrayThresholdWidth.BeforeChangeValue += CheckRanges;
+                //numericEditSubarrayThresholdHeight.BeforeChangeValue += CheckRanges;
+
+                numericEditExposureWidth.AfterChangeValue += CheckRanges1;
+
+                //numericEditExposureInterval.ValueChanged += CheckRangesValueChanged;
+
+                Cursor.Current = Cursors.WaitCursor;
+                if (meanVariancePresenter.MeanVarianceTestLimitsDataList.Count == 0)
+                    await meanVariancePresenter.GetMVLimits();
+
+                if (meanVariancePresenter.ExposureDataList.Count == 0)                    
+                    await meanVariancePresenter.GetMVData(cidInterface);
+
+                UpdateLimitsViewWithModelOnLoad();
+
+                //numericEditNumOfExposures.Maximum = meanVariancePresenter.ExposureDataList.Count;
+                numericEditNumOfExposures.Value = meanVariancePresenter.ExposureDataList.Count;
+                AutoCompleteExposureSubarray();
+                UpdateExposureView(0);
+
+                currentRecord = 0;
+                currentSubarrayRecord = 0;
+                if (userMode == "Admin" && engineeringLoginStatus)
+                {
+                    AddExposure.Enabled = true;
+                    RemoveExposure.Enabled = true;
+                    UpdateExposure.Enabled = true;
+                    AddSubarray.Enabled = true;
+                    RemoveSubarray.Enabled = true;
+                    UpdateSubarray.Enabled = true;
+                }
+                else if(userMode=="Manufacturing")
+                {
+                    EnableReadOnlyControlsManufacturingMode();
+                }
+                Cursor.Current = Cursors.Arrow;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error Loading Mean Variance Test Form", "Loading Form", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void AutoCompleteExposureSubarray()
+        {
+            try
+            {
+                //await Task.Run(() =>
+                    //{
+                        AutoCompleteStringCollection exposureNameList = new AutoCompleteStringCollection();
+                        AutoCompleteStringCollection subarrayNameList = new AutoCompleteStringCollection();
+                        foreach (ExposureDataModel mvm in meanVariancePresenter.ExposureDataList)
+                        {
+                            exposureNameList.Add(mvm.ExposureName);
+                        }
+                        ultraTextEditorExposureName.AutoCompleteMode = AutoCompleteMode.Suggest;
+                        ultraTextEditorExposureName.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                        ultraTextEditorExposureName.AutoCompleteCustomSource = exposureNameList;
+
+                        foreach (SubarrayDataModel mvs in meanVariancePresenter.SubarrayDataModelList)
+                        {
+                            subarrayNameList.Add(mvs.SubarrayName);
+                        }
+                        ultraTextEditorSubarrayName.AutoCompleteMode = AutoCompleteMode.Suggest;
+                        ultraTextEditorSubarrayName.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                        ultraTextEditorSubarrayName.AutoCompleteCustomSource = subarrayNameList;
+                   // });
+               
+            }
+            catch(Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void EnableReadOnlyControlsManufacturingMode()
+        {
+            try
+            {
+                NumExposuresGroupBox.Enabled = false;
+                LimitsGroupBox.Enabled = false;
+                ExposureSettingsGroupBox.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private async void buttonMVRun_Click(object sender, EventArgs e)
+        {
+            //log.Info("Entering buttonMVRun_Click");
+            try
+            {
+                //if (((KronosTestAppMainForm)this.).AutoTestStatus)
+                
+                //if (((KronosTestAppMainForm)this.MdiParent).AutoTestStatus)
+                if (((KronosTestAppMainForm)mdiParent).AutoTestStatus)
+                {
+                    MessageBox.Show("Auto Test is under process. Please wait until the test is completed");
+                    return;
+                }
+                if (((KronosTestAppMainForm)mdiParent).AutoTestStatus)// (((KronosTestAppMainForm)this.MdiParent).AutoPreTestStatus)
+                {
+                    MessageBox.Show("PreTest is under process. Please wait until the test is completed");
+                    return;
+                }
+                else if (cidInterface.IsConnected())
+                {                   
+                    if (Convert.ToInt32(numericEditNumOfExposures.Value) <= 0)
+                    {
+                        MessageBox.Show("Exposure count should be greater than 0", "Invalid exposure count", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                        return;
+                    }
+                    ledPassFail.Value = false;
+                    ledPassFail.OffColor = Color.DarkGreen;
+                    labelGain.Text = string.Empty;
+                    // Instantiate the CancellationTokenSource.  
+                    cts = new CancellationTokenSource();
+                    TestAppHelper.currentRunningTest = "MeanVariance";
+                    ((KronosTestAppMainForm)mdiParent).ResetAutoManualStatusBarPanel();
+                   ((KronosTestAppMainForm)mdiParent).ultraStatusBar1.Panels["TestProgress"].ProgressBarInfo.Value = 1;
+                   ((KronosTestAppMainForm)mdiParent).ultraStatusBar1.Panels["MarqueeStatus"].Text = "Mean Variance Test Processing....";
+                   ((KronosTestAppMainForm)mdiParent).ultraStatusBar1.Panels["MarqueeStatus"].MarqueeInfo.Start();
+                    buttonMVRun.Enabled = false;
+                    buttonMVAbort.Enabled = true;
+
+                    meanofROI1minus2Plot.ClearData();
+                    varianceOfROI1minus2Plot.ClearData();
+                    linearCurveFitOfVarPlot.ClearData();
+                    meanVarianceScatterGraph.ClearData();
+                    meanVarianceScatterGraph.Refresh();
+
+                    meanVarianceTestStatus = true;
+
+                    //var watch = System.Diagnostics.Stopwatch.StartNew();
+
+                    //UpdateModelFromView();
+                    UpdateExposureDataModelFromView();
+                    UpdateSubarrayDataModelFromView();
+
+                    //Run Mean Variance Test
+                    await RunMVTest(cts.Token);
+
+                    //Plot Mean Variance Data
+                    await PlotMVData(cts);
+
+                    ((KronosTestAppMainForm)mdiParent).ultraStatusBar1.Panels["TestProgress"].ProgressBarInfo.Value = 100;
+
+                    //byte[] imagearray = imageToByteArray();
+
+                    //Write Test results to DB
+                    //await meanVariancePresenter.WriteMVTestResultToDB(cts.Token, imagearray);
+
+                    //((KronosTestAppMainForm)this.MdiParent).SaveImage("Bitmap");
+                    //watch.Stop();
+                    //var elapsedMs = watch.ElapsedMilliseconds;
+
+                    ((KronosTestAppMainForm)mdiParent).ultraStatusBar1.Panels["MarqueeStatus"].MarqueeInfo.Stop();
+                    if (cts.IsCancellationRequested)
+                    {
+                        ((KronosTestAppMainForm)mdiParent).ultraStatusBar1.Panels["MarqueeStatus"].Text = "Mean Variance Test Aborted";
+                    }
+                    else
+                    {
+                        ((KronosTestAppMainForm)mdiParent).ultraStatusBar1.Panels["MarqueeStatus"].Text = "Mean Variance Test Completed";
+                    }
+                    labelGain.Text = meanVariancePresenter.Gain.ToString("0.00");
+                    buttonMVAbort.Enabled = false;
+                    buttonMVRun.Enabled = true;
+                    meanVarianceTestStatus = false;
+                    ultraExplorerBar1.Groups[1].Expanded = true;
+                    //log.Info("Exiting buttonMVRun_Click");
+                }
+                else
+                {
+                    //log.Error("Firmware not running or camera not connected to host");
+                    //MessageBox.Show(
+                    //       "Firmware not running or camera not connected to host",
+                    //       "Firmware not found",
+                    //        MessageBoxButtons.OK,
+                    //        MessageBoxIcon.Information);
+                    //return;
+                    bool cameraConnected= cidInterface.Connect(ConfigurationManager.AppSettings["CameraIPAddresss"], Int32.Parse(ConfigurationManager.AppSettings["CameraIPPort"]));
+                    if(cameraConnected)
+                    {
+                        ((KronosTestAppMainForm)mdiParent).ultraStatusBar1.Panels["CameraStatus"].Text = "CID821 Connected";
+                        ((KronosTestAppMainForm)mdiParent).ultraStatusBar1.Panels["CameraStatus"].Appearance.BackColor = Color.LimeGreen;                        
+                    }
+                    else
+                    {
+                        log.Error("Firmware not running or camera not connected to host");
+                        MessageBox.Show("Firmware not running or camera not connected to host", "Firmware not found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                //"Internal Error";
+                buttonMVAbort.Enabled = false;
+                buttonMVRun.Enabled = true;
+                meanVarianceTestStatus = false;
+                ultraExplorerBar1.Groups[1].Expanded = true;
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private async Task RunMVTest(CancellationToken ct)
+        {
+            try
+            {
+                //await meanVariancePresenter.WriteTestResultsToExcel();
+                log.Debug("Run Mean Variance test.");
+                ledPassFail.Value = false;
+                await meanVariancePresenter.runMeanVarianceTest(cidInterface, ct,userMode, Convert.ToInt32(numericEditNumOfExposures.Value));               
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+                //"Internal Error";
+                buttonMVAbort.Enabled = false;
+                buttonMVRun.Enabled = true;
+                meanVarianceTestStatus = false;
+                ultraExplorerBar1.Groups[1].Expanded = true;
+            }
+        }
+        private async Task PlotMVData(CancellationTokenSource ct)
+        {
+            try
+            {
+                    await meanVariancePresenter.CalculateMeanVariance(ct.Token);
+                    if (ct.IsCancellationRequested)
+                        return;
+                if(meanVariancePresenter.NICorrectedMeanValue !=null &&  meanVariancePresenter.NICorrectedVarianceValue !=null)
+                        meanVarianceScatterGraph.PlotXY(meanVariancePresenter.NICorrectedMeanValue, meanVariancePresenter.NICorrectedVarianceValue);
+                if (meanVariancePresenter.LinearCurveFit != null)
+                    linearCurveFitOfVarPlot.PlotY(meanVariancePresenter.LinearCurveFit);
+                    labelGain.Text = meanVariancePresenter.Gain.ToString("0.00");
+                    buttonMVRun.Enabled = true;
+                    buttonMVAbort.Enabled = false;
+                    if (meanVariancePresenter.MeanVarianceTestPassed)
+                        ledPassFail.Value = true;
+                    else
+                    {
+                        ledPassFail.Value = false;
+                        ledPassFail.OffColor = Color.Red;
+                    }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+                //"Internal Error";
+                buttonMVAbort.Enabled = false;
+                buttonMVRun.Enabled = true;
+                meanVarianceTestStatus = false;
+                ultraExplorerBar1.Groups[1].Expanded = true;
+            }
+        }      
+        private void UpdateExposureDataModelFromView()
+        {
+            try
+            {
+                meanVariancePresenter.ExposureDataModel = new ExposureDataModel();
+
+                meanVariancePresenter.ExposureDataModel.ExposureID = Convert.ToInt32(ultraTextEditorExposureID.Value);
+                meanVariancePresenter.ExposureDataModel.TestDataID = "MVT";
+                meanVariancePresenter.ExposureDataModel.UserModified = Environment.UserName;
+                meanVariancePresenter.ExposureDataModel.GlobalInjectDelay = Convert.ToInt32(numericEditDelay.Value);
+                meanVariancePresenter.ExposureDataModel.GlobalInject = Convert.ToInt32(numericEditGlobalInject.Value);
+
+                //Exposure         
+                meanVariancePresenter.ExposureDataModel.ExposureName = ultraTextEditorExposureName.Text.ToString();
+                meanVariancePresenter.ExposureDataModel.ExposureInterval = Convert.ToInt32(numericEditExposureInterval.Value);
+                meanVariancePresenter.ExposureDataModel.ExposureNDROS = Convert.ToInt32(numericEditNDRO.Value);
+                meanVariancePresenter.ExposureDataModel.ExposureRegionXo = Convert.ToInt32(numericEditExposureStartX.Value);
+                meanVariancePresenter.ExposureDataModel.ExposureRegiondX = Convert.ToInt32(numericEditExposureWidth.Value);
+                meanVariancePresenter.ExposureDataModel.ExposureRegionYo = Convert.ToInt32(numericEditExposureStartY.Value);
+                meanVariancePresenter.ExposureDataModel.ExposureRegiondY = Convert.ToInt32(numericEditExposureHeight.Value);
+                meanVariancePresenter.ExposureDataModel.LED1Enabled = ultraCheckEditorLED1.Checked;
+                meanVariancePresenter.ExposureDataModel.LED2Enabled = ultraCheckEditorLED2.Checked;
+                meanVariancePresenter.ExposureDataModel.LED3Enabled = ultraCheckEditorLED3.Checked;
+                meanVariancePresenter.ExposureDataModel.ShutterEnabled = ultraCheckEditorShutterEnabled.Checked;
+                meanVariancePresenter.ExposureDataModel.LEDOnTime = Convert.ToInt32(numericEditLEDOn.Value);
+                meanVariancePresenter.ExposureDataModel.LEDOffTime = Convert.ToInt32(numericEditLEDOff.Value);
+                meanVariancePresenter.ExposureDataModel.LEDFlashes = Convert.ToInt32(numericEditFlash.Value);
+                meanVariancePresenter.ExposureDataModel.AutoBiasFPNEnabled = Convert.ToByte(ultraCheckEditorAutoBias.Checked);
+                meanVariancePresenter.ExposureDataModel.NumberOfSubarrays = Convert.ToInt32(ultraTextEditorNumberOfSubarrays.Value);
+
+                if (ultraRadioButtonFPNNone.Checked == true)
+                {
+                    meanVariancePresenter.ExposureDataModel.ExposureFPN = 0;
+                }
+                else if (ultraRadioButtonFPNRunTime.Checked == true)
+                {
+                    meanVariancePresenter.ExposureDataModel.ExposureFPN = 1;
+                }
+                else if (ultraCheckEditorAutoBias.Checked == true)
+                {
+                    meanVariancePresenter.ExposureDataModel.ExposureFPN = 2;
+                }
+                else if (ultraRadioButtonFPNStored.Checked == true)
+                {
+                    meanVariancePresenter.ExposureDataModel.ExposureFPN = 3;
+                }
+
+                meanVariancePresenter.ExposureDataModel.FullFrameEnabled = ultraCheckEditorExposedFrame.Checked;
+                meanVariancePresenter.ExposureDataModel.DarkFrameEnabled = ultraCheckEditorDarkFrame.Checked;
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void UpdateSubarrayDataModelFromView()
+        {
+            try
+            {
+                //List<SubarrayDataModel> subarray= meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas.ToList().Where(sub => sub.SubarrayID.Equals(Convert.ToInt32(ultraTextEditorSubarrayID.Value))).ToList();
+                //SubarrayDataModel s1= ss.Where(sub => sub.SubarrayID.Equals(Convert.ToInt32(ultraTextEditorSubarrayID.Value)));
+                meanVariancePresenter.SubarrayDataModel = new SubarrayDataModel();
+                meanVariancePresenter.SubarrayDataModel.SubarrayID = Convert.ToInt32(ultraTextEditorSubarrayID.Value);
+                meanVariancePresenter.SubarrayDataModel.ExposureID = Convert.ToInt32(ultraTextEditorExposureID.Value);
+                meanVariancePresenter.SubarrayDataModel.UserModified = Environment.UserName;
+                meanVariancePresenter.SubarrayDataModel.SubarrayName = ultraTextEditorSubarrayName.Text.ToString();
+                meanVariancePresenter.SubarrayDataModel.SubarrayRegionXo = Convert.ToInt32(numericEditSubarrayStartX.Value);
+                meanVariancePresenter.SubarrayDataModel.SubarrayRegiondX = Convert.ToInt32(numericEditSubarrayWidth.Value);
+                meanVariancePresenter.SubarrayDataModel.SubarrayRegionYo = Convert.ToInt32(numericEditSubarrayStartY.Value);
+                meanVariancePresenter.SubarrayDataModel.SubarrayRegiondY = Convert.ToInt32(numericEditSubarrayHeight.Value);
+
+                meanVariancePresenter.SubarrayDataModel.SubarrayReadEnabled = ultraCheckEditorSubarrayRead.Checked;
+                meanVariancePresenter.SubarrayDataModel.SubarrayReadInterval = Convert.ToInt32(numericEditSubarrayReadInterval.Value);
+
+                meanVariancePresenter.SubarrayDataModel.SubarraySubinjectEnabled = ultraCheckEditorSubarraySubInject.Checked;
+                meanVariancePresenter.SubarrayDataModel.SubarraySubinjectInterval = Convert.ToInt32(numericEditSubarraySubinjectInterval.Value);
+
+                meanVariancePresenter.SubarrayDataModel.SubarrayPostReadEnabled = ultraCheckEditorSubarrayPostRead.Checked;
+                meanVariancePresenter.SubarrayDataModel.SubarrayPostReadNDROS = Convert.ToInt32(numericEditSubarrayNDROs.Value);
+
+                meanVariancePresenter.SubarrayDataModel.SubarrayThresholdRegionXo = Convert.ToInt32(numericEditSubarrayThresholdStartX.Value);
+                meanVariancePresenter.SubarrayDataModel.SubarrayThresholdRegiondX = Convert.ToInt32(numericEditSubarrayThresholdWidth.Value);
+                meanVariancePresenter.SubarrayDataModel.SubarrayThresholdRegionYo = Convert.ToInt32(numericEditSubarrayThresholdStartY.Value);
+                meanVariancePresenter.SubarrayDataModel.SubarrayThresholdRegiondY = Convert.ToInt32(numericEditSubarrayThresholdHeight.Value);
+                meanVariancePresenter.SubarrayDataModel.SubarrayThresholdEnabled = ultraCheckEditorEnableThreshold.Checked;
+
+                meanVariancePresenter.SubarrayDataModel.TimeResolvedEnabled = ultraCheckEditorTimeResolved.Checked;
+                meanVariancePresenter.SubarrayDataModel.AdaptiveEnabled = ultraCheckEditorAdaptive.Checked;
+                meanVariancePresenter.SubarrayDataModel.SubarrayThresholdPercent = Convert.ToInt32(numericEditThresholdPercent.Value);
+                meanVariancePresenter.SubarrayDataModel.TimeResolvedInterval = Convert.ToInt32(numericEditSubarrayTimeResolved.Value);
+
+                if (ultraRadioButtonSubarrayFPNNone.Checked == true)
+                {
+                    meanVariancePresenter.SubarrayDataModel.SubarrayFPN = 0;
+                }
+                else if (ultraRadioButtonSubarrayFPNRunTime.Checked == true)
+                {
+                    meanVariancePresenter.SubarrayDataModel.SubarrayFPN = 1;
+                }
+                else if (ultraRadioButtonSubarrayFPNStored.Checked == true)
+                {
+                    meanVariancePresenter.SubarrayDataModel.SubarrayFPN = 3;
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private bool UpdateExposureRecordForUpdateOperation(ExposureDataModel expRecord)
+        {
+            try
+            {
+                expRecord.ExposureID = Convert.ToInt32(ultraTextEditorExposureID.Value);
+                expRecord.TestDataID = "MVT";
+                expRecord.UserModified = Environment.UserName;
+                expRecord.GlobalInjectDelay = Convert.ToInt32(numericEditDelay.Value);
+                expRecord.GlobalInject = Convert.ToInt32(numericEditGlobalInject.Value);
+
+                //Exposure         
+                expRecord.ExposureName = ultraTextEditorExposureName.Text.ToString();
+                expRecord.ExposureInterval = Convert.ToInt32(numericEditExposureInterval.Value);
+                expRecord.ExposureNDROS = Convert.ToInt32(numericEditNDRO.Value);
+                expRecord.ExposureRegionXo = Convert.ToInt32(numericEditExposureStartX.Value);
+                expRecord.ExposureRegiondX = Convert.ToInt32(numericEditExposureWidth.Value);
+                expRecord.ExposureRegionYo = Convert.ToInt32(numericEditExposureStartY.Value);
+                expRecord.ExposureRegiondY = Convert.ToInt32(numericEditExposureHeight.Value);
+                expRecord.LED1Enabled = ultraCheckEditorLED1.Checked;
+                expRecord.LED2Enabled = ultraCheckEditorLED2.Checked;
+                expRecord.LED3Enabled = ultraCheckEditorLED3.Checked;
+                expRecord.ShutterEnabled = ultraCheckEditorShutterEnabled.Checked;
+                expRecord.LEDOnTime = Convert.ToInt32(numericEditLEDOn.Value);
+                expRecord.LEDOffTime = Convert.ToInt32(numericEditLEDOff.Value);
+                expRecord.LEDFlashes = Convert.ToInt32(numericEditFlash.Value);
+                expRecord.AutoBiasFPNEnabled = Convert.ToByte(ultraCheckEditorAutoBias.Checked);
+                expRecord.NumberOfSubarrays = Convert.ToInt32(ultraTextEditorNumberOfSubarrays.Value);
+
+                if (ultraRadioButtonFPNNone.Checked == true)
+                {
+                    expRecord.ExposureFPN = 0;
+                }
+                else if (ultraRadioButtonFPNRunTime.Checked == true)
+                {
+                    expRecord.ExposureFPN = 1;
+                }
+                else if (ultraCheckEditorAutoBias.Checked == true)
+                {
+                    expRecord.ExposureFPN = 2;
+                }
+                else if (ultraRadioButtonFPNStored.Checked == true)
+                {
+                    expRecord.ExposureFPN = 3;
+                }
+
+                expRecord.FullFrameEnabled = ultraCheckEditorExposedFrame.Checked;
+                expRecord.DarkFrameEnabled = ultraCheckEditorDarkFrame.Checked;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+                return false;
+
+            }
+
+
+
+        }
+        private bool UpdateSubarrayModelForUpdateOperation(SubarrayDataModel SubarrayDataModel)
+        {
+            try
+            {
+                // SubarrayDataModel = new SubarrayDataModel();
+                SubarrayDataModel.SubarrayID = Convert.ToInt32(ultraTextEditorSubarrayID.Value);
+                SubarrayDataModel.ExposureID = Convert.ToInt32(ultraTextEditorExposureID.Value);
+                SubarrayDataModel.UserModified = Environment.UserName;
+                SubarrayDataModel.SubarrayName = ultraTextEditorSubarrayName.Text.ToString();
+                SubarrayDataModel.SubarrayRegionXo = Convert.ToInt32(numericEditSubarrayStartX.Value);
+                SubarrayDataModel.SubarrayRegiondX = Convert.ToInt32(numericEditSubarrayWidth.Value);
+                SubarrayDataModel.SubarrayRegionYo = Convert.ToInt32(numericEditSubarrayStartY.Value);
+                SubarrayDataModel.SubarrayRegiondY = Convert.ToInt32(numericEditSubarrayHeight.Value);
+
+                SubarrayDataModel.SubarrayReadEnabled = ultraCheckEditorSubarrayRead.Checked;
+                SubarrayDataModel.SubarrayReadInterval = Convert.ToInt32(numericEditSubarrayReadInterval.Value);
+
+                SubarrayDataModel.SubarraySubinjectEnabled = ultraCheckEditorSubarraySubInject.Checked;
+                SubarrayDataModel.SubarraySubinjectInterval = Convert.ToInt32(numericEditSubarraySubinjectInterval.Value);
+
+                SubarrayDataModel.SubarrayPostReadEnabled = ultraCheckEditorSubarrayPostRead.Checked;
+                SubarrayDataModel.SubarrayPostReadNDROS = Convert.ToInt32(numericEditSubarrayNDROs.Value);
+
+                SubarrayDataModel.SubarrayThresholdRegionXo = Convert.ToInt32(numericEditSubarrayThresholdStartX.Value);
+                SubarrayDataModel.SubarrayThresholdRegiondX = Convert.ToInt32(numericEditSubarrayThresholdWidth.Value);
+                SubarrayDataModel.SubarrayThresholdRegionYo = Convert.ToInt32(numericEditSubarrayThresholdStartY.Value);
+                SubarrayDataModel.SubarrayThresholdRegiondY = Convert.ToInt32(numericEditSubarrayThresholdHeight.Value);
+                SubarrayDataModel.SubarrayThresholdEnabled = ultraCheckEditorEnableThreshold.Checked;
+
+                SubarrayDataModel.TimeResolvedEnabled = ultraCheckEditorTimeResolved.Checked;
+                SubarrayDataModel.AdaptiveEnabled = ultraCheckEditorAdaptive.Checked;
+                SubarrayDataModel.SubarrayThresholdPercent = Convert.ToInt32(numericEditThresholdPercent.Value);
+                SubarrayDataModel.TimeResolvedInterval = Convert.ToInt32(numericEditSubarrayTimeResolved.Value);
+
+                if (ultraRadioButtonSubarrayFPNNone.Checked == true)
+                {
+                    SubarrayDataModel.SubarrayFPN = 0;
+                }
+                else if (ultraRadioButtonSubarrayFPNRunTime.Checked == true)
+                {
+                    SubarrayDataModel.SubarrayFPN = 1;
+                }
+                else if (ultraRadioButtonSubarrayFPNStored.Checked == true)
+                {
+                    SubarrayDataModel.SubarrayFPN = 3;
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+                return false;
+            }
+        }
+        private void UpdateViewForSearchOperation(ExposureDataModel exposureRecord)
+        {
+            try
+            {
+                ultraLabelNumSubarrays.Text = "Total # of Subarrays:" + exposureRecord.SubarrayDatas.Count.ToString();
+
+                ultraTextEditorExposureID.Text = exposureRecord.ExposureID.ToString();
+
+                ultraTextEditorExposureName.Text = exposureRecord.ExposureName.ToString();
+
+                numericEditDelay.Value = exposureRecord.GlobalInjectDelay;
+                numericEditGlobalInject.Value = exposureRecord.GlobalInject;
+
+                numericEditExposureInterval.Value = exposureRecord.ExposureInterval;
+                numericEditNDRO.Value = exposureRecord.ExposureNDROS;
+                numericEditExposureStartX.Value = exposureRecord.ExposureRegionXo;
+                numericEditExposureWidth.Value = exposureRecord.ExposureRegiondX;
+                numericEditExposureStartY.Value = exposureRecord.ExposureRegionYo;
+                numericEditExposureHeight.Value = exposureRecord.ExposureRegiondY;
+
+
+                ultraCheckEditorLED1.Checked = exposureRecord.LED1Enabled;
+                ultraCheckEditorLED2.Checked = exposureRecord.LED2Enabled;
+                ultraCheckEditorLED3.Checked = exposureRecord.LED3Enabled;
+                ultraCheckEditorShutterEnabled.Checked = exposureRecord.ShutterEnabled;
+                numericEditLEDOn.Value = exposureRecord.LEDOnTime;
+                numericEditLEDOff.Value = exposureRecord.LEDOffTime;
+                numericEditFlash.Value = exposureRecord.LEDFlashes;
+                ultraCheckEditorAutoBias.Checked = Convert.ToBoolean(exposureRecord.AutoBiasFPNEnabled);
+
+                if (exposureRecord.ExposureFPN == 0)
+                {
+                    ultraRadioButtonFPNNone.Checked = true;
+                }
+                else if (exposureRecord.ExposureFPN == 1)
+                {
+                    ultraRadioButtonFPNRunTime.Checked = true;
+                }
+                else if (exposureRecord.ExposureFPN == 3)
+                {
+                    ultraRadioButtonFPNStored.Checked = true;
+                }
+
+
+                ultraCheckEditorExposedFrame.Checked = exposureRecord.FullFrameEnabled;
+                ultraCheckEditorDarkFrame.Checked = exposureRecord.DarkFrameEnabled;
+
+                ultraTextEditorSubarrayID.Text = exposureRecord.SubarrayDatas[0].SubarrayID.ToString();
+                ultraTextEditorSubarrayName.Text = exposureRecord.SubarrayDatas[0].SubarrayName.ToString();
+
+                numericEditSubarrayStartX.Value = exposureRecord.SubarrayDatas[0].SubarrayRegionXo;
+                numericEditSubarrayWidth.Value = exposureRecord.SubarrayDatas[0].SubarrayRegiondX;
+                numericEditSubarrayStartY.Value = exposureRecord.SubarrayDatas[0].SubarrayRegionYo;
+                numericEditSubarrayHeight.Value = exposureRecord.SubarrayDatas[0].SubarrayRegiondY;
+
+                ultraCheckEditorSubarrayRead.Checked = exposureRecord.SubarrayDatas[0].SubarrayReadEnabled;
+                numericEditSubarrayReadInterval.Value = exposureRecord.SubarrayDatas[0].SubarrayReadInterval;
+
+                ultraCheckEditorSubarraySubInject.Checked = exposureRecord.SubarrayDatas[0].SubarraySubinjectEnabled;
+                numericEditSubarraySubinjectInterval.Value = exposureRecord.SubarrayDatas[0].SubarraySubinjectInterval;
+                ultraCheckEditorSubarrayPostRead.Checked = exposureRecord.SubarrayDatas[0].SubarrayPostReadEnabled;
+                numericEditSubarrayNDROs.Value = exposureRecord.SubarrayDatas[0].SubarrayPostReadNDROS;
+
+                numericEditSubarrayThresholdStartX.Value = exposureRecord.SubarrayDatas[0].SubarrayThresholdRegionXo;
+                numericEditSubarrayThresholdWidth.Value = exposureRecord.SubarrayDatas[0].SubarrayThresholdRegiondX;
+                numericEditSubarrayThresholdStartY.Value = exposureRecord.SubarrayDatas[0].SubarrayThresholdRegionYo;
+                numericEditSubarrayThresholdHeight.Value = exposureRecord.SubarrayDatas[0].SubarrayThresholdRegiondY;
+                ultraCheckEditorEnableThreshold.Checked = exposureRecord.SubarrayDatas[0].SubarrayThresholdEnabled;
+
+                ultraCheckEditorTimeResolved.Checked = exposureRecord.SubarrayDatas[0].TimeResolvedEnabled;
+                ultraCheckEditorAdaptive.Checked = exposureRecord.SubarrayDatas[0].AdaptiveEnabled;
+                numericEditThresholdPercent.Value = exposureRecord.SubarrayDatas[0].SubarrayThresholdPercent;
+                numericEditSubarrayTimeResolved.Value = exposureRecord.SubarrayDatas[0].TimeResolvedInterval;
+
+                if (exposureRecord.SubarrayDatas[0].SubarrayFPN == 0)
+                {
+                    ultraRadioButtonSubarrayFPNNone.Checked = true;
+                }
+                else if (exposureRecord.SubarrayDatas[0].SubarrayFPN == 1)
+                {
+                    ultraRadioButtonSubarrayFPNRunTime.Checked = true;
+                }
+                else if (exposureRecord.SubarrayDatas[0].SubarrayFPN == 2)
+                {
+                    ultraRadioButtonSubarrayFPNStored.Checked = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }       
+        private void UpdateExposureView(int currentRecord)
+        {
+            try
+            {
+                if (meanVariancePresenter.ExposureDataList.Count > 0 && currentRecord < meanVariancePresenter.ExposureDataList.Count)
+                {
+                    ultraLabelNumberofExposures.Text = "Total # of Exposures:" + meanVariancePresenter.ExposureDataList.Count.ToString();
+                    ultraLabelNumSubarrays.Text = "Total # of Subarrays:" + meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas.Count.ToString();
+
+                    ultraTextEditorExposureID.Text = meanVariancePresenter.ExposureDataList[currentRecord].ExposureID.ToString();
+
+                    ultraTextEditorExposureName.Text = meanVariancePresenter.ExposureDataList[currentRecord].ExposureName.ToString();
+
+                    numericEditDelay.Value = meanVariancePresenter.ExposureDataList[currentRecord].GlobalInjectDelay;
+                    numericEditGlobalInject.Value = meanVariancePresenter.ExposureDataList[currentRecord].GlobalInject;
+
+                    numericEditExposureInterval.Value = meanVariancePresenter.ExposureDataList[currentRecord].ExposureInterval;
+                    numericEditNDRO.Value = meanVariancePresenter.ExposureDataList[currentRecord].ExposureNDROS;
+                    numericEditExposureStartX.Value = meanVariancePresenter.ExposureDataList[currentRecord].ExposureRegionXo;
+                    numericEditExposureWidth.Value = meanVariancePresenter.ExposureDataList[currentRecord].ExposureRegiondX;
+                    numericEditExposureStartY.Value = meanVariancePresenter.ExposureDataList[currentRecord].ExposureRegionYo;
+                    numericEditExposureHeight.Value = meanVariancePresenter.ExposureDataList[currentRecord].ExposureRegiondY;
+
+
+                    ultraCheckEditorLED1.Checked = meanVariancePresenter.ExposureDataList[currentRecord].LED1Enabled;
+                    ultraCheckEditorLED2.Checked = meanVariancePresenter.ExposureDataList[currentRecord].LED2Enabled;
+                    ultraCheckEditorLED3.Checked = meanVariancePresenter.ExposureDataList[currentRecord].LED3Enabled;
+                    ultraCheckEditorShutterEnabled.Checked = meanVariancePresenter.ExposureDataList[currentRecord].ShutterEnabled;
+                    numericEditLEDOn.Value = meanVariancePresenter.ExposureDataList[currentRecord].LEDOnTime;
+                    numericEditLEDOff.Value = meanVariancePresenter.ExposureDataList[currentRecord].LEDOffTime;
+                    numericEditFlash.Value = meanVariancePresenter.ExposureDataList[currentRecord].LEDFlashes;
+                    ultraCheckEditorAutoBias.Checked = Convert.ToBoolean(meanVariancePresenter.ExposureDataList[currentRecord].AutoBiasFPNEnabled);
+
+                    if (meanVariancePresenter.ExposureDataList[currentRecord].ExposureFPN == 0)
+                    {
+                        ultraRadioButtonFPNNone.Checked = true;
+                    }
+                    else if (meanVariancePresenter.ExposureDataList[currentRecord].ExposureFPN == 1)
+                    {
+                        ultraRadioButtonFPNRunTime.Checked = true;
+                    }
+                    else if (meanVariancePresenter.ExposureDataList[currentRecord].ExposureFPN == 3)
+                    {
+                        ultraRadioButtonFPNStored.Checked = true;
+                    }
+
+
+                    ultraCheckEditorExposedFrame.Checked = meanVariancePresenter.ExposureDataList[currentRecord].FullFrameEnabled;
+                    ultraCheckEditorDarkFrame.Checked = meanVariancePresenter.ExposureDataList[currentRecord].DarkFrameEnabled;
+
+                    ultraTextEditorSubarrayID.Text = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayID.ToString();
+                    ultraTextEditorSubarrayName.Text = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayName.ToString();
+
+                    numericEditSubarrayStartX.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayRegionXo;
+                    numericEditSubarrayWidth.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayRegiondX;
+                    numericEditSubarrayStartY.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayRegionYo;
+                    numericEditSubarrayHeight.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayRegiondY;
+
+                    ultraCheckEditorSubarrayRead.Checked = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayReadEnabled;
+                    numericEditSubarrayReadInterval.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayReadInterval;
+
+                    ultraCheckEditorSubarraySubInject.Checked = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarraySubinjectEnabled;
+                    numericEditSubarraySubinjectInterval.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarraySubinjectInterval;
+                    ultraCheckEditorSubarrayPostRead.Checked = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayPostReadEnabled;
+                    numericEditSubarrayNDROs.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayPostReadNDROS;
+
+                    numericEditSubarrayThresholdStartX.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayThresholdRegionXo;
+                    numericEditSubarrayThresholdWidth.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayThresholdRegiondX;
+                    numericEditSubarrayThresholdStartY.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayThresholdRegionYo;
+                    numericEditSubarrayThresholdHeight.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayThresholdRegiondY;
+                    ultraCheckEditorEnableThreshold.Checked = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayThresholdEnabled;
+
+                    ultraCheckEditorTimeResolved.Checked = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].TimeResolvedEnabled;
+                    ultraCheckEditorAdaptive.Checked = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].AdaptiveEnabled;
+                    numericEditThresholdPercent.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayThresholdPercent;
+                    numericEditSubarrayTimeResolved.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].TimeResolvedInterval;
+
+                    if (meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayFPN == 0)
+                    {
+                        ultraRadioButtonSubarrayFPNNone.Checked = true;
+                    }
+                    else if (meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayFPN == 1)
+                    {
+                        ultraRadioButtonSubarrayFPNRunTime.Checked = true;
+                    }
+                    else if (meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayFPN == 2)
+                    {
+                        ultraRadioButtonSubarrayFPNStored.Checked = true;
+                    }
+                }               
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void UpdateSubarrayView(int currentSubarrayRecord)
+        {
+            try
+            {
+
+                if (meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas != null &&
+                    meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas.Count > 0 &&
+                    currentSubarrayRecord < meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas.Count)
+                {
+                    ultraTextEditorSubarrayID.Text = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayID.ToString();
+                    ultraTextEditorSubarrayName.Text = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayName.ToString();
+
+                    numericEditSubarrayStartX.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayRegionXo;
+                    numericEditSubarrayWidth.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayRegiondX;
+                    numericEditSubarrayStartY.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayRegionYo;
+                    numericEditSubarrayHeight.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayRegiondY;
+
+                    ultraCheckEditorSubarrayRead.Checked = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayReadEnabled;
+                    numericEditSubarrayReadInterval.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayReadInterval;
+
+                    ultraCheckEditorSubarraySubInject.Checked = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarraySubinjectEnabled;
+                    numericEditSubarraySubinjectInterval.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarraySubinjectInterval;
+                    ultraCheckEditorSubarrayPostRead.Checked = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayPostReadEnabled;
+                    numericEditSubarrayNDROs.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayPostReadNDROS;
+
+                    numericEditSubarrayThresholdStartX.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayThresholdRegionXo;
+                    numericEditSubarrayThresholdWidth.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayThresholdRegiondX;
+                    numericEditSubarrayThresholdStartY.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayThresholdRegionYo;
+                    numericEditSubarrayThresholdHeight.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayThresholdRegiondY;
+                    ultraCheckEditorEnableThreshold.Checked = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayThresholdEnabled;
+
+                    ultraCheckEditorTimeResolved.Checked = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].TimeResolvedEnabled;
+                    ultraCheckEditorAdaptive.Checked = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].AdaptiveEnabled;
+                    numericEditThresholdPercent.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayThresholdPercent;
+                    numericEditSubarrayTimeResolved.Value = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].TimeResolvedInterval;
+
+                    if (meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayFPN == 0)
+                    {
+                        ultraRadioButtonSubarrayFPNNone.Checked = true;
+                    }
+                    else if (meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayFPN == 1)
+                    {
+                        ultraRadioButtonSubarrayFPNRunTime.Checked = true;
+                    }
+                    else if (meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayFPN == 2)
+                    {
+                        ultraRadioButtonSubarrayFPNStored.Checked = true;
+                    }
+                }
+               
+            }
+
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }     
+        private void ClearExposure()
+        {
+            try
+            {
+                ultraTextEditorExposureID.Text = "";
+                ultraTextEditorExposureName.Text = "";
+                ultraTextEditorNumberOfSubarrays.Text = "";
+                numericEditDelay.Value = 0;
+                numericEditGlobalInject.Value = 0;
+
+                numericEditExposureInterval.Value = 0;
+                numericEditNDRO.Value = 0;
+                numericEditExposureStartX.Value = 0;
+                numericEditExposureWidth.Value = 0;
+                numericEditExposureStartY.Value = 0;
+                numericEditExposureHeight.Value = 0;
+
+
+                ultraCheckEditorLED1.Checked = false;
+                ultraCheckEditorLED2.Checked = false;
+                ultraCheckEditorLED3.Checked = false;
+                ultraCheckEditorShutterEnabled.Checked = false;
+                numericEditLEDOn.Value = 0;
+                numericEditLEDOff.Value = 0;
+                numericEditFlash.Value = 0;
+                ultraCheckEditorAutoBias.Checked = false;
+
+                //fpn
+                //exposurelist[0].Value.exposureFPN
+                ultraCheckEditorExposedFrame.Checked = false;
+                ultraCheckEditorDarkFrame.Checked = false;
+
+                ClearSubarray();
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+
+        }
+        private void ClearSubarray()
+        {
+            try
+            {
+                ultraTextEditorSubarrayID.Text = "";
+                ultraTextEditorSubarrayName.Text = "";
+
+                numericEditSubarrayStartX.Value = 0;
+                numericEditSubarrayWidth.Value = 4;
+                numericEditSubarrayStartY.Value = 0;
+                numericEditSubarrayHeight.Value = 4;
+
+                ultraCheckEditorSubarrayRead.Checked = false;
+                numericEditSubarrayReadInterval.Value = 0;
+
+                ultraCheckEditorSubarraySubInject.Checked = false;
+                numericEditSubarraySubinjectInterval.Value = 0;
+
+                ultraCheckEditorSubarrayPostRead.Checked = false;
+                numericEditSubarrayNDROs.Value = 0;
+
+                numericEditSubarrayThresholdStartX.Value = 0;
+                numericEditSubarrayThresholdWidth.Value = 4;
+                numericEditSubarrayThresholdStartY.Value = 0;
+                numericEditSubarrayThresholdHeight.Value = 4;
+                ultraCheckEditorEnableThreshold.Checked = false;
+
+                ultraCheckEditorTimeResolved.Checked = false;
+                ultraCheckEditorAdaptive.Checked = false;
+                numericEditThresholdPercent.Value = 0;
+                numericEditSubarrayTimeResolved.Value = 0;
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ultraButtonFirstExposure_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                currentRecord = 0;      
+                UpdateExposureView(0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Navigating Exposure", "Navigate Exposure", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+
+        }
+        private void ultraButtonNextExposure_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                currentRecord++;
+                if (currentRecord <= meanVariancePresenter.ExposureDataList.Count)
+                    UpdateExposureView(currentRecord);
+                else
+                    currentRecord--;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Navigating Exposure", "Navigate Exposure", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ultraButtonPreviousExposure_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                currentRecord--;
+                if (currentRecord >= 0)
+                    UpdateExposureView(currentRecord);
+                else
+                    currentRecord++;  
+             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Navigating Exposure", "Navigate Exposure", MessageBoxButtons.OK);
+                log.Error("Exception in"+ MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ultraButtonLastExposure_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                currentRecord = meanVariancePresenter.ExposureDataList.Count();
+                currentRecord--;
+                UpdateExposureView(currentRecord);
+             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Navigating Exposure", "Navigate Exposure", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }              
+        private async void ultraButtonAddExposure_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ultraTextEditorExposureName.Text.ToString() == string.Empty)
+                {
+                    MessageBox.Show("Exposure name cannot be empty", "Add Exposure", MessageBoxButtons.OK);
+                    return;
+                }
+                if (ultraTextEditorSubarrayName.Text.ToString() == string.Empty)
+                {
+                    MessageBox.Show("Subarray name cannot be empty", "Add Exposure", MessageBoxButtons.OK);
+                    return;
+                }
+
+                string addExposureString = "Are you sure to add Exposure " + ultraTextEditorExposureName.Text.ToString() + " ?";
+                DialogResult result = MessageBox.Show(addExposureString, "Add Exposure", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    UpdateExposureDataModelFromView();
+                    UpdateSubarrayDataModelFromView();
+
+                    meanVariancePresenter.ExposureDataModel.NumberOfSubarrays = 1;
+                    meanVariancePresenter.ExposureDataModel.SubarrayDatas = new List<SubarrayDataModel>();
+                    meanVariancePresenter.ExposureDataModel.SubarrayDatas.Add(meanVariancePresenter.SubarrayDataModel);
+
+                    //Save to database if engineering user
+                    if (userMode == "Admin" && engineeringLoginStatus)
+                    {
+                        bool saveDB = await meanVariancePresenter.SaveExposureDataToDB("ADD");
+                        //if (meanVariancePresenter.MVDBChanged)
+                        if (saveDB)
+                        {
+                           // meanVariancePresenter.InMemoryModelChanged = false;
+                            MessageBox.Show("Exposure Added successfully", "Add Exposure", MessageBoxButtons.OK);
+                            meanVariancePresenter.ExposureDataList.Clear();
+                            meanVariancePresenter.SubarrayDataModelList.Clear();
+                            await meanVariancePresenter.GetMVData(cidInterface);
+                        }
+                        else
+                            MessageBox.Show("Exposure not Added", "Add Exposure", MessageBoxButtons.OK);
+                    }
+
+                    //Make inmemory changes                     
+
+                    if (userMode == "Engineering")
+                    {
+                        meanVariancePresenter.ExposureDataList.Add(meanVariancePresenter.ExposureDataModel);
+                        meanVariancePresenter.SubarrayDataModelList.Add(meanVariancePresenter.SubarrayDataModel);
+                        MessageBox.Show("Exposure Added successfully", "Add Exposure", MessageBoxButtons.OK);
+                    }                   
+                    ultraLabelNumberofExposures.Text = "Total # of Exposures:" + meanVariancePresenter.ExposureDataList.Count().ToString();
+                    numericEditNumOfExposures.Value = meanVariancePresenter.ExposureDataList.Count;
+                    if (meanVariancePresenter.ExposureDataModel.SubarrayDatas != null)
+                        ultraLabelNumSubarrays.Text = "Total # of Subarrays:" + meanVariancePresenter.ExposureDataModel.SubarrayDatas.Count().ToString();
+                    else
+                        ultraLabelNumSubarrays.Text = "Total # of Subarrays: 0";
+                }
+            }
+            catch (Exception ex)
+            {                
+                MessageBox.Show("Error Adding Exposure", "Add Exposure", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private async void ultraButtonRemoveExposure_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string removeExposure = "Are you sure to remove Exposure " + ultraTextEditorExposureName.Text + " ?";
+
+                DialogResult result = MessageBox.Show(removeExposure,"Remove Exposure", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                if (result == DialogResult.OK)
+                {
+                    //Save data to DB
+                    if (userMode == "Admin" && engineeringLoginStatus)
+                    {
+                        UpdateExposureDataModelFromView();
+                        UpdateSubarrayDataModelFromView();
+
+                        meanVariancePresenter.ExposureDataModel.SubarrayDatas = new List<SubarrayDataModel>();
+                        meanVariancePresenter.ExposureDataModel.SubarrayDatas.Add(meanVariancePresenter.SubarrayDataModel);
+
+                        bool saveDB = await meanVariancePresenter.SaveExposureDataToDB("REMOVE");
+                        if (saveDB)
+                        {
+                            //meanVariancePresenter.InMemoryModelChanged = false;
+                            MessageBox.Show("Exposure Removed successfully", "Remove Exposure", MessageBoxButtons.OK);
+                            meanVariancePresenter.ExposureDataList.Clear();
+                            meanVariancePresenter.SubarrayDataModelList.Clear();
+                            await meanVariancePresenter.GetMVData(cidInterface);
+                            if (currentRecord == 0)
+                            {
+                                currentRecord = currentRecord + 1;
+                                UpdateExposureView(currentRecord);
+                                UpdateSubarrayView(0);
+                            }
+                            else
+                            {
+                                currentRecord = currentRecord - 1;
+                                UpdateExposureView(currentRecord);
+                                UpdateSubarrayView(0);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Exposure not Removed", "Remove Exposure", MessageBoxButtons.OK);
+                        }
+                    }
+                    else if (userMode == "Engineering")
+                    {
+                        var expitem = meanVariancePresenter.ExposureDataList.FirstOrDefault(x => x.ExposureID.Equals(Convert.ToInt32(ultraTextEditorExposureID.Value)));
+                        if (expitem != null)
+                        {
+                            if(meanVariancePresenter.ExposureDataList.Remove(expitem))
+                            {
+                                var subitem = meanVariancePresenter.SubarrayDataModelList.FirstOrDefault(x => x.SubarrayID.Equals(Convert.ToInt32(ultraTextEditorSubarrayID.Value)));
+                                if (subitem != null)
+                                {
+                                    if(meanVariancePresenter.SubarrayDataModelList.Remove(subitem))
+                                    {
+                                        MessageBox.Show("Exposure Removed successfully", "Remove Exposure", MessageBoxButtons.OK);
+                                        if (currentRecord == 0)
+                                        {
+                                            currentRecord = currentRecord + 1;
+                                            UpdateExposureView(currentRecord);
+                                            UpdateSubarrayView(0);
+                                        }
+
+                                        else
+                                        {
+                                            currentRecord = currentRecord - 1;
+                                            UpdateExposureView(currentRecord);
+                                            UpdateSubarrayView(0);
+                                        }
+                                    }
+                                    else
+                                        MessageBox.Show("Exposure not Removed", "Remove Exposure", MessageBoxButtons.OK);
+                                }                               
+                            }
+                            else
+                                MessageBox.Show("Exposure not Removed", "Remove Exposure", MessageBoxButtons.OK);
+                        }                       
+                            
+                    }                    
+                   
+                    ultraLabelNumberofExposures.Text = "Total # of Exposures:" + meanVariancePresenter.ExposureDataList.Count().ToString();
+                    numericEditNumOfExposures.Value = meanVariancePresenter.ExposureDataList.Count;
+                    if (meanVariancePresenter.ExposureDataModel.SubarrayDatas != null)
+                        ultraLabelNumSubarrays.Text = "Total # of Subarrays:" + meanVariancePresenter.ExposureDataModel.SubarrayDatas.Count().ToString();
+                    else
+                        ultraLabelNumSubarrays.Text = "Total # of Subarrays: 0";
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Removing Exposure", "Remove Exposure", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+
+        }
+        private async void ultraButtonUpdateExposure_Click(object sender, EventArgs e)
+        {
+            try
+            {                
+                string updateExposure = "Are you sure to update Exposure " + ultraTextEditorExposureName.Text.ToString() + " ?";
+
+                DialogResult result = MessageBox.Show(updateExposure, "Update Exposure", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.OK)
+                {
+                    UpdateExposureDataModelFromView();
+                    UpdateSubarrayDataModelFromView();
+
+                    meanVariancePresenter.ExposureDataModel.SubarrayDatas = new List<SubarrayDataModel>();
+                    meanVariancePresenter.ExposureDataModel.SubarrayDatas.Add(meanVariancePresenter.SubarrayDataModel);
+
+
+                    if (userMode == "Admin" && engineeringLoginStatus)
+                    {
+                        bool saveDB = await meanVariancePresenter.SaveExposureDataToDB("UPDATE");
+                        if (saveDB)
+                        {
+                            //meanVariancePresenter.InMemoryModelChanged = false;
+                            MessageBox.Show("Exposure Updated successfully", "Update Exposure", MessageBoxButtons.OK);
+                            await meanVariancePresenter.GetMVData(cidInterface);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Exposure not Updated", "Update Exposure", MessageBoxButtons.OK);
+                        }                            
+                    }
+                    else if (userMode == "Engineering")
+                    {
+                        var exprecord = meanVariancePresenter.ExposureDataList.FirstOrDefault(exp => exp.ExposureID.Equals(Convert.ToInt32(ultraTextEditorExposureID.Value)));
+                        if(UpdateExposureRecordForUpdateOperation(exprecord))
+                        {
+                            var subrec = exprecord.SubarrayDatas.FirstOrDefault(sub => sub.SubarrayID.Equals(Convert.ToInt32(ultraTextEditorSubarrayID.Value)));
+                            if(UpdateSubarrayModelForUpdateOperation(subrec))
+                            {
+                                MessageBox.Show("Exposure Updated successfully", "Update Exposure", MessageBoxButtons.OK);
+                                //meanVariancePresenter.InMemoryModelChanged = true;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Exposure not Updated", "Update Exposure", MessageBoxButtons.OK);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Updating Exposure", "Update Exposure", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }       
+        private async void ultraButtonClearExposure_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //ClearExposure();
+                await meanVariancePresenter.GetMVData(cidInterface);
+                await meanVariancePresenter.GetMVLimits();  
+                UpdateLimitsViewWithModelOnLoad();
+                UpdateExposureView(0);
+            }
+            catch(Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ultraButtonSearchExposure_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               
+                    ExposureDataModel exposureRecord = meanVariancePresenter.ExposureDataList.Where(exp => exp.ExposureName.Equals(ultraTextEditorExposureName.Text.ToString())).FirstOrDefault();
+                    if (exposureRecord != null)
+                    {
+                        UpdateViewForSearchOperation(exposureRecord);
+                    }
+                    else
+                    {
+                        string errorString = string.Format("No Exposure Data found with Exposure Name '{0}' ", ultraTextEditorExposureName.Text.ToString());
+
+                        MessageBox.Show(errorString, "Search Exposure", MessageBoxButtons.OK);
+                    }                           
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Searching the Exposure Record", "Search Exposure", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        } 
+        private async void AddSubarray_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int subarrayPerExposureCount = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas.Count();
+
+                if (!TestAppHelper.checkSubarrayCountForExposure(subarrayPerExposureCount))
+                    return;
+
+                string addSubarray = "Are you sure to add Subarray " + ultraTextEditorSubarrayName.Text.ToString() + " to Exposure " + ultraTextEditorExposureName.Text.ToString() + " ?";
+               
+                if (ultraTextEditorSubarrayName.Text.ToString() == string.Empty)
+                {
+                    MessageBox.Show("Subarray name cannot be empty", "Add Subarray", MessageBoxButtons.OK);
+                    return;
+                }
+                DialogResult result = MessageBox.Show(addSubarray, "Add Subarray", MessageBoxButtons.YesNo, MessageBoxIcon.Question);  
+
+                 if (result == DialogResult.Yes)
+                 {
+                     string errorString = string.Empty;
+                     var errorStringBuilder = new StringBuilder();
+                     //int count = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas.Count();
+                     UpdateExposureDataModelFromView();                     
+                     UpdateSubarrayDataModelFromView();
+
+                     if (userMode == "Admin" && engineeringLoginStatus)                         
+                     {
+                        
+                         meanVariancePresenter.ExposureDataModel = meanVariancePresenter.ExposureDataList[currentRecord];
+                         meanVariancePresenter.ExposureDataModel.NumberOfSubarrays = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas.Count + 1;
+                         //Save to DB                        
+                         bool saveDB=await meanVariancePresenter.SaveSubarrayDataToDB("ADD");
+
+                         if (saveDB)
+                         {
+                             //meanVariancePresenter.InMemoryModelChanged = false;
+                            
+                             MessageBox.Show("Subarray Added Successfully", "Add Subarray", MessageBoxButtons.OK);
+                             await meanVariancePresenter.GetMVData(cidInterface);
+                         }
+                         else if (meanVariancePresenter.ErrorCode == 547)
+                         {
+                             errorString = string.Format("You are trying to add a Subarray '{0}' to Exposure '{1}' which does not exist. Try adding the exposure {2} first", meanVariancePresenter.SubarrayDataModel.SubarrayName, meanVariancePresenter.ExposureDataList[currentRecord].ExposureName, meanVariancePresenter.ExposureDataList[currentRecord].ExposureName);
+
+                             MessageBox.Show(errorString, "Add Subarray", MessageBoxButtons.OK);
+                         }
+                         else
+                         {
+                             MessageBox.Show("Error occured while adding Subarray", "Add Subarray", MessageBoxButtons.OK);
+
+                         }
+                     }
+
+                     if (userMode == "Engineering")
+                     {                         
+                         //subarrayInMemoryAdded = InMemorySubarrayModelChange(meanVariancePresenter.SubarrayDataModel, "ADD");                         
+                         meanVariancePresenter.SubarrayDataModel.SubarrayID = meanVariancePresenter.SubarrayDataModelList.Count + 1;
+                         meanVariancePresenter.SubarrayDataModelList.Add(meanVariancePresenter.SubarrayDataModel);
+                         meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas.Add(meanVariancePresenter.SubarrayDataModel);
+                         ultraTextEditorSubarrayID.Text = meanVariancePresenter.SubarrayDataModel.SubarrayID.ToString();
+                         if (subarrayPerExposureCount != meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas.Count())
+                         {                             
+                             MessageBox.Show("Subarray Added successfully", "Add Subarray", MessageBoxButtons.OK);
+                         }                             
+                         else
+                             MessageBox.Show("Subarray not Added", "Add Subarray", MessageBoxButtons.OK);                       
+                        
+                     }
+                    
+                     ultraLabelNumberofExposures.Text = "Total # of Exposures:" + meanVariancePresenter.ExposureDataList.Count().ToString();
+                     ultraLabelNumSubarrays.Text = "Total # of Subarrays:" + meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas.Count.ToString();
+                 }
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error Adding Subarray", "Add Subarray", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+
+        }
+        private async void RemoveSubarray_Click(object sender, EventArgs e)
+        {
+           
+            try
+            {
+                string errorString = string.Empty;
+                string removeSubarray = "Are you sure to remove Subarray " + ultraTextEditorSubarrayName.Text.ToString() + " ?";
+                DialogResult result = MessageBox.Show(removeSubarray, "Remove Subarray", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                bool subarrayInMemoryRemoved = false;
+                if (result == DialogResult.Yes)
+                {
+                    List<ExposureDataModel> exposureList = meanVariancePresenter.ExposureDataList.Where(exp => exp.ExposureID.Equals(Convert.ToInt32(ultraTextEditorExposureID.Value))).ToList();
+
+                    if (exposureList[0].SubarrayDatas.Count > 1)
+                    {
+                       
+                        if (userMode == "Admin" && engineeringLoginStatus)
+                        {
+                            UpdateExposureDataModelFromView();
+                            UpdateSubarrayDataModelFromView();
+                            //meanVariancePresenter.ExposureDataModel.NumberOfSubarrays = meanVariancePresenter.ExposureDataModel.SubarrayDatas.Count() - 1;
+                            meanVariancePresenter.ExposureDataModel = meanVariancePresenter.ExposureDataList[currentRecord];
+                            meanVariancePresenter.ExposureDataModel.NumberOfSubarrays = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas.Count - 1;
+                            bool saveDB = await meanVariancePresenter.SaveSubarrayDataToDB("REMOVE");
+
+                            if (saveDB)
+                            {
+                                //meanVariancePresenter.InMemoryModelChanged = false;
+                                MessageBox.Show("Subarray removed Successfully", "Remove Subarray", MessageBoxButtons.OK);
+                                await meanVariancePresenter.GetMVData(cidInterface);
+                            }
+                            else if (meanVariancePresenter.ErrorCode == 547)
+                            {
+                                errorString = string.Format("You are trying to remove a Subarray '{0}' which does not exist.", ultraTextEditorSubarrayName.Text.ToString());
+                                MessageBox.Show(errorString, "Remove Subarray", MessageBoxButtons.OK);
+                            }
+                            else
+                                MessageBox.Show("Unknown Error occured while removing Subarray", "Remove Subarray", MessageBoxButtons.OK);
+                        }
+
+                        if (userMode == "Engineering")
+                        {
+                            foreach (SubarrayDataModel sub in meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas)
+                            {
+                                if (sub.SubarrayID == Convert.ToInt32(ultraTextEditorSubarrayID.Value))
+                                {
+                                    subarrayInMemoryRemoved = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas.Remove(sub);
+                                    if(meanVariancePresenter.SubarrayDataModelList.Remove(sub))
+                                    {
+                                        subarrayInMemoryRemoved = true;
+                                        break;
+                                    }                                       
+                                }
+                            }
+                            if (subarrayInMemoryRemoved)
+                            {
+                                MessageBox.Show("Subarray Removed successfully", "Remove Subarray", MessageBoxButtons.OK);
+
+                            }
+                            else
+                                MessageBox.Show("Subarray not Removed", "Remove Subarray", MessageBoxButtons.OK);
+                        }                       
+
+                        if (currentSubarrayRecord == 0)
+                        {
+                            currentSubarrayRecord = currentSubarrayRecord + 1;
+                        }
+                        else
+                        {
+                            currentSubarrayRecord = currentSubarrayRecord - 1;
+                        }
+                        UpdateSubarrayView(currentSubarrayRecord);
+
+                        ultraLabelNumberofExposures.Text = "Total # of Exposures:" + meanVariancePresenter.ExposureDataList.Count().ToString();
+                        ultraLabelNumSubarrays.Text = "Total # of Subarrays:" + meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas.Count.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("There is only one Subarray for this Exposure. You cannot remove this subbarray ", "Remove Subarray", MessageBoxButtons.OK);
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Removing Subarray", "Remove Subarray", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+          
+        }
+        private async void UpdateSubarray_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string errorString = string.Empty;
+                string updateSubarray = "Are you sure to update Subarray " + ultraTextEditorSubarrayName.Text + " ?";
+
+                DialogResult result = MessageBox.Show(updateSubarray, "Update Subarray", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+
+                    if (userMode == "Admin" && engineeringLoginStatus)
+                    {
+                        //save data to DB
+                        UpdateExposureDataModelFromView();
+                        UpdateSubarrayDataModelFromView();
+                        bool saveDB = await meanVariancePresenter.SaveSubarrayDataToDB("UPDATE");
+                        if (saveDB)
+                        {
+                            //meanVariancePresenter.InMemoryModelChanged = false;
+                            MessageBox.Show("Subarray updated Successfully", "Update Subarray", MessageBoxButtons.OK);
+                            await meanVariancePresenter.GetMVData(cidInterface);
+                        }
+                        else if (meanVariancePresenter.ErrorCode == 547)
+                        {
+                            errorString = string.Format("You are trying to update a Subarray '{0}' which does not exist.", ultraTextEditorSubarrayName.Text.ToString());
+                            MessageBox.Show(errorString, "Update Subarray", MessageBoxButtons.OK);
+                        }
+                        else
+                            MessageBox.Show("Error occured while updating Subarray", "Update Subarray", MessageBoxButtons.OK);
+                    }
+
+                    if (userMode == "Engineering")
+                    {
+                        List<ExposureDataModel> exposureList = meanVariancePresenter.ExposureDataList.Where(exp => exp.ExposureID.Equals(Convert.ToInt32(ultraTextEditorExposureID.Value))).ToList();
+                        if (exposureList[0].SubarrayDatas.Count > 0)
+                        {
+                            foreach (SubarrayDataModel sub in meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas)
+                            {
+                                if (sub.SubarrayID == Convert.ToInt32(ultraTextEditorSubarrayID.Value))
+                                {
+                                    if (UpdateSubarrayModelForUpdateOperation(sub))
+                                    {
+                                        MessageBox.Show("Subarray Updated successfully", "Update Subarray", MessageBoxButtons.OK);
+                                        //meanVariancePresenter.InMemoryModelChanged = true;
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Subarray not Updated", "Update Subarray", MessageBoxButtons.OK);
+                                        //meanVariancePresenter.InMemoryModelChanged = false;
+                                    }
+                                    break;
+                                }
+                            }
+                        }
+                    }                  
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Updating Subarray", "Update Subarray", MessageBoxButtons.OK);
+                
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void FirstSubarray_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                currentSubarrayRecord = 0;
+                UpdateSubarrayView(currentSubarrayRecord);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Navigating Subarray", "Navigate Subarray", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+            
+        }
+        private void NextSubarray_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                currentSubarrayRecord ++;
+                if (currentSubarrayRecord < meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas.Count())
+                {
+                    UpdateSubarrayView(currentSubarrayRecord);
+                }
+                else
+                {
+                    currentSubarrayRecord--;
+                }
+             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Navigating Subarray", "Navigate Subarray", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void PreviousSubarray_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                currentSubarrayRecord--;
+                if (currentSubarrayRecord >= 0)
+                {
+                    UpdateSubarrayView(currentSubarrayRecord);
+                }
+                else
+                {
+                    currentSubarrayRecord++;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Navigating Subarray", "Navigate Subarray", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void LastSubarray_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                currentSubarrayRecord = meanVariancePresenter.ExposureDataList[currentRecord].SubarrayDatas.Count();
+                currentSubarrayRecord--;
+                UpdateSubarrayView(currentSubarrayRecord);
+             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Navigating Subarray", "Navigate Subarray", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+            
+        }
+        private async void buttonMVAbort_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cts != null)
+                {
+                    DialogResult result = MessageBox.Show("Are you sure to Abort Mean Variance Test?",
+                           "Abort Mean Variance Test",
+                             MessageBoxButtons.YesNo,
+                             MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {                                  
+                        cidInterface.AbortExposure();
+                        meanVarianceTestStatus = false;                      
+                        
+                        cts.Cancel();
+                        ((KronosTestAppMainForm)mdiParent).ultraStatusBar1.Panels["TestProgress"].ProgressBarInfo.Value = 0;
+                        ((KronosTestAppMainForm)mdiParent).ultraStatusBar1.Panels["TestProgress"].ProgressBarInfo.ResetFillAppearance();
+                        await ClearMVGraphs();
+                        buttonMVRun.Enabled = true;
+                    }
+                    else
+                        return;
+                }  
+            }
+            
+            catch(Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+          
+        }
+        public async Task ClearMVGraphs()
+        {
+            await Task.Run(() =>
+            {
+                meanofROI1minus2Plot.ClearData();
+                varianceOfROI1minus2Plot.ClearData();
+                linearCurveFitOfVarPlot.ClearData();
+                meanVarianceScatterGraph.ClearData();
+                //meanVarianceScatterGraph.Refresh();
+            });
+        }           
+        private void MeanVarianceTestForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           // System.Windows.Forms.Application.Exit();
+            this.Hide();
+            e.Cancel = true;
+        }
+        private void numericEditNumOfExposures_ValueChanged(object sender, EventArgs e)
+        {
+            if (numericEditNumOfExposures.Value > meanVariancePresenter.ExposureDataList.Count)
+            {
+                string errstring = string.Format("Value cannot be greater than total exposure count '{0}'.", meanVariancePresenter.ExposureDataList.Count);
+                MessageBox.Show(errstring, "Invalid exposure count", MessageBoxButtons.OK, MessageBoxIcon.Error);                            
+                numericEditNumOfExposures.Value = meanVariancePresenter.ExposureDataList.Count;
+            }
+        }               
+        private void ListExposureData_Click(object sender, EventArgs e)
+        {
+            ListExposureData obj = new ListExposureData();
+            obj.ExposureDataModelList = meanVariancePresenter.ExposureDataList;
+            obj.ultraGridExposureData.Text = "Mean Variance Exposure Data";
+            obj.Show();
+        }
+        private void ResetProgressBar()
+        {
+            try
+            {
+                if (((KronosTestAppMainForm)mdiParent).ultraStatusBar1.Panels["TestProgress"].ProgressBarInfo.Value == 100)
+                {
+                    ((KronosTestAppMainForm)mdiParent).ultraStatusBar1.Panels["MarqueeStatus"].Text = string.Empty;
+                    ((KronosTestAppMainForm)mdiParent).ultraStatusBar1.Panels["TestProgress"].ProgressBarInfo.Value = 0;
+                    ((KronosTestAppMainForm)mdiParent).ultraStatusBar1.Panels["TestProgress"].ProgressBarInfo.ResetFillAppearance();
+                }
+            }
+
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ultraExplorerBar1_Click(object sender, EventArgs e)
+        {
+            ResetProgressBar();           
+        }
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            ResetProgressBar();
+        }
+        private void meanVarianceScatterGraph_Click(object sender, EventArgs e)
+        {
+            //ResetProgressBar();
+        }
+        private void meanVarianceWaveformGraph_Click(object sender, EventArgs e)
+        {
+            //ResetProgressBar();
+        }
+        private void ultraComboEditorMVLimitIDs_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                meanVariancePresenter.MeanVarianceTestLimitsData = meanVariancePresenter.MeanVarianceTestLimitsDataList.Where(limit => limit.LimitsID.ToString().Equals(ultraComboEditorLimitIDs.SelectedItem.DisplayText.ToString())).FirstOrDefault();               
+                ConverisonFactorTolLimit.Value = Convert.ToDecimal(meanVariancePresenter.MeanVarianceTestLimitsData.ConverisonFactorTol);
+                ConversionFactorNominalLimit.Value = Convert.ToDecimal(meanVariancePresenter.MeanVarianceTestLimitsData.ConversionFactorNominal);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void UpdateLimitsViewWithModelOnLoad()
+        {
+            try
+            {
+                List<int> limtIDs = new List<int>();
+                limtIDs = (from ecos in meanVariancePresenter.MeanVarianceTestLimitsDataList select ecos.LimitsID).ToList();
+                ultraComboEditorLimitIDs.DataSource = limtIDs;
+
+                ultraComboEditorLimitIDs.SelectedIndex = 0;
+                meanVariancePresenter.MeanVarianceTestLimitsData = meanVariancePresenter.MeanVarianceTestLimitsDataList.Where(limit => limit.LimitsID.Equals(limtIDs[0])).FirstOrDefault();
+                if (meanVariancePresenter.MeanVarianceTestLimitsData != null)
+                {
+                    ConverisonFactorTolLimit.Value = Convert.ToDecimal(meanVariancePresenter.MeanVarianceTestLimitsData.ConverisonFactorTol);
+                    ConversionFactorNominalLimit.Value = Convert.ToDecimal(meanVariancePresenter.MeanVarianceTestLimitsData.ConversionFactorNominal);
+                }               
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void UpdateLimitsModelWithView()
+        {
+            try
+            {
+                meanVariancePresenter.MeanVarianceTestLimitsData = meanVariancePresenter.MeanVarianceTestLimitsDataList.FirstOrDefault(limit => limit.LimitsID.Equals(Convert.ToInt32(ultraComboEditorLimitIDs.SelectedItem.DisplayText)));
+
+                meanVariancePresenter.MeanVarianceTestLimitsData.ConversionFactorNominal = Convert.ToDouble(ConversionFactorNominalLimit.Value);
+                meanVariancePresenter.MeanVarianceTestLimitsData.ConverisonFactorTol = Convert.ToInt32(ConverisonFactorTolLimit.Value);                
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UpdateLimitsModelWithView();
+        }
+
+        private async void buttonRefreshLimit_Click(object sender, EventArgs e)
+        {
+            await meanVariancePresenter.GetMVLimits();
+            UpdateLimitsViewWithModelOnLoad();
+
+        }
+        private void CheckRanges(object sender, NationalInstruments.UI.BeforeChangeNumericValueEventArgs e)
+        {
+            TestAppHelper.DisplayRangeMessage(sender, e.NewValue);
+        }
+        private void CheckRanges1(object sender, NationalInstruments.UI.AfterChangeNumericValueEventArgs e)
+        {
+            TestAppHelper.DisplayRangeMessage(sender, e.NewValue);
+        }    
+    }
+}

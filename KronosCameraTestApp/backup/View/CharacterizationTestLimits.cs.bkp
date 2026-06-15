@@ -1,0 +1,1501 @@
+﻿using Infragistics.Win;
+using Infragistics.Win.UltraWinGrid;
+using KronosCameraTestApp.Helpers;
+using KronosCameraTestApp.Model;
+using KronosCameraTestApp.Presenter;
+using KronosCameraTestApp.View.UserControls;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml.Linq;
+
+namespace KronosCameraTestApp.View
+{
+    public partial class CharacterizationTestLimits : Form
+    {
+        MeanVarianceLimitsUserControl meanVarianceTestLimitsUserControl { get; set; }
+        MeanVarianceLimitsPresenter meanVarianceTestLimitsPresenter { get; set; }
+        MeanVarianceTestLimitsData mvLimit { get; set; }
+        List<MeanVarianceTestLimitsData> meanVarianceTestLimitsDataList { get; set; }
+      
+
+        DarkCurrentLimitsUserControl darkCurrentTestLimitsUserControl { get; set; }
+        DarkCurrentLimitsPresenter darkCurrentTestLimitsPresenter { get; set; }
+        DarkCurrentTestLimitsData darkCurrentLimit { get; set; }
+        List<DarkCurrentTestLimitsData> darkCurrentTestLimitsDataList { get; set; }
+
+        DefectsLimitsUserControl defectsTestLimitsUserControl { get; set; }
+        DefectsLimitsPresenter defectsTestLimitsPresenter { get; set; }
+        DefectsTestLimitsData defectsLimit { get; set; }
+        List<DefectsTestLimitsData> defectsTestLimitsDataList { get; set; }
+
+        InjectionEfficiencyLimitsUserControl injectionEfficiencyTestLimitsUserControl { get; set; }
+        InjectionEfficiencyLimitsPresenter injectionEfficiencyTestLimitsPresenter { get; set; }
+        InjectionEfficiencyTestLimitsData injectionEffLimit { get; set; }
+        List<InjectionEfficiencyTestLimitsData> injectionEfficiencyTestLimitsDataList { get; set; }
+
+        InjectionPerformanceLimitsUserControl injectionPerformanceTestLimitsUserControl { get; set; }
+        InjectionPerformanceLimitsPresenter injectionPerformanceTestLimitsPresenter { get; set; }
+        InjectionPerformanceLimitsData injectionPerfLimit { get; set; }
+        List<InjectionPerformanceLimitsData> injectionPerformanceLimitsDataList { get; set; }
+
+        NDROReadDriftLimitsUserControl nDROReadDriftTestLimitsUserControl { get; set; }
+        NDROReadDriftLimitsPresenter nDROReadDriftTestLimitsPresenter { get; set; }
+        NdroReadDriftTestLimitsData ndroLimit { get; set; }
+        List<NdroReadDriftTestLimitsData> ndroReadDriftTestLimitsDataList { get; set; }
+
+        NoiseVsNDROSLimitsUserControl noiseVsNDROSLimitsUserControl { get; set; }
+        NoiseVsNDROSLimitsPresenter noiseVsNDROSLimitsPresenter { get; set; }
+        NoiseVsNDROSLimitsData noiseLimit { get; set; }
+        List<NoiseVsNDROSLimitsData> noiseVsNDROSLimitsDataList { get; set; }
+
+        PhotoresponseLimitsUserControl photoresponseLimitsUserControl { get; set; }
+        PhotoresponseLimitsPresenter photoresponseLimitsPresenter { get; set; }
+        PhotoresponseLimitsData photoresponseLimit { get; set; }
+        List<PhotoresponseLimitsData> photoresponseLimitsDataList { get; set; }
+
+        SegmentInjectLimitsUserControl segmentInjectLimitsUserControl { get; set; }
+        SegmentInjectLimitsPresenter segmentInjectLimitsPresenter { get; set; }
+        SegmentInjectLimitsData segmentInjectLimit { get; set; }
+        List<SegmentInjectLimitsData> segmentInjectLimitsDataList { get; set; }
+
+        TemperatureLimitsUserControl temperatureLimitsUserControl { get; set; }
+        TemperatureLimitsPresenter temperatureLimitsPresenter { get; set; }
+        TemperatureLimitsData tempLimit { get; set; }
+
+        List<ECOData> ecoDataList { get; set; }
+        public List<ECOData> ECODataList
+        {
+            get { return ecoDataList; }
+            set { ecoDataList = value; }
+        }
+        ECOData ecoData { get; set; }
+        public ECOData EcoData
+        {
+            get { return ecoData; }
+            set { ecoData = value; }
+        }
+        List<ECOData> sortedECOData { get; set; }
+        string ECONumber = string.Empty;
+        string userName = string.Empty;
+
+        string userMode = string.Empty;
+        bool engineeringLoginStatus = false;
+        static readonly log4net.ILog log = log4net.LogManager.GetLogger(
+         System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        MeanVarianceTestLimitsData oldMeanVarianceTestLimitsData { get; set; }
+        static int LimitsLoaded = 0;
+        bool enggLimitUpdated=false;
+        Dictionary<string, string> ecoNumbersDict;
+        Tuple<string, string>[] ecoNumbersTuple;
+        string ecoNumberSelected = string.Empty;
+        public string ECONumberSelected
+        {
+            get { return ecoNumberSelected; }
+            set { ecoNumberSelected = value; }
+        }
+        List<string> OmnifyECOList = new List<string>();
+
+        
+        public CharacterizationTestLimits()
+        {
+            InitializeComponent();
+        }
+        public CharacterizationTestLimits(MeanVarianceLimitsPresenter meanVarianceTestLimitsPresenter, 
+                                            DarkCurrentLimitsPresenter darkCurrentTestLimitsPresenter, DefectsLimitsPresenter defectsTestLimitsPresenter,
+                                            InjectionEfficiencyLimitsPresenter injectionEfficiencyTestLimitsPresenter,
+                                            InjectionPerformanceLimitsPresenter injectionPerformanceTestLimitsPresenter,
+                                            NDROReadDriftLimitsPresenter nDROReadDriftTestLimitsPresenter, NoiseVsNDROSLimitsPresenter noiseVsNDROSLimitsPresenter,
+                                            PhotoresponseLimitsPresenter photoresponseLimitsPresenter, SegmentInjectLimitsPresenter segmentInjectLimitsPresenter,
+                                            TemperatureLimitsPresenter temperatureLimitsPresenter)
+        {
+            InitializeComponent();
+            this.meanVarianceTestLimitsPresenter = meanVarianceTestLimitsPresenter;
+            this.darkCurrentTestLimitsPresenter = darkCurrentTestLimitsPresenter;
+            this.defectsTestLimitsPresenter = defectsTestLimitsPresenter;
+            this.injectionEfficiencyTestLimitsPresenter = injectionEfficiencyTestLimitsPresenter;
+            this.injectionPerformanceTestLimitsPresenter = injectionPerformanceTestLimitsPresenter;
+            this.nDROReadDriftTestLimitsPresenter = nDROReadDriftTestLimitsPresenter;
+            this.noiseVsNDROSLimitsPresenter = noiseVsNDROSLimitsPresenter;
+            this.photoresponseLimitsPresenter = photoresponseLimitsPresenter;
+            this.segmentInjectLimitsPresenter = segmentInjectLimitsPresenter;
+            this.temperatureLimitsPresenter = temperatureLimitsPresenter;
+        }
+        public CharacterizationTestLimits(MeanVarianceLimitsPresenter meanVarianceTestLimitsPresenter,  
+                                           DarkCurrentLimitsPresenter darkCurrentTestLimitsPresenter,
+                                            DefectsLimitsPresenter defectsTestLimitsPresenter,InjectionEfficiencyLimitsPresenter injectionEfficiencyTestLimitsPresenter,
+                                            InjectionPerformanceLimitsPresenter injectionPerformanceTestLimitsPresenter,NDROReadDriftLimitsPresenter nDROReadDriftTestLimitsPresenter,
+                                            NoiseVsNDROSLimitsPresenter noiseVsNDROSLimitsPresenter, PhotoresponseLimitsPresenter photoresponseLimitsPresenter,
+                                            SegmentInjectLimitsPresenter segmentInjectLimitsPresenter,
+                                            TemperatureLimitsPresenter temperatureLimitsPresenter, string UserMode, bool engineeringLoginStatus, string enggUserName)
+        {
+            InitializeComponent();
+            this.meanVarianceTestLimitsPresenter = meanVarianceTestLimitsPresenter;
+            this.darkCurrentTestLimitsPresenter = darkCurrentTestLimitsPresenter;
+            this.defectsTestLimitsPresenter = defectsTestLimitsPresenter;
+            this.injectionEfficiencyTestLimitsPresenter = injectionEfficiencyTestLimitsPresenter;
+            this.injectionPerformanceTestLimitsPresenter = injectionPerformanceTestLimitsPresenter;
+            this.nDROReadDriftTestLimitsPresenter = nDROReadDriftTestLimitsPresenter;
+            this.noiseVsNDROSLimitsPresenter = noiseVsNDROSLimitsPresenter;
+            this.photoresponseLimitsPresenter = photoresponseLimitsPresenter;
+            this.segmentInjectLimitsPresenter = segmentInjectLimitsPresenter;
+            this.temperatureLimitsPresenter = temperatureLimitsPresenter;
+            this.userMode=UserMode;
+            this.engineeringLoginStatus=engineeringLoginStatus;
+            this.userName = enggUserName;
+
+            meanVarianceTestLimitsUserControl = new MeanVarianceLimitsUserControl(meanVarianceTestLimitsPresenter, userMode, engineeringLoginStatus, ECONumber);
+            //chargeTransferLossesTestLimitsUserControl = new ChargeTransferLossesLimitsUserControl(chargeTransferLossesTestLimitsPresenter, userMode, engineeringLoginStatus, ECONumber);
+            //crossTalkTestLimitsUserControl = new CrossTalkLimitsUserControl(crossTalkTestLimitsPresenter, userMode, engineeringLoginStatus, ECONumber);
+            darkCurrentTestLimitsUserControl = new DarkCurrentLimitsUserControl(darkCurrentTestLimitsPresenter, userMode, engineeringLoginStatus, ECONumber);
+            defectsTestLimitsUserControl = new DefectsLimitsUserControl(defectsTestLimitsPresenter, userMode, engineeringLoginStatus, ECONumber);
+            injectionEfficiencyTestLimitsUserControl = new InjectionEfficiencyLimitsUserControl(injectionEfficiencyTestLimitsPresenter, userMode, engineeringLoginStatus, ECONumber);
+            injectionPerformanceTestLimitsUserControl = new InjectionPerformanceLimitsUserControl(injectionPerformanceTestLimitsPresenter, userMode, engineeringLoginStatus, ECONumber);
+            nDROReadDriftTestLimitsUserControl = new NDROReadDriftLimitsUserControl(nDROReadDriftTestLimitsPresenter, userMode, engineeringLoginStatus, ECONumber);
+            noiseVsNDROSLimitsUserControl = new NoiseVsNDROSLimitsUserControl(noiseVsNDROSLimitsPresenter, userMode, engineeringLoginStatus, ECONumber);
+            photoresponseLimitsUserControl = new PhotoresponseLimitsUserControl(photoresponseLimitsPresenter, userMode, engineeringLoginStatus, ECONumber);
+            segmentInjectLimitsUserControl = new SegmentInjectLimitsUserControl(segmentInjectLimitsPresenter, userMode, engineeringLoginStatus, ECONumber);
+            temperatureLimitsUserControl = new TemperatureLimitsUserControl(temperatureLimitsPresenter, userMode, engineeringLoginStatus, ECONumber);
+
+            ecoDataList = new List<ECOData>();
+            darkCurrentTestLimitsDataList = new List<DarkCurrentTestLimitsData>();
+            segmentInjectLimitsDataList = new List<SegmentInjectLimitsData>();
+            photoresponseLimitsDataList = new List<PhotoresponseLimitsData>();
+            noiseVsNDROSLimitsDataList = new List<NoiseVsNDROSLimitsData>();
+            ndroReadDriftTestLimitsDataList = new List<NdroReadDriftTestLimitsData>();
+            injectionPerformanceLimitsDataList = new List<InjectionPerformanceLimitsData>();
+            injectionEfficiencyTestLimitsDataList = new List<InjectionEfficiencyTestLimitsData>();
+            defectsTestLimitsDataList = new List<DefectsTestLimitsData>();
+            meanVarianceTestLimitsDataList = new List<MeanVarianceTestLimitsData>();
+           
+        }
+
+        private void ultraExplorerBar1_ItemClick(object sender, Infragistics.Win.UltraWinExplorerBar.ItemEventArgs e)
+        {
+            try
+            {
+                TestLimitsPanel.Controls.Clear();
+
+               
+
+                switch (e.Item.Tag.ToString())
+                {
+                    case "MeanVariance":
+                        ultraLabelTestHeader.Text = "Mean Variance Limit";
+                        meanVarianceTestLimitsUserControl.Dock = DockStyle.Fill;
+                        meanVarianceTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(ecoData.MeanVarianceTestLimitsData.ToList()[0]);
+                        TestLimitsPanel.Controls.Add(meanVarianceTestLimitsUserControl);
+                        break;
+                    //case "ChargeTransferLosses":
+                    //    ultraLabelTestHeader.Text = "Charge Transfer Losses Limit";
+                    //    chargeTransferLossesTestLimitsUserControl.Dock = DockStyle.Fill;
+                    //    chargeTransferLossesTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(chargeTransferLimit);
+                    //    TestLimitsPanel.Controls.Add(chargeTransferLossesTestLimitsUserControl);
+                    //    break;
+                    //case "CrossTalk":
+                    //    ultraLabelTestHeader.Text = "Cross Talk Limit";
+                    //    crossTalkTestLimitsUserControl.Dock = DockStyle.Fill;
+                    //    crossTalkTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(crossTalkLimit);
+                    //    TestLimitsPanel.Controls.Add(crossTalkTestLimitsUserControl);
+                    //    break;
+                    case "DarkCurrent":
+                        ultraLabelTestHeader.Text = "Dark Current Limit";
+                        darkCurrentTestLimitsUserControl.Dock = DockStyle.Fill;
+                        darkCurrentTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(ecoData.DarkCurrentTestLimitsData.ToList()[0]);
+                        TestLimitsPanel.Controls.Add(darkCurrentTestLimitsUserControl);
+                        break;
+                    case "Defects":
+                        ultraLabelTestHeader.Text = "Defects Limit";
+                        defectsTestLimitsUserControl.Dock = DockStyle.Fill;
+                        defectsTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(ecoData.DefectsTestLimitsData.ToList()[0]);
+                        TestLimitsPanel.Controls.Add(defectsTestLimitsUserControl);
+                        break;
+                    case "InjectionEfficiency":
+                        ultraLabelTestHeader.Text = "Injection Efficiency Limit";
+                        injectionEfficiencyTestLimitsUserControl.Dock = DockStyle.Fill;
+                        injectionEfficiencyTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(ecoData.InjectionEfficiencyTestLimitsData.ToList()[0]);
+                        TestLimitsPanel.Controls.Add(injectionEfficiencyTestLimitsUserControl);
+                        break;
+                    case "InjectionPerformance":
+                        ultraLabelTestHeader.Text = "Injection Performance Limit";
+                        injectionPerformanceTestLimitsUserControl.Dock = DockStyle.Fill;
+                        injectionPerformanceTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(ecoData.InjectionPerformanceLimitsData.ToList()[0]);
+                        TestLimitsPanel.Controls.Add(injectionPerformanceTestLimitsUserControl);
+                        break;
+                    case "NdroReadDrift":
+                        ultraLabelTestHeader.Text = "NDRO Read Drift Limit";
+                        nDROReadDriftTestLimitsUserControl.Dock = DockStyle.Fill;
+                        nDROReadDriftTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(ecoData.NdroReadDriftTestLimitsData.ToList()[0]);
+                        TestLimitsPanel.Controls.Add(nDROReadDriftTestLimitsUserControl);
+                        break;
+                    case "ReadNoiseVsNDROs":
+                        ultraLabelTestHeader.Text = "Read Noise Vs NDROs Limit";
+                        noiseVsNDROSLimitsUserControl.Dock = DockStyle.Fill;
+                        noiseVsNDROSLimitsUserControl.UpdateLimitsViewWithSpecificModel(ecoData.NoiseVsNDROSLimitsData.ToList()[0]);
+                        TestLimitsPanel.Controls.Add(noiseVsNDROSLimitsUserControl);
+                        break;
+                    case "Photoresponse":
+                        ultraLabelTestHeader.Text = "Photoresponse Limit";
+                        photoresponseLimitsUserControl.Dock = DockStyle.Fill;
+                        photoresponseLimitsUserControl.UpdateLimitsViewWithSpecificModel(ecoData.PhotoresponseLimitsData.ToList()[0]);
+                        TestLimitsPanel.Controls.Add(photoresponseLimitsUserControl);
+                        break;
+                    case "SegmentInject":
+                        ultraLabelTestHeader.Text = "Segment Inject Limit";
+                        segmentInjectLimitsUserControl.Dock = DockStyle.Fill;
+                        segmentInjectLimitsUserControl.UpdateLimitsViewWithSpecificModel(ecoData.SegmentInjectLimitsData.ToList()[0]);
+                        TestLimitsPanel.Controls.Add(segmentInjectLimitsUserControl);
+                        break;
+                    case "TemperatureLimits":
+                        ultraLabelTestHeader.Text = "Temperature Limit";
+                        temperatureLimitsUserControl.Dock = DockStyle.Fill;
+                        TestLimitsPanel.Controls.Add(temperatureLimitsUserControl);
+                        break;
+                    case "ViewAll":
+                        TestLimitsForm frm = new TestLimitsForm();
+                        frm.Show();
+                        break;
+                    case "OverallLimits":
+                        ultraLabelTestHeader.Text = string.Empty;
+                        ultraGridLimits.Visible = true;
+                        ultraGridLimits.DataSource = sortedECOData;
+                        TestLimitsPanel.Controls.Add(ultraGridLimits);
+                        break;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void contextMenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            try
+            {
+                ToolStripItem item = e.ClickedItem;
+                if (item.Name.Equals("ExportGridToExcel"))
+                {
+                    ExportDataGridToExcel();
+                }
+                if (item.Name.Equals("PrintDataGrid"))
+                {
+                    PrintGrid();
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ultraGridExcelExporter1_BeginExport(object sender, Infragistics.Win.UltraWinGrid.ExcelExport.BeginExportEventArgs e)
+        {
+            try
+            {
+                e.CurrentWorksheet.Name = "Test Results Grid Data";
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ultraGrid1_InitializePrintPreview(object sender, Infragistics.Win.UltraWinGrid.CancelablePrintPreviewEventArgs e)
+        {
+            e.DefaultLogicalPageLayoutInfo.FitWidthToPages = 1;
+            e.DefaultLogicalPageLayoutInfo.PageHeader = ultraGridLimits.Text;
+            // e.DefaultLogicalPageLayoutInfo.PageHeaderHeight = 40;
+            //e.DefaultLogicalPageLayoutInfo.PageHeaderAppearance.FontData.SizeInPoints = 14;
+            e.DefaultLogicalPageLayoutInfo.PageHeaderAppearance.TextHAlign = HAlign.Center;
+            e.DefaultLogicalPageLayoutInfo.PageHeaderBorderStyle = UIElementBorderStyle.Solid;
+
+            e.DefaultLogicalPageLayoutInfo.PageFooter = "Page <#>.";
+            // e.DefaultLogicalPageLayoutInfo.PageFooterHeight = 40;
+            e.DefaultLogicalPageLayoutInfo.PageFooterAppearance.TextHAlign = HAlign.Right;
+            //e.DefaultLogicalPageLayoutInfo.PageFooterAppearance.FontData.Italic = DefaultableBoolean.True;
+            e.DefaultLogicalPageLayoutInfo.PageFooterBorderStyle = UIElementBorderStyle.Solid;
+            e.DefaultLogicalPageLayoutInfo.ClippingOverride = ClippingOverride.Yes;
+
+            e.PrintDocument.DefaultPageSettings.Landscape = true;
+
+        }
+        private void PrintGrid()
+        {
+            try
+            {
+                this.ultraGridLimits.PrintPreview(ultraGridLimits.DisplayLayout);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ExportDataGridToExcel()
+        {
+            try
+            {
+                //await Task.Run(() =>
+                //    {
+                saveFileDialog1.InitialDirectory = Properties.Settings.Default["FilesLocation"].ToString();
+                string datetimestamp = DateTime.Now.ToString("MMddyyyy_hhmm");
+                saveFileDialog1.Title = "Save Test Limits DataGrid to Excel";
+                saveFileDialog1.DefaultExt = "*.xlsx";
+                saveFileDialog1.Filter = "Excel|*.xlsx";
+                saveFileDialog1.FileName = ultraGridLimits.Text + "_" + datetimestamp;
+                if (saveFileDialog1.ShowDialog(this) == System.Windows.Forms.DialogResult.OK && saveFileDialog1.FileName.Length > 0)
+                {
+                    this.ultraGridExcelExporter1.Export(this.ultraGridLimits, saveFileDialog1.FileName);
+                }
+                //});
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void CharacterizationTestLimits_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (userMode.Equals("Engineering") && enggLimitUpdated)
+                    DisplayOldLimitsOnLoad();
+                else
+                    GetEcoData();                
+               
+                //if (userMode.Equals("Engineering"))
+                //    ultraGroupBoxManEngg.Visible = true;                               
+
+                if (userMode.Equals("Admin") || (userMode.Equals("Engineering")))
+                    btnApplyLimit.Visible = true;             
+
+                if (userMode.Equals("Admin"))
+                    ultraGroupBoxAdminECO.Visible = true;
+
+                ultraGridLimits.Visible = false;
+
+                ultraLabelTestHeader.Text = "Mean Variance Limit";
+                meanVarianceTestLimitsUserControl.Dock = DockStyle.Fill;
+                meanVarianceTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(ecoData.MeanVarianceTestLimitsData.ToList()[0]);
+                TestLimitsPanel.Controls.Add(meanVarianceTestLimitsUserControl);
+            }
+            catch(Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }            
+        }    
+        private void GetEcoData()
+        {
+            SqlConnection conn = null;
+            try
+            {
+                sortedECOData = new List<ECOData>();
+                
+                if( TestAppHelper.CheckDBExists())
+                {
+                    if (userMode.Equals("Admin"))
+                    {
+                        conn = new SqlConnection(ConfigurationManager.ConnectionStrings["KronosCamContext"].ToString());
+                        conn.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter("SELECT distinct(Number), Description FROM view_ECO_List;", conn);
+                        DataSet ecs = new DataSet();
+                        adapter.Fill(ecs, "ecs");
+
+                        DataView dvExposure;
+                        dvExposure = ecs.Tables[0].DefaultView;
+                        ecoNumbersDict = new Dictionary<string, string>();
+
+                        foreach (DataRowView dr in dvExposure)
+                        {
+                            OmnifyECOList.Add((dr[0].ToString()));
+                            ecoNumbersDict.Add(dr[0].ToString(), dr[1].ToString());
+                        }                        
+                        conn.Close();
+                    }  
+
+                    using (var kcc = new KronosCamContext())
+                    {
+                        ecoDataList = kcc.ecoData
+                            .Include("MeanVarianceTestLimitsData")
+                            .Include("DarkCurrentTestLimitsData")
+                            .Include("DefectsTestLimitsData")
+                            .Include("InjectionEfficiencyTestLimitsData")
+                            .Include("InjectionPerformanceLimitsData")
+                            .Include("NdroReadDriftTestLimitsData")
+                            .Include("PhotoresponseLimitsData")
+                            .Include("NoiseVsNDROSLimitsData")
+                            .Include("SegmentInjectLimitsData")
+                            .ToList();
+                    }
+                }
+                else
+                {
+                    if (userMode.Equals("Admin"))
+                    {
+                        ProcessOmnifyECOViewXMLFile();
+                    }
+                    ProcessLimitsXMLFiles();                    
+                }
+                ultraComboOmnifyECOs.DataSource = OmnifyECOList;
+                sortedECOData = (from ecos in ecoDataList orderby ecos.DefinedDate descending select ecos).ToList();
+                List<string> ecoList = new List<string>();
+                ecoList = (from ecos in sortedECOData select ecos.ECONumber).ToList();
+                ultraComboEditorECODetails.DataSource = ecoList;
+                DisplayLimitsOnLoad();
+               
+            }
+           
+            catch(Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+                conn.Close();
+            } 
+        }
+
+        private void ProcessLimitsXMLFiles()
+        {
+            try
+            {
+               
+                ProcessECODataXMLFile();
+                ProcessDarkCurrentLimitsXMLFile();
+                ProcessDefectsTestLimitsXMLFile();
+                ProcessInjectionEfficiencyLimitsXMLFile();
+                ProcessInjectionPerformanceLimitsXMLFile();
+                ProcessMeanVarianceLimitsXMLFile();
+                ProcessNdroReadDriftLimitsXMLFile();
+                ProcessNoiseVsNDROSLimitsXMLFile();
+                ProcessPhotoresponseLimitsXMLFile();
+                ProcessSegmentInjectLimitsXMLFile();
+               
+
+                foreach (ECOData ecodata in ecoDataList)
+                {
+                    ecodata.DarkCurrentTestLimitsData = new List<DarkCurrentTestLimitsData>();
+                    foreach (DarkCurrentTestLimitsData obj in darkCurrentTestLimitsDataList)
+                    {  
+                        if (ecodata.ECONumber == obj.ECONumber)
+                        {
+                            ecodata.DarkCurrentTestLimitsData.Add(obj);
+                        }
+                    }
+                    ecodata.DefectsTestLimitsData = new List<DefectsTestLimitsData>();
+                    foreach (DefectsTestLimitsData obj in defectsTestLimitsDataList)
+                    {
+                      
+                        if (ecodata.ECONumber == obj.ECONumber)
+                        {
+                            ecodata.DefectsTestLimitsData.Add(obj);
+                        }
+                    }
+                    ecodata.InjectionEfficiencyTestLimitsData = new List<InjectionEfficiencyTestLimitsData>();
+                    foreach (InjectionEfficiencyTestLimitsData obj in injectionEfficiencyTestLimitsDataList)
+                    {                       
+                        if (ecodata.ECONumber == obj.ECONumber)
+                        {
+                            ecodata.InjectionEfficiencyTestLimitsData.Add(obj);
+                        }
+                    }
+                    ecodata.InjectionPerformanceLimitsData = new List<InjectionPerformanceLimitsData>();
+                    foreach (InjectionPerformanceLimitsData obj in injectionPerformanceLimitsDataList)
+                    {
+                       
+                        if (ecodata.ECONumber == obj.ECONumber)
+                        {
+                            ecodata.InjectionPerformanceLimitsData.Add(obj);
+                        }
+                    }
+                    ecodata.MeanVarianceTestLimitsData = new List<MeanVarianceTestLimitsData>();
+                    foreach (MeanVarianceTestLimitsData obj in meanVarianceTestLimitsDataList)
+                    {
+                        
+                        if (ecodata.ECONumber == obj.ECONumber)
+                        {
+                            ecodata.MeanVarianceTestLimitsData.Add(obj);
+                        }
+                    }
+                    ecodata.NoiseVsNDROSLimitsData = new List<NoiseVsNDROSLimitsData>();
+                    foreach (NoiseVsNDROSLimitsData obj in noiseVsNDROSLimitsDataList)
+                    {
+                       
+                        if (ecodata.ECONumber == obj.ECONumber)
+                        {
+                            ecodata.NoiseVsNDROSLimitsData.Add(obj);
+                        }
+                    }
+                    ecodata.NdroReadDriftTestLimitsData = new List<NdroReadDriftTestLimitsData>();
+                    foreach (NdroReadDriftTestLimitsData obj in ndroReadDriftTestLimitsDataList)
+                    {                        
+                        if (ecodata.ECONumber == obj.ECONumber)
+                        {
+                            ecodata.NdroReadDriftTestLimitsData.Add(obj);
+                        }
+                    }
+                    ecodata.PhotoresponseLimitsData = new List<PhotoresponseLimitsData>();
+                    foreach (PhotoresponseLimitsData obj in photoresponseLimitsDataList)
+                    {                        
+                        if (ecodata.ECONumber == obj.ECONumber)
+                        {
+                            ecodata.PhotoresponseLimitsData.Add(obj);
+                        }
+                    }
+                    ecodata.SegmentInjectLimitsData = new List<SegmentInjectLimitsData>();
+                    foreach (SegmentInjectLimitsData obj in segmentInjectLimitsDataList)
+                    {                        
+                        if (ecodata.ECONumber == obj.ECONumber)
+                        {
+                            ecodata.SegmentInjectLimitsData.Add(obj);
+                        }
+                    }
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+                
+            } 
+        }
+        private void ProcessOmnifyECOViewXMLFile()
+        {
+            try
+            {
+                log.Info("Begin Reading Omnify ECOView XML.");
+
+                DataSet ds = new DataSet();
+                ds.ReadXml(ConfigurationManager.AppSettings["XMLFilePath"].ToString() + "ECOOmnifyViewData.xml", XmlReadMode.InferSchema);
+
+                DataView dvExposure;
+                dvExposure = ds.Tables[0].DefaultView;
+                OmnifyECOList = new List<string>();
+                ecoNumbersDict = new Dictionary<string, string>();
+                foreach (DataRowView dr in dvExposure)
+                {
+                    OmnifyECOList.Add((dr[0].ToString()));
+                    ecoNumbersDict.Add(dr[0].ToString(), dr[1].ToString());
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ProcessECODataXMLFile()
+        {
+            try
+            {
+                log.Info("Begin Reading ECOData XML.");
+
+                DataSet ds = new DataSet();
+                ds.ReadXml(ConfigurationManager.AppSettings["XMLFilePath"].ToString() + "ECOData.xml", XmlReadMode.InferSchema);
+
+                DataView dvExposure;
+                dvExposure = ds.Tables[0].DefaultView;
+                ecoDataList = new List<ECOData>();
+                foreach (DataRowView dr in dvExposure)
+                {
+                    ECOData ecoData = new ECOData();
+                    
+                    ecoData.ECONumber = Convert.ToString(dr[0]);                   
+                    ecoData.DefinedDate = Convert.ToDateTime(dr[1]);
+                    ecoData.UserModified = Convert.ToString(dr[2]);
+
+                    ecoDataList.Add(ecoData);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ProcessDarkCurrentLimitsXMLFile()
+        {
+            try
+            {                
+                    log.Info("Begin Reading DarkCurrentLimitsData XML.");
+
+                    DataSet ds = new DataSet();
+                    ds.ReadXml(ConfigurationManager.AppSettings["XMLFilePath"].ToString() + "DarkCurrentLimitsData.xml", XmlReadMode.InferSchema);
+
+                    DataView dvExposure;
+                    dvExposure = ds.Tables[0].DefaultView;
+                    darkCurrentTestLimitsDataList = new List<DarkCurrentTestLimitsData>();
+                    foreach (DataRowView dr in dvExposure)
+                    {
+                        DarkCurrentTestLimitsData darkCurrentTestLimitsData = new DarkCurrentTestLimitsData();
+
+                        darkCurrentTestLimitsData.LimitsID = Convert.ToInt32(dr[0]);
+                        darkCurrentTestLimitsData.ECONumber = Convert.ToString(dr[1]);
+                        darkCurrentTestLimitsData.DarkCurrentRateMax = Convert.ToDouble(dr[2]);
+                        darkCurrentTestLimitsData.DefinedDate = Convert.ToDateTime(dr[3]);
+                        darkCurrentTestLimitsData.UserModified = Convert.ToString(dr[4]);
+
+                        darkCurrentTestLimitsDataList.Add(darkCurrentTestLimitsData);
+                    }
+               
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ProcessDefectsTestLimitsXMLFile()
+        {
+            try
+            {
+                //await Task.Run(() =>
+                //{
+                    log.Info("Begin Reading DefectsTestLimitsData XML.");
+
+                    DataSet ds = new DataSet();
+                    ds.ReadXml(ConfigurationManager.AppSettings["XMLFilePath"].ToString() + "DefectsTestLimitsData.xml", XmlReadMode.InferSchema);
+
+                    DataView dvExposure;
+                    dvExposure = ds.Tables[0].DefaultView;
+
+                    defectsTestLimitsDataList = new List<DefectsTestLimitsData>();
+                    foreach (DataRowView dr in dvExposure)
+                    {
+                        DefectsTestLimitsData defectsTestLimitsData = new DefectsTestLimitsData();
+
+                        defectsTestLimitsData.LimitsID = Convert.ToInt32(dr[0]);
+                        defectsTestLimitsData.ECONumber = Convert.ToString(dr[1]);
+                        defectsTestLimitsData.PRNUPositive = Convert.ToDouble(dr[2]);
+                        defectsTestLimitsData.PRNUNegative = Convert.ToDouble(dr[3]);
+                        defectsTestLimitsData.MaxTrap = Convert.ToInt32(dr[4]);
+                        defectsTestLimitsData.HotPixel = Convert.ToInt32(dr[5]);
+                        defectsTestLimitsData.AveTrap = Convert.ToInt32(dr[6]);
+                        defectsTestLimitsData.MaxDarkROI = Convert.ToInt32(dr[7]);
+                        defectsTestLimitsData.TotalNumDefects = Convert.ToInt32(dr[8]);
+                        defectsTestLimitsData.TotalNumClusters = Convert.ToInt32(dr[9]);
+                        defectsTestLimitsData.ROI_Xs = Convert.ToInt32(dr[10]);
+                        defectsTestLimitsData.ROI_Ys = Convert.ToInt32(dr[11]);
+                        defectsTestLimitsData.ROI_dXs = Convert.ToInt32(dr[12]);
+                        defectsTestLimitsData.ROI_dYs = Convert.ToInt32(dr[13]);
+                        defectsTestLimitsData.ROI_dXbs = Convert.ToInt32(dr[14]);
+                        defectsTestLimitsData.ROI_dYbs = Convert.ToInt32(dr[15]);
+                        defectsTestLimitsData.ROI_PixRate = Convert.ToInt32(dr[16]);
+                        defectsTestLimitsData.ROI_NDRO = Convert.ToInt32(dr[17]);
+                        defectsTestLimitsData.PRNU_LED = Convert.ToInt32(dr[18]);
+                        defectsTestLimitsData.PRNU_Target = Convert.ToInt32(dr[19]);
+                        defectsTestLimitsData.Trap_LED = Convert.ToInt32(dr[20]);
+                        defectsTestLimitsData.Trap_Target = Convert.ToInt32(dr[21]);
+                        defectsTestLimitsData.HotPixel_LED = Convert.ToInt32(dr[22]);
+                        defectsTestLimitsData.HotPixel_Target = Convert.ToInt32(dr[23]);
+                        defectsTestLimitsData.Unused_outer_rows = Convert.ToInt32(dr[24]);
+                        defectsTestLimitsData.Unused_outer_cols = Convert.ToInt32(dr[25]);
+                        defectsTestLimitsData.PRNU_test_scan_size = Convert.ToInt32(dr[26]);
+                        defectsTestLimitsData.Hot_pix_exp_time = Convert.ToInt32(dr[27]);
+                        defectsTestLimitsData.Ave_dark_scan_size = Convert.ToInt32(dr[28]);
+                        defectsTestLimitsData.DefinedDate = Convert.ToDateTime(dr[29]);
+                        defectsTestLimitsData.UserModified = Convert.ToString(dr[30]);
+
+                        defectsTestLimitsDataList.Add(defectsTestLimitsData);
+                    }
+                //});
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ProcessInjectionEfficiencyLimitsXMLFile()
+        {
+            try
+            {
+                //await Task.Run(() =>
+                //{
+                    log.Info("Begin Reading InjectionEfficiencyLimitsData XML.");
+
+                    DataSet ds = new DataSet();
+                    ds.ReadXml(ConfigurationManager.AppSettings["XMLFilePath"].ToString() + "InjectionEfficiencyTestLimitsData.xml", XmlReadMode.InferSchema);
+
+                    DataView dvExposure;
+                    dvExposure = ds.Tables[0].DefaultView;
+
+                    injectionEfficiencyTestLimitsDataList = new List<InjectionEfficiencyTestLimitsData>();
+                    foreach (DataRowView dr in dvExposure)
+                    {
+                        InjectionEfficiencyTestLimitsData injectionEfficiencyTestLimitsData = new InjectionEfficiencyTestLimitsData();
+
+                        injectionEfficiencyTestLimitsData.LimitsID = Convert.ToInt32(dr[0]);
+                        injectionEfficiencyTestLimitsData.ECONumber = Convert.ToString(dr[1]);
+                        injectionEfficiencyTestLimitsData.MidLevSngInjMax = Convert.ToDouble(dr[2]);
+                        injectionEfficiencyTestLimitsData.DefinedDate = Convert.ToDateTime(dr[3]);
+                        injectionEfficiencyTestLimitsData.UserModified = Convert.ToString(dr[4]);
+
+                        injectionEfficiencyTestLimitsDataList.Add(injectionEfficiencyTestLimitsData);
+                    }
+                //});
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ProcessInjectionPerformanceLimitsXMLFile()
+        {
+            try
+            {
+                //await Task.Run(() =>
+                //{
+                    log.Info("Begin Reading InjectionPerformanceLimitsData XML.");
+
+                    DataSet ds = new DataSet();
+                    ds.ReadXml(ConfigurationManager.AppSettings["XMLFilePath"].ToString() + "InjectionPerformanceTestLimitsData.xml", XmlReadMode.InferSchema);
+
+                    DataView dvExposure;
+                    dvExposure = ds.Tables[0].DefaultView;
+
+                    injectionPerformanceLimitsDataList = new List<InjectionPerformanceLimitsData>();
+                    foreach (DataRowView dr in dvExposure)
+                    {
+                        InjectionPerformanceLimitsData injectionPerformanceLimitsData = new InjectionPerformanceLimitsData();
+
+                        injectionPerformanceLimitsData.LimitsID = Convert.ToInt32(dr[0]);
+                        injectionPerformanceLimitsData.ECONumber = Convert.ToString(dr[1]);
+                        injectionPerformanceLimitsData.AveSigAfterInjectionMax = Convert.ToInt32(dr[2]);
+                        injectionPerformanceLimitsData.StdDevOfAvesMax = Convert.ToInt32(dr[3]);
+                        injectionPerformanceLimitsData.ROI_Xs = Convert.ToInt32(dr[4]);
+                        injectionPerformanceLimitsData.ROI_Ys = Convert.ToInt32(dr[5]);
+                        injectionPerformanceLimitsData.ROI_dXs = Convert.ToInt32(dr[6]);
+                        injectionPerformanceLimitsData.ROI_dYs = Convert.ToInt32(dr[7]);
+                        injectionPerformanceLimitsData.ROI_dXbs = Convert.ToInt32(dr[8]);
+                        injectionPerformanceLimitsData.ROI_dYbs = Convert.ToInt32(dr[9]);
+                        injectionPerformanceLimitsData.ROI_PixRate = Convert.ToInt32(dr[10]);
+                        injectionPerformanceLimitsData.ROI_NDRO = Convert.ToInt32(dr[11]);
+                        injectionPerformanceLimitsData.Points = Convert.ToInt32(dr[12]);
+                        injectionPerformanceLimitsData.Auto_Flashe_LED = Convert.ToInt32(dr[13]);
+                        injectionPerformanceLimitsData.AutoFlash_Target = Convert.ToInt32(dr[14]);
+                        injectionPerformanceLimitsData.DefinedDate = Convert.ToDateTime(dr[15]);
+                        injectionPerformanceLimitsData.UserModified = Convert.ToString(dr[16]);
+
+                        injectionPerformanceLimitsDataList.Add(injectionPerformanceLimitsData);
+                    }
+               // });
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ProcessMeanVarianceLimitsXMLFile()
+        {
+            try
+            {
+                //await Task.Run(() =>
+                //{
+                    log.Info("Begin Reading MeanVarianceLimitsData XML.");
+
+                    DataSet ds = new DataSet();
+                    //string filepath = ConfigurationManager.AppSettings["XMLFilePath"].ToString() + "MeanVarianceLimitsData.xml";
+                    //ds.ReadXml(filepath);
+                    ds.ReadXml(ConfigurationManager.AppSettings["XMLFilePath"].ToString() + "MeanVarianceLimitsData.xml", XmlReadMode.InferSchema);
+
+                    DataView dvExposure;
+                    dvExposure = ds.Tables[0].DefaultView;
+
+                    meanVarianceTestLimitsDataList = new List<MeanVarianceTestLimitsData>();
+                    foreach (DataRowView dr in dvExposure)
+                    {
+                        MeanVarianceTestLimitsData meanVarianceTestLimitsData = new MeanVarianceTestLimitsData();
+                        meanVarianceTestLimitsData.LimitsID = Convert.ToInt32(dr[0]);
+                        meanVarianceTestLimitsData.ECONumber = Convert.ToString(dr[1]);
+                        meanVarianceTestLimitsData.ConversionFactorNominal = Convert.ToDouble(dr[2]);
+                        meanVarianceTestLimitsData.ConverisonFactorTol = Convert.ToInt32(dr[3]);
+                        meanVarianceTestLimitsData.ROI_Xs = Convert.ToInt32(dr[4]);
+                        meanVarianceTestLimitsData.ROI_Ys = Convert.ToInt32(dr[5]);
+                        meanVarianceTestLimitsData.ROI_dXs = Convert.ToInt32(dr[6]);
+                        meanVarianceTestLimitsData.ROI_dYs = Convert.ToInt32(dr[7]);
+                        meanVarianceTestLimitsData.ROI_dXbs = Convert.ToInt32(dr[8]);
+                        meanVarianceTestLimitsData.ROI_dYbs = Convert.ToInt32(dr[9]);
+                        meanVarianceTestLimitsData.ROI_PixRate = Convert.ToInt32(dr[10]);
+                        meanVarianceTestLimitsData.ROI_NDRO = Convert.ToInt32(dr[11]);
+                        meanVarianceTestLimitsData.Exposures = Convert.ToInt32(dr[12]);
+                        meanVarianceTestLimitsData.Trials = Convert.ToInt32(dr[13]);
+                        meanVarianceTestLimitsData.LowerPoint = Convert.ToInt32(dr[14]);
+                        meanVarianceTestLimitsData.UpperPoint = Convert.ToInt32(dr[15]);
+                        meanVarianceTestLimitsData.DefinedDate = Convert.ToDateTime(dr[16]);
+                        meanVarianceTestLimitsData.UserModified = Convert.ToString(dr[17]);
+                        meanVarianceTestLimitsData.LED = Convert.ToInt32(dr[18]);
+                        meanVarianceTestLimitsDataList.Add(meanVarianceTestLimitsData);
+                    }
+                //});
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ProcessNdroReadDriftLimitsXMLFile()
+        {
+            try
+            {
+                //await Task.Run(() =>
+                //{
+                    log.Info("Begin Reading NdroReadDriftLimitsData XML.");
+
+                    DataSet ds = new DataSet();
+                    ds.ReadXml(ConfigurationManager.AppSettings["XMLFilePath"].ToString() + "NdroReadDriftTestLimitsData.xml", XmlReadMode.InferSchema);
+
+                    DataView dvExposure;
+                    dvExposure = ds.Tables[0].DefaultView;
+
+                    ndroReadDriftTestLimitsDataList = new List<NdroReadDriftTestLimitsData>();
+                    foreach (DataRowView dr in dvExposure)
+                    {
+                        NdroReadDriftTestLimitsData ndroReadDriftTestLimitsData = new NdroReadDriftTestLimitsData();
+
+                        ndroReadDriftTestLimitsData.LimitsID = Convert.ToInt32(dr[0]);
+                        ndroReadDriftTestLimitsData.ECONumber = Convert.ToString(dr[1]);
+                        ndroReadDriftTestLimitsData.NdroReadDriftMaxSlope = Convert.ToDouble(dr[2]);
+                        ndroReadDriftTestLimitsData.DefinedDate = Convert.ToDateTime(dr[3]);
+                        ndroReadDriftTestLimitsData.UserModified = Convert.ToString(dr[4]);
+
+                        ndroReadDriftTestLimitsDataList.Add(ndroReadDriftTestLimitsData);
+                    }
+                //});
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ProcessNoiseVsNDROSLimitsXMLFile()
+        {
+            try
+            {
+                //await Task.Run(() =>
+                //{
+                    log.Info("Begin Reading NoiseVsNDROSLimitsData XML.");
+
+                    DataSet ds = new DataSet();
+                    ds.ReadXml(ConfigurationManager.AppSettings["XMLFilePath"].ToString() + "NoiseVsNDROsTestLimitsData.xml", XmlReadMode.InferSchema);
+
+                    DataView dvExposure;
+                    dvExposure = ds.Tables[0].DefaultView;
+
+                    noiseVsNDROSLimitsDataList = new List<NoiseVsNDROSLimitsData>();
+                    foreach (DataRowView dr in dvExposure)
+                    {
+                        NoiseVsNDROSLimitsData noiseVsNDROSLimitsData = new NoiseVsNDROSLimitsData();
+
+                        noiseVsNDROSLimitsData.LimitsID = Convert.ToInt32(dr[0]);
+                        noiseVsNDROSLimitsData.ECONumber = Convert.ToString(dr[1]);
+                        noiseVsNDROSLimitsData.SnglNoiseMax = Convert.ToInt32(dr[2]);
+                        noiseVsNDROSLimitsData.PowerFitUpper = Convert.ToDouble(dr[3]);
+                        noiseVsNDROSLimitsData.PowerFitLower = Convert.ToDouble(dr[4]);
+                        noiseVsNDROSLimitsData.RPower2Correlation = Convert.ToDouble(dr[5]);
+                        noiseVsNDROSLimitsData.ROI_Xs = Convert.ToInt32(dr[6]);
+                        noiseVsNDROSLimitsData.ROI_Ys = Convert.ToInt32(dr[7]);
+                        noiseVsNDROSLimitsData.ROI_dXs = Convert.ToInt32(dr[8]);
+                        noiseVsNDROSLimitsData.ROI_dYs = Convert.ToInt32(dr[9]);
+                        noiseVsNDROSLimitsData.ROI_dXbs = Convert.ToInt32(dr[10]);
+                        noiseVsNDROSLimitsData.ROI_dYbs = Convert.ToInt32(dr[11]);
+                        noiseVsNDROSLimitsData.NDROs = Convert.ToInt32(dr[12]);
+                        noiseVsNDROSLimitsData.Trials = Convert.ToInt32(dr[13]);
+                        noiseVsNDROSLimitsData.Flashes = Convert.ToInt32(dr[14]);
+                        noiseVsNDROSLimitsData.Time = Convert.ToInt32(dr[15]);
+                        noiseVsNDROSLimitsData.ExposureControl = Convert.ToInt32(dr[16]);
+                        noiseVsNDROSLimitsData.ReadOutModeType = Convert.ToInt32(dr[17]);
+                        noiseVsNDROSLimitsData.DefinedDate = Convert.ToDateTime(dr[18]);
+                        noiseVsNDROSLimitsData.UserModified = Convert.ToString(dr[19]);
+
+                        noiseVsNDROSLimitsDataList.Add(noiseVsNDROSLimitsData);
+                    }
+               // });
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ProcessPhotoresponseLimitsXMLFile()
+        {
+            try
+            {
+                //await Task.Run(() =>
+                //{
+                    log.Info("Begin Reading PhotoresponseLimitsData XML.");
+
+                    DataSet ds = new DataSet();
+                    ds.ReadXml(ConfigurationManager.AppSettings["XMLFilePath"].ToString() + "PhotoresponseLimitsData.xml", XmlReadMode.InferSchema);
+
+                    DataView dvExposure;
+                    dvExposure = ds.Tables[0].DefaultView;
+
+                    photoresponseLimitsDataList = new List<PhotoresponseLimitsData>();
+                    foreach (DataRowView dr in dvExposure)
+                    {
+                        PhotoresponseLimitsData photoresponseLimitsData = new PhotoresponseLimitsData();
+
+                        photoresponseLimitsData.LimitsID = Convert.ToInt32(dr[0]);
+                        photoresponseLimitsData.ECONumber = Convert.ToString(dr[1]);
+                        photoresponseLimitsData.LinearityLevelMax = Convert.ToDouble(dr[2]);
+                        photoresponseLimitsData.FullWellLevelMin = Convert.ToInt32(dr[3]);
+                        photoresponseLimitsData.ROI_Xs = Convert.ToInt32(dr[4]);
+                        photoresponseLimitsData.ROI_Ys = Convert.ToInt32(dr[5]);
+                        photoresponseLimitsData.ROI_dXs = Convert.ToInt32(dr[6]);
+                        photoresponseLimitsData.ROI_dYs = Convert.ToInt32(dr[7]);
+                        photoresponseLimitsData.ROI_dXbs = Convert.ToInt32(dr[8]);
+                        photoresponseLimitsData.ROI_dYbs = Convert.ToInt32(dr[9]);
+                        photoresponseLimitsData.ROI_PixRate = Convert.ToInt32(dr[10]);
+                        photoresponseLimitsData.ROI_NDRO = Convert.ToInt32(dr[11]);
+                        photoresponseLimitsData.Exposures = Convert.ToInt32(dr[12]);
+                        photoresponseLimitsData.Flashes = Convert.ToInt32(dr[13]);
+                        photoresponseLimitsData.Time = Convert.ToInt32(dr[14]);
+                        photoresponseLimitsData.ExposureControl = Convert.ToInt32(dr[15]);
+                        photoresponseLimitsData.DefinedDate = Convert.ToDateTime(dr[16]);
+                        photoresponseLimitsData.UserModified = Convert.ToString(dr[17]);
+
+                        photoresponseLimitsDataList.Add(photoresponseLimitsData);
+                    }
+                //});
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ProcessSegmentInjectLimitsXMLFile()
+        {
+            try
+            {
+                //await Task.Run(() =>
+                //{
+                    log.Info("Begin Reading SegmentInjectLimitsData XML.");
+
+                    DataSet ds = new DataSet();
+                    ds.ReadXml(ConfigurationManager.AppSettings["XMLFilePath"].ToString() + "SegmentInjectLimitsData.xml", XmlReadMode.InferSchema);
+
+                    DataView dvExposure;
+                    dvExposure = ds.Tables[0].DefaultView;
+
+                    segmentInjectLimitsDataList = new List<SegmentInjectLimitsData>();
+                    foreach (DataRowView dr in dvExposure)
+                    {
+                        SegmentInjectLimitsData segmentInjectLimitsData = new SegmentInjectLimitsData();
+
+                        segmentInjectLimitsData.LimitsID = Convert.ToInt32(dr[0]);
+                        segmentInjectLimitsData.ECONumber = Convert.ToString(dr[1]);
+                        segmentInjectLimitsData.InjectLevel_adu = Convert.ToInt32(dr[2]);
+                        segmentInjectLimitsData.InjectDisturbance_adu = Convert.ToInt32(dr[3]);
+                        segmentInjectLimitsData.DefinedDate = Convert.ToDateTime(dr[4]);
+                        segmentInjectLimitsData.UserModified = Convert.ToString(dr[5]);
+
+                        segmentInjectLimitsDataList.Add(segmentInjectLimitsData);
+                    }
+               // });
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }      
+        private void CharacterizationTestLimits_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //this.Hide();
+            //e.Cancel = true;
+        }
+        private void ultraComboEditorECODetails_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                TestLimitsPanel.Controls.Clear();
+
+                ecoData=sortedECOData.Where(limit => limit.ECONumber.Equals(ultraComboEditorECODetails.SelectedItem.DisplayText.ToString())).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }            
+        }
+        private void DisplayLimitsOnLoad()
+        {
+            try
+            {
+                ultraComboEditorECODetails.SelectedIndex = 0;
+
+                meanVarianceTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(sortedECOData[0].MeanVarianceTestLimitsData.ToList()[0]);
+              
+                darkCurrentTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(sortedECOData[0].DarkCurrentTestLimitsData.ToList()[0]);
+
+                defectsTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(sortedECOData[0].DefectsTestLimitsData.ToList()[0]);
+
+                injectionEfficiencyTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(sortedECOData[0].InjectionEfficiencyTestLimitsData.ToList()[0]);
+             
+                injectionPerformanceTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(sortedECOData[0].InjectionPerformanceLimitsData.ToList()[0]);
+
+                nDROReadDriftTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(sortedECOData[0].NdroReadDriftTestLimitsData.ToList()[0]);
+                
+                noiseVsNDROSLimitsUserControl.UpdateLimitsViewWithSpecificModel(sortedECOData[0].NoiseVsNDROSLimitsData.ToList()[0]);
+
+                photoresponseLimitsUserControl.UpdateLimitsViewWithSpecificModel(sortedECOData[0].PhotoresponseLimitsData.ToList()[0]);
+
+                segmentInjectLimitsUserControl.UpdateLimitsViewWithSpecificModel(sortedECOData[0].SegmentInjectLimitsData.ToList()[0]);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            } 
+        }
+        private void DisplayOldLimitsOnLoad()
+        {
+            try
+            {
+                sortedECOData = new List<ECOData>();
+                sortedECOData = (from ecos in TestAppHelper.ECODataList orderby ecos.DefinedDate descending select ecos).ToList();
+
+                List<string> ecoList = new List<string>();
+                ecoList = (from ecos in sortedECOData select ecos.ECONumber).ToList();
+                ultraComboEditorECODetails.DataSource = ecoList;
+
+                ultraComboEditorECODetails.SelectedIndex = 0;
+
+                meanVarianceTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(TestAppHelper.ECODataList[0].MeanVarianceTestLimitsData.ToList()[0]);
+
+                darkCurrentTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(TestAppHelper.ECODataList[0].DarkCurrentTestLimitsData.ToList()[0]);
+
+                defectsTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(TestAppHelper.ECODataList[0].DefectsTestLimitsData.ToList()[0]);
+
+                injectionEfficiencyTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(TestAppHelper.ECODataList[0].InjectionEfficiencyTestLimitsData.ToList()[0]);
+
+                injectionPerformanceTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(TestAppHelper.ECODataList[0].InjectionPerformanceLimitsData.ToList()[0]);
+
+                nDROReadDriftTestLimitsUserControl.UpdateLimitsViewWithSpecificModel(TestAppHelper.ECODataList[0].NdroReadDriftTestLimitsData.ToList()[0]);
+
+                noiseVsNDROSLimitsUserControl.UpdateLimitsViewWithSpecificModel(TestAppHelper.ECODataList[0].NoiseVsNDROSLimitsData.ToList()[0]);
+
+                photoresponseLimitsUserControl.UpdateLimitsViewWithSpecificModel(TestAppHelper.ECODataList[0].PhotoresponseLimitsData.ToList()[0]);
+
+                segmentInjectLimitsUserControl.UpdateLimitsViewWithSpecificModel(TestAppHelper.ECODataList[0].SegmentInjectLimitsData.ToList()[0]);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }       
+        private async Task<bool> SaveLimitsData(ECOData ecoData, string OperationType )
+        {
+            try
+            {
+                var res = await Task.Run(() =>
+                {
+                    ecoData.DefinedDate = DateTime.Now;
+                    int limitsRecordSaved = 0;
+                    bool limitsXMLSaved =false;
+                    using (var kcc = new KronosCamContext())
+                    {
+                        if( TestAppHelper.CheckDBExists())
+                        {
+                            if (OperationType.Equals("ADD"))
+                            {
+                                kcc.ecoData.Add(ecoData);
+                            }
+                            else if (OperationType.Equals("Remove"))
+                            {
+                                kcc.ecoData.Remove(ecoData);
+                            }
+                            limitsRecordSaved = kcc.SaveChanges();
+                        }                       
+
+                         if(OperationType.Equals("ADD"))
+                        {
+                            AddECODataToXML(ecoData);
+
+                            limitsXMLSaved = AddLimitsToXML(ecoData.MeanVarianceTestLimitsData.ToList()[0], ecoData.DarkCurrentTestLimitsData.ToList()[0],
+                                            ecoData.DefectsTestLimitsData.ToList()[0],
+                                            ecoData.InjectionEfficiencyTestLimitsData.ToList()[0], ecoData.InjectionPerformanceLimitsData.ToList()[0],
+                                            ecoData.NdroReadDriftTestLimitsData.ToList()[0], ecoData.NoiseVsNDROSLimitsData.ToList()[0],
+                                            ecoData.PhotoresponseLimitsData.ToList()[0], ecoData.SegmentInjectLimitsData.ToList()[0]);
+                                   
+                         }
+                         else if (OperationType.Equals("Remove"))
+                         {
+                             RemoveECODataFromXML(ecoData);
+
+                             limitsXMLSaved = RemoveLimitsFromXML(ecoData.MeanVarianceTestLimitsData.ToList()[0], ecoData.DarkCurrentTestLimitsData.ToList()[0],
+                                             ecoData.DefectsTestLimitsData.ToList()[0],
+                                             ecoData.InjectionEfficiencyTestLimitsData.ToList()[0], ecoData.InjectionPerformanceLimitsData.ToList()[0],
+                                             ecoData.NdroReadDriftTestLimitsData.ToList()[0], ecoData.NoiseVsNDROSLimitsData.ToList()[0],
+                                             ecoData.PhotoresponseLimitsData.ToList()[0], ecoData.SegmentInjectLimitsData.ToList()[0]);
+
+                         }
+                         if (limitsRecordSaved > 0 || limitsXMLSaved)
+                        {
+                            log.Info("End ADD/Remove/Update Camera Details Limits Data to DB.");
+                            return true;
+                        }
+                        else
+                        {
+                            log.Error("Eror Occured while ADD/Remove/Update Limits Data records to DB");
+                            return false;
+                        }
+                    }
+                   
+                });
+                return res;
+            }
+            catch (Exception ex)
+            {
+                log.Error("Eror Occured while ADD/Remove/Update Limits Data records to DB");
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+                return false;
+            }
+        }
+        private void AddECODataToXML(ECOData ecoData)
+        {
+            try
+            {
+                log.Info("Begin Add ECOData to XML.");
+                XDocument xmlDoc = XDocument.Load(ConfigurationManager.AppSettings["XMLFilePath"].ToString() + "ECOData.xml");
+                xmlDoc.Element("ECODetails").Add
+                    (
+                    new XElement("ECOData",
+                    new XElement("ECONumber", ecoData.ECONumber),
+                    new XElement("DefinedDate", ecoData.DefinedDate),
+                    new XElement("UserModified", ecoData.UserModified)
+                    ));
+
+                xmlDoc.Save(ConfigurationManager.AppSettings["XMLFilePath"].ToString() + "ECOData.xml");
+                log.Info("End Add ECOData to XML.");
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+            
+        }
+        public void RemoveECODataFromXML(ECOData ecoData)
+        {
+            try
+            {
+                log.Info("Begin Remove ECOData from XML.");
+                XDocument xmlDoc = XDocument.Load(ConfigurationManager.AppSettings["XMLFilePath"].ToString() + "ECOData.xml");
+                XElement removeExposure = xmlDoc.Descendants("ECOData").FirstOrDefault(p => p.Element("ECONumber").Value == ecoData.ECONumber.ToString());
+                if (removeExposure != null)
+                {
+                    removeExposure.Remove();
+                    xmlDoc.Save(ConfigurationManager.AppSettings["XMLFilePath"].ToString() + "ECOData.xml");
+                    xmlDoc = XDocument.Load(ConfigurationManager.AppSettings["XMLFilePath"].ToString() + "ECOData.xml");
+                }
+                else
+                {
+
+                    log.Error("Remove ECOData from XML failed due to no ECONumber found with Number." + ecoData.ECONumber.ToString());
+                }
+                log.Info("End ECOData from ECOData XML.");
+            }
+            catch (Exception ex)
+            {
+                
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private bool AddLimitsToXML(MeanVarianceTestLimitsData mvLimit,DarkCurrentTestLimitsData darkCurrentLimit,DefectsTestLimitsData defectsLimit,
+            InjectionEfficiencyTestLimitsData injectionEffLimit,InjectionPerformanceLimitsData injectionPerfLimit,NdroReadDriftTestLimitsData ndroLimit,
+             NoiseVsNDROSLimitsData noiseLimit,PhotoresponseLimitsData photoresponseLimit,SegmentInjectLimitsData segmentInjectLimit )
+        {
+            try
+            {
+                darkCurrentLimit.ECONumber = defectsLimit.ECONumber = darkCurrentLimit.ECONumber =
+                mvLimit.ECONumber = injectionEffLimit.ECONumber = injectionPerfLimit.ECONumber =
+                ndroLimit.ECONumber = noiseLimit.ECONumber = photoresponseLimit.ECONumber = segmentInjectLimit.ECONumber = ultraComboOmnifyECOs.SelectedItem.DisplayText;
+
+                meanVarianceTestLimitsPresenter.AddMeanVarianceLimitsXML(mvLimit);
+                darkCurrentTestLimitsPresenter.AddDarkCurrentLimitsXML(darkCurrentLimit);
+                defectsTestLimitsPresenter.AddDefectsLimitsXML(defectsLimit);
+                injectionEfficiencyTestLimitsPresenter.AddInjectionEfficiencyLimitsXML(injectionEffLimit);
+                injectionPerformanceTestLimitsPresenter.AddInjectionPerformanceLimitsXML(injectionPerfLimit);
+                nDROReadDriftTestLimitsPresenter.AddNdroReadDriftLimitsXML(ndroLimit) ;
+                noiseVsNDROSLimitsPresenter.AddNoiseVsNDROSLimitsXML(noiseLimit);
+                photoresponseLimitsPresenter.AddPhotoresponseLimitsXML(photoresponseLimit);
+                segmentInjectLimitsPresenter.AddSegmentInjectLimitsXML(segmentInjectLimit);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                log.Error("Eror Occured while ADD/Remove Limits Data records to XML");
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+                return false;
+            }
+        }
+        private bool  RemoveLimitsFromXML(MeanVarianceTestLimitsData mvLimit, DarkCurrentTestLimitsData darkCurrentLimit, DefectsTestLimitsData defectsLimit,
+           InjectionEfficiencyTestLimitsData injectionEffLimit, InjectionPerformanceLimitsData injectionPerfLimit, NdroReadDriftTestLimitsData ndroLimit,
+            NoiseVsNDROSLimitsData noiseLimit, PhotoresponseLimitsData photoresponseLimit, SegmentInjectLimitsData segmentInjectLimit)
+        {
+            try
+            {
+                meanVarianceTestLimitsPresenter.RemoveMeanVarianceLimitsXML(mvLimit);
+                darkCurrentTestLimitsPresenter.RemoveDarkCurrentLimitsXML(darkCurrentLimit);
+                defectsTestLimitsPresenter.RemoveDefectsLimitsXML(defectsLimit);
+                injectionEfficiencyTestLimitsPresenter.RemoveInjectionEfficiencyLimitsXML(injectionEffLimit);
+                injectionPerformanceTestLimitsPresenter.RemoveInjectionPerformanceLimitsXML(injectionPerfLimit);
+                nDROReadDriftTestLimitsPresenter.RemoveNdroReadDriftLimitsXML(ndroLimit);
+                noiseVsNDROSLimitsPresenter.RemoveNoiseVsNDROSLimitsXML(noiseLimit);
+                photoresponseLimitsPresenter.RemovePhotoresponseLimitsXML(photoresponseLimit);
+                segmentInjectLimitsPresenter.RemoveSegmentInjectLimitsXML(segmentInjectLimit);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                log.Error("Eror Occured while ADD/Remove Limits Data records to XML");
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+                return false;
+            }
+        }
+        private async void AddLimitsData_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(ultraComboOmnifyECOs.SelectedItem.DisplayText.ToString()))
+                {
+                    MessageBox.Show("ECO Number cannot be empty", "Add New Test Limit", MessageBoxButtons.OK);
+                    return;
+                }
+                else
+                {
+                    ecoData = new ECOData();
+                    ecoData.ECONumber = ultraComboOmnifyECOs.SelectedItem.DisplayText;//textBoxECONumber.Text.ToString();
+                    ecoData.UserModified = userName;
+
+                    ecoData.MeanVarianceTestLimitsData = new List<MeanVarianceTestLimitsData>();
+                    ecoData.MeanVarianceTestLimitsData.Add(meanVarianceTestLimitsUserControl.ReturnMeanVarianceLimitsModel());
+                    
+
+                    ecoData.InjectionEfficiencyTestLimitsData = new List<InjectionEfficiencyTestLimitsData>();
+                    ecoData.InjectionEfficiencyTestLimitsData.Add(injectionEfficiencyTestLimitsUserControl.ReturnInjectionEfficiencyLimits());
+
+                    ecoData.InjectionPerformanceLimitsData = new List<InjectionPerformanceLimitsData>();
+                    ecoData.InjectionPerformanceLimitsData.Add(injectionPerformanceTestLimitsUserControl.ReturnInjectionPerformanceLimit());
+
+                    ecoData.NoiseVsNDROSLimitsData = new List<NoiseVsNDROSLimitsData>();
+                    ecoData.NoiseVsNDROSLimitsData.Add(noiseVsNDROSLimitsUserControl.ReturnNoiseVsNDROsLimit());
+
+                    ecoData.NdroReadDriftTestLimitsData = new List<NdroReadDriftTestLimitsData>();
+                    ecoData.NdroReadDriftTestLimitsData.Add(nDROReadDriftTestLimitsUserControl.ReturnNdroReadDriftLimit());
+
+                    ecoData.PhotoresponseLimitsData = new List<PhotoresponseLimitsData>();
+                    ecoData.PhotoresponseLimitsData.Add(photoresponseLimitsUserControl.ReturPhotoresponseLimit());
+
+                    ecoData.SegmentInjectLimitsData = new List<SegmentInjectLimitsData>();
+                    ecoData.SegmentInjectLimitsData.Add(segmentInjectLimitsUserControl.ReturnSegmentInjectLimit());
+
+                    ecoData.DarkCurrentTestLimitsData = new List<DarkCurrentTestLimitsData>();
+                    ecoData.DarkCurrentTestLimitsData.Add(darkCurrentTestLimitsUserControl.ReturnDarkCurrentLimits());
+
+                    ecoData.DefectsTestLimitsData = new List<DefectsTestLimitsData>();
+                    ecoData.DefectsTestLimitsData.Add(defectsTestLimitsUserControl.ReturnDefectsTestLimit());
+
+                    if (await SaveLimitsData(ecoData, "ADD"))
+                    {
+                        MessageBox.Show("New Test Limit added successfully", "Add Test Limit", MessageBoxButtons.OK);
+                        TestAppHelper.SelectedECONumber = string.Empty;
+                        GetEcoData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("New Test Limit add failed", "Add Test Limit", MessageBoxButtons.OK);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Eror Occured while adding Limits Data records to DB");
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private async void RemoveLimitsData_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(ultraComboOmnifyECOs.SelectedItem.DisplayText.ToString()))
+                {
+                    MessageBox.Show("ECO Number cannot be empty", "Remove Test Limit", MessageBoxButtons.OK);
+                    return;
+                }
+                else
+                {
+                    ECOData ecoData = new ECOData();
+                    ecoData = sortedECOData.Where(eco => eco.ECONumber.Equals(ultraComboOmnifyECOs.SelectedItem.DisplayText)).FirstOrDefault();
+                    if (await SaveLimitsData(ecoData, "REMOVE"))
+                    {
+                        MessageBox.Show("Test Limit removed successfully", "Remove Test Limit", MessageBoxButtons.OK);
+                        GetEcoData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Test Limit removed failed", "Remove Test Limit", MessageBoxButtons.OK);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Eror Occured while Remvoing Limits Data records to DB");
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+               
+            }
+        }       
+        private void RefreshLimitsData_Click(object sender, EventArgs e)
+        {
+            try
+            {               
+                GetEcoData();
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }  
+        }
+        private void UpdateCharacterizationLimit_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in TestLimitsPanel.Controls)
+            {
+                ecoData = sortedECOData.Where(limit => limit.ECONumber.Equals(ultraComboEditorECODetails.SelectedItem.DisplayText.ToString())).FirstOrDefault();
+                switch (control.GetType().Name.ToString())
+                {
+                    //case "ChargeTransferLossesLimitsUserControl":
+                    //    ecoData.ChargeTransferLossesTestLimitsData.Add(chargeTransferLossesTestLimitsUserControl.ReturnChargeTransferLossesLimit());
+                    //    TestAppHelper.chargeTransferLossesTestLimitsData = chargeTransferLossesTestLimitsUserControl.ReturnChargeTransferLossesLimit();
+                    //    ecoData.ChargeTransferLossesTestLimitsData.Remove(ecoData.ChargeTransferLossesTestLimitsData.ToList()[0]);
+                    //    break;
+                    //case "CrossTalkLimitsUserControl":
+                    //    ecoData.CrossTalkLimitsData.Add(crossTalkTestLimitsUserControl.ReturnCrossTalkLimit());
+                    //    TestAppHelper.crossTalkLimitsData = crossTalkTestLimitsUserControl.ReturnCrossTalkLimit();
+                    //    ecoData.CrossTalkLimitsData.Remove(ecoData.CrossTalkLimitsData.ToList()[0]);
+                    //    break;
+                    case "MeanVarianceLimitsUserControl":
+                        ecoData.MeanVarianceTestLimitsData.Add(meanVarianceTestLimitsUserControl.ReturnMeanVarianceLimitsModel());
+                        TestAppHelper.meanVarianceTestLimitsData = meanVarianceTestLimitsUserControl.ReturnMeanVarianceLimitsModel();                       
+                        ecoData.MeanVarianceTestLimitsData.Remove(ecoData.MeanVarianceTestLimitsData.ToList()[0]);  
+                        break;
+                    case "DarkCurrentLimitsUserControl":
+                        ecoData.DarkCurrentTestLimitsData.Add(darkCurrentTestLimitsUserControl.ReturnDarkCurrentLimits());
+                        TestAppHelper.darkCurrentTestLimitsData = darkCurrentTestLimitsUserControl.ReturnDarkCurrentLimits();
+                        ecoData.DarkCurrentTestLimitsData.Remove(ecoData.DarkCurrentTestLimitsData.ToList()[0]);
+                        break;
+                    case "DefectsLimitsUserControl":
+                        ecoData.DefectsTestLimitsData.Add(defectsTestLimitsUserControl.ReturnDefectsTestLimit());
+                        TestAppHelper.defectsTestLimitsData = defectsTestLimitsUserControl.ReturnDefectsTestLimit();
+                        ecoData.DefectsTestLimitsData.Remove(ecoData.DefectsTestLimitsData.ToList()[0]);
+                        break;
+                    case "InjectionEfficiencyLimitsUserControl":
+                         ecoData.InjectionEfficiencyTestLimitsData.Add(injectionEfficiencyTestLimitsUserControl.ReturnInjectionEfficiencyLimits());
+                         TestAppHelper.injectionEfficiencyTestLimitsData = injectionEfficiencyTestLimitsUserControl.ReturnInjectionEfficiencyLimits();
+                         ecoData.InjectionEfficiencyTestLimitsData.Remove(ecoData.InjectionEfficiencyTestLimitsData.ToList()[0]);
+                        break;
+                    case "InjectionPerformanceLimitsUserControl":
+                        ecoData.InjectionPerformanceLimitsData.Add(injectionPerformanceTestLimitsUserControl.ReturnInjectionPerformanceLimit());
+                        TestAppHelper.injectionPerformanceLimitsData = injectionPerformanceTestLimitsUserControl.ReturnInjectionPerformanceLimit();
+                        ecoData.InjectionPerformanceLimitsData.Remove(ecoData.InjectionPerformanceLimitsData.ToList()[0]);
+                        break;
+                    case "NDROReadDriftLimitsUserControl":
+                        ecoData.NdroReadDriftTestLimitsData.Add(nDROReadDriftTestLimitsUserControl.ReturnNdroReadDriftLimit());
+                        TestAppHelper.ndroReadDriftTestLimitsData = nDROReadDriftTestLimitsUserControl.ReturnNdroReadDriftLimit();
+                        ecoData.NdroReadDriftTestLimitsData.Remove(ecoData.NdroReadDriftTestLimitsData.ToList()[0]);
+                        break;
+                    case "NoiseVsNDROSLimitsUserControl":
+                        ecoData.NoiseVsNDROSLimitsData.Add(noiseVsNDROSLimitsUserControl.ReturnNoiseVsNDROsLimit());
+                        TestAppHelper.noiseVsNDROSLimitsData = noiseVsNDROSLimitsUserControl.ReturnNoiseVsNDROsLimit();
+                        ecoData.NoiseVsNDROSLimitsData.Remove(ecoData.NoiseVsNDROSLimitsData.ToList()[0]);
+                        break;
+                    case "PhotoresponseLimitsUserControl":
+                        ecoData.PhotoresponseLimitsData.Add(photoresponseLimitsUserControl.ReturPhotoresponseLimit());
+                        TestAppHelper.photoresponseLimitsData = photoresponseLimitsUserControl.ReturPhotoresponseLimit();
+                        ecoData.PhotoresponseLimitsData.Remove(ecoData.PhotoresponseLimitsData.ToList()[0]);
+                        break;
+                    case "SegmentInjectLimitsUserControl":
+                        ecoData.SegmentInjectLimitsData.Add(segmentInjectLimitsUserControl.ReturnSegmentInjectLimit());
+                        TestAppHelper.segmentInjectLimitsData = segmentInjectLimitsUserControl.ReturnSegmentInjectLimit();
+                        ecoData.SegmentInjectLimitsData.Remove(ecoData.SegmentInjectLimitsData.ToList()[0]);
+                        break;
+                }
+                TestAppHelper.eCOData = ecoData;
+                TestAppHelper.ECODataList = new List<ECOData>();
+                TestAppHelper.ECODataList = sortedECOData;
+                enggLimitUpdated = true;
+
+            }
+           
+        }
+        private void RefreshCharacterizationLimit_Click(object sender, EventArgs e)
+        {
+            GetEcoData();
+        }
+        private async void ultraGridLimits_InitializeLayout(object sender, Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs e)
+        {
+            try
+            {
+                await InitializeGridLayout();
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private async Task InitializeGridLayout()
+        {
+            try
+            {
+                await Task.Run(() =>
+                {
+                    foreach (Infragistics.Win.UltraWinGrid.UltraGridRow row in ultraGridLimits.Rows)
+                    {
+                        if (row.ChildBands != null && row.ChildBands.Count > 0)
+                        {
+                            foreach (Infragistics.Win.UltraWinGrid.UltraGridChildBand childband in row.ChildBands)
+                            {
+                                childband.Band.HeaderVisible = true;
+                            }
+                        }
+                       
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+
+        private void btnApplyLimit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ecoNumberSelected = TestAppHelper.SelectedECONumber= ultraComboEditorECODetails.SelectedItem.DisplayText.ToString();
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+
+        private void ultraComboOmnifyECOs_SelectionChanged(object sender, EventArgs e)
+        {
+            ECODescription.Text = ecoNumbersDict.FirstOrDefault(eco => eco.Key.Equals(ultraComboOmnifyECOs.SelectedItem.DisplayText)).Value;
+        }
+    }
+}

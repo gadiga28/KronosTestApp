@@ -1,0 +1,16 @@
+2018-06-25 13:21:19,227 [9] ERROR KronosCameraTestApp.View.TestResultsForm System.ArgumentException: Parameter is not valid.
+   at System.Drawing.Bitmap..ctor(String filename)
+   at KronosCameraTestApp.View.TestResultsForm.InitializeGridLayout() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 199
+ AMER\babagoud.gadiga - Exception inVoid InitializeGridLayout()
+2018-06-25 13:21:20,844 [9] ERROR KronosCameraTestApp.View.TestResultsForm System.ArgumentException: Parameter is not valid.
+   at System.Drawing.Bitmap..ctor(String filename)
+   at KronosCameraTestApp.View.TestResultsForm.InitializeGridLayout() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 199
+ AMER\babagoud.gadiga - Exception inVoid InitializeGridLayout()
+2018-06-25 13:37:15,055 [9] ERROR KronosCameraTestApp.View.TestResultsForm System.ArgumentException: Parameter is not valid.
+   at System.Drawing.Bitmap..ctor(String filename)
+   at KronosCameraTestApp.View.TestResultsForm.InitializeGridLayout() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 199
+ AMER\babagoud.gadiga - Exception inVoid InitializeGridLayout()
+2018-06-25 14:09:51,901 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-06-25 14:10:01,582 [9] ERROR KronosCameraTestApp.View.TestResultsForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.TestResultsForm.UpdateMeanVarianceResultsGrid() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 691
+ AMER\babagoud.gadiga - Exception inVoid UpdateMeanVarianceResultsGrid()

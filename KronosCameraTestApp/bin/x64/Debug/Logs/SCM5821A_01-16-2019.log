@@ -1,0 +1,195 @@
+2019-01-16 09:59:50,989 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-16 11:39:53,848 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ComponentModel.LicenseException: NationalInstruments.UI.WindowsForms.Led is unlicensed.
+   at NationalInstruments.Restricted.LicenseBase.ShowUnLicensedBehavior(Type type, Object instance)
+   at NationalInstruments.Restricted.LicenseBase.a(Type A_0, Object A_1)
+   at NationalInstruments.Restricted.LicenseProviderBase.GetLicense(LicenseContext context, Type type, Object instance, Boolean allowExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type, Object instance)
+   at NationalInstruments.UI.WindowsForms.Led..ctor()
+   at KronosCameraTestApp.View.KronosTestAppMainForm.InitializeComponent() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.Designer.cs:line 288
+   at KronosCameraTestApp.View.KronosTestAppMainForm..ctor() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 247
+ AMER\babagoud.gadiga - Exception inVoid .ctor()
+2019-01-16 11:39:54,779 [1] ERROR KronosCameraTestApp.Program System.ComponentModel.LicenseException: NationalInstruments.UI.WindowsForms.Led is unlicensed.
+   at NationalInstruments.Restricted.LicenseBase.ShowUnLicensedBehavior(Type type, Object instance)
+   at NationalInstruments.Restricted.LicenseBase.a(Type A_0, Object A_1)
+   at NationalInstruments.Restricted.LicenseProviderBase.GetLicense(LicenseContext context, Type type, Object instance, Boolean allowExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type, Object instance)
+   at NationalInstruments.UI.WindowsForms.Led..ctor()
+   at KronosCameraTestApp.View.MeanVarianceTestForm.InitializeComponent() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.Designer.cs:line 112
+   at KronosCameraTestApp.View.MeanVarianceTestForm..ctor() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 54
+   at KronosCameraTestApp.Program.Main() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Program.cs:line 49
+ AMER\babagoud.gadiga - Exception inVoid Main()
+2019-01-16 11:40:12,784 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ComponentModel.LicenseException: NationalInstruments.UI.WindowsForms.Led is unlicensed.
+   at NationalInstruments.Restricted.LicenseBase.ShowUnLicensedBehavior(Type type, Object instance)
+   at NationalInstruments.Restricted.LicenseBase.a(Type A_0, Object A_1)
+   at NationalInstruments.Restricted.LicenseProviderBase.GetLicense(LicenseContext context, Type type, Object instance, Boolean allowExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type, Object instance)
+   at NationalInstruments.UI.WindowsForms.Led..ctor()
+   at KronosCameraTestApp.View.KronosTestAppMainForm.InitializeComponent() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.Designer.cs:line 288
+   at KronosCameraTestApp.View.KronosTestAppMainForm..ctor() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 247
+ AMER\babagoud.gadiga - Exception inVoid .ctor()
+2019-01-16 11:40:13,744 [1] ERROR KronosCameraTestApp.Program System.ComponentModel.LicenseException: NationalInstruments.UI.WindowsForms.Led is unlicensed.
+   at NationalInstruments.Restricted.LicenseBase.ShowUnLicensedBehavior(Type type, Object instance)
+   at NationalInstruments.Restricted.LicenseBase.a(Type A_0, Object A_1)
+   at NationalInstruments.Restricted.LicenseProviderBase.GetLicense(LicenseContext context, Type type, Object instance, Boolean allowExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type, Object instance)
+   at NationalInstruments.UI.WindowsForms.Led..ctor()
+   at KronosCameraTestApp.View.MeanVarianceTestForm.InitializeComponent() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.Designer.cs:line 112
+   at KronosCameraTestApp.View.MeanVarianceTestForm..ctor() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 54
+   at KronosCameraTestApp.Program.Main() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Program.cs:line 49
+ AMER\babagoud.gadiga - Exception inVoid Main()
+2019-01-16 11:41:15,780 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ComponentModel.LicenseException: NationalInstruments.UI.WindowsForms.Led is unlicensed.
+   at NationalInstruments.Restricted.LicenseBase.ShowUnLicensedBehavior(Type type, Object instance)
+   at NationalInstruments.Restricted.LicenseBase.a(Type A_0, Object A_1)
+   at NationalInstruments.Restricted.LicenseProviderBase.GetLicense(LicenseContext context, Type type, Object instance, Boolean allowExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type, Object instance)
+   at NationalInstruments.UI.WindowsForms.Led..ctor()
+   at KronosCameraTestApp.View.KronosTestAppMainForm.InitializeComponent() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.Designer.cs:line 288
+   at KronosCameraTestApp.View.KronosTestAppMainForm..ctor() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 247
+ AMER\babagoud.gadiga - Exception inVoid .ctor()
+2019-01-16 11:41:16,750 [1] ERROR KronosCameraTestApp.Program System.ComponentModel.LicenseException: NationalInstruments.UI.WindowsForms.Led is unlicensed.
+   at NationalInstruments.Restricted.LicenseBase.ShowUnLicensedBehavior(Type type, Object instance)
+   at NationalInstruments.Restricted.LicenseBase.a(Type A_0, Object A_1)
+   at NationalInstruments.Restricted.LicenseProviderBase.GetLicense(LicenseContext context, Type type, Object instance, Boolean allowExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type, Object instance)
+   at NationalInstruments.UI.WindowsForms.Led..ctor()
+   at KronosCameraTestApp.View.MeanVarianceTestForm.InitializeComponent() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.Designer.cs:line 112
+   at KronosCameraTestApp.View.MeanVarianceTestForm..ctor() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 54
+   at KronosCameraTestApp.Program.Main() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Program.cs:line 49
+ AMER\babagoud.gadiga - Exception inVoid Main()
+2019-01-16 11:42:51,756 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ComponentModel.LicenseException: NationalInstruments.UI.WindowsForms.Led is unlicensed.
+   at NationalInstruments.Restricted.LicenseBase.ShowUnLicensedBehavior(Type type, Object instance)
+   at NationalInstruments.Restricted.LicenseBase.a(Type A_0, Object A_1)
+   at NationalInstruments.Restricted.LicenseProviderBase.GetLicense(LicenseContext context, Type type, Object instance, Boolean allowExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type, Object instance)
+   at NationalInstruments.UI.WindowsForms.Led..ctor()
+   at KronosCameraTestApp.View.KronosTestAppMainForm.InitializeComponent() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.Designer.cs:line 288
+   at KronosCameraTestApp.View.KronosTestAppMainForm..ctor() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 247
+ AMER\babagoud.gadiga - Exception inVoid .ctor()
+2019-01-16 11:42:52,133 [1] ERROR KronosCameraTestApp.Program System.ComponentModel.LicenseException: NationalInstruments.UI.WindowsForms.Led is unlicensed.
+   at NationalInstruments.Restricted.LicenseBase.ShowUnLicensedBehavior(Type type, Object instance)
+   at NationalInstruments.Restricted.LicenseBase.a(Type A_0, Object A_1)
+   at NationalInstruments.Restricted.LicenseProviderBase.GetLicense(LicenseContext context, Type type, Object instance, Boolean allowExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type, Object instance)
+   at NationalInstruments.UI.WindowsForms.Led..ctor()
+   at KronosCameraTestApp.View.MeanVarianceTestForm.InitializeComponent() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.Designer.cs:line 112
+   at KronosCameraTestApp.View.MeanVarianceTestForm..ctor() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 54
+   at KronosCameraTestApp.Program.Main() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Program.cs:line 49
+ AMER\babagoud.gadiga - Exception inVoid Main()
+2019-01-16 11:43:44,465 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ComponentModel.LicenseException: NationalInstruments.UI.WindowsForms.Led is unlicensed.
+   at NationalInstruments.Restricted.LicenseBase.ShowUnLicensedBehavior(Type type, Object instance)
+   at NationalInstruments.Restricted.LicenseBase.a(Type A_0, Object A_1)
+   at NationalInstruments.Restricted.LicenseProviderBase.GetLicense(LicenseContext context, Type type, Object instance, Boolean allowExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type, Object instance)
+   at NationalInstruments.UI.WindowsForms.Led..ctor()
+   at KronosCameraTestApp.View.KronosTestAppMainForm.InitializeComponent() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.Designer.cs:line 288
+   at KronosCameraTestApp.View.KronosTestAppMainForm..ctor() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 247
+ AMER\babagoud.gadiga - Exception inVoid .ctor()
+2019-01-16 11:43:45,611 [1] ERROR KronosCameraTestApp.Program System.ComponentModel.LicenseException: NationalInstruments.UI.WindowsForms.Led is unlicensed.
+   at NationalInstruments.Restricted.LicenseBase.ShowUnLicensedBehavior(Type type, Object instance)
+   at NationalInstruments.Restricted.LicenseBase.a(Type A_0, Object A_1)
+   at NationalInstruments.Restricted.LicenseProviderBase.GetLicense(LicenseContext context, Type type, Object instance, Boolean allowExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type, Object instance)
+   at NationalInstruments.UI.WindowsForms.Led..ctor()
+   at KronosCameraTestApp.View.MeanVarianceTestForm.InitializeComponent() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.Designer.cs:line 112
+   at KronosCameraTestApp.View.MeanVarianceTestForm..ctor() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 54
+   at KronosCameraTestApp.Program.Main() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Program.cs:line 49
+ AMER\babagoud.gadiga - Exception inVoid Main()
+2019-01-16 11:43:58,453 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ComponentModel.LicenseException: NationalInstruments.UI.WindowsForms.Led is unlicensed.
+   at NationalInstruments.Restricted.LicenseBase.ShowUnLicensedBehavior(Type type, Object instance)
+   at NationalInstruments.Restricted.LicenseBase.a(Type A_0, Object A_1)
+   at NationalInstruments.Restricted.LicenseProviderBase.GetLicense(LicenseContext context, Type type, Object instance, Boolean allowExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type, Object instance)
+   at NationalInstruments.UI.WindowsForms.Led..ctor()
+   at KronosCameraTestApp.View.KronosTestAppMainForm.InitializeComponent() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.Designer.cs:line 288
+   at KronosCameraTestApp.View.KronosTestAppMainForm..ctor() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 247
+ AMER\babagoud.gadiga - Exception inVoid .ctor()
+2019-01-16 11:43:59,412 [1] ERROR KronosCameraTestApp.Program System.ComponentModel.LicenseException: NationalInstruments.UI.WindowsForms.Led is unlicensed.
+   at NationalInstruments.Restricted.LicenseBase.ShowUnLicensedBehavior(Type type, Object instance)
+   at NationalInstruments.Restricted.LicenseBase.a(Type A_0, Object A_1)
+   at NationalInstruments.Restricted.LicenseProviderBase.GetLicense(LicenseContext context, Type type, Object instance, Boolean allowExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type, Object instance)
+   at NationalInstruments.UI.WindowsForms.Led..ctor()
+   at KronosCameraTestApp.View.MeanVarianceTestForm.InitializeComponent() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.Designer.cs:line 112
+   at KronosCameraTestApp.View.MeanVarianceTestForm..ctor() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 54
+   at KronosCameraTestApp.Program.Main() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Program.cs:line 49
+ AMER\babagoud.gadiga - Exception inVoid Main()
+2019-01-16 11:56:29,272 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ComponentModel.LicenseException: NationalInstruments.UI.WindowsForms.Led is unlicensed.
+   at NationalInstruments.Restricted.LicenseBase.ShowUnLicensedBehavior(Type type, Object instance)
+   at NationalInstruments.Restricted.LicenseBase.a(Type A_0, Object A_1)
+   at NationalInstruments.Restricted.LicenseProviderBase.GetLicense(LicenseContext context, Type type, Object instance, Boolean allowExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type, Object instance)
+   at NationalInstruments.UI.WindowsForms.Led..ctor()
+   at KronosCameraTestApp.View.KronosTestAppMainForm.InitializeComponent() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.Designer.cs:line 288
+   at KronosCameraTestApp.View.KronosTestAppMainForm..ctor() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 247
+ AMER\babagoud.gadiga - Exception inVoid .ctor()
+2019-01-16 11:56:30,151 [1] ERROR KronosCameraTestApp.Program System.ComponentModel.LicenseException: NationalInstruments.UI.WindowsForms.Led is unlicensed.
+   at NationalInstruments.Restricted.LicenseBase.ShowUnLicensedBehavior(Type type, Object instance)
+   at NationalInstruments.Restricted.LicenseBase.a(Type A_0, Object A_1)
+   at NationalInstruments.Restricted.LicenseProviderBase.GetLicense(LicenseContext context, Type type, Object instance, Boolean allowExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type, Object instance)
+   at NationalInstruments.UI.WindowsForms.Led..ctor()
+   at KronosCameraTestApp.View.MeanVarianceTestForm.InitializeComponent() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.Designer.cs:line 112
+   at KronosCameraTestApp.View.MeanVarianceTestForm..ctor() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 54
+   at KronosCameraTestApp.Program.Main() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Program.cs:line 49
+ AMER\babagoud.gadiga - Exception inVoid Main()
+2019-01-16 11:58:16,630 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ComponentModel.LicenseException: NationalInstruments.UI.WindowsForms.Led is unlicensed.
+   at NationalInstruments.Restricted.LicenseBase.ShowUnLicensedBehavior(Type type, Object instance)
+   at NationalInstruments.Restricted.LicenseBase.a(Type A_0, Object A_1)
+   at NationalInstruments.Restricted.LicenseProviderBase.GetLicense(LicenseContext context, Type type, Object instance, Boolean allowExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type, Object instance)
+   at NationalInstruments.UI.WindowsForms.Led..ctor()
+   at KronosCameraTestApp.View.KronosTestAppMainForm.InitializeComponent() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.Designer.cs:line 288
+   at KronosCameraTestApp.View.KronosTestAppMainForm..ctor() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 247
+ AMER\babagoud.gadiga - Exception inVoid .ctor()
+2019-01-16 12:03:48,471 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2019-01-16 15:26:29,426 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-16 16:45:51,914 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ComponentModel.LicenseException: NationalInstruments.UI.WindowsForms.Led is unlicensed.
+   at NationalInstruments.Restricted.LicenseBase.ShowUnLicensedBehavior(Type type, Object instance)
+   at NationalInstruments.Restricted.LicenseBase.a(Type A_0, Object A_1)
+   at NationalInstruments.Restricted.LicenseProviderBase.GetLicense(LicenseContext context, Type type, Object instance, Boolean allowExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type, Object instance)
+   at NationalInstruments.UI.WindowsForms.Led..ctor()
+   at KronosCameraTestApp.View.KronosTestAppMainForm.InitializeComponent() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.Designer.cs:line 289
+   at KronosCameraTestApp.View.KronosTestAppMainForm..ctor() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 248
+ AMER\babagoud.gadiga - Exception inVoid .ctor()
+2019-01-16 16:45:53,091 [1] ERROR KronosCameraTestApp.Program System.ComponentModel.LicenseException: NationalInstruments.UI.WindowsForms.Led is unlicensed.
+   at NationalInstruments.Restricted.LicenseBase.ShowUnLicensedBehavior(Type type, Object instance)
+   at NationalInstruments.Restricted.LicenseBase.a(Type A_0, Object A_1)
+   at NationalInstruments.Restricted.LicenseProviderBase.GetLicense(LicenseContext context, Type type, Object instance, Boolean allowExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type, Object instance)
+   at NationalInstruments.UI.WindowsForms.Led..ctor()
+   at KronosCameraTestApp.View.MeanVarianceTestForm.InitializeComponent() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.Designer.cs:line 112
+   at KronosCameraTestApp.View.MeanVarianceTestForm..ctor() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 54
+   at KronosCameraTestApp.Program.Main() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Program.cs:line 49
+ AMER\babagoud.gadiga - Exception inVoid Main()
+2019-01-16 16:55:57,476 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2019-01-16 16:56:02,718 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 1
+2019-01-16 16:56:02,729 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 2
+2019-01-16 16:56:03,348 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 3
+2019-01-16 16:56:03,381 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 4
+2019-01-16 16:56:06,242 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 5
+2019-01-16 16:56:06,334 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 6
+2019-01-16 16:56:06,341 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 7
+2019-01-16 16:56:06,347 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 8
+2019-01-16 16:56:06,845 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 9
+2019-01-16 16:56:06,866 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp copied
+2019-01-16 16:56:06,872 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 11
+2019-01-16 16:56:06,921 [1] ERROR KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - logtemp 12
+2019-01-16 16:56:06,953 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - logtemp 13

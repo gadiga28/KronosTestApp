@@ -1,0 +1,18 @@
+2018-12-18 09:10:15,174 [5] INFO KronosCameraTestApp.Presenter.MeanVariancePresenter  AMER\babagoud.gadiga - Mean Variance Test data populated from Database with Model & Subarray Records of .2020
+2018-12-18 09:12:46,857 [7] INFO KronosCameraTestApp.Presenter.MeanVariancePresenter  AMER\babagoud.gadiga - Mean Variance Test data populated from Database with Model & Subarray Records of .2020
+2018-12-18 09:13:36,713 [1] INFO KronosCameraTestApp.Presenter.MeanVariancePresenter  AMER\babagoud.gadiga - Begin Mean Variance test.
+2018-12-18 09:13:36,723 [1] INFO KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Begin process Exposure data
+2018-12-18 09:13:36,753 [5] INFO KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - End Process Exposure data
+2018-12-18 09:13:37,053 [1] INFO KronosCameraTestApp.Presenter.MeanVariancePresenter  AMER\babagoud.gadiga - End Mean Variance test.
+2018-12-18 09:13:37,093 [9] INFO KronosCameraTestApp.Presenter.MeanVariancePresenter  AMER\babagoud.gadiga - Begin Calcluate Mean Variance for Exposure Count 20
+2018-12-18 09:13:37,103 [5] INFO KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Begin Send Exposure
+2018-12-18 09:13:37,143 [5] INFO KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - End Send Exposure
+2018-12-18 09:14:03,537 [5] INFO KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Begin Send Exposure
+2018-12-18 09:14:03,557 [5] INFO KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - End Send Exposure
+2018-12-18 09:14:29,947 [1] INFO KronosCameraTestApp.Presenter.MeanVariancePresenter  AMER\babagoud.gadiga - End Calcluate Mean Variance for Exposure Count 20
+2018-12-18 09:16:00,703 [1] INFO KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - End Test App
+2018-12-18 09:16:00,713 [1] INFO KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - Begin Close Excel
+2018-12-18 09:16:00,813 [1] INFO KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - End Close Excel
+2018-12-18 09:16:00,943 [1] INFO KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - End Test App
+2018-12-18 09:16:00,953 [1] INFO KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - Begin Close Excel
+2018-12-18 09:16:00,993 [1] INFO KronosCameraTestApp.Helpers.ExcelUtilities  AMER\babagoud.gadiga - End Close Excel

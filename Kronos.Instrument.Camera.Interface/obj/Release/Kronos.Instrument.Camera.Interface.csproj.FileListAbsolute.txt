@@ -1,0 +1,8 @@
+C:\Users\babagoud.gadiga\_binaries\Kronos.Instrument.Camera.Interface.XML
+C:\Users\babagoud.gadiga\_binaries\Kronos.Instrument.Camera.Interface.dll
+C:\Users\babagoud.gadiga\_binaries\Kronos.Instrument.Camera.Interface.pdb
+C:\Users\babagoud.gadiga\Source\Repos\CID821API_Latest_Aug302023\CID821API\Kronos.Instrument.Camera.Interface\obj\Release\Kronos.Instrument.Camera.Interface.csproj.AssemblyReference.cache
+C:\Users\babagoud.gadiga\Source\Repos\CID821API_Latest_Aug302023\CID821API\Kronos.Instrument.Camera.Interface\obj\Release\Kronos.Instrument.Camera.Interface.csproj.CoreCompileInputs.cache
+C:\Users\babagoud.gadiga\Source\Repos\CID821API_Latest_Aug302023\CID821API\Kronos.Instrument.Camera.Interface\obj\Release\Kronos.Instrument.Camera.Interface.csproj.CopyComplete
+C:\Users\babagoud.gadiga\Source\Repos\CID821API_Latest_Aug302023\CID821API\Kronos.Instrument.Camera.Interface\obj\Release\Kronos.Instrument.Camera.Interface.dll
+C:\Users\babagoud.gadiga\Source\Repos\CID821API_Latest_Aug302023\CID821API\Kronos.Instrument.Camera.Interface\obj\Release\Kronos.Instrument.Camera.Interface.pdb

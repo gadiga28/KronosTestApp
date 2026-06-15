@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MeanVarianceTestLimitsData>
+  <Limit>
+    <LimitsID>4</LimitsID>
+    <ConversionFactorNominal>4.090000000000000e+000</ConversionFactorNominal>
+    <ConverisonFactorTol>10</ConverisonFactorTol>
+    <ROI_Xs>270</ROI_Xs>
+    <ROI_Ys>270</ROI_Ys>
+    <ROI_dXs>80</ROI_dXs>
+    <ROI_dYs>80</ROI_dYs>
+    <ROI_dXbs>1</ROI_dXbs>
+    <ROI_dYbs>1</ROI_dYbs>
+    <ROI_PixRate>0</ROI_PixRate>
+    <ROI_NDRO>4</ROI_NDRO>
+    <Exposures>2</Exposures>
+    <Trials>10</Trials>
+    <LowerPoint>10000</LowerPoint>
+    <UpperPoint>100000</UpperPoint>
+    <DefinedDate>2018-01-16T14:25:59.630</DefinedDate>
+    <UserModified>Baba</UserModified>
+    <LED>25</LED>
+  </Limit>
+  <Limit>
+    <LimitsID>5</LimitsID>
+    <ConversionFactorNominal>5.000000000000000e+000</ConversionFactorNominal>
+    <ConverisonFactorTol>910</ConverisonFactorTol>
+    <ROI_Xs>271</ROI_Xs>
+    <ROI_Ys>268</ROI_Ys>
+    <ROI_dXs>82</ROI_dXs>
+    <ROI_dYs>78</ROI_dYs>
+    <ROI_dXbs>3</ROI_dXbs>
+    <ROI_dYbs>4</ROI_dYbs>
+    <ROI_PixRate>5</ROI_PixRate>
+    <ROI_NDRO>7</ROI_NDRO>
+    <Exposures>92</Exposures>
+    <Trials>10</Trials>
+    <LowerPoint>50000</LowerPoint>
+    <UpperPoint>900000</UpperPoint>
+    <DefinedDate>2018-01-27T14:10:41.923</DefinedDate>
+    <UserModified>babagoud.gadiga</UserModified>
+    <LED>26</LED>
+  </Limit>
+</MeanVarianceTestLimitsData>

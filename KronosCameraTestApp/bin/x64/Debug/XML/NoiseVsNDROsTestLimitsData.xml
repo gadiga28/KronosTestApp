@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NoiseVsNDROsLimitsData>
+  <Limit>
+    <LimitsID>1</LimitsID>
+    <SnglNoiseMax>225</SnglNoiseMax>
+    <PowerFitUpper>-4.400000000000000e-001</PowerFitUpper>
+    <PowerFitLower>-5.600000000000001e-001</PowerFitLower>
+    <RPower2Correlation>9.750000000000000e-001</RPower2Correlation>
+    <ROI_Xs>270</ROI_Xs>
+    <ROI_Ys>270</ROI_Ys>
+    <ROI_dXs>10</ROI_dXs>
+    <ROI_dYs>10</ROI_dYs>
+    <ROI_dXbs>1</ROI_dXbs>
+    <ROI_dYbs>1</ROI_dYbs>
+    <NDROs>7</NDROs>
+    <Trials>10</Trials>
+    <Flashes>0</Flashes>
+    <Time>0</Time>
+    <ExposureControl>4</ExposureControl>
+    <ReadOutModeType>0</ReadOutModeType>
+    <DefinedDate>2018-01-26T16:31:48.693</DefinedDate>
+    <UserModified>Baba</UserModified>
+  </Limit>
+</NoiseVsNDROsLimitsData>

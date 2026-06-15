@@ -1,0 +1,206 @@
+2018-05-02 12:19:53,384 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.Data.Entity.ModelConfiguration.ModelValidationException: One or more validation errors were detected during model generation:
+
+KronosCameraTestApp.InstrumentDefaultsModel: : EntityType 'InstrumentDefaultsModel' has no key defined. Define the key for this EntityType.
+instrumentDefaultsModel: EntityType: EntitySet 'instrumentDefaultsModel' is based on type 'InstrumentDefaultsModel' that has no keys defined.
+
+   at System.Data.Entity.Core.Metadata.Edm.EdmModel.Validate()
+   at System.Data.Entity.DbModelBuilder.Build(DbProviderManifest providerManifest, DbProviderInfo providerInfo)
+   at System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   at System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   at System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.ForceOSpaceLoadingForKnownEntityTypes()
+   at System.Data.Entity.DbContext.System.Data.Entity.Infrastructure.IObjectContextAdapter.get_ObjectContext()
+   at KronosCameraTestApp.KronosCamContext..ctor() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\KronosCamContext.cs:line 17
+   at KronosCameraTestApp.Helpers.TestAppHelper.CheckDBExists() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Helpers\TestAppHelper.cs:line 311
+   at KronosCameraTestApp.View.KronosTestAppMainForm.SetDatabaseConnectivityStatusBarPanel() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 276
+ AMER\babagoud.gadiga - Exception inVoid SetDatabaseConnectivityStatusBarPanel()
+2018-05-02 12:20:15,995 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 12:22:24,091 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.Data.Entity.ModelConfiguration.ModelValidationException: One or more validation errors were detected during model generation:
+
+KronosCameraTestApp.InstrumentDefaultsModel: : EntityType 'InstrumentDefaultsModel' has no key defined. Define the key for this EntityType.
+instrumentDefaultsModel: EntityType: EntitySet 'instrumentDefaultsModel' is based on type 'InstrumentDefaultsModel' that has no keys defined.
+
+   at System.Data.Entity.Core.Metadata.Edm.EdmModel.Validate()
+   at System.Data.Entity.DbModelBuilder.Build(DbProviderManifest providerManifest, DbProviderInfo providerInfo)
+   at System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   at System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   at System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.ForceOSpaceLoadingForKnownEntityTypes()
+   at System.Data.Entity.DbContext.System.Data.Entity.Infrastructure.IObjectContextAdapter.get_ObjectContext()
+   at KronosCameraTestApp.KronosCamContext..ctor() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\KronosCamContext.cs:line 17
+   at KronosCameraTestApp.Helpers.TestAppHelper.CheckDBExists() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Helpers\TestAppHelper.cs:line 311
+   at KronosCameraTestApp.View.KronosTestAppMainForm.SetDatabaseConnectivityStatusBarPanel() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 276
+ AMER\babagoud.gadiga - Exception inVoid SetDatabaseConnectivityStatusBarPanel()
+2018-05-02 12:22:46,655 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 12:26:56,193 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 12:31:52,084 [10] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:31:54,844 [10] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:31:56,734 [10] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:31:58,213 [10] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:31:59,519 [10] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:32:00,772 [10] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:32:01,836 [10] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:33:36,143 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 12:34:09,438 [9] ERROR KronosCameraTestApp.View.TestResultsForm System.ArgumentException: Parameter is not valid.
+   at System.Drawing.Image.get_Width()
+   at System.Drawing.Image.get_Size()
+   at KronosCameraTestApp.View.TestResultsForm.ultraPrintDocument1_PrintPage(Object sender, PrintPageEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 351
+ AMER\babagoud.gadiga - Exception inVoid ultraPrintDocument1_PrintPage(System.Object, System.Drawing.Printing.PrintPageEventArgs)
+2018-05-02 12:34:21,054 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:29,520 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:30,849 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:32,033 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:33,268 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:34,538 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:35,732 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:36,849 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:37,981 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:38,987 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:40,143 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:43,180 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:45,433 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:47,416 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:48,950 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:49,625 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:50,415 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:51,121 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:51,804 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:52,619 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:54,567 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:56,530 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:34:59,455 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:35:01,310 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:35:02,536 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:35:03,644 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:35:04,497 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:35:05,188 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:35:06,003 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:35:06,677 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:35:07,385 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:35:09,815 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:35:11,233 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:38:14,062 [9] ERROR KronosCameraTestApp.View.TestResultsForm System.InvalidOperationException: Cross-thread operation not valid: Control 'TestResultsForm' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.GetSafeHandle(IWin32Window window)
+   at System.Windows.Forms.CommonDialog.ShowDialog(IWin32Window owner)
+   at KronosCameraTestApp.View.TestResultsForm.<SaveResultsImage>b__14() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 325
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.View.TestResultsForm.<SaveResultsImage>d__16.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 317
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-05-02 12:38:20,673 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 12:40:25,553 [8] ERROR KronosCameraTestApp.View.TestResultsForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.TestResultsForm.UpdateMeanVarianceResultsGrid() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 567
+ AMER\babagoud.gadiga - Exception inVoid UpdateMeanVarianceResultsGrid()
+2018-05-02 12:40:39,916 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 12:40:59,080 [8] ERROR KronosCameraTestApp.View.TestResultsForm System.ArgumentException: Parameter is not valid.
+   at System.Drawing.Image.get_Width()
+   at System.Drawing.Image.get_Size()
+   at KronosCameraTestApp.View.TestResultsForm.ultraPrintDocument1_PrintPage(Object sender, PrintPageEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 351
+ AMER\babagoud.gadiga - Exception inVoid ultraPrintDocument1_PrintPage(System.Object, System.Drawing.Printing.PrintPageEventArgs)
+2018-05-02 12:41:01,606 [8] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:41:10,685 [8] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:41:12,330 [8] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:41:13,532 [8] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:41:14,733 [8] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:41:15,949 [8] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:41:17,165 [8] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:41:18,231 [8] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:41:19,199 [8] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:41:20,211 [8] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:41:21,365 [8] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:41:22,562 [8] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:41:23,622 [8] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:41:27,968 [8] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:43:27,846 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 12:44:10,822 [9] ERROR KronosCameraTestApp.View.TestResultsForm System.ArgumentException: Parameter is not valid.
+   at System.Drawing.Image.get_Width()
+   at KronosCameraTestApp.View.TestResultsForm.ultraPrintDocument1_PagePrinted(Object sender, PagePrintedEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 258
+ AMER\babagoud.gadiga - Exception inVoid ultraPrintDocument1_PagePrinted(System.Object, Infragistics.Win.Printing.PagePrintedEventArgs)
+2018-05-02 12:45:50,454 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 12:46:07,182 [10] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:46:22,796 [10] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:46:24,284 [10] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:46:26,630 [10] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:49:38,498 [10] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 12:50:32,205 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 12:51:17,921 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationIndex was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+2018-05-02 12:53:14,018 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentException: Parameter is not valid.
+   at System.Drawing.Graphics.GetHdc()
+   at Infragistics.Win.UltraWinGrid.ExcelExport.UltraGridExcelExporter..ctor()
+   at Infragistics.Win.UltraWinGrid.ExcelExport.UltraGridExcelExporter..ctor(IContainer container)
+   at KronosCameraTestApp.View.TestResultsForm.InitializeComponent() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.Designer.cs:line 107
+   at KronosCameraTestApp.View.TestResultsForm..ctor(MeanVariancePresenter meanVariancePresenter, DarkCurrentPresenter darkCurrentPresenter, InjectionPerformancePresenter injectionPerformancePresenter, NoiseVsNDROPresenter noiseVsNDROPresenter, PhotoresponsePresenter photoresponsePresenter, RedBluePresenter redBluePresenter, ShutterDrivePresenter shutterDrivePresenter, OverAllTestResultsPresenter overAllTestResultsPresenter) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\TestResultsForm.cs:line 51
+   at KronosCameraTestApp.View.KronosTestAppMainForm.TestResults() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 2700
+ AMER\babagoud.gadiga - Exception inVoid TestResults()
+2018-05-02 12:56:49,871 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 13:00:12,611 [10] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationParameter is not valid.
+2018-05-02 13:03:03,938 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 13:09:25,795 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 13:11:39,240 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 13:13:56,493 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 14:01:42,785 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 14:07:49,408 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 14:14:44,735 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 14:30:02,185 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 14:32:35,182 [1] ERROR KronosCameraTestApp.View.CharacterizationTestLimits System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.OrderedEnumerable`2..ctor(IEnumerable`1 source, Func`2 keySelector, IComparer`1 comparer, Boolean descending)
+   at System.Linq.Enumerable.OrderByDescending[TSource,TKey](IEnumerable`1 source, Func`2 keySelector)
+   at KronosCameraTestApp.View.CharacterizationTestLimits.DisplayOldLimitsOnLoad() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\CharacterizationTestLimits.cs:line 362
+ AMER\babagoud.gadiga - Exception inVoid DisplayOldLimitsOnLoad()
+2018-05-02 14:32:45,255 [1] ERROR KronosCameraTestApp.View.CharacterizationTestLimits System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.CharacterizationTestLimits.ultraExplorerBar1_ItemClick(Object sender, ItemEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\CharacterizationTestLimits.cs:line 185
+ AMER\babagoud.gadiga - Exception inVoid ultraExplorerBar1_ItemClick(System.Object, Infragistics.Win.UltraWinExplorerBar.ItemEventArgs)
+2018-05-02 14:33:38,835 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 16:07:17,600 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 16:35:52,833 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 16:41:41,213 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 17:02:17,955 [9] ERROR KronosCameraTestApp.View.MeanVarianceTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.MeanVarianceTestForm.ultraComboEditorMVLimitIDs_SelectionChanged(Object sender, EventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 1623
+ AMER\babagoud.gadiga - Exception inVoid ultraComboEditorMVLimitIDs_SelectionChanged(System.Object, System.EventArgs)
+2018-05-02 17:02:20,523 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 17:06:11,162 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 17:25:59,456 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 17:28:59,971 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 17:32:04,163 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 17:34:03,293 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 17:41:25,785 [9] ERROR KronosCameraTestApp.View.MeanVarianceTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.MeanVarianceTestForm.<UpdateLimitsViewWithModelOnLoad>b__5a(MeanVarianceTestLimitsData limit) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 1636
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at KronosCameraTestApp.View.MeanVarianceTestForm.UpdateLimitsViewWithModelOnLoad() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 1636
+ AMER\babagoud.gadiga - Exception inVoid UpdateLimitsViewWithModelOnLoad()
+2018-05-02 17:41:35,114 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 17:43:33,875 [10] ERROR KronosCameraTestApp.View.MeanVarianceTestForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.MeanVarianceTestForm.<UpdateLimitsViewWithModelOnLoad>b__5a(MeanVarianceTestLimitsData limit) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 1636
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at KronosCameraTestApp.View.MeanVarianceTestForm.UpdateLimitsViewWithModelOnLoad() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 1636
+ AMER\babagoud.gadiga - Exception inVoid UpdateLimitsViewWithModelOnLoad()
+2018-05-02 17:43:34,152 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 17:46:37,186 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 23:35:35,553 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-02 23:35:36,385 [9] ERROR KronosCameraTestApp.Presenter.MeanVariancePresenter System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at KronosCameraTestApp.Presenter.MeanVariancePresenter.<>c__DisplayClass2c.<CalculateMeanVariance>b__2a() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\MeanVariancePresenter.cs:line 551
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Presenter.MeanVariancePresenter.<CalculateMeanVariance>d__2e.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\MeanVariancePresenter.cs:line 529
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-05-02 23:35:36,935 [9] ERROR KronosCameraTestApp.View.MeanVarianceTestForm System.ArgumentNullException: Value cannot be null.
+Parameter name: xData
+   at NationalInstruments.UI.ScatterPlot.PlotXY(Double[] xData, Double[] yData)
+   at KronosCameraTestApp.View.MeanVarianceTestForm.<PlotMVData>d__9.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\MeanVarianceTestForm.cs:line 269
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()

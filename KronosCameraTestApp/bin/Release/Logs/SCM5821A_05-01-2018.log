@@ -1,0 +1,64 @@
+2018-05-01 13:46:28,323 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-01 13:46:28,323 [15] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Camera is not in disconnected state.
+   at Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.Connect(String ipaddress, String port) in c:\Baba\API_Latest\API_04232018\Kronos.Instrument.Camera.Interface\SCM5821AX1.cs:line 772
+   at Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.Connect(String ipAddress, Int32 port) in c:\Baba\API_Latest\API_04232018\Kronos.Instrument.Camera.Interface\CIDInterface.cs:line 171
+   at KronosCameraTestApp.View.KronosTestAppMainForm.<>c__DisplayClass20.<AutoConnectCamera>b__1c() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 815
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.View.KronosTestAppMainForm.<AutoConnectCamera>d__22.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 819
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-05-01 14:14:55,204 [3] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 14:14:57,874 [3] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 14:15:00,452 [3] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 14:15:01,962 [3] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 14:15:03,497 [3] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 14:15:05,031 [3] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 14:15:06,353 [3] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 14:15:07,510 [3] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 14:15:08,998 [3] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 14:15:10,147 [3] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 14:15:59,509 [3] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 14:16:00,312 [3] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 14:16:01,167 [3] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 14:16:02,007 [3] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 14:16:02,804 [3] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:53:12,896 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-01 15:56:05,623 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:07,490 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:08,485 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:09,147 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:09,893 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:10,493 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:11,158 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:11,902 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:12,440 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:13,402 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:14,056 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:14,538 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:15,143 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:15,612 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:15,950 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:16,321 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:17,090 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:17,762 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:18,137 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 15:56:18,522 [13] ERROR KronosCameraTestApp.CommandProcessor  AMER\babagoud.gadiga - Camera is not connected.
+2018-05-01 17:13:53,335 [9] ERROR KronosCameraTestApp.View.CharacterizationTestLimits System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.CharacterizationTestLimits.CharacterizationTestLimits_Load(Object sender, EventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\CharacterizationTestLimits.cs:line 268
+ AMER\babagoud.gadiga - Exception inVoid CharacterizationTestLimits_Load(System.Object, System.EventArgs)
+2018-05-01 17:14:31,789 [9] ERROR KronosCameraTestApp.View.CharacterizationTestLimits System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.CharacterizationTestLimits.CharacterizationTestLimits_Load(Object sender, EventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\CharacterizationTestLimits.cs:line 268
+ AMER\babagoud.gadiga - Exception inVoid CharacterizationTestLimits_Load(System.Object, System.EventArgs)
+2018-05-01 17:29:02,757 [9] ERROR KronosCameraTestApp.View.CharacterizationTestLimits System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.CharacterizationTestLimits.CharacterizationTestLimits_Load(Object sender, EventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\CharacterizationTestLimits.cs:line 273
+ AMER\babagoud.gadiga - Exception inVoid CharacterizationTestLimits_Load(System.Object, System.EventArgs)
+2018-05-01 17:29:22,323 [9] ERROR KronosCameraTestApp.View.CharacterizationTestLimits System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.CharacterizationTestLimits.CharacterizationTestLimits_Load(Object sender, EventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\CharacterizationTestLimits.cs:line 273
+ AMER\babagoud.gadiga - Exception inVoid CharacterizationTestLimits_Load(System.Object, System.EventArgs)
+2018-05-01 17:32:20,919 [8] ERROR KronosCameraTestApp.View.CharacterizationTestLimits System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.CharacterizationTestLimits.ultraExplorerBar1_ItemClick(Object sender, ItemEventArgs e) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\CharacterizationTestLimits.cs:line 187
+ AMER\babagoud.gadiga - Exception inVoid ultraExplorerBar1_ItemClick(System.Object, Infragistics.Win.UltraWinExplorerBar.ItemEventArgs)
+2018-05-01 21:57:54,874 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host

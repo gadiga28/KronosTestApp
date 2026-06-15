@@ -1,0 +1,9 @@
+2018-10-31 10:28:36,856 [1] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 647
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<CalculateNoiseNDRO>d__142.MoveNext() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 546
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SegmentInjectTestLimitsData>
+  <Limit>
+    <LimitsID>1</LimitsID>
+    <InjectLevel_adu>100</InjectLevel_adu>
+    <InjectDisturbance_adu>100</InjectDisturbance_adu>
+    <DefinedDate>2018-01-26T16:32:27.283</DefinedDate>
+    <UserModified>Baba</UserModified>
+  </Limit>
+</SegmentInjectTestLimitsData>

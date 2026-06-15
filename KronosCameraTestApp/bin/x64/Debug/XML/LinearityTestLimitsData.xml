@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LinearityTestLimitsData>
+  <Limit>
+    <LimitsID>1</LimitsID>
+    <LinearityLevelMax>2.000000000000000e+000</LinearityLevelMax>
+    <FullWellLinLevMin>500000</FullWellLinLevMin>
+    <FullWellLinLevMax>10000000</FullWellLinLevMax>
+    <SatLevMin>0</SatLevMin>
+    <SatLevMax>10000000</SatLevMax>
+    <DefinedDate>2018-01-26T16:23:04.083</DefinedDate>
+    <UserModified>Baba</UserModified>
+  </Limit>
+</LinearityTestLimitsData>

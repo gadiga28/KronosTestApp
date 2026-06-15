@@ -1,0 +1,90 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\babagoud.gadiga\\Source\\Repos\\CID821API_Latest_Aug302023\\CID821API\\Kronos.Instrument.Camera.Interface\\Kronos.Instrument.Camera.Interface.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\babagoud.gadiga\\Source\\Repos\\CID821API_Latest_Aug302023\\CID821API\\Kronos.Instrument.Camera.Contracts\\Kronos.Instrument.Camera.Contracts.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\babagoud.gadiga\\Source\\Repos\\CID821API_Latest_Aug302023\\CID821API\\Kronos.Instrument.Camera.Contracts\\Kronos.Instrument.Camera.Contracts.csproj",
+        "projectName": "Kronos.Instrument.Camera.Contracts",
+        "projectPath": "C:\\Users\\babagoud.gadiga\\Source\\Repos\\CID821API_Latest_Aug302023\\CID821API\\Kronos.Instrument.Camera.Contracts\\Kronos.Instrument.Camera.Contracts.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\babagoud.gadiga\\Source\\Repos\\CID821API_Latest_Aug302023\\CID821API\\Kronos.Instrument.Camera.Interface\\Kronos.Instrument.Camera.Interface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\babagoud.gadiga\\Source\\Repos\\CID821API_Latest_Aug302023\\CID821API\\Kronos.Instrument.Camera.Interface\\Kronos.Instrument.Camera.Interface.csproj",
+        "projectName": "Kronos.Instrument.Camera.Interface",
+        "projectPath": "C:\\Users\\babagoud.gadiga\\Source\\Repos\\CID821API_Latest_Aug302023\\CID821API\\Kronos.Instrument.Camera.Interface\\Kronos.Instrument.Camera.Interface.csproj",
+        "packagesPath": "C:\\Users\\babagoud.gadiga\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\babagoud.gadiga\\Source\\Repos\\CID821API_Latest_Aug302023\\CID821API\\Kronos.Instrument.Camera.Interface\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\babagoud.gadiga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Public\\Documents\\Infragistics\\NuGet\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\babagoud.gadiga\\Source\\Repos\\CID821API_Latest_Aug302023\\CID821API\\Kronos.Instrument.Camera.Contracts\\Kronos.Instrument.Camera.Contracts.csproj": {
+                "projectPath": "C:\\Users\\babagoud.gadiga\\Source\\Repos\\CID821API_Latest_Aug302023\\CID821API\\Kronos.Instrument.Camera.Contracts\\Kronos.Instrument.Camera.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            },
+            "SSH.NET": {
+              "target": "Package",
+              "version": "[2020.0.1, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

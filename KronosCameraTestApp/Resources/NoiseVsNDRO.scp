@@ -1,0 +1,505 @@
+ASSIGN Exposure exp1ndro = (
+  .exposure_interval = 1000,
+  .exposure_ndros    = 1,
+  .exposure_region.xo   = 10,
+  .exposure_region.yo   = 10,
+  .exposure_region.dx   = 1000,
+  .exposure_region.dy   = 1000,
+  .exposure_fpn           = 0,
+  
+  .led_ontime    = 10000,
+  .led_offtime   = 100,
+  .led_flashes   = 10,
+  .led1_enabled    = TRUE,
+  .led2_enabled    = FALSE,
+  .led3_enabled    = FALSE,
+  .shutter_enabled = FALSE,
+
+  .full_frame_enabled = FALSE,
+  .dark_frame_enabled = FALSE,
+        
+  .num_subarrays  = 2,
+  .sa_list[0].name = Subarray1,                       
+  .sa_list[0].subarray_region.xo = 1000,
+  .sa_list[0].subarray_region.yo = 1000,
+  .sa_list[0].subarray_region.dx =  64,
+  .sa_list[0].subarray_region.dy =  64,						
+  .sa_list[0].read_enabled = FALSE,
+  .sa_list[0].read_interval = 100,
+  .sa_list[0].subinject_enabled = FALSE,
+  .sa_list[0].subinject_interval = 30000,
+  .sa_list[0].postread_enabled  = TRUE,
+  .sa_list[0].postread_ndros = 1,
+        
+  .sa_list[0].threshold_enabled = FALSE,
+  .sa_list[0].threshold_percent = 75,
+  .sa_list[0].threshold_region.xo = 1000,
+  .sa_list[0].threshold_region.yo = 100,
+  .sa_list[0].threshold_region.dx = 260,
+  .sa_list[0].threshold_region.dy = 80,
+        
+  .sa_list[1].name = Subarray2,                       
+  .sa_list[1].subarray_region.xo = 1000,
+  .sa_list[1].subarray_region.yo = 1000,
+  .sa_list[1].subarray_region.dx =  64,
+  .sa_list[1].subarray_region.dy =  64,						
+  .sa_list[1].read_enabled = FALSE,
+  .sa_list[1].read_interval = 100,
+  .sa_list[1].subinject_enabled = FALSE,
+  .sa_list[1].subinject_interval = 50000,
+  .sa_list[1].postread_enabled  = TRUE,
+  .sa_list[1].postread_ndros = 1,
+        
+  .sa_list[1].threshold_enabled = FALSE,
+  .sa_list[1].threshold_percent = 75,
+  .sa_list[1].threshold_region.xo = 20,
+  .sa_list[1].threshold_region.yo = 200,
+  .sa_list[1].threshold_region.dx = 260,
+  .sa_list[1].threshold_region.dy = 80)
+  
+ASSIGN Exposure exp2ndro = (
+  .exposure_interval = 1000,
+  .exposure_ndros    = 1,
+  .exposure_region.xo   = 10,
+  .exposure_region.yo   = 10,
+  .exposure_region.dx   = 1000,
+  .exposure_region.dy   = 1000,
+  .exposure_fpn           = 0,
+  
+  .led_ontime    = 10000,
+  .led_offtime   = 100,
+  .led_flashes   = 10,
+  .led1_enabled    = TRUE,
+  .led2_enabled    = FALSE,
+  .led3_enabled    = FALSE,
+  .shutter_enabled = FALSE,
+
+  .full_frame_enabled = FALSE,
+  .dark_frame_enabled = FALSE,
+        
+  .num_subarrays  = 2,
+  .sa_list[0].name = Subarray1,                       
+  .sa_list[0].subarray_region.xo = 1000,
+  .sa_list[0].subarray_region.yo = 1000,
+  .sa_list[0].subarray_region.dx =  64,
+  .sa_list[0].subarray_region.dy =  64,						
+  .sa_list[0].read_enabled = FALSE,
+  .sa_list[0].read_interval = 100,
+  .sa_list[0].subinject_enabled = FALSE,
+  .sa_list[0].subinject_interval = 30000,
+  .sa_list[0].postread_enabled  = TRUE,
+  .sa_list[0].postread_ndros = 2,
+        
+  .sa_list[0].threshold_enabled = FALSE,
+  .sa_list[0].threshold_percent = 75,
+  .sa_list[0].threshold_region.xo = 1000,
+  .sa_list[0].threshold_region.yo = 100,
+  .sa_list[0].threshold_region.dx = 260,
+  .sa_list[0].threshold_region.dy = 80,
+        
+  .sa_list[1].name = Subarray2,                       
+  .sa_list[1].subarray_region.xo = 1000,
+  .sa_list[1].subarray_region.yo = 1000,
+  .sa_list[1].subarray_region.dx =  64,
+  .sa_list[1].subarray_region.dy =  64,						
+  .sa_list[1].read_enabled = FALSE,
+  .sa_list[1].read_interval = 100,
+  .sa_list[1].subinject_enabled = FALSE,
+  .sa_list[1].subinject_interval = 50000,
+  .sa_list[1].postread_enabled  = TRUE,
+  .sa_list[1].postread_ndros = 2,
+        
+  .sa_list[1].threshold_enabled = FALSE,
+  .sa_list[1].threshold_percent = 75,
+  .sa_list[1].threshold_region.xo = 20,
+  .sa_list[1].threshold_region.yo = 200,
+  .sa_list[1].threshold_region.dx = 260,
+  .sa_list[1].threshold_region.dy = 80)
+  
+ASSIGN Exposure exp4ndro = (
+  .exposure_interval = 1000,
+  .exposure_ndros    = 1,
+  .exposure_region.xo   = 10,
+  .exposure_region.yo   = 10,
+  .exposure_region.dx   = 1000,
+  .exposure_region.dy   = 1000,
+  .exposure_fpn           = 0,
+  
+  .led_ontime    = 10000,
+  .led_offtime   = 100,
+  .led_flashes   = 10,
+  .led1_enabled    = TRUE,
+  .led2_enabled    = FALSE,
+  .led3_enabled    = FALSE,
+  .shutter_enabled = FALSE,
+
+  .full_frame_enabled = FALSE,
+  .dark_frame_enabled = FALSE,
+        
+  .num_subarrays  = 2,
+  .sa_list[0].name = Subarray1,                       
+  .sa_list[0].subarray_region.xo = 1000,
+  .sa_list[0].subarray_region.yo = 1000,
+  .sa_list[0].subarray_region.dx =  64,
+  .sa_list[0].subarray_region.dy =  64,						
+  .sa_list[0].read_enabled = FALSE,
+  .sa_list[0].read_interval = 100,
+  .sa_list[0].subinject_enabled = FALSE,
+  .sa_list[0].subinject_interval = 30000,
+  .sa_list[0].postread_enabled  = TRUE,
+  .sa_list[0].postread_ndros = 4,
+        
+  .sa_list[0].threshold_enabled = FALSE,
+  .sa_list[0].threshold_percent = 75,
+  .sa_list[0].threshold_region.xo = 1000,
+  .sa_list[0].threshold_region.yo = 100,
+  .sa_list[0].threshold_region.dx = 260,
+  .sa_list[0].threshold_region.dy = 80,
+        
+  .sa_list[1].name = Subarray2,                       
+  .sa_list[1].subarray_region.xo = 1000,
+  .sa_list[1].subarray_region.yo = 1000,
+  .sa_list[1].subarray_region.dx =  64,
+  .sa_list[1].subarray_region.dy =  64,						
+  .sa_list[1].read_enabled = FALSE,
+  .sa_list[1].read_interval = 100,
+  .sa_list[1].subinject_enabled = FALSE,
+  .sa_list[1].subinject_interval = 50000,
+  .sa_list[1].postread_enabled  = TRUE,
+  .sa_list[1].postread_ndros = 4,
+        
+  .sa_list[1].threshold_enabled = FALSE,
+  .sa_list[1].threshold_percent = 75,
+  .sa_list[1].threshold_region.xo = 20,
+  .sa_list[1].threshold_region.yo = 200,
+  .sa_list[1].threshold_region.dx = 260,
+  .sa_list[1].threshold_region.dy = 80)
+  
+ASSIGN Exposure exp8ndro = (
+  .exposure_interval = 1000,
+  .exposure_ndros    = 1,
+  .exposure_region.xo   = 10,
+  .exposure_region.yo   = 10,
+  .exposure_region.dx   = 1000,
+  .exposure_region.dy   = 1000,
+  .exposure_fpn           = 0,
+  
+  .led_ontime    = 10000,
+  .led_offtime   = 100,
+  .led_flashes   = 10,
+  .led1_enabled    = TRUE,
+  .led2_enabled    = FALSE,
+  .led3_enabled    = FALSE,
+  .shutter_enabled = FALSE,
+
+  .full_frame_enabled = FALSE,
+  .dark_frame_enabled = FALSE,
+        
+  .num_subarrays  = 2,
+  .sa_list[0].name = Subarray1,                       
+  .sa_list[0].subarray_region.xo = 1000,
+  .sa_list[0].subarray_region.yo = 1000,
+  .sa_list[0].subarray_region.dx =  64,
+  .sa_list[0].subarray_region.dy =  64,						
+  .sa_list[0].read_enabled = FALSE,
+  .sa_list[0].read_interval = 100,
+  .sa_list[0].subinject_enabled = FALSE,
+  .sa_list[0].subinject_interval = 30000,
+  .sa_list[0].postread_enabled  = TRUE,
+  .sa_list[0].postread_ndros = 8,
+        
+  .sa_list[0].threshold_enabled = FALSE,
+  .sa_list[0].threshold_percent = 75,
+  .sa_list[0].threshold_region.xo = 1000,
+  .sa_list[0].threshold_region.yo = 100,
+  .sa_list[0].threshold_region.dx = 260,
+  .sa_list[0].threshold_region.dy = 80,
+        
+  .sa_list[1].name = Subarray2,                       
+  .sa_list[1].subarray_region.xo = 1000,
+  .sa_list[1].subarray_region.yo = 1000,
+  .sa_list[1].subarray_region.dx =  64,
+  .sa_list[1].subarray_region.dy =  64,						
+  .sa_list[1].read_enabled = FALSE,
+  .sa_list[1].read_interval = 100,
+  .sa_list[1].subinject_enabled = FALSE,
+  .sa_list[1].subinject_interval = 50000,
+  .sa_list[1].postread_enabled  = TRUE,
+  .sa_list[1].postread_ndros = 8,
+        
+  .sa_list[1].threshold_enabled = FALSE,
+  .sa_list[1].threshold_percent = 75,
+  .sa_list[1].threshold_region.xo = 20,
+  .sa_list[1].threshold_region.yo = 200,
+  .sa_list[1].threshold_region.dx = 260,
+  .sa_list[1].threshold_region.dy = 80)
+  
+ASSIGN Exposure exp16ndro = (
+  .exposure_interval = 1000,
+  .exposure_ndros    = 1,
+  .exposure_region.xo   = 10,
+  .exposure_region.yo   = 10,
+  .exposure_region.dx   = 1000,
+  .exposure_region.dy   = 1000,
+  .exposure_fpn           = 0,
+  
+  .led_ontime    = 10000,
+  .led_offtime   = 100,
+  .led_flashes   = 10,
+  .led1_enabled    = TRUE,
+  .led2_enabled    = FALSE,
+  .led3_enabled    = FALSE,
+  .shutter_enabled = FALSE,
+
+  .full_frame_enabled = FALSE,
+  .dark_frame_enabled = FALSE,
+        
+  .num_subarrays  = 2,
+  .sa_list[0].name = Subarray1,                       
+  .sa_list[0].subarray_region.xo = 1000,
+  .sa_list[0].subarray_region.yo = 1000,
+  .sa_list[0].subarray_region.dx =  64,
+  .sa_list[0].subarray_region.dy =  64,						
+  .sa_list[0].read_enabled = FALSE,
+  .sa_list[0].read_interval = 100,
+  .sa_list[0].subinject_enabled = FALSE,
+  .sa_list[0].subinject_interval = 30000,
+  .sa_list[0].postread_enabled  = TRUE,
+  .sa_list[0].postread_ndros = 16,
+        
+  .sa_list[0].threshold_enabled = FALSE,
+  .sa_list[0].threshold_percent = 75,
+  .sa_list[0].threshold_region.xo = 1000,
+  .sa_list[0].threshold_region.yo = 100,
+  .sa_list[0].threshold_region.dx = 260,
+  .sa_list[0].threshold_region.dy = 80,
+        
+  .sa_list[1].name = Subarray2,                       
+  .sa_list[1].subarray_region.xo = 1000,
+  .sa_list[1].subarray_region.yo = 1000,
+  .sa_list[1].subarray_region.dx =  64,
+  .sa_list[1].subarray_region.dy =  64,						
+  .sa_list[1].read_enabled = FALSE,
+  .sa_list[1].read_interval = 100,
+  .sa_list[1].subinject_enabled = FALSE,
+  .sa_list[1].subinject_interval = 50000,
+  .sa_list[1].postread_enabled  = TRUE,
+  .sa_list[1].postread_ndros = 16,
+        
+  .sa_list[1].threshold_enabled = FALSE,
+  .sa_list[1].threshold_percent = 75,
+  .sa_list[1].threshold_region.xo = 20,
+  .sa_list[1].threshold_region.yo = 200,
+  .sa_list[1].threshold_region.dx = 260,
+  .sa_list[1].threshold_region.dy = 80,)
+  
+ASSIGN Exposure exp32ndro = (
+  .exposure_interval = 1000,
+  .exposure_ndros    = 1,
+  .exposure_region.xo   = 10,
+  .exposure_region.yo   = 10,
+  .exposure_region.dx   = 1000,
+  .exposure_region.dy   = 1000,
+  .exposure_fpn           = 0,
+  
+  .led_ontime    = 10000,
+  .led_offtime   = 100,
+  .led_flashes   = 10,
+  .led1_enabled    = TRUE,
+  .led2_enabled    = FALSE,
+  .led3_enabled    = FALSE,
+  .shutter_enabled = FALSE,
+
+  .full_frame_enabled = FALSE,
+  .dark_frame_enabled = FALSE,
+        
+  .num_subarrays  = 2,
+  .sa_list[0].name = Subarray1,                       
+  .sa_list[0].subarray_region.xo = 1000,
+  .sa_list[0].subarray_region.yo = 1000,
+  .sa_list[0].subarray_region.dx =  64,
+  .sa_list[0].subarray_region.dy =  64,						
+  .sa_list[0].read_enabled = FALSE,
+  .sa_list[0].read_interval = 100,
+  .sa_list[0].subinject_enabled = FALSE,
+  .sa_list[0].subinject_interval = 30000,
+  .sa_list[0].postread_enabled  = TRUE,
+  .sa_list[0].postread_ndros = 32,
+        
+  .sa_list[0].threshold_enabled = FALSE,
+  .sa_list[0].threshold_percent = 75,
+  .sa_list[0].threshold_region.xo = 1000,
+  .sa_list[0].threshold_region.yo = 100,
+  .sa_list[0].threshold_region.dx = 260,
+  .sa_list[0].threshold_region.dy = 80,
+        
+  .sa_list[1].name = Subarray2,                       
+  .sa_list[1].subarray_region.xo = 1000,
+  .sa_list[1].subarray_region.yo = 1000,
+  .sa_list[1].subarray_region.dx =  64,
+  .sa_list[1].subarray_region.dy =  64,						
+  .sa_list[1].read_enabled = FALSE,
+  .sa_list[1].read_interval = 100,
+  .sa_list[1].subinject_enabled = FALSE,
+  .sa_list[1].subinject_interval = 50000,
+  .sa_list[1].postread_enabled  = TRUE,
+  .sa_list[1].postread_ndros = 32,
+        
+  .sa_list[1].threshold_enabled = FALSE,
+  .sa_list[1].threshold_percent = 75,
+  .sa_list[1].threshold_region.xo = 20,
+  .sa_list[1].threshold_region.yo = 200,
+  .sa_list[1].threshold_region.dx = 260,
+  .sa_list[1].threshold_region.dy = 80,)
+  
+ASSIGN Exposure exp64ndro = (
+  .exposure_interval = 1000,
+  .exposure_ndros    = 1,
+  .exposure_region.xo   = 10,
+  .exposure_region.yo   = 10,
+  .exposure_region.dx   = 1000,
+  .exposure_region.dy   = 1000,
+  .exposure_fpn           = 0,
+  
+  .led_ontime    = 10000,
+  .led_offtime   = 100,
+  .led_flashes   = 10,
+  .led1_enabled    = TRUE,
+  .led2_enabled    = FALSE,
+  .led3_enabled    = FALSE,
+  .shutter_enabled = FALSE,
+
+  .full_frame_enabled = FALSE,
+  .dark_frame_enabled = FALSE,
+        
+  .num_subarrays  = 2,
+  .sa_list[0].name = Subarray1,                       
+  .sa_list[0].subarray_region.xo = 1000,
+  .sa_list[0].subarray_region.yo = 1000,
+  .sa_list[0].subarray_region.dx =  64,
+  .sa_list[0].subarray_region.dy =  64,						
+  .sa_list[0].read_enabled = FALSE,
+  .sa_list[0].read_interval = 100,
+  .sa_list[0].subinject_enabled = FALSE,
+  .sa_list[0].subinject_interval = 30000,
+  .sa_list[0].postread_enabled  = TRUE,
+  .sa_list[0].postread_ndros = 64,
+        
+  .sa_list[0].threshold_enabled = FALSE,
+  .sa_list[0].threshold_percent = 75,
+  .sa_list[0].threshold_region.xo = 1000,
+  .sa_list[0].threshold_region.yo = 100,
+  .sa_list[0].threshold_region.dx = 260,
+  .sa_list[0].threshold_region.dy = 80,
+        
+  .sa_list[1].name = Subarray2,                       
+  .sa_list[1].subarray_region.xo = 1000,
+  .sa_list[1].subarray_region.yo = 1000,
+  .sa_list[1].subarray_region.dx =  64,
+  .sa_list[1].subarray_region.dy =  64,						
+  .sa_list[1].read_enabled = FALSE,
+  .sa_list[1].read_interval = 100,
+  .sa_list[1].subinject_enabled = FALSE,
+  .sa_list[1].subinject_interval = 50000,
+  .sa_list[1].postread_enabled  = TRUE,
+  .sa_list[1].postread_ndros = 64,
+        
+  .sa_list[1].threshold_enabled = FALSE,
+  .sa_list[1].threshold_percent = 75,
+  .sa_list[1].threshold_region.xo = 20,
+  .sa_list[1].threshold_region.yo = 200,
+  .sa_list[1].threshold_region.dx = 260,
+  .sa_list[1].threshold_region.dy = 80,)
+ 
+ASSIGN Exposure exp128ndro = (
+  .exposure_interval = 1000,
+  .exposure_ndros    = 1,
+  .exposure_region.xo   = 10,
+  .exposure_region.yo   = 10,
+  .exposure_region.dx   = 1000,
+  .exposure_region.dy   = 1000,
+  .exposure_fpn           = 0,
+  
+  .led_ontime    = 10000,
+  .led_offtime   = 100,
+  .led_flashes   = 10,
+  .led1_enabled    = TRUE,
+  .led2_enabled    = FALSE,
+  .led3_enabled    = FALSE,
+  .shutter_enabled = FALSE,
+
+  .full_frame_enabled = FALSE,
+  .dark_frame_enabled = FALSE,
+        
+  .num_subarrays  = 2,
+  .sa_list[0].name = Subarray1,                       
+  .sa_list[0].subarray_region.xo = 1000,
+  .sa_list[0].subarray_region.yo = 1000,
+  .sa_list[0].subarray_region.dx =  64,
+  .sa_list[0].subarray_region.dy =  64,						
+  .sa_list[0].read_enabled = FALSE,
+  .sa_list[0].read_interval = 100,
+  .sa_list[0].subinject_enabled = FALSE,
+  .sa_list[0].subinject_interval = 30000,
+  .sa_list[0].postread_enabled  = TRUE,
+  .sa_list[0].postread_ndros = 128,
+        
+  .sa_list[0].threshold_enabled = FALSE,
+  .sa_list[0].threshold_percent = 75,
+  .sa_list[0].threshold_region.xo = 1000,
+  .sa_list[0].threshold_region.yo = 100,
+  .sa_list[0].threshold_region.dx = 260,
+  .sa_list[0].threshold_region.dy = 80,
+        
+  .sa_list[1].name = Subarray2,                       
+  .sa_list[1].subarray_region.xo = 1000,
+  .sa_list[1].subarray_region.yo = 1000,
+  .sa_list[1].subarray_region.dx =  64,
+  .sa_list[1].subarray_region.dy =  64,						
+  .sa_list[1].read_enabled = FALSE,
+  .sa_list[1].read_interval = 100,
+  .sa_list[1].subinject_enabled = FALSE,
+  .sa_list[1].subinject_interval = 50000,
+  .sa_list[1].postread_enabled  = TRUE,
+  .sa_list[1].postread_ndros = 128,
+        
+  .sa_list[1].threshold_enabled = FALSE,
+  .sa_list[1].threshold_percent = 75,
+  .sa_list[1].threshold_region.xo = 20,
+  .sa_list[1].threshold_region.yo = 200,
+  .sa_list[1].threshold_region.dx = 260,
+  .sa_list[1].threshold_region.dy = 80,)
+
+GI( 5 )		// global inject for 5ms, 5000us
+DELAY( 1000 )	// camera delay 1 seconds
+EXPOSE( exp1ndro )   // recieve video packet from camera 
+
+GI( 5 )		// global inject for 5ms, 5000us
+DELAY( 1000 )	// camera delay 1 seconds
+EXPOSE( exp2ndro )   // recieve video packet from camera 
+
+GI( 5 )		// global inject for 5ms, 5000us
+DELAY( 1000 )	// camera delay 1 seconds
+EXPOSE( exp4ndro )   // recieve video packet from camera
+
+GI( 5 )		// global inject for 5ms, 5000us
+DELAY( 1000 )	// camera delay 1 seconds
+EXPOSE( exp8ndro )   // recieve video packet from camera
+
+GI( 5 )		// global inject for 5ms, 5000us
+DELAY( 1000 )	// camera delay 1 seconds
+EXPOSE( exp16ndro )   // recieve video packet from camera
+
+GI( 5 )		// global inject for 5ms, 5000us
+DELAY( 1000 )	// camera delay 1 seconds
+EXPOSE( exp32ndro )   // recieve video packet from camera
+
+GI( 5 )		// global inject for 5ms, 5000us
+DELAY( 1000 )	// camera delay 1 seconds
+EXPOSE( exp64ndro )   // recieve video packet from camera  
+
+GI( 5 )		// global inject for 5ms, 5000us
+DELAY( 1000 )	// camera delay 1 seconds
+EXPOSE( exp128ndro )   // recieve video packet from camera  
+
+START                   // CAMERA start sequence

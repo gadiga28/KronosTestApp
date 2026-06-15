@@ -1,0 +1,33 @@
+2018-05-03 09:54:15,559 [10] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass2e.<CalculateNoiseNDRO>b__2c() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 536
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<CalculateNoiseNDRO>d__30.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 494
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-05-03 10:02:07,006 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-03 11:03:42,895 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.IO.IOException: Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.AbortMessages() in c:\Baba\API_Latest\API_04232018\Kronos.Instrument.Camera.Interface\SCM5821AX1.cs:line 365
+   at Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.Disconnect() in c:\Baba\API_Latest\API_04232018\Kronos.Instrument.Camera.Interface\SCM5821AX1.cs:line 838
+   at Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.Disconnect() in c:\Baba\API_Latest\API_04232018\Kronos.Instrument.Camera.Interface\CIDInterface.cs:line 225
+   at KronosCameraTestApp.View.KronosTestAppMainForm.ExitApplication() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 3824
+ AMER\babagoud.gadiga - Exception inVoid ExitApplication()
+2018-05-03 11:03:47,494 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.IO.IOException: Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.AbortMessages() in c:\Baba\API_Latest\API_04232018\Kronos.Instrument.Camera.Interface\SCM5821AX1.cs:line 365
+   at Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.Disconnect() in c:\Baba\API_Latest\API_04232018\Kronos.Instrument.Camera.Interface\SCM5821AX1.cs:line 838
+   at Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.Disconnect() in c:\Baba\API_Latest\API_04232018\Kronos.Instrument.Camera.Interface\CIDInterface.cs:line 225
+   at KronosCameraTestApp.View.KronosTestAppMainForm.ExitApplication() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 3824
+ AMER\babagoud.gadiga - Exception inVoid ExitApplication()

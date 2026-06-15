@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DefectsTestLimitsData>
+  <Limit>
+    <LimitsID>1</LimitsID>
+    <PRNUPositive>1.500000000000000e+001</PRNUPositive>
+    <PRNUNegative>2.000000000000000e+001</PRNUNegative>
+    <MaxTrap>5000</MaxTrap>
+    <HotPixel>100</HotPixel>
+    <AveTrap>1150</AveTrap>
+    <MaxDarkROI>50</MaxDarkROI>
+    <TotalNumDefects>15</TotalNumDefects>
+    <TotalNumClusters>5</TotalNumClusters>
+    <ROI_Xs>0</ROI_Xs>
+    <ROI_Ys>0</ROI_Ys>
+    <ROI_dXs>540</ROI_dXs>
+    <ROI_dYs>540</ROI_dYs>
+    <ROI_dXbs>1</ROI_dXbs>
+    <ROI_dYbs>1</ROI_dYbs>
+    <ROI_PixRate>0</ROI_PixRate>
+    <ROI_NDRO>0</ROI_NDRO>
+    <PRNU_LED>70</PRNU_LED>
+    <PRNU_Target>338000</PRNU_Target>
+    <Trap_LED>3</Trap_LED>
+    <Trap_Target>10000</Trap_Target>
+    <HotPixel_LED>3</HotPixel_LED>
+    <HotPixel_Target>10000</HotPixel_Target>
+    <Unused_outer_rows>1</Unused_outer_rows>
+    <Unused_outer_cols>1</Unused_outer_cols>
+    <PRNU_test_scan_size>54</PRNU_test_scan_size>
+    <Hot_pix_exp_time>60</Hot_pix_exp_time>
+    <Ave_dark_scan_size>10</Ave_dark_scan_size>
+    <DefinedDate>2018-01-26T16:20:29.033</DefinedDate>
+    <UserModified>Baba</UserModified>
+  </Limit>
+</DefectsTestLimitsData>

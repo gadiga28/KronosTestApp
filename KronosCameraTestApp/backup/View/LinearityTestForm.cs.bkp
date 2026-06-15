@@ -1,0 +1,1417 @@
+﻿using CIDSoftwareApplication;
+using Infragistics.Win.UltraWinToolTip;
+using KronosCameraTestApp.Helpers;
+using KronosCameraTestApp.Model;
+using KronosCameraTestApp.Presenter;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Thermo.Kronos.Instrument.Camera.Interface;
+
+namespace KronosCameraTestApp.View
+{
+    public partial class LinearityTestForm : Form
+    {
+        public LinearityPresenter linearityPresenter { get; set; }
+
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(
+           System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        CID821_Data cid821Data = new CID821_Data();
+
+        public int currentRecord = 0;
+
+        double gain = 0;
+        string userMode = string.Empty;
+        bool engineeringLoginStatus = false;
+        int currentSubarrayRecord = 0;
+        Infragistics.Win.UltraWinStatusBar.UltraStatusBar statusBar = null;
+        CancellationTokenSource cts { get; set; }
+        private CIDInterface cidInterface = null;
+        public CIDInterface CidInterface
+        {
+            get { return cidInterface; }
+            set { cidInterface = value; }
+        }
+        bool linearityTestStatus = false;
+        public bool LinearityTestStatus
+        {
+            get { return linearityTestStatus; }
+            set { linearityTestStatus = value; }
+        }
+        public LinearityTestForm()
+        {
+            InitializeComponent();
+        }
+        public LinearityTestForm(LinearityPresenter linearityPresenter, string UserMode, bool enggLoginStatus,
+            CIDInterface cidInterface, Infragistics.Win.UltraWinStatusBar.UltraStatusBar statusBar)
+        {
+            try
+            {
+                InitializeComponent();
+                currentSubarrayRecord = 0;
+                currentRecord = 0;
+                this.linearityPresenter = linearityPresenter;
+                this.userMode = UserMode;
+                this.engineeringLoginStatus = enggLoginStatus;
+                this.cidInterface = cidInterface;
+                this.statusBar = statusBar;
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+
+        }
+        private async void LinearityTestForm_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Properties.Settings.Default.selectedGraphPreferencesList != null)
+                {
+                    if (Properties.Settings.Default.selectedGraphPreferencesList.Contains("LIT"))
+                    {
+                        this.linearityWaveformGraph.PlotAreaColor = Properties.Settings.Default.colorOfPlotBackground;
+                        this.linearityTestWaveformPlot.LineWidth = Properties.Settings.Default.lineWidthOfPlot;
+                        this.meanWaveformPlot.LineWidth = Properties.Settings.Default.lineWidthOfPlot;
+                        this.log20WaveformPlot.LineWidth = Properties.Settings.Default.lineWidthOfPlot;
+
+                        this.derivativeWaveformGraph.PlotAreaColor = Properties.Settings.Default.colorOfPlotBackground;
+                        this.derivativeWaveformPlot.LineWidth = Properties.Settings.Default.lineWidthOfPlot;
+                        this.waveformPlot2.LineWidth = Properties.Settings.Default.lineWidthOfPlot;
+                    }
+                }
+
+                currentRecord = 0;
+                currentSubarrayRecord = 0;
+                if (linearityPresenter.ExposureDataList.Count == 0)
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    await linearityPresenter.GetLinearityData(cidInterface);
+                    //numericEditNumOfExposures.Maximum = linearityPresenter.ExposureDataList.Count;
+                    //numericEditNumOfExposures.Value = linearityPresenter.ExposureDataList.Count;
+                    //AutoCompleteExposureSubarray();
+                    Cursor.Current = Cursors.Arrow;
+                    UpdateExposureView(0);
+                }
+               
+                    numericEditNumOfExposures.Maximum = linearityPresenter.ExposureDataList.Count;
+                    numericEditNumOfExposures.Value = linearityPresenter.ExposureDataList.Count;
+                    AutoCompleteExposureSubarray();
+                    UpdateExposureView(0);
+
+                    if (userMode == "Admin" && engineeringLoginStatus)
+                {
+
+                    AddExposure.Enabled = true;
+                    RemoveExposure.Enabled = true;
+                    UpdateExposure.Enabled = true;
+                    AddSubarray.Enabled = true;
+                    RemoveSubarray.Enabled = true;
+                    UpdateSubarray.Enabled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Loading Linearity Test Form", "Loading Form", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+
+        }
+        private async void buttonLinearityRun_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                 if (cidInterface.IsConnected())
+                {
+                    if (Convert.ToInt32(numericEditNumOfExposures.Value) <= 0 )
+                    {
+                        MessageBox.Show("Exposure count should be greater than 0", "Invalid exposure count", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                        return;
+                    }
+                    ledPassFail.Value = false;
+                cts = new CancellationTokenSource();
+                TestAppHelper.currentRunningTest = "Linearity";
+                //((KronosTestAppMainForm)this.MdiParent).cidDataList.Clear();
+                statusBar.Panels["TestProgress"].ProgressBarInfo.Value = 1;
+                linearityTestStatus = true;
+                statusBar.Panels["MarqueeStatus"].Text = "Linearity Test Processing....";
+                statusBar.Panels["MarqueeStatus"].MarqueeInfo.Start();
+                //((KronosTestAppMainForm)this.MdiParent).ExpCount = Convert.ToInt32(numericEditNumOfExposures.Value);
+
+                buttonLinearityAbort.Enabled = true;
+
+                linearityTestWaveformPlot.ClearData();
+                derivativeWaveformPlot.ClearData();
+
+                //linearityPresenter.CIDDataList.Clear();
+               // UpdateModelFromView();
+                //ApplySettings();
+
+                UpdateExposureDataModelFromView();
+                UpdateSubarrayDataModelFromView();
+
+                //Run Linearity Test
+                await RunLinearityTest(cts.Token);
+
+                //Plot data
+                await PlotLinearityData(cts);
+
+                statusBar.Panels["TestProgress"].ProgressBarInfo.Value = 100;
+                //write test results to DB
+                //await linearityPresenter.WriteLinearityTestResultToDB(cts.Token);
+
+                statusBar.Panels["MarqueeStatus"].MarqueeInfo.Stop();
+                if (cts.IsCancellationRequested)
+                {
+                    statusBar.Panels["MarqueeStatus"].Text = "Linearity Test Aborted";
+                }
+                else
+                {
+                    statusBar.Panels["MarqueeStatus"].Text = "Linearity Test Completed";
+                }
+                //this.gainLabel.Text = "Gain : " + gain.ToString("0.00") + " e-/ADU";
+                buttonLinearityAbort.Enabled = false;
+                linearityTestStatus = false;
+                ultraExplorerBar1.Groups[1].Expanded = true;
+                }
+                 else
+                 {
+                     log.Error("Firmware not running or camera not connected to host");
+                     MessageBox.Show(
+                           "Firmware not running or camera not connected to host",
+                           "Firmware not found",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                     return;
+                 }
+            }
+            catch (Exception ex)
+            {
+                //"Internal Error";
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+
+        }
+        private async Task RunLinearityTest(CancellationToken ct)
+        {
+            try
+            {
+                log.Debug("Run Mean Variance test.");
+                await linearityPresenter.runLinearityTest(cidInterface, ct, Convert.ToInt32(numericEditNumOfExposures.Value));
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private async Task PlotLinearityData(CancellationTokenSource ct)
+        {
+            try
+            {
+                if (ct.IsCancellationRequested)
+                    return;
+                else
+                {
+                    await linearityPresenter.CalculateLinearity(ct.Token);
+                    linearityTestWaveformPlot.PlotYAppend(linearityPresenter.ROID);
+                    derivativeWaveformPlot.PlotY(linearityPresenter.Deriv);
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private async void buttonLinearityAbort_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cts != null)
+                {
+                    DialogResult result = MessageBox.Show("Are you sure to Abort Linearity Test?",
+                           "Abort Linearity Test",
+                             MessageBoxButtons.YesNo,
+                             MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        cidInterface.AbortExposure();
+                        await ClearLinearityGraphs();
+                        linearityTestStatus = false;
+                        statusBar.Panels["TestProgress"].ProgressBarInfo.Value = 0;
+                        statusBar.Panels["TestProgress"].ProgressBarInfo.ResetFillAppearance();
+                        cts.Cancel();
+                    }
+                    else
+                        return;
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+
+        }
+        public async Task ClearLinearityGraphs()
+        {
+            await Task.Run(() =>
+            {
+                linearityTestWaveformPlot.ClearData();
+                derivativeWaveformPlot.ClearData();
+            });
+        }
+        private async void buttonViewUpdateExposures_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //if (linearityPresenter.ExposureDataList.Count == 0)
+                //{                   
+                //    Cursor.Current = Cursors.WaitCursor;
+                //    await linearityPresenter.GetLinearityData(cidInterface);
+                //    AutoCompleteExposureSubarray();
+                //    Cursor.Current = Cursors.Arrow;
+                //    UpdateExposureView(0);
+                //}
+                ultraExplorerBar1.Groups[2].Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in  View/Update Exposure", "View/Update Exposure", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+
+        }
+        private void UpdateExposureDataModelFromView()
+        {
+            try
+            {
+                linearityPresenter.ExposureDataModel = new ExposureDataModel();
+
+                linearityPresenter.ExposureDataModel.ExposureID = Convert.ToInt32(ultraTextEditorExposureID.Value);
+                linearityPresenter.ExposureDataModel.TestDataID = "LIT";
+                linearityPresenter.ExposureDataModel.UserModified = Environment.UserName;
+                linearityPresenter.ExposureDataModel.GlobalInjectDelay = Convert.ToInt32(numericEditDelay.Value);
+                linearityPresenter.ExposureDataModel.GlobalInject = Convert.ToInt32(numericEditGlobalInject.Value);
+
+                //Exposure         
+                linearityPresenter.ExposureDataModel.ExposureName = ultraTextEditorExposureName.Text.ToString();
+                linearityPresenter.ExposureDataModel.ExposureInterval = Convert.ToInt32(numericEditExposureInterval.Value);
+                linearityPresenter.ExposureDataModel.ExposureNDROS = Convert.ToInt32(numericEditNDRO.Value);
+                linearityPresenter.ExposureDataModel.ExposureRegionXo = Convert.ToInt32(numericEditExposureStartX.Value);
+                linearityPresenter.ExposureDataModel.ExposureRegiondX = Convert.ToInt32(numericEditExposureWidth.Value);
+                linearityPresenter.ExposureDataModel.ExposureRegionYo = Convert.ToInt32(numericEditExposureStartY.Value);
+                linearityPresenter.ExposureDataModel.ExposureRegiondY = Convert.ToInt32(numericEditExposureHeight.Value);
+                linearityPresenter.ExposureDataModel.LED1Enabled = ultraCheckEditorLED1.Checked;
+                linearityPresenter.ExposureDataModel.LED2Enabled = ultraCheckEditorLED2.Checked;
+                linearityPresenter.ExposureDataModel.LED3Enabled = ultraCheckEditorLED3.Checked;
+                linearityPresenter.ExposureDataModel.ShutterEnabled = ultraCheckEditorShutterEnabled.Checked;
+                linearityPresenter.ExposureDataModel.LEDOnTime = Convert.ToInt32(numericEditLEDOn.Value);
+                linearityPresenter.ExposureDataModel.LEDOffTime = Convert.ToInt32(numericEditLEDOff.Value);
+                linearityPresenter.ExposureDataModel.LEDFlashes = Convert.ToInt32(numericEditFlash.Value);
+                linearityPresenter.ExposureDataModel.NumberOfSubarrays = Convert.ToInt32(ultraTextEditorNumberOfSubarrays.Value);
+
+                if (ultraRadioButtonFPNNone.Checked == true)
+                {
+                    linearityPresenter.ExposureDataModel.ExposureFPN = 0;
+                }
+                else if (ultraRadioButtonFPNRunTime.Checked == true)
+                {
+                    linearityPresenter.ExposureDataModel.ExposureFPN = 1;
+                }
+                else if (ultraRadioButtonFPNStored.Checked == true)
+                {
+                    linearityPresenter.ExposureDataModel.ExposureFPN = 3;
+                }
+
+                linearityPresenter.ExposureDataModel.FullFrameEnabled = ultraCheckEditorExposedFrame.Checked;
+                linearityPresenter.ExposureDataModel.DarkFrameEnabled = ultraCheckEditorDarkFrame.Checked;
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void UpdateSubarrayDataModelFromView()
+        {
+            try
+            {
+                linearityPresenter.SubarrayDataModel = new SubarrayDataModel();
+                linearityPresenter.SubarrayDataModel.SubarrayID = Convert.ToInt32(ultraTextEditorSubarrayID.Value);
+                linearityPresenter.SubarrayDataModel.ExposureID = Convert.ToInt32(ultraTextEditorExposureID.Value);
+                linearityPresenter.SubarrayDataModel.UserModified = Environment.UserName;
+                linearityPresenter.SubarrayDataModel.SubarrayName = ultraTextEditorSubarrayName.Text.ToString();
+                linearityPresenter.SubarrayDataModel.SubarrayRegionXo = Convert.ToInt32(numericEditSubarrayStartX.Value);
+                linearityPresenter.SubarrayDataModel.SubarrayRegiondX = Convert.ToInt32(numericEditSubarrayWidth.Value);
+                linearityPresenter.SubarrayDataModel.SubarrayRegionYo = Convert.ToInt32(numericEditSubarrayStartY.Value);
+                linearityPresenter.SubarrayDataModel.SubarrayRegiondY = Convert.ToInt32(numericEditSubarrayHeight.Value);
+
+                linearityPresenter.SubarrayDataModel.SubarrayReadEnabled = ultraCheckEditorSubarrayRead.Checked;
+                linearityPresenter.SubarrayDataModel.SubarrayReadInterval = Convert.ToInt32(numericEditSubarrayReadInterval.Value);
+
+                linearityPresenter.SubarrayDataModel.SubarraySubinjectEnabled = ultraCheckEditorSubarraySubInject.Checked;
+                linearityPresenter.SubarrayDataModel.SubarraySubinjectInterval = Convert.ToInt32(numericEditSubarraySubinjectInterval.Value);
+
+                linearityPresenter.SubarrayDataModel.SubarrayPostReadEnabled = ultraCheckEditorSubarrayPostRead.Checked;
+                linearityPresenter.SubarrayDataModel.SubarrayPostReadNDROS = Convert.ToInt32(numericEditSubarrayNDROs.Value);
+
+                linearityPresenter.SubarrayDataModel.SubarrayThresholdRegionXo = Convert.ToInt32(numericEditSubarrayThresholdStartX.Value);
+                linearityPresenter.SubarrayDataModel.SubarrayThresholdRegiondX = Convert.ToInt32(numericEditSubarrayThresholdWidth.Value);
+                linearityPresenter.SubarrayDataModel.SubarrayThresholdRegionYo = Convert.ToInt32(numericEditSubarrayThresholdStartY.Value);
+                linearityPresenter.SubarrayDataModel.SubarrayThresholdRegiondY = Convert.ToInt32(numericEditSubarrayThresholdHeight.Value);
+                linearityPresenter.SubarrayDataModel.SubarrayThresholdEnabled = ultraCheckEditorEnableThreshold.Checked;
+
+                //linearityPresenter.SubarrayDataModel.TimeResolvedEnabled = ultraCheckEditorTimeResolved.Checked;
+                //linearityPresenter.SubarrayDataModel.AdaptiveEnabled = ultraCheckEditorAdaptive.Checked;
+                linearityPresenter.SubarrayDataModel.SubarrayThresholdPercent = Convert.ToInt32(numericEditThresholdPercent.Value);
+                //linearityPresenter.SubarrayDataModel.TimeResolvedInterval = Convert.ToInt32(numericEditSubarrayTimeResolved.Value);
+
+                //if (ultraRadioButtonSubarrayFPNNone.Checked == true)
+                //{
+                //    linearityPresenter.SubarrayDataModel.SubarrayFPN = 0;
+                //}
+                //else if (ultraRadioButtonSubarrayFPNRunTime.Checked == true)
+                //{
+                //    linearityPresenter.SubarrayDataModel.SubarrayFPN = 1;
+                //}
+                //else if (ultraRadioButtonSubarrayFPNStored.Checked == true)
+                //{
+                //    linearityPresenter.SubarrayDataModel.SubarrayFPN = 3;
+                //}
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }             
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ExposureDataModel exposureRecord = linearityPresenter.ExposureDataList.Where(exp => exp.ExposureName.Equals(ultraTextEditorExposureName.Text.ToString())).FirstOrDefault();
+                if (exposureRecord != null)
+                {
+                    UpdateViewForSearchOperation(exposureRecord);
+                }
+                else
+                {
+                    string errorString = string.Format("No Exposure Data found with Exposure Name '{0}' ", ultraTextEditorExposureName.Text.ToString());
+
+                    MessageBox.Show(errorString, "Search Exposure", MessageBoxButtons.OK);
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private async void buttonAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (ultraTextEditorExposureName.Text.ToString() == string.Empty)
+                {
+                    MessageBox.Show("Exposure name cannot be empty", "Add Exposure", MessageBoxButtons.OK);
+                    return;
+                }
+                if (ultraTextEditorSubarrayName.Text.ToString() == string.Empty)
+                {
+                    MessageBox.Show("Subarray name cannot be empty", "Add Exposure", MessageBoxButtons.OK);
+                    return;
+                }
+
+                string addExposureString = "Are you sure to add Exposure " + ultraTextEditorExposureName.Text.ToString() + " ?";
+                DialogResult result = MessageBox.Show(addExposureString, "Add Exposure", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    UpdateExposureDataModelFromView();
+                    UpdateSubarrayDataModelFromView();
+
+                    linearityPresenter.ExposureDataModel.NumberOfSubarrays = 1;
+                    linearityPresenter.ExposureDataModel.SubarrayDatas = new List<SubarrayDataModel>();
+                    linearityPresenter.ExposureDataModel.SubarrayDatas.Add(linearityPresenter.SubarrayDataModel);
+
+                    //Save to database if engineering user
+                    if (userMode == "Admin" && engineeringLoginStatus)
+                    {
+                        bool saveDB = await linearityPresenter.SaveExposureDataToDB("ADD");
+                        if (saveDB)
+                        {
+                            //linearityPresenter.InMemoryModelChanged = false;
+                            MessageBox.Show("Exposure Added successfully", "Add Exposure", MessageBoxButtons.OK);
+                            linearityPresenter.ExposureDataList.Clear();
+                            linearityPresenter.SubarrayDataModelList.Clear();
+                            await linearityPresenter.GetLinearityData(cidInterface);
+                        }
+                        else
+                            MessageBox.Show("Exposure not Added", "Add Exposure", MessageBoxButtons.OK);
+                    }
+
+                    //Make inmemory changes                     
+
+                    if (userMode == "Manufacturing")
+                    {
+                        linearityPresenter.ExposureDataList.Add(linearityPresenter.ExposureDataModel);
+                        linearityPresenter.SubarrayDataModelList.Add(linearityPresenter.SubarrayDataModel);
+                        MessageBox.Show("Exposure Added successfully", "Add Exposure", MessageBoxButtons.OK);
+                    }
+                    ultraLabelNumberofExposures.Text = "Total # of Exposures:" + linearityPresenter.ExposureDataList.Count().ToString();
+                    numericEditNumOfExposures.Value = linearityPresenter.ExposureDataList.Count;
+                    if (linearityPresenter.ExposureDataModel.SubarrayDatas != null)
+                        ultraLabelNumSubarrays.Text = "Total # of Subarrays:" + linearityPresenter.ExposureDataModel.SubarrayDatas.Count().ToString();
+                    else
+                        ultraLabelNumSubarrays.Text = "Total # of Subarrays: 0";
+                }
+            }
+            catch (Exception ex)
+            {               
+                MessageBox.Show("Error Adding Exposure", "Add Exposure", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private async void buttonRemove_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string removeExposure = "Are you sure to remove Exposure " + ultraTextEditorExposureName.Text + " ?";
+
+                DialogResult result = MessageBox.Show(removeExposure, "Remove Exposure", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                if (result == DialogResult.OK)
+                {
+                    //Save data to DB
+                    if (userMode == "Admin" && engineeringLoginStatus)
+                    {
+                        UpdateExposureDataModelFromView();
+                        UpdateSubarrayDataModelFromView();
+                        linearityPresenter.ExposureDataModel.SubarrayDatas = new List<SubarrayDataModel>();
+                        linearityPresenter.ExposureDataModel.SubarrayDatas.Add(linearityPresenter.SubarrayDataModel);
+                        bool saveDB = await linearityPresenter.SaveExposureDataToDB("REMOVE");
+                        if (saveDB)
+                        {
+                            //linearityPresenter.InMemoryModelChanged = false;
+                            MessageBox.Show("Exposure Removed successfully", "Remove Exposure", MessageBoxButtons.OK);
+                            linearityPresenter.ExposureDataList.Clear();
+                            linearityPresenter.SubarrayDataModelList.Clear();
+                            await linearityPresenter.GetLinearityData(cidInterface);
+                            if (currentRecord == 0)
+                            {
+                                currentRecord = currentRecord + 1;
+                                UpdateExposureView(currentRecord);
+                                UpdateSubarrayView(0);
+                            }
+                            else
+                            {
+                                currentRecord = currentRecord - 1;
+                                UpdateExposureView(currentRecord);
+                                UpdateSubarrayView(0);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Exposure not Removed", "Remove Exposure", MessageBoxButtons.OK);
+                        }
+                    }
+                    else if (userMode == "Manufacturing")
+                    {
+                        var expitem = linearityPresenter.ExposureDataList.FirstOrDefault(x => x.ExposureID.Equals(Convert.ToInt32(ultraTextEditorExposureID.Value)));
+                        if (expitem != null)
+                        {
+                            if (linearityPresenter.ExposureDataList.Remove(expitem))
+                            {
+                                var subitem = linearityPresenter.SubarrayDataModelList.FirstOrDefault(x => x.SubarrayID.Equals(Convert.ToInt32(ultraTextEditorSubarrayID.Value)));
+                                if (subitem != null)
+                                {
+                                    if (linearityPresenter.SubarrayDataModelList.Remove(subitem))
+                                    {
+                                        MessageBox.Show("Exposure Removed successfully", "Remove Exposure", MessageBoxButtons.OK);
+                                        if (currentRecord == 0)
+                                        {
+                                            currentRecord = currentRecord + 1;
+                                            UpdateExposureView(currentRecord);
+                                            UpdateSubarrayView(0);
+                                        }
+
+                                        else
+                                        {
+                                            currentRecord = currentRecord - 1;
+                                            UpdateExposureView(currentRecord);
+                                            UpdateSubarrayView(0);
+                                        }
+                                    }
+                                }
+                                MessageBox.Show("Exposure not Removed", "Remove Exposure", MessageBoxButtons.OK);
+                            }
+                        }
+
+                    }
+
+                    ultraLabelNumberofExposures.Text = "Total # of Exposures:" + linearityPresenter.ExposureDataList.Count().ToString();
+                    numericEditNumOfExposures.Value = linearityPresenter.ExposureDataList.Count;
+                    if (linearityPresenter.ExposureDataModel.SubarrayDatas != null)
+                        ultraLabelNumSubarrays.Text = "Total # of Subarrays:" + linearityPresenter.ExposureDataModel.SubarrayDatas.Count().ToString();
+                    else
+                        ultraLabelNumSubarrays.Text = "Total # of Subarrays: 0";
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Removing Exposure", "Remove Exposure", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private async void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string updateExposure = "Are you sure to update Exposure " + ultraTextEditorExposureName.Text.ToString() + " ?";
+
+                DialogResult result = MessageBox.Show(updateExposure, "Update Exposure", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.OK)
+                {
+                    UpdateExposureDataModelFromView();
+                    UpdateSubarrayDataModelFromView();
+                    linearityPresenter.ExposureDataModel.SubarrayDatas = new List<SubarrayDataModel>();
+                    linearityPresenter.ExposureDataModel.SubarrayDatas.Add(linearityPresenter.SubarrayDataModel);
+
+                    if (userMode == "Admin" && engineeringLoginStatus)
+                    {
+                        bool saveDB = await linearityPresenter.SaveExposureDataToDB("UPDATE");
+                        if (saveDB)
+                        {
+                            //linearityPresenter.InMemoryModelChanged = false;
+                            MessageBox.Show("Exposure Updated successfully", "Update Exposure", MessageBoxButtons.OK);
+                            await linearityPresenter.GetLinearityData(cidInterface);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Exposure not Updated", "Update Exposure", MessageBoxButtons.OK);
+                        }
+                    }
+                    else if (userMode == "Manufacturing")
+                    {
+                        var exprecord = linearityPresenter.ExposureDataList.FirstOrDefault(exp => exp.ExposureID.Equals(Convert.ToInt32(ultraTextEditorExposureID.Value)));
+                        if (UpdateExposureRecordForUpdateOperation(exprecord))
+                        {
+                            var subrec = exprecord.SubarrayDatas.FirstOrDefault(sub => sub.SubarrayID.Equals(Convert.ToInt32(ultraTextEditorSubarrayID.Value)));
+                            if (UpdateSubarrayModelForUpdateOperation(subrec))
+                            {
+                                MessageBox.Show("Exposure Updated successfully", "Update Exposure", MessageBoxButtons.OK);
+                                //linearityPresenter.InMemoryModelChanged = true;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Exposure not Updated", "Update Exposure", MessageBoxButtons.OK);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                
+                MessageBox.Show("Error Updating Exposure", "Update Exposure", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }      
+        private void buttonFirstExposure_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                currentRecord = 0;
+                UpdateExposureView(0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Navigating Exposure", "Navigate Exposure", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void buttonNextExposure_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                currentRecord++;
+                UpdateExposureView(currentRecord);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Navigating Exposure", "Navigate Exposure", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void buttonPrevious_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                currentRecord--;
+                UpdateExposureView(currentRecord);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Navigating Exposure", "Navigate Exposure", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void buttonLast_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                currentRecord = linearityPresenter.ExposureDataList.Count();
+                currentRecord--;
+                UpdateExposureView(currentRecord);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Navigating Exposure", "Navigate Exposure", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void UpdateViewForSearchOperation(ExposureDataModel exposureRecord)
+        {
+            try
+            {
+                ultraLabelNumSubarrays.Text = "Total # of Subarrays:" + exposureRecord.SubarrayDatas.Count.ToString();
+
+                ultraTextEditorExposureID.Text = exposureRecord.ExposureID.ToString();
+
+                ultraTextEditorExposureName.Text = exposureRecord.ExposureName.ToString();
+
+                numericEditDelay.Value = exposureRecord.GlobalInjectDelay;
+                numericEditGlobalInject.Value = exposureRecord.GlobalInject;
+
+                numericEditExposureInterval.Value = exposureRecord.ExposureInterval;
+                numericEditNDRO.Value = exposureRecord.ExposureNDROS;
+                numericEditExposureStartX.Value = exposureRecord.ExposureRegionXo;
+                numericEditExposureWidth.Value = exposureRecord.ExposureRegiondX;
+                numericEditExposureStartY.Value = exposureRecord.ExposureRegionYo;
+                numericEditExposureHeight.Value = exposureRecord.ExposureRegiondY;
+
+
+                ultraCheckEditorLED1.Checked = exposureRecord.LED1Enabled;
+                ultraCheckEditorLED2.Checked = exposureRecord.LED2Enabled;
+                ultraCheckEditorLED3.Checked = exposureRecord.LED3Enabled;
+                ultraCheckEditorShutterEnabled.Checked = exposureRecord.ShutterEnabled;
+                numericEditLEDOn.Value = exposureRecord.LEDOnTime;
+                numericEditLEDOff.Value = exposureRecord.LEDOffTime;
+                numericEditFlash.Value = exposureRecord.LEDFlashes;
+
+                if (exposureRecord.ExposureFPN == 0)
+                {
+                    ultraRadioButtonFPNNone.Checked = true;
+                }
+                else if (exposureRecord.ExposureFPN == 1)
+                {
+                    ultraRadioButtonFPNRunTime.Checked = true;
+                }
+                else if (exposureRecord.ExposureFPN == 3)
+                {
+                    ultraRadioButtonFPNStored.Checked = true;
+                }
+
+
+                ultraCheckEditorExposedFrame.Checked = exposureRecord.FullFrameEnabled;
+                ultraCheckEditorDarkFrame.Checked = exposureRecord.DarkFrameEnabled;
+
+                ultraTextEditorSubarrayID.Text = exposureRecord.SubarrayDatas[0].SubarrayID.ToString();
+                ultraTextEditorSubarrayName.Text = exposureRecord.SubarrayDatas[0].SubarrayName.ToString();
+
+                numericEditSubarrayStartX.Value = exposureRecord.SubarrayDatas[0].SubarrayRegionXo;
+                numericEditSubarrayWidth.Value = exposureRecord.SubarrayDatas[0].SubarrayRegiondX;
+                numericEditSubarrayStartY.Value = exposureRecord.SubarrayDatas[0].SubarrayRegionYo;
+                numericEditSubarrayHeight.Value = exposureRecord.SubarrayDatas[0].SubarrayRegiondY;
+
+                ultraCheckEditorSubarrayRead.Checked = exposureRecord.SubarrayDatas[0].SubarrayReadEnabled;
+                numericEditSubarrayReadInterval.Value = exposureRecord.SubarrayDatas[0].SubarrayReadInterval;
+
+                ultraCheckEditorSubarraySubInject.Checked = exposureRecord.SubarrayDatas[0].SubarraySubinjectEnabled;
+                numericEditSubarraySubinjectInterval.Value = exposureRecord.SubarrayDatas[0].SubarraySubinjectInterval;
+                ultraCheckEditorSubarrayPostRead.Checked = exposureRecord.SubarrayDatas[0].SubarrayPostReadEnabled;
+                numericEditSubarrayNDROs.Value = exposureRecord.SubarrayDatas[0].SubarrayPostReadNDROS;
+
+                numericEditSubarrayThresholdStartX.Value = exposureRecord.SubarrayDatas[0].SubarrayThresholdRegionXo;
+                numericEditSubarrayThresholdWidth.Value = exposureRecord.SubarrayDatas[0].SubarrayThresholdRegiondX;
+                numericEditSubarrayThresholdStartY.Value = exposureRecord.SubarrayDatas[0].SubarrayThresholdRegionYo;
+                numericEditSubarrayThresholdHeight.Value = exposureRecord.SubarrayDatas[0].SubarrayThresholdRegiondY;
+                ultraCheckEditorEnableThreshold.Checked = exposureRecord.SubarrayDatas[0].SubarrayThresholdEnabled;
+
+               
+                numericEditThresholdPercent.Value = exposureRecord.SubarrayDatas[0].SubarrayThresholdPercent;               
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private bool UpdateExposureRecordForUpdateOperation(ExposureDataModel expRecord)
+        {
+            try
+            {
+                expRecord.ExposureID = Convert.ToInt32(ultraTextEditorExposureID.Value);
+                expRecord.TestDataID = "LIT";
+                expRecord.UserModified = Environment.UserName;
+                expRecord.GlobalInjectDelay = Convert.ToInt32(numericEditDelay.Value);
+                expRecord.GlobalInject = Convert.ToInt32(numericEditGlobalInject.Value);
+
+                //Exposure         
+                expRecord.ExposureName = ultraTextEditorExposureName.Text.ToString();
+                expRecord.ExposureInterval = Convert.ToInt32(numericEditExposureInterval.Value);
+                expRecord.ExposureNDROS = Convert.ToInt32(numericEditNDRO.Value);
+                expRecord.ExposureRegionXo = Convert.ToInt32(numericEditExposureStartX.Value);
+                expRecord.ExposureRegiondX = Convert.ToInt32(numericEditExposureWidth.Value);
+                expRecord.ExposureRegionYo = Convert.ToInt32(numericEditExposureStartY.Value);
+                expRecord.ExposureRegiondY = Convert.ToInt32(numericEditExposureHeight.Value);
+                expRecord.LED1Enabled = ultraCheckEditorLED1.Checked;
+                expRecord.LED2Enabled = ultraCheckEditorLED2.Checked;
+                expRecord.LED3Enabled = ultraCheckEditorLED3.Checked;
+                expRecord.ShutterEnabled = ultraCheckEditorShutterEnabled.Checked;
+                expRecord.LEDOnTime = Convert.ToInt32(numericEditLEDOn.Value);
+                expRecord.LEDOffTime = Convert.ToInt32(numericEditLEDOff.Value);
+                expRecord.LEDFlashes = Convert.ToInt32(numericEditFlash.Value);
+                expRecord.NumberOfSubarrays = Convert.ToInt32(ultraTextEditorNumberOfSubarrays.Value);
+
+                if (ultraRadioButtonFPNNone.Checked == true)
+                {
+                    expRecord.ExposureFPN = 0;
+                }
+                else if (ultraRadioButtonFPNRunTime.Checked == true)
+                {
+                    expRecord.ExposureFPN = 1;
+                }               
+                else if (ultraRadioButtonFPNStored.Checked == true)
+                {
+                    expRecord.ExposureFPN = 3;
+                }
+
+                expRecord.FullFrameEnabled = ultraCheckEditorExposedFrame.Checked;
+                expRecord.DarkFrameEnabled = ultraCheckEditorDarkFrame.Checked;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+                return false;
+
+            }
+
+
+
+        }
+        private bool UpdateSubarrayModelForUpdateOperation(SubarrayDataModel SubarrayDataModel)
+        {
+            try
+            {               
+                SubarrayDataModel.SubarrayID = Convert.ToInt32(ultraTextEditorSubarrayID.Value);
+                SubarrayDataModel.ExposureID = Convert.ToInt32(ultraTextEditorExposureID.Value);
+                SubarrayDataModel.UserModified = Environment.UserName;
+                SubarrayDataModel.SubarrayName = ultraTextEditorSubarrayName.Text.ToString();
+                SubarrayDataModel.SubarrayRegionXo = Convert.ToInt32(numericEditSubarrayStartX.Value);
+                SubarrayDataModel.SubarrayRegiondX = Convert.ToInt32(numericEditSubarrayWidth.Value);
+                SubarrayDataModel.SubarrayRegionYo = Convert.ToInt32(numericEditSubarrayStartY.Value);
+                SubarrayDataModel.SubarrayRegiondY = Convert.ToInt32(numericEditSubarrayHeight.Value);
+
+                SubarrayDataModel.SubarrayReadEnabled = ultraCheckEditorSubarrayRead.Checked;
+                SubarrayDataModel.SubarrayReadInterval = Convert.ToInt32(numericEditSubarrayReadInterval.Value);
+
+                SubarrayDataModel.SubarraySubinjectEnabled = ultraCheckEditorSubarraySubInject.Checked;
+                SubarrayDataModel.SubarraySubinjectInterval = Convert.ToInt32(numericEditSubarraySubinjectInterval.Value);
+
+                SubarrayDataModel.SubarrayPostReadEnabled = ultraCheckEditorSubarrayPostRead.Checked;
+                SubarrayDataModel.SubarrayPostReadNDROS = Convert.ToInt32(numericEditSubarrayNDROs.Value);
+
+                SubarrayDataModel.SubarrayThresholdRegionXo = Convert.ToInt32(numericEditSubarrayThresholdStartX.Value);
+                SubarrayDataModel.SubarrayThresholdRegiondX = Convert.ToInt32(numericEditSubarrayThresholdWidth.Value);
+                SubarrayDataModel.SubarrayThresholdRegionYo = Convert.ToInt32(numericEditSubarrayThresholdStartY.Value);
+                SubarrayDataModel.SubarrayThresholdRegiondY = Convert.ToInt32(numericEditSubarrayThresholdHeight.Value);
+                SubarrayDataModel.SubarrayThresholdEnabled = ultraCheckEditorEnableThreshold.Checked;
+
+               
+                SubarrayDataModel.SubarrayThresholdPercent = Convert.ToInt32(numericEditThresholdPercent.Value);
+              
+                return true;
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+                return false;
+            }
+        }
+        private void UpdateExposureView(int currentRecord)
+        {
+            try
+            {
+                if (linearityPresenter.ExposureDataList.Count > 0)
+                {
+                    ultraLabelNumberofExposures.Text = "Total # of Exposures:" + linearityPresenter.ExposureDataList.Count.ToString();
+                    ultraLabelNumSubarrays.Text = "Total # of Subarrays:" + linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas.Count.ToString();
+
+                    ultraTextEditorExposureID.Text = linearityPresenter.ExposureDataList[currentRecord].ExposureID.ToString();
+
+                    ultraTextEditorExposureName.Text = linearityPresenter.ExposureDataList[currentRecord].ExposureName.ToString();
+
+                    numericEditDelay.Value = linearityPresenter.ExposureDataList[currentRecord].GlobalInjectDelay;
+                    numericEditGlobalInject.Value = linearityPresenter.ExposureDataList[currentRecord].GlobalInject;
+
+                    numericEditExposureInterval.Value = linearityPresenter.ExposureDataList[currentRecord].ExposureInterval;
+                    numericEditNDRO.Value = linearityPresenter.ExposureDataList[currentRecord].ExposureNDROS;
+                    numericEditExposureStartX.Value = linearityPresenter.ExposureDataList[currentRecord].ExposureRegionXo;
+                    numericEditExposureWidth.Value = linearityPresenter.ExposureDataList[currentRecord].ExposureRegiondX;
+                    numericEditExposureStartY.Value = linearityPresenter.ExposureDataList[currentRecord].ExposureRegionYo;
+                    numericEditExposureHeight.Value = linearityPresenter.ExposureDataList[currentRecord].ExposureRegiondY;
+
+
+                    ultraCheckEditorLED1.Checked = linearityPresenter.ExposureDataList[currentRecord].LED1Enabled;
+                    ultraCheckEditorLED2.Checked = linearityPresenter.ExposureDataList[currentRecord].LED2Enabled;
+                    ultraCheckEditorLED3.Checked = linearityPresenter.ExposureDataList[currentRecord].LED3Enabled;
+                    ultraCheckEditorShutterEnabled.Checked = linearityPresenter.ExposureDataList[currentRecord].ShutterEnabled;
+                    numericEditLEDOn.Value = linearityPresenter.ExposureDataList[currentRecord].LEDOnTime;
+                    numericEditLEDOff.Value = linearityPresenter.ExposureDataList[currentRecord].LEDOffTime;
+                    numericEditFlash.Value = linearityPresenter.ExposureDataList[currentRecord].LEDFlashes;
+
+                    if (linearityPresenter.ExposureDataList[currentRecord].ExposureFPN == 0)
+                    {
+                        ultraRadioButtonFPNNone.Checked = true;
+                    }
+                    else if (linearityPresenter.ExposureDataList[currentRecord].ExposureFPN == 1)
+                    {
+                        ultraRadioButtonFPNRunTime.Checked = true;
+                    }
+                    else if (linearityPresenter.ExposureDataList[currentRecord].ExposureFPN == 3)
+                    {
+                        ultraRadioButtonFPNStored.Checked = true;
+                    }
+
+
+                    ultraCheckEditorExposedFrame.Checked = linearityPresenter.ExposureDataList[currentRecord].FullFrameEnabled;
+                    ultraCheckEditorDarkFrame.Checked = linearityPresenter.ExposureDataList[currentRecord].DarkFrameEnabled;
+
+                    ultraTextEditorSubarrayID.Text = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayID.ToString();
+                    ultraTextEditorSubarrayName.Text = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayName.ToString();
+
+                    numericEditSubarrayStartX.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayRegionXo;
+                    numericEditSubarrayWidth.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayRegiondX;
+                    numericEditSubarrayStartY.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayRegionYo;
+                    numericEditSubarrayHeight.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayRegiondY;
+
+                    ultraCheckEditorSubarrayRead.Checked = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayReadEnabled;
+                    numericEditSubarrayReadInterval.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayReadInterval;
+
+                    ultraCheckEditorSubarraySubInject.Checked = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarraySubinjectEnabled;
+                    numericEditSubarraySubinjectInterval.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarraySubinjectInterval;
+                    ultraCheckEditorSubarrayPostRead.Checked = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayPostReadEnabled;
+                    numericEditSubarrayNDROs.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayPostReadNDROS;
+
+                    numericEditSubarrayThresholdStartX.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayThresholdRegionXo;
+                    numericEditSubarrayThresholdWidth.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayThresholdRegiondX;
+                    numericEditSubarrayThresholdStartY.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayThresholdRegionYo;
+                    numericEditSubarrayThresholdHeight.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayThresholdRegiondY;
+                    ultraCheckEditorEnableThreshold.Checked = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayThresholdEnabled;
+
+
+                    numericEditThresholdPercent.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[0].SubarrayThresholdPercent;
+                }
+                             
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void UpdateSubarrayView(int currentSubarrayRecord)
+        {
+            try
+            {
+                ultraTextEditorSubarrayID.Text = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayID.ToString();
+                ultraTextEditorSubarrayName.Text = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayName.ToString();
+
+                numericEditSubarrayStartX.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayRegionXo;
+                numericEditSubarrayWidth.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayRegiondX;
+                numericEditSubarrayStartY.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayRegionYo;
+                numericEditSubarrayHeight.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayRegiondY;
+
+                ultraCheckEditorSubarrayRead.Checked = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayReadEnabled;
+                numericEditSubarrayReadInterval.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayReadInterval;
+
+                ultraCheckEditorSubarraySubInject.Checked = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarraySubinjectEnabled;
+                numericEditSubarraySubinjectInterval.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarraySubinjectInterval;
+                ultraCheckEditorSubarrayPostRead.Checked = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayPostReadEnabled;
+                numericEditSubarrayNDROs.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayPostReadNDROS;
+
+                numericEditSubarrayThresholdStartX.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayThresholdRegionXo;
+                numericEditSubarrayThresholdWidth.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayThresholdRegiondX;
+                numericEditSubarrayThresholdStartY.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayThresholdRegionYo;
+                numericEditSubarrayThresholdHeight.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayThresholdRegiondY;
+                ultraCheckEditorEnableThreshold.Checked = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayThresholdEnabled;
+
+
+                numericEditThresholdPercent.Value = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas[currentSubarrayRecord].SubarrayThresholdPercent;
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+          
+
+        }            
+        private async void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClearExposure();
+                await linearityPresenter.PopulateLinearityData();
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ClearExposure()
+        {
+            try
+            {
+                ultraTextEditorExposureID.Text = "";
+                ultraTextEditorExposureName.Text = "";
+                ultraTextEditorNumberOfSubarrays.Text = "";
+                numericEditDelay.Value = 0;
+                numericEditGlobalInject.Value = 0;
+
+                //ultraGroupBoxExposure.Text = "Exposure:" + "";
+
+                numericEditExposureInterval.Value = 0;
+                numericEditNDRO.Value = 0;
+                numericEditExposureStartX.Value = 0;
+                numericEditExposureWidth.Value = 0;
+                numericEditExposureStartY.Value = 0;
+                numericEditExposureHeight.Value = 0;
+
+
+                ultraCheckEditorLED1.Checked = false;
+                ultraCheckEditorLED2.Checked = false;
+                ultraCheckEditorLED3.Checked = false;
+                ultraCheckEditorShutterEnabled.Checked = false;
+
+                numericEditLEDOn.Value = 0;
+                numericEditLEDOff.Value = 0;
+                numericEditFlash.Value = 0;
+
+                ultraRadioButtonFPNNone.Checked = true;
+
+                ultraCheckEditorExposedFrame.Checked = false;
+                ultraCheckEditorDarkFrame.Checked = false;
+
+                ClearSubarray();
+
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ClearSubarray()
+        {
+            try
+            {
+                ultraTextEditorSubarrayID.Text = "";
+                ultraTextEditorSubarrayName.Text = "";
+                numericEditSubarrayStartX.Value = 0;
+                numericEditSubarrayWidth.Value = 0;
+                numericEditSubarrayStartY.Value = 0;
+                numericEditSubarrayHeight.Value = 0;
+
+                ultraCheckEditorSubarrayRead.Checked = false;
+                numericEditSubarrayReadInterval.Value = 0;
+
+                ultraCheckEditorSubarraySubInject.Checked = false;
+                numericEditSubarraySubinjectInterval.Value = 0;
+
+                ultraCheckEditorSubarrayPostRead.Checked = false;
+                numericEditSubarrayNDROs.Value = 0;
+
+                numericEditSubarrayThresholdStartX.Value = 0;
+                numericEditSubarrayThresholdWidth.Value = 0;
+                numericEditSubarrayThresholdStartY.Value = 0;
+                numericEditSubarrayThresholdHeight.Value = 0;
+                ultraCheckEditorEnableThreshold.Checked = false;
+                numericEditThresholdPercent.Value = 0;
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+
+        }            
+        private void FirstSubarray_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                currentSubarrayRecord = 0;
+                UpdateSubarrayView(currentSubarrayRecord);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Navigating Subarray", "Navigate Subarray", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void NextSubarray_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                currentSubarrayRecord++;
+                if (currentSubarrayRecord <= linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas.Count() -1)
+                {
+                    UpdateSubarrayView(currentSubarrayRecord);
+                }
+                else
+                {
+                    currentSubarrayRecord--;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Navigating Subarray", "Navigate Subarray", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void PreviousSubarray_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                currentSubarrayRecord--;
+                if (currentSubarrayRecord >= 0)
+                {
+                    UpdateSubarrayView(currentSubarrayRecord);
+                }
+                else
+                {
+                    currentSubarrayRecord++;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Navigating Subarray", "Navigate Subarray", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void LastSubarray_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                currentSubarrayRecord = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas.Count();
+                currentSubarrayRecord--;
+                UpdateSubarrayView(currentSubarrayRecord);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Navigating Subarray", "Navigate Subarray", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private async void AddSubarray_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string addSubarray = "Are you sure to add Subarray " + ultraTextEditorSubarrayName.Text.ToString() + " to Exposure " + ultraTextEditorExposureName.Text.ToString() + " ?";
+
+                if (ultraTextEditorSubarrayName.Text.ToString() == string.Empty)
+                {
+                    MessageBox.Show("Subarray name cannot be empty", "Add Subarray", MessageBoxButtons.OK);
+                    return;
+                }
+                DialogResult result = MessageBox.Show(addSubarray, "Add Subarray", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    string errorString = string.Empty;
+                    var errorStringBuilder = new StringBuilder();
+                    int count = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas.Count();
+                    UpdateSubarrayDataModelFromView();
+                    UpdateSubarrayDataModelFromView();
+                    if (userMode == "Admin" && engineeringLoginStatus)
+                    {
+                        //Save to DB                        
+                        bool saveDB = await linearityPresenter.SaveSubarrayDataToDB("ADD");
+                        if (saveDB)
+                        {
+                            //linearityPresenter.InMemoryModelChanged = false;
+                            MessageBox.Show("Subarray Added Successfully", "Add Subarray", MessageBoxButtons.OK);
+                            await linearityPresenter.GetLinearityData(cidInterface);
+                        }
+                        else if (linearityPresenter.ErrorCode == 547)
+                        {
+                            errorString = string.Format("You are trying to add a Subarray '{0}' to Exposure '{1}' which does not exist. Try adding the exposure {2} first", linearityPresenter.SubarrayDataModel.SubarrayName, linearityPresenter.ExposureDataList[currentRecord].ExposureName, linearityPresenter.ExposureDataList[currentRecord].ExposureName);
+
+                            MessageBox.Show(errorString, "Add Subarray", MessageBoxButtons.OK);
+                        }
+
+                        else
+                            MessageBox.Show("Error occured while adding Subarray", "Add Subarray", MessageBoxButtons.OK);
+                    }
+
+                    if (userMode == "Manufacturing")
+                    {
+                        //subarrayInMemoryAdded = InMemorySubarrayModelChange(linearityPresenter.SubarrayDataModel, "ADD");                         
+                        linearityPresenter.SubarrayDataModel.SubarrayID = linearityPresenter.SubarrayDataModelList.Count + 1;
+                        linearityPresenter.SubarrayDataModelList.Add(linearityPresenter.SubarrayDataModel);
+                        linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas.Add(linearityPresenter.SubarrayDataModel);
+                        ultraTextEditorSubarrayID.Text = linearityPresenter.SubarrayDataModel.SubarrayID.ToString();
+                        if (count != linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas.Count())
+                        {
+                            MessageBox.Show("Subarray Added successfully", "Add Subarray", MessageBoxButtons.OK);
+                        }
+                        else
+                            MessageBox.Show("Subarray not Added", "Add Subarray", MessageBoxButtons.OK);
+
+                    }                   
+                    ultraLabelNumberofExposures.Text = "Total # of Exposures:" + linearityPresenter.ExposureDataList.Count().ToString();
+                    ultraLabelNumSubarrays.Text = "Total # of Subarrays:" + linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas.Count.ToString();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error occured while adding Subarray", "Add Subarray", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private async void RemoveSubarray_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string errorString = string.Empty;
+                string removeSubarray = "Are you sure to remove Subarray " + ultraTextEditorSubarrayName.Text.ToString() + " ?";
+                DialogResult result = MessageBox.Show(removeSubarray, "Remove Subarray", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                //if(linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas.Count >1)
+                //{ }
+                if (result == DialogResult.Yes)
+                {
+                    List<ExposureDataModel> exposureList = linearityPresenter.ExposureDataList.Where(exp => exp.ExposureID.Equals(Convert.ToInt32(ultraTextEditorExposureID.Value))).ToList();
+
+                    if (exposureList[0].SubarrayDatas.Count > 1)
+                    {
+                        bool subarrayInMemoryRemoved = false;
+                        if (userMode == "Admin" && engineeringLoginStatus)
+                        {
+                            UpdateSubarrayDataModelFromView();
+                            UpdateSubarrayDataModelFromView();
+                            bool saveDB = await linearityPresenter.SaveSubarrayDataToDB("REMOVE");
+                            if (saveDB)
+                            {
+                                //linearityPresenter.InMemoryModelChanged = false;
+                                MessageBox.Show("Subarray removed Successfully", "Remove Subarray", MessageBoxButtons.OK);
+                                await linearityPresenter.GetLinearityData(cidInterface);
+                            }
+                            else if (linearityPresenter.ErrorCode == 547)
+                            {
+                                errorString = string.Format("You are trying to remove a Subarray '{0}' which does not exist.", ultraTextEditorSubarrayName.Text.ToString());
+                                MessageBox.Show(errorString, "Remove Subarray", MessageBoxButtons.OK);
+                            }
+                            else
+                                MessageBox.Show("Error occured while removing Subarray", "Remove Subarray", MessageBoxButtons.OK);
+                        }
+
+                        if (userMode == "Manufacturing")
+                        {
+                            foreach (SubarrayDataModel sub in linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas)
+                            {
+                                if (sub.SubarrayID == Convert.ToInt32(ultraTextEditorSubarrayID.Value))
+                                {
+                                    subarrayInMemoryRemoved = linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas.Remove(sub);
+                                    linearityPresenter.SubarrayDataModelList.Remove(sub);
+                                    subarrayInMemoryRemoved = true;
+                                    break;
+                                }
+                            }
+                            if (subarrayInMemoryRemoved)
+                            {
+                                MessageBox.Show("Subarray Removed successfully", "Remove Subarray", MessageBoxButtons.OK);
+
+                            }
+                            else
+                                MessageBox.Show("Subarray not Removed", "Remove Subarray", MessageBoxButtons.OK);
+                        }
+
+                       
+
+                        if (currentSubarrayRecord == 0)
+                        {
+                            currentSubarrayRecord = currentSubarrayRecord + 1;
+                        }
+                        else
+                        {
+                            currentSubarrayRecord = currentSubarrayRecord - 1;
+                        }
+                        UpdateSubarrayView(currentSubarrayRecord);
+
+                        ultraLabelNumberofExposures.Text = "Total # of Exposures:" + linearityPresenter.ExposureDataList.Count().ToString();
+                        ultraLabelNumSubarrays.Text = "Total # of Subarrays:" + linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas.Count.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("There is only one Subarray for this Exposure. You cannot remove this subbarray ", "Remove Subarray", MessageBoxButtons.OK);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Removing Subarray", "Remove Subarray", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private async void UpdateSubarray_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string errorString = string.Empty;
+                string updateSubarray = "Are you sure to update Subarray " + ultraTextEditorSubarrayID.Value + " ?";
+
+                DialogResult result = MessageBox.Show(updateSubarray, "Update Subarray", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+
+                    if (userMode == "Admin" && engineeringLoginStatus)
+                    {
+                        //save data to DB
+                        UpdateSubarrayDataModelFromView();
+                        UpdateSubarrayDataModelFromView();
+                        bool saveDB = await linearityPresenter.SaveSubarrayDataToDB("UPDATE");
+                        if (saveDB)
+                        {
+                            //linearityPresenter.InMemoryModelChanged = false;
+                            MessageBox.Show("Subarray updated Successfully", "Update Subarray", MessageBoxButtons.OK);
+                            await linearityPresenter.GetLinearityData(cidInterface);
+                        }
+                        else if (linearityPresenter.ErrorCode == 547)
+                        {
+                            errorString = string.Format("You are trying to update a Subarray '{0}' which does not exist.", ultraTextEditorSubarrayName.Text.ToString());
+                            MessageBox.Show(errorString, "Update Subarray", MessageBoxButtons.OK);
+                        }
+                        else
+                            MessageBox.Show("Error occured while updating Subarray", "Update Subarray", MessageBoxButtons.OK);
+                    }
+
+                    if (userMode == "Manufacturing")
+                    {
+                        List<ExposureDataModel> exposureList = linearityPresenter.ExposureDataList.Where(exp => exp.ExposureID.Equals(Convert.ToInt32(ultraTextEditorExposureID.Value))).ToList();
+                        if (exposureList[0].SubarrayDatas.Count > 0)
+                        {
+                            foreach (SubarrayDataModel sub in linearityPresenter.ExposureDataList[currentRecord].SubarrayDatas)
+                            {
+                                if (sub.SubarrayID == Convert.ToInt32(ultraTextEditorSubarrayID.Value))
+                                {
+                                    if (UpdateSubarrayModelForUpdateOperation(sub))
+                                    {
+                                        MessageBox.Show("Subarray Updated successfully", "Update Subarray", MessageBoxButtons.OK);
+                                        //linearityPresenter.InMemoryModelChanged = true;
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Subarray not Updated", "Update Subarray", MessageBoxButtons.OK);
+                                        //linearityPresenter.InMemoryModelChanged = false;
+                                    }
+                                    break;
+                                }
+                            }
+                        }
+                    }                  
+                 }
+               
+            }
+            catch (Exception ex)
+            {                
+                MessageBox.Show("Error Updating Subarray", "Update Subarray", MessageBoxButtons.OK);
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }        
+        private void AutoCompleteExposureSubarray()
+        {
+            try
+            {
+                AutoCompleteStringCollection exposureNameList = new AutoCompleteStringCollection();
+                AutoCompleteStringCollection subarrayNameList = new AutoCompleteStringCollection();
+                foreach (ExposureDataModel mvm in linearityPresenter.ExposureDataList)
+                {
+                    exposureNameList.Add(mvm.ExposureName);
+                }
+                ultraTextEditorExposureName.AutoCompleteMode = AutoCompleteMode.Suggest;
+                ultraTextEditorExposureName.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                ultraTextEditorExposureName.AutoCompleteCustomSource = exposureNameList;
+
+                foreach (SubarrayDataModel mvs in linearityPresenter.SubarrayDataModelList)
+                {
+                    subarrayNameList.Add(mvs.SubarrayName);
+                }
+                ultraTextEditorSubarrayName.AutoCompleteMode = AutoCompleteMode.Suggest;
+                ultraTextEditorSubarrayName.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                ultraTextEditorSubarrayName.AutoCompleteCustomSource = subarrayNameList;
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void numericEditNumOfExposures_ValueChanged(object sender, EventArgs e)
+        {
+            if(numericEditNumOfExposures.Value > linearityPresenter.ExposureDataList.Count)
+            {
+                string errstring = string.Format("Value cannot be greater than total exposure count '{0}'.", linearityPresenter.ExposureDataList.Count);
+                MessageBox.Show(errstring, "Invalid exposure count", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information); 
+            }
+        }
+        private void LinearityTestForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            e.Cancel = true;
+        }
+
+        private void ListExposureData_Click(object sender, EventArgs e)
+        {
+            ListExposureData obj = new ListExposureData();
+            obj.ExposureDataModelList = linearityPresenter.ExposureDataList;
+            obj.ultraGridExposureData.Text = "Linearity Exposure Data";
+            obj.Show();
+        }
+        private void ResetProgressBar()
+        {
+            try
+            {
+                if (((KronosTestAppMainForm)this.MdiParent).ultraStatusBar1.Panels["TestProgress"].ProgressBarInfo.Value == 100)
+                {
+                    ((KronosTestAppMainForm)this.MdiParent).ultraStatusBar1.Panels["MarqueeStatus"].Text = string.Empty;
+                    ((KronosTestAppMainForm)this.MdiParent).ultraStatusBar1.Panels["TestProgress"].ProgressBarInfo.Value = 0;
+                    ((KronosTestAppMainForm)this.MdiParent).ultraStatusBar1.Panels["TestProgress"].ProgressBarInfo.ResetFillAppearance();
+                }
+            }
+
+            catch (Exception ex)
+            {
+                log.Error("Exception in" + MethodBase.GetCurrentMethod(), ex);
+            }
+        }
+        private void ultraExplorerBar1_Click(object sender, EventArgs e)
+        {
+            ResetProgressBar();
+        }
+
+        private void linearityTestPanel_Click(object sender, EventArgs e)
+        {
+            ResetProgressBar();
+        }
+        
+    }
+}

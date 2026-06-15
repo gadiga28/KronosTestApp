@@ -1,0 +1,364 @@
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Aero.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Chameleon.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Claymation.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Excel2013 - Dark Gray.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Excel2013 - Light Gray.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Excel2013 - White.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\GrapeTomato.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\IG.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\LucidDream.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Metro.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\ModClay.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Nautilus.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\NoirModerne.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2007Black.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2007Blue.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2007Silver.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2010Black.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2010Blue.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2010Silver.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2013 - Dark Gray.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2013 - Light Gray.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2013 - White.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Outlook2013 - Dark Gray.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Outlook2013 - LightGray.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Outlook2013 - White.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Pear.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\RedPlanet.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\RubberBlack.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Trendy.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\VS2008.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\VS2010.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\VS2013 - Blue.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\VS2013 - Dark.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\VS2013 - Light.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Windows7.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Windows8-DarkGray-Blue.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Windows8-DarkGray-Green.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Windows8-DarkGray-Pink.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Windows8-DarkGray-Yellow.isl
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Resources\TestApp_Software_User_Guide_Specification.doc
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\ChargeTransferLossesResultsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\CrossTalkResultsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\DarkCurrentResultsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\InjectionPerformanceResultsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\LinearityResultsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\NoiseVsNDROsResultsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\PhotoresponseResultsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\RedBlueResultsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\ShutterDriveResultsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\MeanVarianceResultsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\SegmentInjectLimitsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\PhotoresponseLimitsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\NoiseVsNDROsTestLimitsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\ChargeTransferLossesTestLimitsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\CrossTalkLimitsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\DefectsTestLimitsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\InjectionEfficiencyTestLimitsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\InjectionPerformanceTestLimitsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\LinearityTestLimitsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\DarkCurrentLimitsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\NDROReadDriftTestLimitsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\MeanVarianceLimitsData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\InjectionPerformanceData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\NoiseVsNDROData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\DarkCurrentData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\LinearityData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\MeanVarianceData.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Resources\Documentation.chm
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Resources\WarmUpTest.scp
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\App.config
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\KronosCameraTestApp.exe.config
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\KronosCameraTestApp.exe
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\KronosCameraTestApp.pdb
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\BitMiracle.LibTiff.NET.dll
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\CyUSB.dll
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\EntityFramework.dll
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\EntityFramework.SqlServer.dll
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Kronos.Instrument.Camera.Contracts.dll
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Kronos.Instrument.Camera.Interface.dll
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\log4net.dll
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\netchartdir_cp.dll
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Renci.SshNet.dll
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\WeifenLuo.WinFormsUI.Docking.dll
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\WpfUserControl.dll
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Kronos.Instrument.Camera.Contracts.pdb
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Kronos.Instrument.Camera.Interface.pdb
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\EntityFramework.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\EntityFramework.SqlServer.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Microsoft.Office.Tools.Outlook.v4.0.Utilities.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\WpfUserControl.pdb
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.csprojResolveAssemblyReference.cache
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.AutoPretestForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.CreateUserAccount.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.DashBoardAutoForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.DashBoardAutoPretestForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.FinalTestReportForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.ImageDisplayForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.AboutForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.ApplyInfraStylesForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.AutoTestForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.CameraDiagnostics.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.ChargeTransferLossesTestForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.ImageDisplayPanel.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.ListExposureData.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.Logger.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.OverAllTestResultsForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.RedBlueTestForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.TestGraphPreferences.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.TestResultsForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.ChargeTransferLossesLimitsUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.ChargeTransferLossesUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.CrossTalkTestForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.CrossTalkLimitsUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.CrossTalkUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.CRUDExposure.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.DarkCurrentTestForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.DarkCurrentLimitsUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.DarkCurrentUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.DashBoard.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.DownloadUpdatedFirmware.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.CharacterizationTestLimits.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.InjectionPerformanceTestForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.DefectsLimitsUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.FinalTestReportUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.InjectionEfficiencyLimitsUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.InjectionPerformanceLimitsUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.InjectionPerformanceUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.InstrumentDefaults.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.KronosTestAppMainForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.LinearityTestForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.LinearityLimitsUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.LinearityUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.MeanVarianceLimitsUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.OperatorInputForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.SendMailForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.TemperatureGraphForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.TestLimitsForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.NDROReadDriftLimitsUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.NoiseVsNDROSLimitsUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.PhotoresponseLimitsUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.RedBlueUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.SegmentInjectLimitsUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.TemperatureLimitsUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserLoginForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.PhotoresponseTestForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.PhotoresponseUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.NoiseVsNDROUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.NoiseVsNDROTestForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.ShutterDriveTestForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.MeanVarianceTestForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.MeanVarianceUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.Properties.Resources.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.ShutterDriveUserControl.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.TCPSettingsForm.resources
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.csproj.GenerateResource.Cache
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.exe.licenses
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.exe
+C:\Baba\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.pdb
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Aero.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Chameleon.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Claymation.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Excel2013 - Dark Gray.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Excel2013 - Light Gray.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Excel2013 - White.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\GrapeTomato.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\IG.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\LucidDream.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Metro.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\ModClay.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Nautilus.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\NoirModerne.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2007Black.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2007Blue.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2007Silver.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2010Black.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2010Blue.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2010Silver.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2013 - Dark Gray.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2013 - Light Gray.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Office2013 - White.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Outlook2013 - Dark Gray.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Outlook2013 - LightGray.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Outlook2013 - White.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Pear.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\RedPlanet.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\RubberBlack.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Trendy.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\VS2008.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\VS2010.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\VS2013 - Blue.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\VS2013 - Dark.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\VS2013 - Light.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Windows7.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Windows8-DarkGray-Blue.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Windows8-DarkGray-Green.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Windows8-DarkGray-Pink.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\InfraStyles\Windows8-DarkGray-Yellow.isl
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Resources\TestApp_Software_User_Guide_Specification.doc
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\ChargeTransferLossesResultsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\CrossTalkResultsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\DarkCurrentResultsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\InjectionPerformanceResultsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\LinearityResultsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\NoiseVsNDROsResultsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\PhotoresponseResultsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\RedBlueResultsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\ShutterDriveResultsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\MeanVarianceResultsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\SegmentInjectLimitsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\PhotoresponseLimitsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\NoiseVsNDROsTestLimitsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\ChargeTransferLossesTestLimitsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\CrossTalkLimitsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\DefectsTestLimitsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\InjectionEfficiencyTestLimitsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\InjectionPerformanceTestLimitsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\LinearityTestLimitsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\DarkCurrentLimitsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\NDROReadDriftTestLimitsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\MeanVarianceLimitsData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\InjectionPerformanceData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\NoiseVsNDROData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\DarkCurrentData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\LinearityData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\XML\MeanVarianceData.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Resources\Documentation.chm
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Resources\WarmUpTest.scp
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\App.config
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\SCM5821AX1.exe.config
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\SCM5821AX1.exe
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\SCM5821AX1.pdb
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\BitMiracle.LibTiff.NET.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\CyUSB.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\EntityFramework.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\EntityFramework.SqlServer.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Kronos.Instrument.Camera.Contracts.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Kronos.Instrument.Camera.Interface.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\log4net.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\netchartdir_cp.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Renci.SshNet.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Kronos.Instrument.Camera.Contracts.pdb
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Kronos.Instrument.Camera.Contracts.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Kronos.Instrument.Camera.Interface.pdb
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\EntityFramework.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\EntityFramework.SqlServer.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.AutoPretestForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.CreateUserAccount.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.DashBoardAutoForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.DashBoardAutoPretestForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.FinalTestReportForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.ImageDisplayForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.AboutForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.ApplyInfraStylesForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.AutoTestForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.CameraDiagnostics.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.ChargeTransferLossesTestForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.ImageDisplayPanel.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.ListExposureData.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.Logger.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.OverAllTestResultsForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.RedBlueTestForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.TestGraphPreferences.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.TestResultsForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.ChargeTransferLossesLimitsUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.ChargeTransferLossesUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.CrossTalkTestForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.CrossTalkLimitsUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.CrossTalkUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.CRUDExposure.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.DarkCurrentTestForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.DarkCurrentLimitsUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.DarkCurrentUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.DashBoard.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.DownloadUpdatedFirmware.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.CharacterizationTestLimits.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.DefectsLimitsUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.FinalTestReportUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.InjectionEfficiencyLimitsUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.InjectionPerformanceLimitsUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.InstrumentDefaults.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.KronosTestAppMainForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.LinearityTestForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.LinearityLimitsUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.LinearityUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.MeanVarianceLimitsUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.OperatorInputForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.SendMailForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.TemperatureGraphForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.TestLimitsForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.NDROReadDriftLimitsUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.NoiseVsNDROSLimitsUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.PhotoresponseLimitsUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.RedBlueUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.SegmentInjectLimitsUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.TemperatureLimitsUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserLoginForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.PhotoresponseTestForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.PhotoresponseUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.NoiseVsNDROUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.NoiseVsNDROTestForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.ShutterDriveTestForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.MeanVarianceTestForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.MeanVarianceUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.Properties.Resources.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.ShutterDriveUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.TCPSettingsForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.csproj.GenerateResource.Cache
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\SCM5821AX1.exe.licenses
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\SCM5821AX1.exe
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\SCM5821AX1.pdb
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Documents.Core.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Documents.Excel.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Shared.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.Misc.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinDataSource.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinDock.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinEditors.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinExplorerBar.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinGrid.ExcelExport.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinGrid.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinListView.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinLiveTileView.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinOfficeNavBar.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinPrintPreviewDialog.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinRadialMenu.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinSchedule.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinStatusBar.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinTabbedMdi.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinTabControl.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinToolbars.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.v18.1.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\LJUDDotNet.dll
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Documents.Core.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinToolbars.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinTabControl.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinTabbedMdi.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinStatusBar.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinSchedule.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinRadialMenu.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinPrintPreviewDialog.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinOfficeNavBar.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinLiveTileView.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinListView.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinGrid.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinGrid.ExcelExport.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinExplorerBar.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinEditors.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinDock.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.UltraWinDataSource.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Win.Misc.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Shared.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Infragistics4.Documents.Excel.v18.1.xml
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.csprojAssemblyReference.cache
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.csproj.CoreCompileInputs.cache
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.csproj.CopyComplete
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.InjectionEfficiencyTestForm.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\obj\Release\KronosCameraTestApp.View.UserControls.InjectionEfficiencyUserControl.resources
+C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\bin\Release\Kronos.Instrument.Camera.Interface.xml

@@ -1,0 +1,992 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Kronos.Instrument.Camera.Interface</name>
+    </assembly>
+    <members>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface">
+            <summary>
+            This class provides an implementation of the ICameraInterface.
+            It is used as API between the camera communication on the Kronos Research App/Qtegra side and the SCM5821Ax1 side.
+            HINT: API comments
+            </summary>
+            <seealso cref="T:Thermo.Kronos.Instrument.Camera.Contracts.ICIDInterface" />
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface" /> class.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.ReceivedCameraConnectionStatus">
+            <summary>
+            Gets or sets the received camera connection status.
+            </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.IsConnected">
+            <summary>
+            Gets a value indicating whether this instance is connected.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.DevelopmentMode">
+            <summary>
+            Gets or sets a value indicating whether [development mode]. This will change the way images are received.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.ReceivedCameraExposureResult">
+            <summary>
+            Occurs when an image was received.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.ReceivedImage">
+            <summary>
+            Occurs when [received image].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.ReceivedSubarrays">
+            <summary>
+            Occurs when [received image].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.ReceivedIntegratedImage">
+            <summary>
+            Occurs when [received image].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.ReceivedLogData">
+            <summary>
+            Occurs when [received log data].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.ReceivedStatus">
+            <summary>
+            Occurs when [received status].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.ReceivedExposureComplete">
+            <summary>
+            Occurs when [received exposure complete].
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.ReceivedHeartbeat">
+            <summary>
+            Gets or sets the received heartbeat.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.ReceivedState">
+            <summary>
+            Gets or sets the state of the received.
+            </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.AbortExposure">
+            <summary>
+            Aborts the exposure.
+            If a user wants to abort the measurement process, this method should abort all underlying running methods on camera side.
+            HINT: should not crash, but return a meaningful log entry
+            HINT: do not throw an exception
+            </summary>
+            <returns>returns a boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.RebootFirmware">
+            <summary>
+            Reboots the Linux OS/CPU board where the Firmware resides.
+            Host is responsible for disconnecting interface just before reboot.
+            </summary>
+            <returns>returns a boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.SendLogLevel(Thermo.Kronos.Instrument.Camera.Contracts.Enums.LogLevel)">
+            <summary>
+            Sends the log level.
+            </summary>
+            <param name="logLevel">The log level.</param>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.SendLogLevel(System.Int32)">
+            <summary>
+            Sends a command from host to camera setting the target Log Level for the firmware.
+            </summary>
+            <returns>returns a boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.SendSerialNumbers(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSerialNumbers)">
+            <summary>
+            Sends a command from host to camera setting the target Log Level for the firmware.
+            </summary>
+            <returns>returns a boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.SetIpAddress(System.String)">
+            <summary>
+            Sets a new TCP/IP Address for the camera.
+            </summary>
+            <returns>returns a boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.SendVoltageRequest(System.String)">
+            <summary>
+            Sends a command for a voltage request
+            </summary>
+            <returns>returns a boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.Connect(System.String,System.Int32)">
+            <summary>
+            Connects to the specified IP address.
+            </summary>
+            <param name="ipAddress">The IP address.</param>
+            <param name="port">The port.</param>
+            <returns>returns a boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.DisableThermoElectricCooler">
+            <summary>
+            Disables the ThermoElectricCooler.
+            </summary>
+            <returns>returns a boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.Disconnect">
+            <summary>
+            Disconnects this instance.
+            </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.GetCameraInformation">
+            <summary>
+            Gets information about the camera.
+            </summary>
+            <returns>
+            Returns information about the connected camera.
+            </returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.EnableThermoElectricCooler">
+            <summary>
+            Enables the ThermoElectricCooler.
+            </summary>
+            <returns>returns a boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.UpdateFirmware(System.String)">
+            <summary>
+            Update the current connected camera with a new version of firmware (*.exe file)
+            Secure FTP the file to the LINUX based camera
+            </summary>
+            <param name="file">The file path where the new firmware resides.</param>
+            <returns>returns a boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.UpdateFirmware(System.String,System.String,System.String,System.String)">
+            <summary>
+            Overloaded method to Update the current connected camera with a new version of firmware
+            Secure FTP the file to the LINUX based camera
+            </summary>
+            <param name="file">The folder\folder where the new firmware resides.</param>
+            <param name="username">The username to log into the camera.</param>
+            <param name="password">The user password to log into the camera.</param>
+            <param name="hostAddress">The TCP/IP Address to log into the camera.</param>
+            <returns>returns a bool indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.ResetExposureId">
+            <summary>
+            Resets the exposure id for characterization testing.
+            </summary>   
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.PerformExposure(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraExposureSettings)">
+            <summary>
+            Performs the exposure.
+            </summary>
+            <param name="cameraExposureSetting">The exposure settings.</param>
+            <returns>returns a boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.ProcessCameraConfigurationData(Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ConfigurationStructure)">
+            <summary>
+             Deprecated method
+            </summary>
+            <param name="configurationData"></param>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.SetThermoElectricCoolerTemperature(System.Single)">
+            <summary>
+            Sets the ThermoElectricCooler temperature.
+            </summary>
+            <param name="temperatureCelsius">The temperature in degree Celsius.</param>
+            <returns>returns a boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.ExposureData">
+            <summary>
+            Class to control the layout of exposure objects when exported to unmanaged code.
+            Structures are sized to match the SCM5821AX1 Software API document.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.ExposureData.ExposureDataContainer">
+            <summary>
+            Structure that contains all of the Exposure data fields defined by the host GUI
+            </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.ExposureData.ExposureDataContainer.GetNumBytes(System.Int32)">
+            <summary>
+            Method to return size of the Exposure structure in bytes
+            </summary>
+            <param name="numberOfSubarrays"></param>
+            <returns>Number of bytes in the exposure structure including size of subarray list</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.ExposureData.ExposureDataContainer.WriteExposure(System.IO.BinaryWriter)">
+            <summary> Serialize this Exposure structure using the provided BinaryWriter. </summary>
+            <remarks> This code is synchronized with camera firmware. </remarks>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.ExposureData.BufferType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.ExposureData.BufferType.buffer">
+            <summary>
+            The buffer
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1">
+            <summary> Provide communications and functionality between the Host software and the SCM5821AX1 camera firmware. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.MAXIMUM_TIMEOUT_MS">
+            <summary> Length of time command transactions wait for reply. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.cameraInfo">
+            <summary>
+            Information about the camera such as serial number for most boards and software version.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.PacketType">
+            <summary> These values decode packet formats. </summary>
+            <remarks> This structure is synchronized with camera firmware.  </remarks>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.PacketType.Command">
+            <summary>value used to mark packet send to camera requesting execution of a command. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.PacketType.Response">
+            <summary> value used to identify response to execution of command by camera. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.PacketType.Status">
+            <summary> value used to identify packet containing camera status information. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.PacketType.ImageStart">
+            <summary>value used to identify packet containing ROI header information. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.PacketType.ImageData">
+            <summary> value used to identify packet containing ROI video data. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.PacketType.ImagerVoltages">
+            <summary> value used to identify packet containing Imager Voltages data. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.PacketType.Clog">
+            <summary>
+            Camera log from the FW
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.PacketType.ExposureComplete">
+            <summary> used to identify when the exposure has completed from the FW. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.PacketType.CameraInfo">
+            <summary> used to identify when the Camera meta-data is received from the FW. </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CommandCode">
+            <summary> This structure is used to enumerate command and status information conveyed in Command and Response Packets. </summary>
+            <remarks> This enumeration is synchronized with camera firmware. </remarks>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ConnectionState">
+            <summary> Used to coordinate transitions in the connection state between threads. </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.Command">
+            <summary> This structure is used to transmit commands to the camera and receive a response in turn. </summary>
+            <remarks> This structure is synchronized with camera firmware. </remarks>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.Command.commandCode">
+            <summary>
+            Indicates the command being sent or the response being received.  This field also includes status values for
+            the response packed into select bits.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.Command.payload">
+            <summary> Optional field that holds command parameters or response data serialized into a byte array. </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CID821Image">
+            <summary> This structure encapsulates raw image data from the CID821 camera. </summary>
+            <remarks>
+            This structure is synchronized with camera firmware.  This structure can be quite large if
+            large images are acquired using high NDRO settings as none of the data is compressed or processed.
+            The  current approach is to allow the host software the flexibility of logging _all_ raw video data
+            and allowing the host to process (and/or reprocess) data if needed.
+            The host can also monitor the acquisition in realtime using this data.
+            </remarks>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CID821Image.initialTimestamp">
+            <summary> Timestamp of this data using the units specified in microseconds. </summary>
+            <remarks> This timestamp is the start of integration for this image. Most recent of OpenShutter, GI or SI.
+            </remarks>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CID821Image.timestampRead">
+            <summary>
+            Earliest of image read or CloseShutter. Could be a Non-Destructive or Destructive Read.
+            </summary>
+            <remarks>IntegrationTime = timestampRead – initialTimestamp; </remarks>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CID821Image.subarrayTag">
+            <summary> This is the tag field provided as a unique subarray descriptor. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CID821Image.imageType">
+            <summary> This field indicates the circumstances underwhich this video data was taken. </summary>
+            <remarks>
+            This field can help the host process the video data properly and may be expanded to provide additional
+            context on how the image was taken during readout.
+            </remarks>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CID821Image.exposureTag">
+            <summary> This is the tag field provided as a unique exposure descriptor id. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CID821Image.x0">
+            <summary>The upper left pixel coordinate(Column) of the Subarray. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CID821Image.y0">
+            <summary>The upper left pixel coordinate(Row) of the Subarray. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CID821Image.dx">
+            <summary> The number of pixels, Columns, offset from x0, to create a Subarray. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CID821Image.dy">
+            <summary> The number of pixels, Rows, offset from y0, to create a Subarray. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CID821Image.ndros">
+            <summary> Number of Non destructive reads used to acquire this data. </summary>
+            <remarks> This is used to interpret the data field. </remarks>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CID821Image.saturation">
+            <summary> Saturation bit for subarray. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CID821Image.subinjects">
+            <summary> Number of Subinjects to subarray. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CID821Image.data">
+            <summary>
+            Pixel data in frame order. If multiple NDROS are used, the data is in frame or Subarray
+            interleave order.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.StatusEventHandler">
+            <summary> Callback signature used whenever the host receives a status packet from the camera. </summary>
+            <param name="status">Structure to indicate Status and TEC Cooler state of the SCM5821AX1 camera.</param>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CameraInfoEventHandler">
+            <summary> Callback signature used whenever the host receives a Camera Info packet from the firmware. </summary>
+            <param name="cameraInfo">Structure represents meta-data of the SCM5821AX1 camera.</param>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.LogDataEventHandler">
+            <summary> Callback signature used whenever the host receives a log data packet from the camera. </summary>
+            <param name="logData">String to indicate error events of the SCM5821AX1 camera firmware.</param>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ImageEventHandler">
+            <summary> Callback signature used whenever the host receives a completed CID821Image from the camera. </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.VoltageEventHandler">
+            <summary> Callback signature used whenever the host receives a voltage status packet from the camera. </summary>
+            <param name="voltages">Structure to indicate all voltages from the SCM5821AX1 camera.</param>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ExposureCompleteEventHandler">
+            <summary> Callback signature used whenever the host receives an Exposure Complete packet from the camera. </summary>
+            <param name="exposureId">Defines the completed exposure from the SCM5821AX1 camera.</param>
+        </member>
+        <member name="E:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ReceivedStatus">
+            <summary> Called each time the host receives a status packet from the camera. </summary>
+        </member>
+        <member name="E:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ReceivedCameraInfo">
+            <summary> Called each time the host receives a Camera Info packet from the firmware/camera. </summary>
+        </member>
+        <member name="E:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ReceivedLogData">
+            <summary> Called each time the host receives a log data packet from the camera. </summary>
+        </member>
+        <member name="E:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ReceivedImage">
+            <summary> Called each time the host receives a completed image from the camera. </summary>
+        </member>
+        <member name="E:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ReceivedImageStream">
+            <summary> Called each time the host receives a completed image from the camera. </summary>
+        </member>
+        <member name="E:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ReceivedIntegratedImage">
+            <summary> Called each time the host receives an integrated image from the camera. </summary>
+        </member>
+        <member name="E:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ReceivedVoltages">
+            <summary> Called each time the host receives voltages from the camera. </summary>
+        </member>
+        <member name="E:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ReceivedExposureComplete">
+            <summary> Called each time the host receives an Exposure Complete packet from the camera. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.lock_object">
+            <summary> Used to serialize camera operations. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.connection_state">
+            <summary> Used to coordinate connection transitions and state. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.camera_writer">
+            <summary> This is the method used to pass commands to the camera. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.camera_thread">
+            <summary> This thread manages the receive traffic from the camera. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.response_queue">
+            <summary> Pass response to a command from one thread to the next. </summary>
+            <remarks> This may be overkill as currently only one response is expected at a time. </remarks>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.image_queue">
+            <summary>
+            Store image data in a thread-safe queue so that the application can process it
+            asynchronously without blocking the event notifier.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.image_in_progress">
+            <summary>
+            Video data arrives from the camera in chunks.  This member is used to coallesce the chunks into a final image.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.image_in_progress_offset">
+            <summary>
+            Video data arrives from the camera in chunks.  This member is used to coallesce the chunks into a final image.
+            </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.#ctor">
+            <summary> Default constructor. </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.SendCommand(Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CommandCode,System.Byte[],System.Int32)">
+            <summary> Used internally to transmit commands to camera as various actions are invoked by the host. </summary>
+            <remarks>
+            Most of the API will utilize this function as it takes the associated lock.  However some functions
+            require taking the lock over a wider scope and will call SendCommandUnlocked() instead.
+            </remarks>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.SendCommandUnlocked(Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CommandCode,System.Byte[],System.Int32)">
+            <summary> Used internally to transmit commands to the camera and receive the associated response. </summary>
+            <remarks> This is the raw function which must only be called with the lock taken. </remarks>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.Abort">
+            <summary> This function implements the Abort data command to the Firmware/FPGA. </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.AbortMessages">
+            <summary> This function implements the Abort all message data command to the Firmware/FPGA. </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.SendHeartbeat">
+            <summary> This function implements the heartbeat command to the Firmware/FPGA. </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.SetNewIpAddress(System.String)">
+            <summary> This function implements the Set New IP Address command to the Firmware. </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.GetCameraInformation">
+            <summary> This function sends a request to get camera information from the Firmware. </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ReceivePacket(System.Net.Sockets.Socket)">
+            <summary> This function implements the deserialization and dispatch operations of the receive thread. </summary>
+            <param name="socket">The Socket class provides a rich set of methods and properties for network communications</param> 
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ReadByte(System.Net.Sockets.Socket)">
+            <summary> Helper function to derserialize data from network receive thread. </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ReadUInt16(System.Net.Sockets.Socket)">
+            <summary> Helper function to derserialize data from network receive thread. </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ReadInt32(System.Net.Sockets.Socket)">
+            <summary> Helper function to derserialize data from network receive thread. </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ReadUInt32(System.Net.Sockets.Socket)">
+            <summary> Helper function to derserialize data from network receive thread. </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ReadUInt64(System.Net.Sockets.Socket)">
+            <summary> Helper function to derserialize data from network receive thread. </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ReadSingle(System.Net.Sockets.Socket)">
+            <summary> Helper function to derserialize data from network receive thread. </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ReadString(System.Net.Sockets.Socket,System.UInt32)">
+            <summary> Helper function to derserialize data from network receive thread. </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ReceiveThreadWorker(System.Net.Sockets.Socket,System.Threading.ManualResetEvent)">
+            <summary> Core receive thread. </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.Connect(System.String,System.String)">
+            <summary> Begin a TCP/IP session with the camera and its firmware at the specified address and port. </summary>
+            <param name="ipaddress">Dot notated string for the IP Address</param>
+            <param name="port">Generic port number greater than 4000</param>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.Disconnect">
+            <summary> Terminates a session with the camera. </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ValidExposure(Thermo.Kronos.Instrument.Camera.Interface.ExposureData.ExposureDataContainer)">
+            <summary> Check the validity of the exposure acquisition parameters to the camera. </summary>
+            <param name="exposureParameters">Container holding exposure parameters populated by the host operator</param>
+            <returns>TRUE if all parameters are excepted, FALSE otherwise</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CheckExposureParameter(Thermo.Kronos.Instrument.Camera.Interface.ExposureData.ExposureDataContainer)">
+            <summary> Check the validity of the exposure acquisition parameters to the camera. </summary>
+            <param name="exposureParameters">Container holding exposure parameters populated by the host operator</param>
+            <returns>String containing why parameter is invalid</returns>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.SendExposureSettings(Thermo.Kronos.Instrument.Camera.Interface.ExposureData.ExposureDataContainer)">
+            <summary> Transmit the exposure acquisition parameters to the camera. </summary>
+            <param name="exposureParameters">Container holding exposure parameters populated by the host operator</param>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.SendGlobalInject(System.UInt32)">
+            <summary>
+            Sends a command from host to camera defining the length in microseconds of a global inject/clear
+            </summary>
+            <param name="duration"></param>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.SendCameraConfiguration(Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ConfigurationStructure)">
+            <summary> Transmit the acquisition parameters to the camera. </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.SendCameraConfiguration">
+            <summary>
+            Sends a command from host to camera defining the configuration timing table and other registers.
+            </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.SendTECEnable(System.UInt32)">
+            <summary>
+            Sends a command from host to camera Enabling or Disabling the TE Cooler.
+            </summary>
+            <param name="enableTEC"></param>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.SendTargetTemp(System.Single)">
+            <summary>
+            Sends a command from host to camera setting the target temperature in degrees C for the TE Cooler
+            </summary>
+            <param name="tecTargetTemp">Target Temperature in degrees C</param>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.RunFixed">
+            <summary>
+            Executes the Fixed Readout acquisition using the previously
+            transmitted exposure parameters.
+            </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.SendDelay(System.UInt32)">
+            <summary>
+            Command message from host to camera descibing the length of time the camera does nothing, delays. 
+            </summary>
+            <param name="duration">Delay time in microseconds</param>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.SendVoltagesRequest(System.String)">
+            <summary>
+            Sends a command from host to camera requesting the voltage settings.
+            </summary>
+            <param name="filename"></param>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.SendLogLevel(System.Int32)">
+            <summary>
+            Sends a command from host to camera setting the target Log Level for the Firwmare
+            </summary>
+            <param name="logLevel">Log Level (Fatal=0, Error, Warning, Debug, Info, Camera)</param>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.SendSerialNumbers(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraSerialNumbers)">
+            <summary>
+            Sends a command from host to camera setting all of the cameras boards serial numbers.
+            </summary>
+            <param name="serialNumbers">String</param>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.SendStart">
+            <summary>
+            Sends a command from host to camera Starting all other commands that are queued.
+            </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.SendReboot">
+            <summary>
+            Sends a command from host to camera rebooting the CPU board the Firwmare resides.
+            Can be used after a Download Firmware command from the host
+            </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.SetConnectionState(Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ConnectionState)">
+            <summary>
+            Helper function to set connection state should a notifier be needed.
+            </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.IsConnected">
+            <summary> Accessor to determine connection/session state of camera. </summary>
+        </member>
+        <member name="P:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.IsDisconnected">
+            <summary> Accessor to determine connection/session state of camera. </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.TakeImage">
+            <summary>
+            Retrieve an image from the image queue. Don't retrieve more images than specified by callbacks
+            otherwise this will block.
+            </summary>
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.TryTakeImage(Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.CID821Image@)">
+            <summary>
+            Retrieve an image from the image queue.
+            </summary>
+            <param name="image">Returned image data from camera to host</param>
+            
+        </member>
+        <member name="M:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.ClearImageQueue">
+            <summary>
+            Clear Image Queue.
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes">
+            <summary> These Data Types provide the data needed for communication to and from the SCM5821AX1 camera. </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.StatusStructure">
+            <summary> Status and TEC Cooler state from the SCM5821AX1 camera. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.StatusStructure.sequenceNumber">
+            
+             <summary>
+             Status packet sequence number since Connect
+             </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.StatusStructure.diodeTemp">
+            <summary>
+            Image Sensor temperature (C) via on-chip diode
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.StatusStructure.tecTherm1v">
+            <summary>
+            Image Sensor temperature (C) via nearby thermistor
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.StatusStructure.tecTherm2v">
+            <summary>
+            Legacy thermistor for analog TEC control. Future Humidity Sensor.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.StatusStructure.isiTemp">
+            <summary>
+            Image Sensor Interface board temparatue (C)
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.StatusStructure.cspTemp">
+            <summary>
+            Camera Signal Processor board temparatue (C)
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.StatusStructure.pwrLocalTemp0">
+            <summary>
+            Temparatue (C) near Thermo Electric Control Circuit
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.StatusStructure.pwrLocalTemp1">
+            <summary>
+            Temparature (C) near regulator for digital electronics
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.StatusStructure.cpuTemp">
+            <summary>
+            i.MX6 Rex ARM CPU temperature
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.StatusStructure.tecVdiv2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.StatusStructure.tecEn">
+            <summary>
+            Flag that enables and disables the TEC cooler
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.StatusStructure.tecTTemp">
+            <summary>
+            Sets the target temperature of the TEC cooler
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ImagerVoltagesStructure">
+            <summary> Voltages and Bias settings from the SCM5821AX1 camera. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ImagerVoltagesStructure.cidSeltg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ImagerVoltagesStructure.cidUnseltg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ImagerVoltagesStructure.cidUnselStore">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ImagerVoltagesStructure.cidSelStore">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ImagerVoltagesStructure.cidSelReset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ImagerVoltagesStructure.cidUnselReset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ImagerVoltagesStructure.cidSelSense">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ImagerVoltagesStructure.cidUnselSense">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ImagerVoltagesStructure.cidSelInject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ImagerVoltagesStructure.cidUnselInject">
+            <summary>
+            
+            </summary>          
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ImagerVoltagesStructure.cidImpxlBias">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ImagerVoltagesStructure.cidImcdsBias">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ImagerVoltagesStructure.cidIncds">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ImagerVoltagesStructure.cidImrefcds">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ImagerVoltagesStructure.cidOutBias">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ImagerVoltagesStructure.cidVideoBias">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ConfigurationStructure">
+            <summary>User configured Voltages and Bias settings sent to the SCM5821AX1 camera. </summary>
+            <remarks>Structure may not be available in final API</remarks>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.RegionStructure">
+            <summary>Structure to define a region(rectangle) on the imager using the (Xo,Yo) starting point. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.RegionStructure.Xo">
+            <summary>
+            X pixel index of image sensor array
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.RegionStructure.Yo">
+            <summary>
+            Y pixel index of image sensor array
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.RegionStructure.dX">
+            <summary>
+            Width of image from Xo in pixels
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.RegionStructure.dY">
+            <summary>
+            Height of image from Yo in pixels
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure">
+            <summary>User configured Subarray(Region Of Interest) settings sent to the SCM5821AX1 camera. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.subarrayName">
+            <summary>
+            Unique string name for referencing subarray
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.subarrayId">
+            <summary>
+            Index into subarray list
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.thresholdValuePercent">
+            <summary>
+            Pixel value threshold to trigger a sub-inject, if enabled
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.readInterval">
+            <summary>
+            Interval between reads in microseconds
+            </summary>   
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.timeResolvedInterval">
+            <summary>
+            Interval between time resolved reads in microseconds
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.subInjectInterval">
+            <summary>
+            Interval between subarray clears
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.postreadNDROs">
+            <summary>
+            Power of 2 number of Non-Destructive Reads after shutter is closed
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.subarrayFPN">
+            <summary>
+            Fixed Pattern Noise Correction mode for each subarray
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.subarrayRegion">
+            <summary>
+            Region(rectangle) on the imager using the (Xo,Yo) starting point for a subarray
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.thresholdRegion">
+            <summary>
+            Region(ROI) on the imager using the (Xo,Yo) starting point for a threshold
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.postreadEnabled">
+            <summary>
+            Flag to enable the post exposure read
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.subInjEnabled">
+            <summary>
+            Flag to enable sub-inject fields, the interval between subarray clears
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.readEnabled">
+            <summary>
+            Flag to enable subarray reads
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.thresholdEnabled">
+            <summary>
+            Flag to enable threshold (ROI), allows thresholdValue to influence decision to clear subarray region
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.timeResolvedEnabled">
+            <summary>
+            Flag to enable time resolved processing
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.adaptiveEnabled">
+            <summary>
+            Flag that allows sub-inject interval to adapt to pixel value
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.spare1">
+            <summary>
+            padding for 32 bit alignment
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.SubarrayStructure.spare2">
+            <summary>
+            padding for 32 bit alignment
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure">
+            <summary> Exposure settings sent to the SCM5821AX1 camera. </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.exposureName">
+            <summary>
+            Unique identifier string to define an exposure
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.exposureId">
+            <summary>
+            Exposure Identification Number
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.numberOfNDROs">
+            <summary>
+            Power-of-2 number of non-destructive reads after shutter closes
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.exposureInterval">
+            <summary>
+            Lenght of time the shutter is open, if shutter is enabled.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.exposureRegion">
+            <summary>
+            Typically full frame, but can be reduced to save time.
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.exposureFPN">
+            <summary>
+            Fixed Pattern Noise Correction mode for the entire exposure
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.autoBiasEnabled">
+            <summary>
+            Eanble the Auto Bias correction for the entire exposure
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.spareByte1">
+            <summary>
+            Byte used for 32 bit word alignment
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.spareByte2">
+            <summary>
+            Byte used for 32 bit word alignment
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.ledOffTime">
+            <summary>
+            LED sequencer off time in microseconds
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.ledOnTime">
+            <summary>
+            LED sequencer on time in microseconds
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.ledFlashes">
+            <summary>
+            The number of LED flashes between off and on time
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.led1Enabled">
+            <summary>
+            Enable/Disable LED 1
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.led2Enabled">
+            <summary>
+            Enable/Disable LED 2
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.led3Enabled">
+            <summary>
+            Enable/Disable LED 3
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.shutterEnabled">
+            <summary>
+            Enable/Disable the shutters functionality
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.fullFrameEnabled">
+            <summary>
+            Read exposureRegion at end of an exposure if enabled
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.darkFrameEnabled">
+            <summary>
+            Capture a dark image for Fixed Pattern Noise correction if enabled
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.useDefaultConfiguration">
+            <summary>
+            Use the cameras default configuration instead of relying on the operator defined fields
+            </summary>
+        </member>
+        <member name="F:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.ExposureStructure.numberOfSubarrays">
+            <summary>
+            The number of subarrays defined in a list for a given exposure
+            </summary>
+        </member>
+        <member name="T:Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1DataTypes.VideoStruct">
+            <summary>Video(Signal) data structure used internally by host software mapped from the SCM5821AX1.CID821Image . </summary>
+        </member>
+    </members>
+</doc>

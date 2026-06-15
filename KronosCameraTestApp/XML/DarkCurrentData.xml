@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DarkCurrentExposures>
+  <Exposure>
+    <ExposureID>1</ExposureID>
+    <ExposureName>Exp1</ExposureName>
+    <ExposureInterval>27000</ExposureInterval>
+    <ExposureNDROS>1</ExposureNDROS>
+    <ExposureRegionXO>0</ExposureRegionXO>
+    <ExposureRegionYO>0</ExposureRegionYO>
+    <ExposureRegionDX>0</ExposureRegionDX>
+    <ExposureRegionDY>0</ExposureRegionDY>
+    <ExpsoureFPN>0</ExpsoureFPN>
+    <FullFrameEnabled>0</FullFrameEnabled>
+    <DarkFrameEnabled>0</DarkFrameEnabled>
+    <UserDefaultConfiguration>0</UserDefaultConfiguration>
+    <LED1Enabled>1</LED1Enabled>
+    <LED2Enabled>0</LED2Enabled>
+    <LED3Enabled>1</LED3Enabled>
+    <LEDOnTime>10000</LEDOnTime>
+    <LEDOffTime>100</LEDOffTime>
+    <LEDFlashes>10</LEDFlashes>
+    <ShutterEnabled>0</ShutterEnabled>
+    <AutoBiasFPNEnabled>0</AutoBiasFPNEnabled>
+    <NumberOfSubarrays>1</NumberOfSubarrays>
+    <GlobalInject>5</GlobalInject>
+    <Delay>1</Delay>
+    <SubarrayList ID="1">
+      <Subarray>
+        <SubarrayID>1</SubarrayID>
+        <SubarrayName>Subarray1</SubarrayName>
+        <SubarrayRegionXO>1000</SubarrayRegionXO>
+        <SubarrayRegionYO>1000</SubarrayRegionYO>
+        <SubarrayRegionDX>100</SubarrayRegionDX>
+        <SubarrayRegionDY>100</SubarrayRegionDY>
+        <SubarrayFPN>0</SubarrayFPN>
+        <SubarrayReadEnabled>1</SubarrayReadEnabled>
+        <SubarrayReadInterval>1000</SubarrayReadInterval>
+        <SubarraySubinjectEnabled>0</SubarraySubinjectEnabled>
+        <SubarraySubinjectInterval>0</SubarraySubinjectInterval>
+        <SubarrayPostReadEnabled>0</SubarrayPostReadEnabled>
+        <SubarrayPostReadNDROS>1</SubarrayPostReadNDROS>
+        <SubarrayThresholdEnabled>0</SubarrayThresholdEnabled>
+        <SubarrayThresholdPercent>75</SubarrayThresholdPercent>
+        <SubarrayThresholdRegionXO>0</SubarrayThresholdRegionXO>
+        <SubarrayThresholdRegionYO>0</SubarrayThresholdRegionYO>
+        <SubarrayThresholdRegionDX>0</SubarrayThresholdRegionDX>
+        <SubarrayThresholdRegionDY>0</SubarrayThresholdRegionDY>
+        <TimeResolvedEnabled>0</TimeResolvedEnabled>
+        <AdaptiveEnabled>0</AdaptiveEnabled>
+        <ExposureName>Exp1</ExposureName>
+      </Subarray>
+    </SubarrayList>
+  </Exposure>
+</DarkCurrentExposures>

@@ -1,0 +1,3 @@
+2018-12-11 14:14:18,153 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.DivideByZeroException: Attempted to divide by zero.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBar1() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 706
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBar1()

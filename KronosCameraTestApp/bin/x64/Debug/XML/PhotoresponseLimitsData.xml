@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PhotoresponseLimitsData>
+  <Limit>
+    <LimitsID>1</LimitsID>
+    <LinearityLevelMax>2.000000000000000e+000</LinearityLevelMax>
+    <FullWellLevelMin>430000</FullWellLevelMin>
+    <ROI_Xs>270</ROI_Xs>
+    <ROI_Ys>270</ROI_Ys>
+    <ROI_dXs>10</ROI_dXs>
+    <ROI_dYs>10</ROI_dYs>
+    <ROI_dXbs>1</ROI_dXbs>
+    <ROI_dYbs>1</ROI_dYbs>
+    <ROI_PixRate>0</ROI_PixRate>
+    <ROI_NDRO>2</ROI_NDRO>
+    <Exposures>400</Exposures>
+    <Flashes>1</Flashes>
+    <Time>16</Time>
+    <ExposureControl>2</ExposureControl>
+    <DefinedDate>2018-01-26T16:24:46.850</DefinedDate>
+    <UserModified>Baba</UserModified>
+  </Limit>
+</PhotoresponseLimitsData>

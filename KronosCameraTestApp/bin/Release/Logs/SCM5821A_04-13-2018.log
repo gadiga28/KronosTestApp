@@ -1,0 +1,204 @@
+2018-04-13 14:25:46,321 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.SaveImage(String ImageType) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 2813
+ AMER\babagoud.gadiga - Exception inVoid SaveImage(System.String)
+2018-04-13 14:26:14,274 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'KronosTestAppMainForm'.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 627
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:14,462 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:14,537 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:14,604 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:14,690 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:14,747 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:14,804 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:14,861 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:14,917 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:15,102 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:15,190 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:15,252 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:15,306 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:15,360 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:15,416 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:15,473 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:15,532 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:15,700 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:15,791 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:15,850 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:15,906 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:15,962 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:16,033 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:16,093 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:16,151 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:16,212 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:16,651 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:17,632 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:18,662 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:19,682 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:20,674 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:21,688 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:26:22,712 [14] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.populateStatusGUI(CameraStatus cameraStatus) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 626
+ AMER\babagoud.gadiga - Exception inVoid populateStatusGUI(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraStatus)
+2018-04-13 14:59:03,749 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-04-13 15:09:55,813 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host

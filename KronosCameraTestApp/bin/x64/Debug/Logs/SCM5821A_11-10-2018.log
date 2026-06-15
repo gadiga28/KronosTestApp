@@ -1,0 +1,151 @@
+2018-11-10 16:16:14,357 [1] ERROR KronosCameraTestApp.CommandProcessor System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.CommandProcessor.warmupTest() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\CommandProcessor.cs:line 88
+   at KronosCameraTestApp.CommandProcessor.<>c__DisplayClass28_0.<SendExposure>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\CommandProcessor.cs:line 257
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.CommandProcessor.<SendExposure>d__28.MoveNext() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\CommandProcessor.cs:line 255
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-11-10 16:16:18,364 [1] ERROR KronosCameraTestApp.View.NoiseVsNDROTestForm System.ArgumentNullException: Value cannot be null.
+Parameter name: yData
+   at NationalInstruments.UI.ScatterPlot.PlotXYAppend(Double[] xData, Double[] yData)
+   at KronosCameraTestApp.View.NoiseVsNDROTestForm.<PlotNoiseNDROData>d__37.MoveNext() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\NoiseVsNDROTestForm.cs:line 359
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-11-10 16:19:54,284 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-11-10 16:32:43,764 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.DivideByZeroException: Attempted to divide by zero.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBar1() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 714
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBar1()
+2018-11-10 16:35:44,119 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.DivideByZeroException: Attempted to divide by zero.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBar1() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 714
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBar1()
+2018-11-10 16:44:53,033 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.DivideByZeroException: Attempted to divide by zero.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBar1() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 709
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBar1()
+2018-11-10 16:45:52,705 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.DivideByZeroException: Attempted to divide by zero.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBar() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 672
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBar()
+2018-11-10 16:47:17,450 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.DivideByZeroException: Attempted to divide by zero.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBar() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 682
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBar()
+2018-11-10 16:47:43,136 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.DivideByZeroException: Attempted to divide by zero.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBar() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 677
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBar()
+2018-11-10 16:48:15,919 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.DivideByZeroException: Attempted to divide by zero.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBar() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 668
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBar()
+2018-11-10 16:51:23,614 [9] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.TrapTest() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 915
+ AMER\babagoud.gadiga - Exception inVoid TrapTest()
+2018-11-10 16:51:39,976 [5] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 16:51:40,035 [5] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 16:51:40,093 [5] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 16:51:40,154 [5] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 16:51:40,236 [5] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 16:51:40,295 [5] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 16:51:40,364 [5] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 16:51:40,430 [5] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 16:52:24,367 [1] ERROR KronosCameraTestApp.View.UserControls.ShutterDriveUserControl LabJack not found                                                                                                                                                                                                                                              
+ AMER\babagoud.gadiga - LabJack open errorVoid MoveNext()
+2018-11-10 16:57:30,486 [5] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.TrapTest() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 915
+ AMER\babagoud.gadiga - Exception inVoid TrapTest()
+2018-11-10 16:58:28,135 [12] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 16:58:29,572 [12] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 16:58:30,646 [12] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 16:58:31,301 [12] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 16:58:31,981 [12] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 16:58:33,139 [12] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 16:58:34,741 [12] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 16:58:36,283 [12] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 17:00:11,417 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.DivideByZeroException: Attempted to divide by zero.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateStatusBar() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 672
+ AMER\babagoud.gadiga - Exception inVoid UpdateStatusBar()
+2018-11-10 17:04:30,369 [5] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.TrapTest() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 915
+ AMER\babagoud.gadiga - Exception inVoid TrapTest()
+2018-11-10 17:04:50,321 [11] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 17:04:52,027 [11] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 17:04:52,814 [11] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 17:04:53,316 [11] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 17:04:53,880 [11] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 17:04:56,281 [11] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 17:04:57,269 [11] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 17:04:57,827 [11] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.<>c__DisplayClass142_0.<CalculateNoiseNDRO>b__0() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 615
+ AMER\babagoud.gadiga - Exception inVoid <CalculateNoiseNDRO>b__0()
+2018-11-10 17:05:42,281 [1] ERROR KronosCameraTestApp.View.UserControls.ShutterDriveUserControl LabJack not found                                                                                                                                                                                                                                              
+ AMER\babagoud.gadiga - LabJack open errorVoid MoveNext()
+2018-11-10 17:10:28,977 [1] ERROR KronosCameraTestApp.View.UserControls.InjectionEfficiencyUserControl System.ArgumentNullException: Value cannot be null.
+Parameter name: yData
+   at NationalInstruments.UI.WaveformPlot.PlotYAppend(Double[] yData)
+   at KronosCameraTestApp.View.UserControls.InjectionEfficiencyUserControl.<PlotInjectionPerformanceData>d__17.MoveNext() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\InjectionEfficiencyUserControl.cs:line 115
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-11-10 17:18:58,900 [5] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.TrapTest() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 915
+ AMER\babagoud.gadiga - Exception inVoid TrapTest()
+2018-11-10 17:25:23,873 [10] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.TrapTest() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 915
+ AMER\babagoud.gadiga - Exception inVoid TrapTest()
+2018-11-10 17:37:13,335 [9] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.TrapTest() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 919
+ AMER\babagoud.gadiga - Exception inVoid TrapTest()
+2018-11-10 17:42:36,518 [10] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.TrapTest() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 919
+ AMER\babagoud.gadiga - Exception inVoid TrapTest()
+2018-11-10 17:47:46,455 [7] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.TrapTest() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 919
+ AMER\babagoud.gadiga - Exception inVoid TrapTest()
+2018-11-10 17:52:30,797 [5] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.TrapTest() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 920
+ AMER\babagoud.gadiga - Exception inVoid TrapTest()
+2018-11-10 17:59:27,541 [7] ERROR KronosCameraTestApp.Presenter.DarkCurrentPresenter System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at KronosCameraTestApp.Presenter.DarkCurrentPresenter.TrapTest() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\Presenter\DarkCurrentPresenter.cs:line 918
+ AMER\babagoud.gadiga - Exception inVoid TrapTest()

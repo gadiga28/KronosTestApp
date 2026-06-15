@@ -1,0 +1,18 @@
+2018-10-15 12:09:58,523 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateCameraDetailsOnScreen(CameraInformation cameraInformation) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 1029
+ AMER\babagoud.gadiga - Exception inVoid UpdateCameraDetailsOnScreen(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation)
+2018-10-15 12:11:17,029 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.KronosTestAppMainForm.UpdateCameraDetailsOnScreen(CameraInformation cameraInformation) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 1029
+ AMER\babagoud.gadiga - Exception inVoid UpdateCameraDetailsOnScreen(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation)
+2018-10-15 16:56:18,526 [1] ERROR KronosCameraTestApp.View.OperatorInputForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.OperatorInputForm.updateSerialNumbers(CameraInformation cameraInfo) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\OperatorInputForm.cs:line 252
+ AMER\babagoud.gadiga - Exception inVoid updateSerialNumbers(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation)
+2018-10-15 17:01:40,255 [1] ERROR KronosCameraTestApp.View.OperatorInputForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.OperatorInputForm.updateSerialNumbers(CameraInformation cameraInfo) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\OperatorInputForm.cs:line 254
+ AMER\babagoud.gadiga - Exception inVoid updateSerialNumbers(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation)
+2018-10-15 17:02:43,035 [1] ERROR KronosCameraTestApp.View.OperatorInputForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.OperatorInputForm.updateSerialNumbers(CameraInformation cameraInfo) in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\OperatorInputForm.cs:line 254
+ AMER\babagoud.gadiga - Exception inVoid updateSerialNumbers(Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation)
+2018-10-15 17:08:27,972 [1] ERROR KronosCameraTestApp.View.OperatorInputForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.OperatorInputForm.updateSerialNumbers() in C:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\OperatorInputForm.cs:line 252
+ AMER\babagoud.gadiga - Exception inVoid updateSerialNumbers()

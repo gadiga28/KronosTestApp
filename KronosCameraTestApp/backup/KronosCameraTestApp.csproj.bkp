@@ -1,0 +1,1227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C01019D-90DC-47E9-993C-B24BCCE8DF00}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KronosCameraTestApp</RootNamespace>
+    <AssemblyName>SCM5821AX1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>1591,1572,1571,1573,1587,1570</NoWarn>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>KronosCameraTestApp.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>1591,1572,1571,1573,1587,1570</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>1591,1572,1571,1573,1587,1570</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BitMiracle.LibTiff.NET">
+      <HintPath>..\..\code\BitMiracle.LibTiff.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CyUSB">
+      <HintPath>..\..\code\Scientific Camera Controller\bin\Debug\CyUSB.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Excel.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinDataSource.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinDock.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.ExcelExport.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinListView.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinLiveTileView.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinOfficeNavBar.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinPrintPreviewDialog.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinRadialMenu.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinSchedule.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinStatusBar.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabbedMdi.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.v17.1, Version=17.1.20171.2043, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="LJUDDotNet, Version=3.50.0.0, Culture=neutral, PublicKeyToken=9d6c109908595016, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\LJUDDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\code\Scientific Camera Controller\bin\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Outlook, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Outlook.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NationalInstruments.Analysis.Enterprise, Version=15.0.45.49153, Culture=neutral, PublicKeyToken=4febd62461bf11a4, processorArchitecture=MSIL" />
+    <Reference Include="NationalInstruments.Common, Version=15.0.40.49154, Culture=neutral, PublicKeyToken=dc6ad606294fc298, processorArchitecture=MSIL" />
+    <Reference Include="NationalInstruments.UI, Version=15.0.45.49153, Culture=neutral, PublicKeyToken=4febd62461bf11a4, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Program Files (x86)\National Instruments\MeasurementStudioVS2012\DotNET\Assemblies\Current\NationalInstruments.UI.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="NationalInstruments.UI.Styles3D, Version=15.0.40.49152, Culture=neutral, PublicKeyToken=dc6ad606294fc298, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NationalInstruments.UI.WindowsForms, Version=15.0.45.49153, Culture=neutral, PublicKeyToken=4febd62461bf11a4, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Program Files (x86)\National Instruments\MeasurementStudioVS2012\DotNET\Assemblies\Current\NationalInstruments.UI.WindowsForms.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="netchartdir_cp, Version=5.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\netchartdir_cp.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\Program Files (x86)\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\Office15\Office.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Renci.SshNet">
+      <HintPath>..\..\code\Scientific Camera Controller\bin\Debug\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=3.0.1.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\code\Scientific Camera Controller\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WpfUserControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WpfUserControl\WpfUserControl\bin\Debug\WpfUserControl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CID821 Data.cs" />
+    <Compile Include="Installer1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Installer1.Designer.cs">
+      <DependentUpon>Installer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CameraDetailsModel.cs" />
+    <Compile Include="Model\FinalTestResultsDetailsModel.cs" />
+    <Compile Include="Model\InstrumentDefaultsModel.cs" />
+    <Compile Include="Model\OverAllTestResultsModel.cs" />
+    <Compile Include="Model\ParametersModel.cs" />
+    <Compile Include="Model\RedBlueModel.cs" />
+    <Compile Include="Model\ShutterDriveModel.cs" />
+    <Compile Include="Presenter\CameraDetailsPresenter.cs" />
+    <Compile Include="Presenter\ChargeTransferLossesLimitsPresenter.cs" />
+    <Compile Include="Presenter\CrossTalkLimitsPresenter.cs" />
+    <Compile Include="Presenter\DarkCurrentLimitsPresenter.cs" />
+    <Compile Include="Presenter\DefectsLimitsPresenter.cs" />
+    <Compile Include="Presenter\ECOADetailsPresenter.cs" />
+    <Compile Include="Presenter\ImageDisplayPanelPresenter.cs" />
+    <Compile Include="Presenter\InjectionEfficiencyLimitsPresenter.cs" />
+    <Compile Include="Presenter\InjectionPerformanceLimitsPresenter.cs" />
+    <Compile Include="Presenter\LinearityLimitsPresenter.cs" />
+    <Compile Include="Presenter\MainPresenter.cs" />
+    <Compile Include="Presenter\NDROReadDriftLimitsPresenter.cs" />
+    <Compile Include="Presenter\NoiseVsNDROSLimitsPresenter.cs" />
+    <Compile Include="Presenter\OverAllTestResultsPresenter.cs" />
+    <Compile Include="Presenter\PhotoresponseLimitsPresenter.cs" />
+    <Compile Include="Presenter\RedBluePresenter.cs" />
+    <Compile Include="Presenter\SegmentInjectLimitsPresenter.cs" />
+    <Compile Include="Presenter\ShutterDrivePresenter.cs" />
+    <Compile Include="Presenter\TemperatureLimitsPresenter.cs" />
+    <Compile Include="Serializer.cs" />
+    <Compile Include="Subarray.cs" />
+    <Compile Include="View\AutoPretestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AutoPretestForm.Designer.cs">
+      <DependentUpon>AutoPretestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CreateUserAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CreateUserAccount.Designer.cs">
+      <DependentUpon>CreateUserAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DashBoardAutoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DashBoardAutoForm.Designer.cs">
+      <DependentUpon>DashBoardAutoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ExcelUtilities.cs" />
+    <Compile Include="Helpers\SendOutlookMail.cs" />
+    <Compile Include="Helpers\UserAuthentication.cs" />
+    <Compile Include="View\DashBoardAutoPretestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DashBoardAutoPretestForm.Designer.cs">
+      <DependentUpon>DashBoardAutoPretestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FinalTestReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FinalTestReportForm.Designer.cs">
+      <DependentUpon>FinalTestReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ImageDisplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ImageDisplayForm.Designer.cs">
+      <DependentUpon>ImageDisplayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KronosCamContext.cs" />
+    <Compile Include="Model\ChargeTransferLossesModel.cs" />
+    <Compile Include="Model\CrossTalkModel.cs" />
+    <Compile Include="Model\DarkCurrentModel.cs" />
+    <Compile Include="Model\InjectionPerformanceModel.cs" />
+    <Compile Include="Model\LinearityModel.cs" />
+    <Compile Include="Model\MeanVarianceModel.cs" />
+    <Compile Include="Model\NoiseVsNDROModel.cs" />
+    <Compile Include="Model\PhotoresponseModel.cs" />
+    <Compile Include="Model\SubarrayDataModel.cs" />
+    <Compile Include="Model\ExposureDataModel.cs" />
+    <Compile Include="Model\TestLimitsModel.cs" />
+    <Compile Include="Model\UserLoginModel.cs" />
+    <Compile Include="Presenter\ChargeTransferLossesPresenter.cs" />
+    <Compile Include="Presenter\CrossTalkPresenter.cs" />
+    <Compile Include="Presenter\DarkCurrentPresenter.cs" />
+    <Compile Include="Presenter\InjectionPerformancePresenter.cs" />
+    <Compile Include="Presenter\LinearityPresenter.cs" />
+    <Compile Include="Presenter\MeanVariancePresenter.cs" />
+    <Compile Include="Presenter\NoiseVsNDROPresenter.cs" />
+    <Compile Include="Presenter\PhotoresponsePresenter.cs" />
+    <Compile Include="Presenter\MeanVarianceLimitsPresenter.cs" />
+    <Compile Include="Presenter\UserLoginPresenter.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ApplyInfraStylesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ApplyInfraStylesForm.Designer.cs">
+      <DependentUpon>ApplyInfraStylesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AutoTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AutoTestForm.Designer.cs">
+      <DependentUpon>AutoTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CameraDiagnostics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CameraDiagnostics.Designer.cs">
+      <DependentUpon>CameraDiagnostics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChargeTransferLossesTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChargeTransferLossesTestForm.Designer.cs">
+      <DependentUpon>ChargeTransferLossesTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ImageDisplayPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ImageDisplayPanel.Designer.cs">
+      <DependentUpon>ImageDisplayPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListExposureData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ListExposureData.Designer.cs">
+      <DependentUpon>ListExposureData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Logger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Logger.Designer.cs">
+      <DependentUpon>Logger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OverAllTestResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OverAllTestResultsForm.Designer.cs">
+      <DependentUpon>OverAllTestResultsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RedBlueTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RedBlueTestForm.Designer.cs">
+      <DependentUpon>RedBlueTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TestGraphPreferences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TestGraphPreferences.Designer.cs">
+      <DependentUpon>TestGraphPreferences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TestResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TestResultsForm.Designer.cs">
+      <DependentUpon>TestResultsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\ChargeTransferLossesLimitsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\ChargeTransferLossesLimitsUserControl.Designer.cs">
+      <DependentUpon>ChargeTransferLossesLimitsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\ChargeTransferLossesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\ChargeTransferLossesUserControl.Designer.cs">
+      <DependentUpon>ChargeTransferLossesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CrossTalkTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CrossTalkTestForm.Designer.cs">
+      <DependentUpon>CrossTalkTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\CrossTalkLimitsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\CrossTalkLimitsUserControl.Designer.cs">
+      <DependentUpon>CrossTalkLimitsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\CrossTalkUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\CrossTalkUserControl.Designer.cs">
+      <DependentUpon>CrossTalkUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CRUDExposure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CRUDExposure.Designer.cs">
+      <DependentUpon>CRUDExposure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DarkCurrentTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DarkCurrentTestForm.Designer.cs">
+      <DependentUpon>DarkCurrentTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\TestAppHelper.cs" />
+    <Compile Include="View\UserControls\DarkCurrentLimitsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\DarkCurrentLimitsUserControl.Designer.cs">
+      <DependentUpon>DarkCurrentLimitsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\DarkCurrentUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\DarkCurrentUserControl.Designer.cs">
+      <DependentUpon>DarkCurrentUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DashBoard.Designer.cs">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DownloadUpdatedFirmware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DownloadUpdatedFirmware.Designer.cs">
+      <DependentUpon>DownloadUpdatedFirmware.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CharacterizationTestLimits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CharacterizationTestLimits.Designer.cs">
+      <DependentUpon>CharacterizationTestLimits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\InjectionPerformanceTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InjectionPerformanceTestForm.Designer.cs">
+      <DependentUpon>InjectionPerformanceTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\DefectsLimitsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\DefectsLimitsUserControl.Designer.cs">
+      <DependentUpon>DefectsLimitsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\FinalTestReportUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\FinalTestReportUserControl.Designer.cs">
+      <DependentUpon>FinalTestReportUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\InjectionEfficiencyLimitsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\InjectionEfficiencyLimitsUserControl.Designer.cs">
+      <DependentUpon>InjectionEfficiencyLimitsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\InjectionPerformanceLimitsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\InjectionPerformanceLimitsUserControl.Designer.cs">
+      <DependentUpon>InjectionPerformanceLimitsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\InjectionPerformanceUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\InjectionPerformanceUserControl.Designer.cs">
+      <DependentUpon>InjectionPerformanceUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentDefaults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InstrumentDefaults.Designer.cs">
+      <DependentUpon>InstrumentDefaults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\KronosTestAppMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\KronosTestAppMainForm.Designer.cs">
+      <DependentUpon>KronosTestAppMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LinearityTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LinearityTestForm.Designer.cs">
+      <DependentUpon>LinearityTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\LinearityLimitsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\LinearityLimitsUserControl.Designer.cs">
+      <DependentUpon>LinearityLimitsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\LinearityUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\LinearityUserControl.Designer.cs">
+      <DependentUpon>LinearityUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\MeanVarianceLimitsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\MeanVarianceLimitsUserControl.Designer.cs">
+      <DependentUpon>MeanVarianceLimitsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OperatorInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OperatorInputForm.Designer.cs">
+      <DependentUpon>OperatorInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SendMailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SendMailForm.Designer.cs">
+      <DependentUpon>SendMailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TemperatureGraphForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TemperatureGraphForm.Designer.cs">
+      <DependentUpon>TemperatureGraphForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TestLimitsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TestLimitsForm.Designer.cs">
+      <DependentUpon>TestLimitsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\NDROReadDriftLimitsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\NDROReadDriftLimitsUserControl.Designer.cs">
+      <DependentUpon>NDROReadDriftLimitsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\NoiseVsNDROSLimitsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\NoiseVsNDROSLimitsUserControl.Designer.cs">
+      <DependentUpon>NoiseVsNDROSLimitsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\PhotoresponseLimitsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\PhotoresponseLimitsUserControl.Designer.cs">
+      <DependentUpon>PhotoresponseLimitsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\RedBlueUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\RedBlueUserControl.Designer.cs">
+      <DependentUpon>RedBlueUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\SegmentInjectLimitsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\SegmentInjectLimitsUserControl.Designer.cs">
+      <DependentUpon>SegmentInjectLimitsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\TemperatureLimitsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\TemperatureLimitsUserControl.Designer.cs">
+      <DependentUpon>TemperatureLimitsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UserLoginForm.Designer.cs">
+      <DependentUpon>UserLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PhotoresponseTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PhotoresponseTestForm.Designer.cs">
+      <DependentUpon>PhotoresponseTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\PhotoresponseUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\PhotoresponseUserControl.Designer.cs">
+      <DependentUpon>PhotoresponseUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\NoiseVsNDROUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\NoiseVsNDROUserControl.Designer.cs">
+      <DependentUpon>NoiseVsNDROUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NoiseVsNDROTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NoiseVsNDROTestForm.Designer.cs">
+      <DependentUpon>NoiseVsNDROTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ShutterDriveTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ShutterDriveTestForm.Designer.cs">
+      <DependentUpon>ShutterDriveTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommandProcessor.cs" />
+    <Compile Include="View\MeanVarianceTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MeanVarianceTestForm.Designer.cs">
+      <DependentUpon>MeanVarianceTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\MeanVarianceUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\MeanVarianceUserControl.Designer.cs">
+      <DependentUpon>MeanVarianceUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\UserControls\ShutterDriveUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\ShutterDriveUserControl.Designer.cs">
+      <DependentUpon>ShutterDriveUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TCPSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TCPSettingsForm.Designer.cs">
+      <DependentUpon>TCPSettingsForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\AutoPretestForm.resx">
+      <DependentUpon>AutoPretestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CreateUserAccount.resx">
+      <DependentUpon>CreateUserAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DashBoardAutoForm.resx">
+      <DependentUpon>DashBoardAutoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DashBoardAutoPretestForm.resx">
+      <DependentUpon>DashBoardAutoPretestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FinalTestReportForm.resx">
+      <DependentUpon>FinalTestReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ImageDisplayForm.resx">
+      <DependentUpon>ImageDisplayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ApplyInfraStylesForm.resx">
+      <DependentUpon>ApplyInfraStylesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AutoTestForm.resx">
+      <DependentUpon>AutoTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CameraDiagnostics.resx">
+      <DependentUpon>CameraDiagnostics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChargeTransferLossesTestForm.resx">
+      <DependentUpon>ChargeTransferLossesTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ImageDisplayPanel.resx">
+      <DependentUpon>ImageDisplayPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ListExposureData.resx">
+      <DependentUpon>ListExposureData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Logger.resx">
+      <DependentUpon>Logger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OverAllTestResultsForm.resx">
+      <DependentUpon>OverAllTestResultsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RedBlueTestForm.resx">
+      <DependentUpon>RedBlueTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TestGraphPreferences.resx">
+      <DependentUpon>TestGraphPreferences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TestResultsForm.resx">
+      <DependentUpon>TestResultsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\ChargeTransferLossesLimitsUserControl.resx">
+      <DependentUpon>ChargeTransferLossesLimitsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\ChargeTransferLossesUserControl.resx">
+      <DependentUpon>ChargeTransferLossesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CrossTalkTestForm.resx">
+      <DependentUpon>CrossTalkTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\CrossTalkLimitsUserControl.resx">
+      <DependentUpon>CrossTalkLimitsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\CrossTalkUserControl.resx">
+      <DependentUpon>CrossTalkUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CRUDExposure.resx">
+      <DependentUpon>CRUDExposure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DarkCurrentTestForm.resx">
+      <DependentUpon>DarkCurrentTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\DarkCurrentLimitsUserControl.resx">
+      <DependentUpon>DarkCurrentLimitsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\DarkCurrentUserControl.resx">
+      <DependentUpon>DarkCurrentUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DownloadUpdatedFirmware.resx">
+      <DependentUpon>DownloadUpdatedFirmware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CharacterizationTestLimits.resx">
+      <DependentUpon>CharacterizationTestLimits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InjectionPerformanceTestForm.resx">
+      <DependentUpon>InjectionPerformanceTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\DefectsLimitsUserControl.resx">
+      <DependentUpon>DefectsLimitsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\FinalTestReportUserControl.resx">
+      <DependentUpon>FinalTestReportUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\InjectionEfficiencyLimitsUserControl.resx">
+      <DependentUpon>InjectionEfficiencyLimitsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\InjectionPerformanceLimitsUserControl.resx">
+      <DependentUpon>InjectionPerformanceLimitsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\InjectionPerformanceUserControl.resx">
+      <DependentUpon>InjectionPerformanceUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InstrumentDefaults.resx">
+      <DependentUpon>InstrumentDefaults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\KronosTestAppMainForm.resx">
+      <DependentUpon>KronosTestAppMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LinearityTestForm.resx">
+      <DependentUpon>LinearityTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\LinearityLimitsUserControl.resx">
+      <DependentUpon>LinearityLimitsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\LinearityUserControl.resx">
+      <DependentUpon>LinearityUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\MeanVarianceLimitsUserControl.resx">
+      <DependentUpon>MeanVarianceLimitsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OperatorInputForm.resx">
+      <DependentUpon>OperatorInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SendMailForm.resx">
+      <DependentUpon>SendMailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TemperatureGraphForm.resx">
+      <DependentUpon>TemperatureGraphForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TestLimitsForm.resx">
+      <DependentUpon>TestLimitsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\NDROReadDriftLimitsUserControl.resx">
+      <DependentUpon>NDROReadDriftLimitsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\NoiseVsNDROSLimitsUserControl.resx">
+      <DependentUpon>NoiseVsNDROSLimitsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\PhotoresponseLimitsUserControl.resx">
+      <DependentUpon>PhotoresponseLimitsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\RedBlueUserControl.resx">
+      <DependentUpon>RedBlueUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\SegmentInjectLimitsUserControl.resx">
+      <DependentUpon>SegmentInjectLimitsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\TemperatureLimitsUserControl.resx">
+      <DependentUpon>TemperatureLimitsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserLoginForm.resx">
+      <DependentUpon>UserLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PhotoresponseTestForm.resx">
+      <DependentUpon>PhotoresponseTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\PhotoresponseUserControl.resx">
+      <DependentUpon>PhotoresponseUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\NoiseVsNDROUserControl.resx">
+      <DependentUpon>NoiseVsNDROUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NoiseVsNDROTestForm.resx">
+      <DependentUpon>NoiseVsNDROTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ShutterDriveTestForm.resx">
+      <DependentUpon>ShutterDriveTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MeanVarianceTestForm.resx">
+      <DependentUpon>MeanVarianceTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\MeanVarianceUserControl.resx">
+      <DependentUpon>MeanVarianceUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\ShutterDriveUserControl.resx">
+      <DependentUpon>ShutterDriveUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TCPSettingsForm.resx">
+      <DependentUpon>TCPSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="InfraStyles\Aero.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Chameleon.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Claymation.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Excel2013 - Dark Gray.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Excel2013 - Light Gray.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Excel2013 - White.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\GrapeTomato.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\IG.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\LucidDream.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Metro.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\ModClay.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Nautilus.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\NoirModerne.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Office2007Black.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Office2007Blue.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Office2007Silver.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Office2010Black.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Office2010Blue.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Office2010Silver.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Office2013 - Dark Gray.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Office2013 - Light Gray.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Office2013 - White.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Outlook2013 - Dark Gray.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Outlook2013 - LightGray.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Outlook2013 - White.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Pear.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\RedPlanet.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\RubberBlack.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Trendy.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\VS2008.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\VS2010.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\VS2013 - Blue.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\VS2013 - Dark.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\VS2013 - Light.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Windows7.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Windows8-DarkGray-Blue.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Windows8-DarkGray-Green.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Windows8-DarkGray-Pink.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InfraStyles\Windows8-DarkGray-Yellow.isl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\KronosCameraTestApp.Model.ExposureDataModel.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\if_interface-54_809272.png" />
+    <None Include="Resources\if_JD-03_2259887.png" />
+    <None Include="Resources\if_power_1287516.png" />
+    <None Include="Resources\if_power_1287516.bmp" />
+    <EmbeddedResource Include="Resources\Camera_ON.bmp" />
+    <EmbeddedResource Include="Resources\Camera_Off.bmp" />
+    <Content Include="Resources\TestApp_Software_User_Guide_Specification.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\DarkCurrent.scp" />
+    <None Include="Resources\Documentation.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\InjectionEfficiency.scp" />
+    <None Include="Resources\LinearityExposures.scp" />
+    <None Include="Resources\MeanVariance2Subarrays.scp" />
+    <None Include="Resources\NoiseVsNDRO.scp" />
+    <None Include="Resources\WarmUpTest.scp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="XML\ShutterDriveData.xml" />
+    <None Include="Resources\thermo-fisher-scientific-logo.jpg" />
+    <Content Include="BitMiracle.LibTiff.NET.dll" />
+    <Content Include="CyUSB.dll" />
+    <Content Include="log4net.dll" />
+    <Content Include="Renci.SshNet.dll" />
+    <Content Include="XML\CameraDetails.xml" />
+    <Content Include="XML\OverallTestResultsData.xml" />
+    <Content Include="XML\PhotoresponseData.xml" />
+    <Content Include="XML\RedBlueData.xml" />
+    <None Include="XML\ChargeTransferLossesResultsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\CrossTalkResultsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\DarkCurrentResultsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\InjectionPerformanceResultsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\LinearityResultsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\NoiseVsNDROsResultsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\PhotoresponseResultsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\RedBlueResultsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\ShutterDriveResultsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\MeanVarianceResultsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\SegmentInjectLimitsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\PhotoresponseLimitsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\NoiseVsNDROsTestLimitsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\ChargeTransferLossesTestLimitsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\CrossTalkLimitsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\DefectsTestLimitsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\InjectionEfficiencyTestLimitsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\InjectionPerformanceTestLimitsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\LinearityTestLimitsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\DarkCurrentLimitsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\NDROReadDriftTestLimitsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\MeanVarianceLimitsData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\InjectionPerformanceData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\NoiseVsNDROData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\DarkCurrentData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\weather.png" />
+    <None Include="XML\LinearityData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XML\MeanVarianceData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\zoomout.bmp" />
+    <None Include="Resources\zoomin.bmp" />
+    <None Include="Resources\Zoom-in_49275.bmp" />
+    <None Include="Resources\open-file-smaller.png" />
+    <None Include="Resources\open-file-smaller1.png" />
+    <None Include="Resources\if_arrow_down_alt1_118751 16_16.png" />
+    <None Include="Resources\copy.bmp" />
+    <None Include="Resources\Help.bmp" />
+    <Content Include="app_icon.ico" />
+    <None Include="Resources\Abort_132156.ico" />
+    <Content Include="Resources\app_icon.ico" />
+    <None Include="Resources\Axis_2119357.png" />
+    <None Include="Resources\icons-04_799762.png" />
+    <None Include="Resources\graph2.ico" />
+    <Content Include="Resources\if_arrow_up_alt1_118743 16_16.png" />
+    <None Include="Resources\if_arrow_up_alt1_118743 16_161.png" />
+    <None Include="Resources\if_button_switch_vertical_352886.png" />
+    <None Include="Resources\if_button_switch_vertical_352886 16_16.png" />
+    <None Include="Resources\new.bmp" />
+    <None Include="Resources\MovieMode.bmp" />
+    <None Include="Resources\if_Zoom-in_49275.ico" />
+    <None Include="Resources\if_Zoom-in_49275.png" />
+    <None Include="Resources\if_Zoom-in_49275.bmp" />
+    <None Include="Resources\if_Zoom-in_492751.bmp" />
+    <None Include="Resources\open-file-smaller2.png" />
+    <None Include="Resources\new_icon.bmp" />
+    <None Include="Resources\line_chart_172493.png" />
+    <None Include="Resources\line_chart_1724931.png" />
+    <None Include="Resources\line_graph_old-b_86262.png" />
+    <Content Include="Resources\open-file.bmp" />
+    <None Include="Resources\open-file1.bmp" />
+    <None Include="Resources\Save1.bmp" />
+    <None Include="Resources\Save.bmp" />
+    <None Include="Resources\print.bmp" />
+    <None Include="Resources\Paste.bmp" />
+    <None Include="Resources\RunControl_46721.ico" />
+    <None Include="Resources\temperature_graph.png" />
+    <None Include="Resources\Test-paper.ico" />
+    <Content Include="Resources\voltages.bmp" />
+    <Content Include="Resources\voltages2.bmp" />
+    <Content Include="Resources\voltages3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\CIDAPI_07112018\Kronos.Instrument.Camera.Contracts\Kronos.Instrument.Camera.Contracts.csproj">
+      <Project>{00b110db-0535-4f8c-810a-a31dd8ac3756}</Project>
+      <Name>Kronos.Instrument.Camera.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\CIDAPI_07112018\Kronos.Instrument.Camera.Interface\Kronos.Instrument.Camera.Interface.csproj">
+      <Project>{a1274cf0-b51c-4365-9a36-a864026723af}</Project>
+      <Name>Kronos.Instrument.Camera.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

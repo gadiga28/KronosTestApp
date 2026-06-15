@@ -1,0 +1,86 @@
+2018-09-25 11:54:29,388 [11] ERROR KronosCameraTestApp.CommandProcessor System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at KronosCameraTestApp.CommandProcessor.<>c__DisplayClass9.<SendExposure>b__7() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\CommandProcessor.cs:line 211
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.CommandProcessor.<SendExposure>d__b.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\CommandProcessor.cs:line 183
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-09-25 11:54:34,419 [11] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.AbortExposure() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\Kronos.Instrument.Camera.Interface\CIDInterface.cs:line 108
+   at KronosCameraTestApp.View.KronosTestAppMainForm.AbortAutoTest(Boolean abortFromMainScreen, String testType) in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 3837
+ AMER\babagoud.gadiga - Exception inVoid AbortAutoTest(Boolean, System.String)
+2018-09-25 11:57:42,603 [9] ERROR KronosCameraTestApp.CommandProcessor System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at KronosCameraTestApp.CommandProcessor.<>c__DisplayClass9.<SendExposure>b__7() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\CommandProcessor.cs:line 211
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.CommandProcessor.<SendExposure>d__b.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\CommandProcessor.cs:line 183
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-09-25 11:57:47,054 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.NullReferenceException: Object reference not set to an instance of an object.
+   at Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.AbortExposure() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\Kronos.Instrument.Camera.Interface\CIDInterface.cs:line 108
+   at KronosCameraTestApp.View.KronosTestAppMainForm.AbortAutoTest(Boolean abortFromMainScreen, String testType) in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 3837
+ AMER\babagoud.gadiga - Exception inVoid AbortAutoTest(Boolean, System.String)
+2018-09-25 12:09:39,049 [11] ERROR KronosCameraTestApp.View.UserControls.PhotoresponseUserControl System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at KronosCameraTestApp.View.UserControls.PhotoresponseUserControl.UpdateExposureDataModelFromView() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\PhotoresponseUserControl.cs:line 107
+ AMER\babagoud.gadiga - Exception inVoid UpdateExposureDataModelFromView()
+2018-09-25 12:09:39,389 [11] ERROR KronosCameraTestApp.View.UserControls.PhotoresponseUserControl System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at KronosCameraTestApp.View.UserControls.PhotoresponseUserControl.UpdateSubarrayDataModelFromView() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\PhotoresponseUserControl.cs:line 145
+ AMER\babagoud.gadiga - Exception inVoid UpdateSubarrayDataModelFromView()
+2018-09-25 12:09:46,354 [11] ERROR KronosCameraTestApp.View.UserControls.PhotoresponseUserControl System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.UserControls.PhotoresponseUserControl.UpdateExposureView(Int32 currentRecord) in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\PhotoresponseUserControl.cs:line 338
+ AMER\babagoud.gadiga - Exception inVoid UpdateExposureView(Int32)
+2018-09-25 12:10:14,607 [11] ERROR KronosCameraTestApp.CommandProcessor System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at KronosCameraTestApp.CommandProcessor.<>c__DisplayClass9.<SendExposure>b__7() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\CommandProcessor.cs:line 211
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.CommandProcessor.<SendExposure>d__b.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\CommandProcessor.cs:line 183
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-09-25 12:26:15,590 [11] ERROR KronosCameraTestApp.View.UserControls.PhotoresponseUserControl System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at KronosCameraTestApp.View.UserControls.PhotoresponseUserControl.UpdateExposureDataModelFromView() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\PhotoresponseUserControl.cs:line 107
+ AMER\babagoud.gadiga - Exception inVoid UpdateExposureDataModelFromView()
+2018-09-25 12:26:16,000 [11] ERROR KronosCameraTestApp.View.UserControls.PhotoresponseUserControl System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at KronosCameraTestApp.View.UserControls.PhotoresponseUserControl.UpdateSubarrayDataModelFromView() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\PhotoresponseUserControl.cs:line 145
+ AMER\babagoud.gadiga - Exception inVoid UpdateSubarrayDataModelFromView()
+2018-09-25 12:26:28,418 [11] ERROR KronosCameraTestApp.View.UserControls.PhotoresponseUserControl System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.UserControls.PhotoresponseUserControl.UpdateExposureView(Int32 currentRecord) in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\PhotoresponseUserControl.cs:line 338
+ AMER\babagoud.gadiga - Exception inVoid UpdateExposureView(Int32)
+2018-09-25 12:27:07,615 [11] ERROR KronosCameraTestApp.CommandProcessor System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at KronosCameraTestApp.CommandProcessor.<>c__DisplayClass9.<SendExposure>b__7() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\CommandProcessor.cs:line 211
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at KronosCameraTestApp.CommandProcessor.<SendExposure>d__b.MoveNext() in c:\Baba\GIT Repos\SCM5821AX1\KronosCameraTestApp\KronosCameraTestApp\CommandProcessor.cs:line 183
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()

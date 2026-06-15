@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ShutterDriveExposures>
+  <Exposure>
+    <ExposureID>1</ExposureID>
+    <TestDataID>SDT</TestDataID>
+    <ExposureName>ShutterExp1</ExposureName>
+    <DateDefined>2018-01-16T14:39:37.410</DateDefined>
+    <UserModified>Baba</UserModified>
+    <ExposureRegionXo>0</ExposureRegionXo>
+    <ExposureRegionYo>0</ExposureRegionYo>
+    <ExposureRegiondX>2048</ExposureRegiondX>
+    <ExposureRegiondY>2048</ExposureRegiondY>
+    <ExposureInterval>1000</ExposureInterval>
+    <ExposureNDROS>1</ExposureNDROS>
+    <ExposureFPN>0</ExposureFPN>
+    <FullFrameEnabled>1</FullFrameEnabled>
+    <DarkFrameEnabled>0</DarkFrameEnabled>
+    <UserDefaultConfiguration>0</UserDefaultConfiguration>
+    <LED1Enabled>1</LED1Enabled>
+    <LED2Enabled>0</LED2Enabled>
+    <LED3Enabled>0</LED3Enabled>
+    <LEDOnTime>100</LEDOnTime>
+    <LEDOffTime>100</LEDOffTime>
+    <LEDFlashes>1000</LEDFlashes>
+    <ShutterEnabled>1</ShutterEnabled>
+    <AutoBiasFPNEnabled>0</AutoBiasFPNEnabled>
+    <NumberOfSubarrays>0</NumberOfSubarrays>
+    <GlobalInject>5</GlobalInject>
+    <GlobalInjectDelay>1</GlobalInjectDelay>
+  </Exposure>  
+</ShutterDriveExposures>

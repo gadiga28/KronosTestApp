@@ -1,0 +1,102 @@
+2018-05-10 12:01:57,804 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-10 13:00:33,274 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-10 13:03:59,059 [8] ERROR KronosCameraTestApp.View.UserControls.DarkCurrentUserControl System.ArgumentNullException: Value cannot be null.
+Parameter name: yData
+   at NationalInstruments.UI.WaveformPlot.PlotY(Double[] yData)
+   at KronosCameraTestApp.View.UserControls.DarkCurrentUserControl.<PlotDarkCurrentData>d__6.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\DarkCurrentUserControl.cs:line 115
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-05-10 13:04:05,667 [12] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'Infragistics.Win.UltraWinStatusBar.UltraStatusPanel'.
+   at Infragistics.Shared.DisposableObject.VerifyNotDisposed()
+   at Infragistics.Shared.SubObjectBase.NotifyPropChange(PropChangeInfo trigger)
+   at Infragistics.Win.UltraWinStatusBar.UltraStatusPanel.OnSubObjectPropChanged(PropChangeInfo propChangeInfo)
+   at Infragistics.Win.AppearanceHolder.OnSubObjectPropChanged(PropChangeInfo propChange)
+   at Infragistics.Shared.SubObjectBase.NotifyPropChange(PropChangeInfo trigger)
+   at Infragistics.Win.AppearanceData.set_BackColor(Color value)
+   at Infragistics.Win.Appearance.set_BackColor(Color value)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.SetDatabaseConnectivityStatusBarPanel() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 280
+ AMER\babagoud.gadiga - Exception inVoid SetDatabaseConnectivityStatusBarPanel()
+2018-05-10 14:56:34,508 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-10 14:58:43,746 [9] ERROR KronosCameraTestApp.Program  AMER\babagoud.gadiga - Thread Exception in Kronos Test ApplicationObject reference not set to an instance of an object.
+2018-05-10 15:01:47,051 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-10 15:08:52,843 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-10 15:11:47,352 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-10 15:36:14,868 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-10 15:38:42,612 [9] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-10 15:41:33,270 [9] ERROR KronosCameraTestApp.Presenter.UserLoginPresenter System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Violation of PRIMARY KEY constraint 'PK_UserLogin_SCM5821A'. Cannot insert duplicate key in object 'dbo.UserLogin_SCM5821A'. The duplicate key value is (baba).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at KronosCameraTestApp.Presenter.UserLoginPresenter.<>c__DisplayClass7.<CreateUserAccount>b__5() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\UserLoginPresenter.cs:line 76
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at KronosCameraTestApp.Presenter.UserLoginPresenter.<CreateUserAccount>d__9.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\UserLoginPresenter.cs:line 69
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-05-10 15:41:34,589 [9] ERROR KronosCameraTestApp.View.CreateUserAccount  AMER\babagoud.gadiga - Error creating User account
+2018-05-10 15:43:17,589 [9] ERROR KronosCameraTestApp.Presenter.UserLoginPresenter System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Violation of PRIMARY KEY constraint 'PK_UserLogin_SCM5821A'. Cannot insert duplicate key in object 'dbo.UserLogin_SCM5821A'. The duplicate key value is (baba1).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at KronosCameraTestApp.Presenter.UserLoginPresenter.<>c__DisplayClass7.<CreateUserAccount>b__5() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\UserLoginPresenter.cs:line 76
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at KronosCameraTestApp.Presenter.UserLoginPresenter.<CreateUserAccount>d__9.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\UserLoginPresenter.cs:line 69
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-05-10 15:43:18,337 [9] ERROR KronosCameraTestApp.View.CreateUserAccount  AMER\babagoud.gadiga - Error creating User account
+2018-05-10 15:50:45,651 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-05-10 15:57:06,883 [1] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.IO.IOException: Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.AbortMessages() in c:\Baba\CIDAPI_0509\Kronos.Instrument.Camera.Interface\SCM5821AX1.cs:line 365
+   at Thermo.Kronos.Instrument.Camera.Interface.SCM5821AX1.Disconnect() in c:\Baba\CIDAPI_0509\Kronos.Instrument.Camera.Interface\SCM5821AX1.cs:line 838
+   at Thermo.Kronos.Instrument.Camera.Interface.CIDInterface.Disconnect() in c:\Baba\CIDAPI_0509\Kronos.Instrument.Camera.Interface\CIDInterface.cs:line 225
+   at KronosCameraTestApp.View.KronosTestAppMainForm.ExitApplication() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 3923
+ AMER\babagoud.gadiga - Exception inVoid ExitApplication()

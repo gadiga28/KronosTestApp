@@ -1,0 +1,116 @@
+2018-06-29 15:22:10,070 [8] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-06-29 15:45:22,152 [10] ERROR KronosCameraTestApp.Presenter.MeanVariancePresenter System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at KronosCameraTestApp.Presenter.MeanVariancePresenter.ReturnMVResults() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\MeanVariancePresenter.cs:line 491
+ AMER\babagoud.gadiga - Exception inKronosCameraTestApp.Model.MeanVarianceTestResultsData ReturnMVResults()
+2018-06-29 15:45:22,454 [10] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.ReturnNoiseVsNDROsResults() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 444
+ AMER\babagoud.gadiga - Exception inKronosCameraTestApp.Model.NoiseVsNDROTestResults ReturnNoiseVsNDROsResults()
+2018-06-29 15:45:22,672 [10] ERROR KronosCameraTestApp.Presenter.InjectionPerformancePresenter System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at KronosCameraTestApp.Presenter.InjectionPerformancePresenter.ReturnInjectionPeformanceResults() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\InjectionPerformancePresenter.cs:line 439
+ AMER\babagoud.gadiga - Exception inKronosCameraTestApp.Model.InjectionPerformanceTestResults ReturnInjectionPeformanceResults()
+2018-06-29 15:45:22,881 [10] ERROR KronosCameraTestApp.Presenter.PhotoresponsePresenter System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at KronosCameraTestApp.Presenter.PhotoresponsePresenter.ReturnPhotoresponseResults() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\PhotoresponsePresenter.cs:line 432
+ AMER\babagoud.gadiga - Exception inKronosCameraTestApp.Model.PhotoresponseTestResults ReturnPhotoresponseResults()
+2018-06-29 15:45:23,098 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Max(IEnumerable`1 source)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.PopulateFinalTestResultsModel() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 2456
+ AMER\babagoud.gadiga - Exception inVoid PopulateFinalTestResultsModel()
+2018-06-29 15:45:24,072 [10] ERROR KronosCameraTestApp.View.UserControls.FinalTestReportUserControl System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.UserControls.FinalTestReportUserControl.UpdateFinalTestReportView(FinalTestResultsDetailsModel finalTestResultsDetailsModel, CameraDetailsModel cameraDetailsModel, RedBlueTestResults redBlueTestResults, MeanVarianceTestResultsData meanVarianceTestResultsData, NoiseVsNDROTestResults noiseVsNDROTestResults, DarkCurrentTestResults darkCurrentTestResults, InjectionPerformanceTestResults injectionPerformanceTestResults, PhotoresponseTestResults photoresponseTestResults, ShutterDriveTestResults shutterDriveTestResults, CameraInformation cameraInformation) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\FinalTestReportUserControl.cs:line 249
+ AMER\babagoud.gadiga - Exception inVoid UpdateFinalTestReportView(KronosCameraTestApp.Model.FinalTestResultsDetailsModel, KronosCameraTestApp.Model.CameraDetailsModel, KronosCameraTestApp.Model.RedBlueTestResults, KronosCameraTestApp.Model.MeanVarianceTestResultsData, KronosCameraTestApp.Model.NoiseVsNDROTestResults, KronosCameraTestApp.Model.DarkCurrentTestResults, KronosCameraTestApp.Model.InjectionPerformanceTestResults, KronosCameraTestApp.Model.PhotoresponseTestResults, KronosCameraTestApp.Model.ShutterDriveTestResults, Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation)
+2018-06-29 15:45:24,936 [10] ERROR KronosCameraTestApp.Presenter.OverAllTestResultsPresenter System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.Presenter.OverAllTestResultsPresenter.<SaveOverAllTestResults>d__12.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\OverAllTestResultsPresenter.cs:line 582
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-06-29 15:46:39,248 [10] ERROR KronosCameraTestApp.Presenter.MeanVariancePresenter System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at KronosCameraTestApp.Presenter.MeanVariancePresenter.ReturnMVResults() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\MeanVariancePresenter.cs:line 491
+ AMER\babagoud.gadiga - Exception inKronosCameraTestApp.Model.MeanVarianceTestResultsData ReturnMVResults()
+2018-06-29 15:46:39,468 [10] ERROR KronosCameraTestApp.Presenter.NoiseVsNDROPresenter System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at KronosCameraTestApp.Presenter.NoiseVsNDROPresenter.ReturnNoiseVsNDROsResults() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\NoiseVsNDROPresenter.cs:line 444
+ AMER\babagoud.gadiga - Exception inKronosCameraTestApp.Model.NoiseVsNDROTestResults ReturnNoiseVsNDROsResults()
+2018-06-29 15:46:39,674 [10] ERROR KronosCameraTestApp.Presenter.InjectionPerformancePresenter System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at KronosCameraTestApp.Presenter.InjectionPerformancePresenter.ReturnInjectionPeformanceResults() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\InjectionPerformancePresenter.cs:line 439
+ AMER\babagoud.gadiga - Exception inKronosCameraTestApp.Model.InjectionPerformanceTestResults ReturnInjectionPeformanceResults()
+2018-06-29 15:46:39,881 [10] ERROR KronosCameraTestApp.Presenter.PhotoresponsePresenter System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at KronosCameraTestApp.Presenter.PhotoresponsePresenter.ReturnPhotoresponseResults() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\PhotoresponsePresenter.cs:line 432
+ AMER\babagoud.gadiga - Exception inKronosCameraTestApp.Model.PhotoresponseTestResults ReturnPhotoresponseResults()
+2018-06-29 15:46:40,094 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Max(IEnumerable`1 source)
+   at KronosCameraTestApp.View.KronosTestAppMainForm.PopulateFinalTestResultsModel() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\KronosTestAppMainForm.cs:line 2456
+ AMER\babagoud.gadiga - Exception inVoid PopulateFinalTestResultsModel()
+2018-06-29 15:46:40,553 [10] ERROR KronosCameraTestApp.View.UserControls.FinalTestReportUserControl System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.View.UserControls.FinalTestReportUserControl.UpdateFinalTestReportView(FinalTestResultsDetailsModel finalTestResultsDetailsModel, CameraDetailsModel cameraDetailsModel, RedBlueTestResults redBlueTestResults, MeanVarianceTestResultsData meanVarianceTestResultsData, NoiseVsNDROTestResults noiseVsNDROTestResults, DarkCurrentTestResults darkCurrentTestResults, InjectionPerformanceTestResults injectionPerformanceTestResults, PhotoresponseTestResults photoresponseTestResults, ShutterDriveTestResults shutterDriveTestResults, CameraInformation cameraInformation) in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\UserControls\FinalTestReportUserControl.cs:line 249
+ AMER\babagoud.gadiga - Exception inVoid UpdateFinalTestReportView(KronosCameraTestApp.Model.FinalTestResultsDetailsModel, KronosCameraTestApp.Model.CameraDetailsModel, KronosCameraTestApp.Model.RedBlueTestResults, KronosCameraTestApp.Model.MeanVarianceTestResultsData, KronosCameraTestApp.Model.NoiseVsNDROTestResults, KronosCameraTestApp.Model.DarkCurrentTestResults, KronosCameraTestApp.Model.InjectionPerformanceTestResults, KronosCameraTestApp.Model.PhotoresponseTestResults, KronosCameraTestApp.Model.ShutterDriveTestResults, Thermo.Kronos.Instrument.Camera.Contracts.Data.CameraInformation)
+2018-06-29 15:46:41,215 [10] ERROR KronosCameraTestApp.Presenter.OverAllTestResultsPresenter System.NullReferenceException: Object reference not set to an instance of an object.
+   at KronosCameraTestApp.Presenter.OverAllTestResultsPresenter.<SaveOverAllTestResults>d__12.MoveNext() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\Presenter\OverAllTestResultsPresenter.cs:line 582
+ AMER\babagoud.gadiga - Exception inVoid MoveNext()
+2018-06-29 15:50:26,338 [10] ERROR KronosCameraTestApp.View.AutoTestForm System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid object name 'dbo.Parameters'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at KronosCameraTestApp.View.AutoTestForm.GetTestResultsPath() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\AutoTestForm.cs:line 291
+ AMER\babagoud.gadiga - Exception inVoid GetTestResultsPath()
+2018-06-29 15:52:28,689 [10] ERROR KronosCameraTestApp.View.KronosTestAppMainForm  AMER\babagoud.gadiga - Firmware not running or camera not connected to host
+2018-06-29 15:53:44,790 [10] ERROR KronosCameraTestApp.View.AutoTestForm System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid object name 'dbo.Parameters'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at KronosCameraTestApp.View.AutoTestForm.GetTestResultsPath() in c:\Baba\KronosCameraTestApp\KronosCameraTestApp\View\AutoTestForm.cs:line 291
+ AMER\babagoud.gadiga - Exception inVoid GetTestResultsPath()
